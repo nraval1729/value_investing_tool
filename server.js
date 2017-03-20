@@ -19,8 +19,17 @@ app.use(express.static(__dirname + '/public'));
 // Util shit to inspect shit
 var util = require('util');
 
+// Python bridge to run python from node
+var spawn = require("child_process").spawn;
+
 // Home page handler
 app.get("/", function(req, res) {
+	filePath = __dirname + "/public/scripts/python/biographical_historical_scraper.py";
+	console.log("FIlepath: " +filePath);
+	var process = spawn('python',[filePath]);
+	process.stdout.on('data', function(data) {
+		console.log("Received: " +data);
+	});
 	res.render('index.html');
 });
 

@@ -11,7 +11,7 @@ $(document).ready(function() {
 	// 	doStuffWithHistoricalData(data);
 	// });
 
-	// Make a get request to /current to get current.json
+	// Make a get request to /biographical to get biographical.json
 	$.get('/biographical', function(data) {
 		doStuffWithBiographicalData(data);
 	});
