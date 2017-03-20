@@ -477,7 +477,7 @@
         "ticker": "CAT", 
         "security": "Caterpillar Inc.", 
         "sector": "Industrials", 
-        "industry": "Construction & Farm Machinery & Heavy Trucks"
+        "industry": "Construction Machinery & Heavy Trucks"
     }, 
     {
         "ticker": "CB", 
@@ -501,7 +501,7 @@
         "ticker": "CBS", 
         "security": "CBS Corp.", 
         "sector": "Consumer Discretionary", 
-        "industry": "Broadcasting & Cable TV"
+        "industry": "Broadcasting"
     }, 
     {
         "ticker": "CCI", 
@@ -722,8 +722,8 @@
     {
         "ticker": "CTL", 
         "security": "CenturyLink Inc", 
-        "sector": "Telecommunications Services", 
-        "industry": "Integrated Telecommunications Services"
+        "sector": "Telecommunication Services", 
+        "industry": "Integrated Telecommunication Services"
     }, 
     {
         "ticker": "CTSH", 
@@ -777,7 +777,7 @@
         "ticker": "DE", 
         "security": "Deere & Co.", 
         "sector": "Industrials", 
-        "industry": "Construction & Farm Machinery & Heavy Trucks"
+        "industry": "Agricultural & Farm Machinery"
     }, 
     {
         "ticker": "DFS", 
@@ -1137,7 +1137,7 @@
         "ticker": "FLR", 
         "security": "Fluor Corp.", 
         "sector": "Industrials", 
-        "industry": "Diversified Commercial Services"
+        "industry": "Construction & Engineering"
     }, 
     {
         "ticker": "FLS", 
@@ -1718,7 +1718,7 @@
     {
         "ticker": "LVLT", 
         "security": "Level 3 Communications", 
-        "sector": "Telecommunications Services", 
+        "sector": "Telecommunication Services", 
         "industry": "Alternative Carriers"
     }, 
     {
@@ -2582,8 +2582,8 @@
     {
         "ticker": "T", 
         "security": "AT&T Inc", 
-        "sector": "Telecommunications Services", 
-        "industry": "Integrated Telecommunications Services"
+        "sector": "Telecommunication Services", 
+        "industry": "Integrated Telecommunication Services"
     }, 
     {
         "ticker": "TAP", 
@@ -2852,8 +2852,8 @@
     {
         "ticker": "VZ", 
         "security": "Verizon Communications", 
-        "sector": "Telecommunications Services", 
-        "industry": "Integrated Telecommunications Services"
+        "sector": "Telecommunication Services", 
+        "industry": "Integrated Telecommunication Services"
     }, 
     {
         "ticker": "WAT", 
