@@ -32,9 +32,23 @@ function hashmapCurrent(data) {
 	for(var i = 0; i < data.length; i++) {
 		var curr = data[i];
 
-		//technical hashmap with fillers for historical data
-		technicalMap[curr['ticker']] = [0, Number(curr['pe_cur']), 0, Number(curr['ps_cur']),
-		 0, Number(curr['pb_cur']), 0, Number(curr['div_cur']), 0, 0];
+		//technical hashmap
+		if(technicalMap[curr['ticker']]===undefined) {
+
+			//technical hashmap with fillers for historical data
+			technicalMap[curr['ticker']] = [0, Number(curr['pe_cur']), 0, Number(curr['ps_cur']),
+			 0, Number(curr['pb_cur']), 0, Number(curr['div_cur']), sScore(), sRank()];
+
+		} else {
+			technicalMap[curr['ticker']][1] = curr['pe_cur'];
+			technicalMap[curr['ticker']][3] = curr['ps_cur'];
+			technicalMap[curr['ticker']][5] = curr['pb_cur'];
+			technicalMap[curr['ticker']][7] = curr['div_cur'];
+			technicalMap[curr['ticker']][8] = sScore();
+			technicalMap[curr['ticker']][9] = sRank();
+		}
+
+
 
 	}
 }
@@ -47,13 +61,12 @@ function hashmapHistorical(data) {
 		//technical hashmap
 		if(technicalMap[hist['ticker']]===undefined) {
 			//handle error
+			//console.log("ERROR: ticker " + hist['ticker'] + " has no current data.");
 		} else {
 			technicalMap[hist['ticker']][0] = hist['pe_avg'];
 			technicalMap[hist['ticker']][2] = hist['ps_avg'];
 			technicalMap[hist['ticker']][4] = hist['pb_avg'];
 			technicalMap[hist['ticker']][6] = hist['div_avg'];
-			technicalMap[hist['ticker']][8] = sScore();
-			technicalMap[hist['ticker']][9] = sRank();
 		}
 
 	}
