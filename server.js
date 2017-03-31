@@ -2,6 +2,9 @@
 var express = require('express');
 var app = express();
 
+// Scraperjs shit
+var scraperjs = require('scraperjs');
+
 // Templating shit
 var engines = require('consolidate');
 app.engine('html', engines.hogan);
@@ -30,6 +33,19 @@ var process = spawn('python',[filePath]);
 	process.stdout.on('data', function(data) {
 		console.log("Received: " +data);
 	});
+
+// Historical scraping part
+scraperjs.DynamicScraper.create('https://news.ycombinator.com/')
+	.scrape(function($) {
+		console.log("Scraping");
+		return $(".title a").map(function() {
+			return $(this).text();
+		}).get();
+	})
+	.then(function(news) {
+		console.log("News!");
+		console.log(news);
+	})
 
 // Home page handler
 app.get("/", function(req, res) {

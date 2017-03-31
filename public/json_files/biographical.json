@@ -127,7 +127,7 @@
     }, 
     {
         "ticker": "AIV", 
-        "security": "Apartment Investment & Mgmt", 
+        "security": "Apartment Investment & Management", 
         "sector": "Real Estate", 
         "industry": "Residential REITs"
     }, 
@@ -384,7 +384,7 @@
         "industry": "Asset Management & Custody Banks"
     }, 
     {
-        "ticker": "BF-B", 
+        "ticker": "BF.B", 
         "security": "Brown-Forman Corp.", 
         "sector": "Consumer Staples", 
         "industry": "Distillers & Vintners"
@@ -426,7 +426,7 @@
         "industry": "Health Care Distributors"
     }, 
     {
-        "ticker": "BRK-B", 
+        "ticker": "BRK.B", 
         "security": "Berkshire Hathaway", 
         "sector": "Financials", 
         "industry": "Multi-Sector Holdings"
@@ -813,7 +813,7 @@
         "ticker": "DIS", 
         "security": "The Walt Disney Company", 
         "sector": "Consumer Discretionary", 
-        "industry": "Broadcasting & Cable TV"
+        "industry": "Cable & Satellite"
     }, 
     {
         "ticker": "DISCA", 
@@ -1039,7 +1039,7 @@
     }, 
     {
         "ticker": "EXPD", 
-        "security": "Expeditors Int'l", 
+        "security": "Expeditors International", 
         "sector": "Industrials", 
         "industry": "Air Freight & Logistics"
     }, 
@@ -2121,7 +2121,7 @@
         "ticker": "PCAR", 
         "security": "PACCAR Inc.", 
         "sector": "Industrials", 
-        "industry": "Construction & Farm Machinery & Heavy Trucks"
+        "industry": "Construction Machinery & Heavy Trucks"
     }, 
     {
         "ticker": "PCG", 
@@ -2377,7 +2377,7 @@
     }, 
     {
         "ticker": "ROP", 
-        "security": "Roper Industries", 
+        "security": "Roper Technologies", 
         "sector": "Industrials", 
         "industry": "Industrial Conglomerates"
     }, 
@@ -2469,7 +2469,7 @@
         "ticker": "SNI", 
         "security": "Scripps Networks Interactive Inc.", 
         "sector": "Consumer Discretionary", 
-        "industry": "Broadcasting & Cable TV"
+        "industry": "Cable & Satellite"
     }, 
     {
         "ticker": "SNPS", 
@@ -2667,7 +2667,7 @@
         "ticker": "TSCO", 
         "security": "Tractor Supply Company", 
         "sector": "Consumer Discretionary", 
-        "industry": "Specialty Retail"
+        "industry": "Specialty Stores"
     }, 
     {
         "ticker": "TSN", 
@@ -2691,7 +2691,7 @@
         "ticker": "TWX", 
         "security": "Time Warner Inc.", 
         "sector": "Consumer Discretionary", 
-        "industry": "Broadcasting & Cable TV"
+        "industry": "Cable & Satellite"
     }, 
     {
         "ticker": "TXN", 
@@ -2805,7 +2805,7 @@
         "ticker": "VIAB", 
         "security": "Viacom Inc.", 
         "sector": "Consumer Discretionary", 
-        "industry": "Broadcasting & Cable TV"
+        "industry": "Cable & Satellite"
     }, 
     {
         "ticker": "VLO", 
@@ -2907,7 +2907,7 @@
         "ticker": "WM", 
         "security": "Waste Management Inc.", 
         "sector": "Industrials", 
-        "industry": "Environmental Services"
+        "industry": "Environmental & Facilities Services"
     }, 
     {
         "ticker": "WMB", 
