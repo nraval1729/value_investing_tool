@@ -1,53 +1,108 @@
+var biographicalMap = {};
+var sectorMap = {};
+var industryMap = {};
+var technicalMap = {};
+
 $(document).ready(function() {
 	console.log("Index page is ready!");
 
-	// Make a get request to /current to get current.json
-	// $.get('/current', function(data) {
-	// 	doStuffWithCurrentData(data);
-	// });
+	//Make a get request to /current to get current.json
+	$.get('/current', function(data) {
+		hashmapCurrent(data);
+	});
 
-	// Make a get request to /historical to get historical.json
-	// $.get('/historical', function(data) {
-	// 	doStuffWithHistoricalData(data);
-	// });
+	//Make a get request to /historical to get historical.json
+	$.get('/historical', function(data) {
+		hashmapHistorical(data);
+	});
 
 	// Make a get request to /biographical to get biographical.json
 	$.get('/biographical', function(data) {
-		doStuffWithBiographicalData(data);
+		hashmapBiographical(data);
 	});
+
+	console.log(biographicalMap);
+	console.log(sectorMap);
+	console.log(industryMap);
+	console.log(technicalMap);
 });
 
-function doStuffWithCurrentData(data) {
-	console.log("Printing current data now.......");
+function hashmapCurrent(data) {
+
 	for(var i = 0; i < data.length; i++) {
-			curr_object = data[i];
-			console.log("ticker: " +curr_object['ticker']);
-			console.log("pe_cur: " +curr_object['pe_cur']);
-			console.log("ps_cur: " +curr_object['ps_cur']);
-			console.log("pb_cur: " +curr_object['pb_cur']);
-			console.log("div_cur: " +curr_object['div_cur']);
+		var curr = data[i];
+
+		//technical hashmap
+		if(technicalMap[curr['ticker']]===undefined) {
+
+			//technical hashmap with fillers for historical data
+			technicalMap[curr['ticker']] = [0, Number(curr['pe_cur']), 0, Number(curr['ps_cur']),
+			 0, Number(curr['pb_cur']), 0, Number(curr['div_cur']), sScore(), sRank()];
+
+		} else {
+			technicalMap[curr['ticker']][1] = curr['pe_cur'];
+			technicalMap[curr['ticker']][3] = curr['ps_cur'];
+			technicalMap[curr['ticker']][5] = curr['pb_cur'];
+			technicalMap[curr['ticker']][7] = curr['div_cur'];
+			technicalMap[curr['ticker']][8] = sScore();
+			technicalMap[curr['ticker']][9] = sRank();
+		}
+
+
+
 	}
 }
 
-function doStuffWithHistoricalData(data) {
-	console.log("Printing historical data now.......");
+function hashmapHistorical(data) {
+
 	for(var i = 0; i < data.length; i++) {
-		curr_object = data[i];
-		console.log("ticker: " +curr_object['ticker']);
-		console.log("pe_avg: " +curr_object['pe_avg']);
-		console.log("ps_avg: " +curr_object['ps_avg']);
-		console.log("pb_avg: " +curr_object['pb_avg']);
-		console.log("div_cur: " +curr_object['div_avg']);	
+		var hist = data[i];
+
+		//technical hashmap
+		if(technicalMap[hist['ticker']]===undefined) {
+			//handle error
+			//console.log("ERROR: ticker " + hist['ticker'] + " has no current data.");
+		} else {
+			technicalMap[hist['ticker']][0] = hist['pe_avg'];
+			technicalMap[hist['ticker']][2] = hist['ps_avg'];
+			technicalMap[hist['ticker']][4] = hist['pb_avg'];
+			technicalMap[hist['ticker']][6] = hist['div_avg'];
+		}
+
 	}
 }
 
-function doStuffWithBiographicalData(data) {
-	console.log("Printing biographical data now.......");
+function hashmapBiographical(data) {
+
 	for(var i = 0; i < data.length; i++) {
-		curr_object = data[i];
-		console.log("ticker: " +curr_object['ticker']);
-		console.log("security: " +curr_object['security']);
-		console.log("sector: " +curr_object['sector']);
-		console.log("industry: " +curr_object['industry']);
+		var bio = data[i];
+
+		//biographical hashmap
+		biographicalMap[bio['ticker']] = [bio['security'], bio['sector'], bio['industry']];
+
+		//sector hashmap
+		if(sectorMap[bio['sector']]===undefined) {
+			sectorMap[bio['sector']] = [bio['industry']];
+		} else {
+			if(!sectorMap[bio['sector']].includes(bio['industry'])){
+				sectorMap[bio['sector']].push(bio['industry']);
+			}
+		}
+
+		//industry hashmap
+		if(industryMap[bio['industry']] === undefined) {
+			industryMap[bio['industry']] = [bio['ticker']];
+		} else {
+			industryMap[bio['industry']].push(bio['ticker']);
+		}
 	}
+}
+
+//TODO: functions to get score and rank
+function sScore() {
+    return 0;
+}
+
+function sRank() {
+    return 0;
 }
