@@ -6,10 +6,14 @@ from selenium.webdriver.common.keys import Keys
 from collections import OrderedDict
 import time
 from random import randint
+from selenium import webdriver
 
 
 def start_browser():
-	browser = Firefox()
+	fp = webdriver.FirefoxProfile()
+	fp.set_preference("dom.max_chrome_script_run_time", 0)
+	fp.set_preference("dom.max_script_run_time", 0)
+	browser = Firefox(firefox_profile=fp)
 	return browser
 
 def load_tickers():
@@ -43,31 +47,34 @@ def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list
 		# Open morningstar pages
 		browser.get(curr_url)
 		# wait for the page to load
-		WebDriverWait(browser, timeout=15).until(
+		try:
+			WebDriverWait(browser, timeout=30).until(
 		     lambda x: x.find_element_by_id('currentValuationTable'))
-		valutation_table = browser.find_element_by_id('currentValuationTable')
+			valutation_table = browser.find_element_by_id('currentValuationTable')
 
-		# store it to string variable
-		print "Valuation table*****************************"
-		for index, row in enumerate(valutation_table.find_elements_by_tag_name("tr")[1::2]):
-		 		if index != 0 and index != 4 and index != 6:
-		 			cells = row.find_elements_by_tag_name('td')
-		 			data = cells[-1].text
-		 			if index == 1:
-		 				my_dict['pe_avg'] = data
-		 			if index == 2:
-		 				my_dict['pb_avg'] = data
-		 			if index == 3:
-		 				my_dict['ps_avg'] = data
-		 			if index == 5:
-		 				my_dict['div_avg'] = data
+			# store it to string variable
+			print "Valuation table*****************************"
+			for index, row in enumerate(valutation_table.find_elements_by_tag_name("tr")[1::2]):
+			 		if index != 0 and index != 4 and index != 6:
+			 			cells = row.find_elements_by_tag_name('td')
+			 			data = cells[-1].text
+			 			if index == 1:
+			 				my_dict['pe_avg'] = data
+			 			if index == 2:
+			 				my_dict['pb_avg'] = data
+			 			if index == 3:
+			 				my_dict['ps_avg'] = data
+			 			if index == 5:
+			 				my_dict['div_avg'] = data
 
-		sorted_historical_list_of_dicts.append(my_dict)
+			sorted_historical_list_of_dicts.append(my_dict)
 
-		browser.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'w') 
+			browser.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'w')
+			
+			browser.close()
 
-	browser.close()
-
+		except Exception:
+			pass
 
 def write_sorted_historical_list_of_dicts(sorted_historical_list_of_dicts):
 	with open("../../json_files/historical.json", 'w') as c:

@@ -51,26 +51,26 @@ def get_and_write_biographical_data():
 	return sorted_biographical_list_of_dicts
 
 
-def write_historical_data(sorted_biographical_list_of_dicts):
-	# Code to generate random historical ratio data, and write to historical.json. Will be modified soon so that this grabs (greps?) the actual data from morningstar
+# def write_historical_data(sorted_biographical_list_of_dicts):
+# 	# Code to generate random historical ratio data, and write to historical.json. Will be modified soon so that this grabs (greps?) the actual data from morningstar
 
-	historical_list_of_dicts = []
+# 	historical_list_of_dicts = []
 
-	# p/e: 5-30, p/s: 5-30, div: 0-20, pb: 5-30
-	for my_dict in sorted_biographical_list_of_dicts:
-		curr_dict = OrderedDict()
-		curr_dict['ticker'] = my_dict['ticker']
-		curr_dict["pe_avg"] = random.uniform(5, 30)
-		curr_dict["ps_avg"] = random.uniform(5, 30)
-		curr_dict["pb_avg"] = random.uniform(5, 30)
-		curr_dict["div_avg"] = random.uniform(0, 20)
+# 	# p/e: 5-30, p/s: 5-30, div: 0-20, pb: 5-30
+# 	for my_dict in sorted_biographical_list_of_dicts:
+# 		curr_dict = OrderedDict()
+# 		curr_dict['ticker'] = my_dict['ticker']
+# 		curr_dict["pe_avg"] = random.uniform(5, 30)
+# 		curr_dict["ps_avg"] = random.uniform(5, 30)
+# 		curr_dict["pb_avg"] = random.uniform(5, 30)
+# 		curr_dict["div_avg"] = random.uniform(0, 20)
 
-		historical_list_of_dicts.append(curr_dict)
+# 		historical_list_of_dicts.append(curr_dict)
 
-	sorted_historical_list_of_dicts = sorted(historical_list_of_dicts, key=lambda k:k['ticker'])
+# 	sorted_historical_list_of_dicts = sorted(historical_list_of_dicts, key=lambda k:k['ticker'])
 
-	with open(cwd+'/public/json_files/historical.json', 'w') as h:
-		json.dump(sorted_historical_list_of_dicts, h, indent = 4)
+# 	with open(cwd+'/public/json_files/historical.json', 'w') as h:
+# 		json.dump(sorted_historical_list_of_dicts, h, indent = 4)
 
 def dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts):
 	with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'w') as c:
@@ -80,7 +80,7 @@ def main():
 
 	sorted_biographical_list_of_dicts = get_and_write_biographical_data()
 
-	write_historical_data(sorted_biographical_list_of_dicts)
+	# write_historical_data(sorted_biographical_list_of_dicts)
 
 	dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts)
 
