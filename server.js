@@ -34,19 +34,6 @@ var process = spawn('python',[filePath]);
 		console.log("Received: " +data);
 	});
 
-// Historical scraping part
-scraperjs.DynamicScraper.create('https://news.ycombinator.com/')
-	.scrape(function($) {
-		console.log("Scraping");
-		return $(".title a").map(function() {
-			return $(this).text();
-		}).get();
-	})
-	.then(function(news) {
-		console.log("News!");
-		console.log(news);
-	})
-
 // Home page handler
 app.get("/", function(req, res) {
 
