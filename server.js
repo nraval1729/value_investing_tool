@@ -37,7 +37,7 @@ var process = spawn('python',[filePath]);
 // Home page handler
 app.get("/", function(req, res) {
 
-	// Spawns a new python child process that launches the biographical_historical_scraper.py to update biographical.json and historical.json
+	// Spawns a new python child process that launches the biographical_historical_scraper.py to update biographical.json
 	var scriptPath = __dirname + "/public/scripts/python/biographical_scraper.py";
 	var process = spawn('python',[scriptPath]);
 	process.stdout.on('data', function(data) {

@@ -35,6 +35,9 @@ def get_and_write_biographical_data():
 			curr_dict["sector"] = td_list[3].contents[0]
 
 			# print "Industry: ", td_list[4].contents[0]
+			if not td_list[4].contents:
+				continue
+				
 			curr_dict["industry"] = td_list[4].contents[0]
 
 			biographical_list_of_dicts.append(curr_dict)
