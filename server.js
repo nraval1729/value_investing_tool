@@ -34,7 +34,16 @@ var process = spawn('python',[filePath]);
 		console.log("Received: " +data);
 	});
 
-// Home page handler
+
+// This chunk of code spawns a new python child process that launches the technical_json_generator.py to generate technical.json every 5 mins
+filePath = __dirname + "/public/scripts/python/technical_json_generator.py"
+console.log("File path: " +filePath);
+var process = spawn('python',[filePath]);
+	process.stdout.on('data', function(data) {
+		console.log("Received: " +data);
+	});
+
+// To get home page
 app.get("/", function(req, res) {
 
 	// Spawns a new python child process that launches the biographical_historical_scraper.py to update biographical.json
@@ -48,22 +57,32 @@ app.get("/", function(req, res) {
 	res.render('index.html');
 });
 
+// To get current.json
 app.get("/current", function(req, res) {
 	currentFilePath = __dirname + '/public/json_files/current.json';
 	console.log("Inside /current, sending current json at path: " +currentFilePath);
 	res.sendFile(currentFilePath);
 });
 
+// To get historical.json
 app.get("/historical", function(req, res) {
 	historicalFilePath = __dirname + '/public/json_files/historical.json';
 	console.log("Inside /historical, sending historical json at path: " +historicalFilePath);
 	res.sendFile(historicalFilePath);
 });
 
+// To get biographical.json
 app.get("/biographical", function(req, res) {
 	biographicalFilePath = __dirname + '/public/json_files/biographical.json';
 	console.log("Inside /biographical, sending biographical json at path: " +biographicalFilePath);
 	res.sendFile(biographicalFilePath);
+});
+
+// To get technical.json
+app.get("/technical", function(req, res) {
+	technicalFilePath = __dirname + '/public/json_files/technical.json';
+	console.log("Inside /technical, sending technical json at path: " +technicalFilePath);
+	res.sendFile(technicalFilePath);
 });
 
 app.listen(8080)
