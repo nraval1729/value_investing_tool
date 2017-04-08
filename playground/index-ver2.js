@@ -165,18 +165,24 @@ function industry(data, sector) {
   var urlIndustries = generateHashURL(listOfUniqueIndustries); 
   var index = 0;
 
+
+  var stringToAppend = "";
   for (var i = 0; i < numRow; i++) {
-    industryTable.append('<tr>');
+    stringToAppend = stringToAppend + "<tr>";
     for (var j = 0; j < numCol; j++) {
       
-      industryTable.append("<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'><td>" + listOfUniqueIndustries[index] + '</a></td>');
-      $('a:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
+      stringToAppend = stringToAppend + "<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + "</a></td>";
+
+      //industryTable.append("<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + '</a></td>');
+      //$('a:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
       index++;
       
     }
-    industryTable.append('</tr>');
+    stringToAppend = stringToAppend + "</tr>";
   }
   
+  industryTable.append(stringToAppend);
+
   // When user clicks on one of industries on table...
   $('a.aIndustry').click( function(e) {
     e.preventDefault(); 
@@ -295,6 +301,7 @@ function company(biographicaljson, technicaljson, industryName) {
       '<td>' + div_cur[index] + '</td>' + 
       '<td>' + s_rank[index] + '</td>' +
       '</tr>');
+    $('tr:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
   }
   return false; 
 }

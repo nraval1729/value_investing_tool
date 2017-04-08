@@ -81,18 +81,11 @@ th, td {
 
 #industry {
   display: table;
-/*    min-width: 0px; 
-    min-height: 0px;
-    width: 0px;
-    height: 0px;*/
 }
 
 #company {
   display: table;
-/*    min-width: 0px; 
-    min-height: 0px;
-    width: 0px;
-    height: 0px;*/
+
 }
 
 a {
