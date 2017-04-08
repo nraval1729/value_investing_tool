@@ -1,6 +1,6 @@
 import json
 from contextlib import closing
-from selenium.webdriver import Firefox # pip install selenium
+from selenium.webdriver import Firefox
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from collections import OrderedDict
@@ -37,8 +37,6 @@ def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list
 		my_dict['ticker'] = curr_ticker
 
 		curr_url = base_url + curr_ticker +'&region=usa&culture=en-US'
-		# print "this is the url: ", curr_url
-		# print
 		print "Curr ticker: ", curr_ticker
 		
 		# Open new tab

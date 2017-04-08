@@ -25,33 +25,12 @@ var util = require('util');
 // Python bridge to run python from node
 var spawn = require("child_process").spawn;
 
-
-// This chunk of code spawns a new python child process that launches the current_scraper.py to update the current.json every 5 mins
-filePath = __dirname + "/public/scripts/python/current_scraper.py"
-console.log("File path: " +filePath);
-var process = spawn('python',[filePath]);
-	process.stdout.on('data', function(data) {
-		console.log("Received: " +data);
-	});
-
-
-// This chunk of code spawns a new python child process that launches the technical_json_generator.py to generate technical.json every 5 mins
-filePath = __dirname + "/public/scripts/python/technical_json_generator.py"
-console.log("File path: " +filePath);
-var process = spawn('python',[filePath]);
-	process.stdout.on('data', function(data) {
-		console.log("Received: " +data);
-	});
+launchCurrentScraper();
+launchTechnicalJsonGenerator();
 
 // To get home page
 app.get("/", function(req, res) {
-
-	// Spawns a new python child process that launches the biographical_historical_scraper.py to update biographical.json
-	var scriptPath = __dirname + "/public/scripts/python/biographical_scraper.py";
-	var process = spawn('python',[scriptPath]);
-	process.stdout.on('data', function(data) {
-		console.log("Received: " +data);
-	});
+    launchBiographicalScraper();
 
 	// Renders the main page
 	res.render('index.html');
@@ -84,5 +63,28 @@ app.get("/technical", function(req, res) {
 	console.log("Inside /technical, sending technical json at path: " +technicalFilePath);
 	res.sendFile(technicalFilePath);
 });
+
+function launchCurrentScraper() {
+	var filePath = __dirname + "/public/scripts/python/current_scraper.py";
+	spawnPythonProcess(filePath);
+}
+
+function launchTechnicalJsonGenerator() {
+	var filePath = __dirname + "/public/scripts/python/technical_json_generator.py";
+    console.log("tech");
+	spawnPythonProcess(filePath);
+}
+
+function launchBiographicalScraper() {
+    var scriptPath = __dirname + "/public/scripts/python/biographical_scraper.py";
+    spawnPythonProcess(scriptPath);
+}
+
+function spawnPythonProcess(scriptPath) {
+    var process = spawn('python',[scriptPath]);
+    process.stdout.on('data', function(data) {
+        console.log("Received: " +data);
+    });
+}
 
 app.listen(8080)

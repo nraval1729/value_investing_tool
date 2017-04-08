@@ -16,10 +16,7 @@ def write_current_data(sorted_biographical_list_of_dicts):
 	ticker_list = []
 
 	for index, my_dict in enumerate(sorted_biographical_list_of_dicts):
-		# curr_dict = OrderedDict()
-		# curr_dict['ticker'] = my_dict['ticker']
 		ticker_list.append(str(my_dict['ticker']))
-		# current_list_of_dicts.append(curr_dict)
 
 	ticker_tuple = tuple(ticker_list)
 
@@ -28,8 +25,6 @@ def write_current_data(sorted_biographical_list_of_dicts):
 	    'format': 'json',
 	    'env': 'store://datatables.org/alltableswithkeys'
 	}
-
-	# print query['q']
 
 	url = base_url + urllib.urlencode(query)
 	response = urllib.urlopen(url)
@@ -44,12 +39,6 @@ def write_current_data(sorted_biographical_list_of_dicts):
 			curr_dict['ps_cur'] = q['PriceSales']
 			curr_dict['pb_cur'] = q['PriceBook']
 			curr_dict['div_cur'] = q['DividendYield']
-			# print "Ticker: ", q['symbol']
-			# print "PE: ", q['PERatio']
-			# print "PS: ", q['PriceSales']
-			# print "PB: ",  q['PriceBook']
-			# print "Div: ", q['DividendYield']
-			# print "*******************************************************************"
 		else:
 			print "Symbol is this: ", q['symbol']
 
