@@ -1,4 +1,5 @@
-$(function() {
+$(document).ready(function() {
+  $("#company").tablesorter();
   sector(biographical);
 });
 
@@ -149,7 +150,7 @@ function industry(data, sector) {
   // After splitting, listOfUniqueIndustries[0] returns "Health Care Equipment" and [1] returns "Pharmaceuticals" ... which is what we want!
 
   // Step 5: construct industry table
-  var industryTable = $("#industry");
+  var industryTable = $("#industry tbody");
   var numCol = 4; // limiting to 4 cols for visual aesthetics
   var numRow = Math.ceil(listOfUniqueIndustries.length / 4);
   var urlIndustries = generateHashURL(listOfUniqueIndustries); 
@@ -271,7 +272,7 @@ function company(biographicaljson, technicaljson, industryName) {
   }
 
   // Construct company table
-  var companyTable = $("#company");
+  var companyTable = $("#company tbody");
 
   for (var index = 0; index < listOfUniqueCompanies.length; index++) {
 
