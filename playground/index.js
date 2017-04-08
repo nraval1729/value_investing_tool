@@ -1,5 +1,5 @@
 $(function() {
-  sector(biographical);
+  renderSector(biographical);
 });
 
 /*
@@ -9,7 +9,7 @@ $(function() {
 *
 *
 */
-function sector(data) {
+function renderSector(data) {
   var data = biographical;
   var listOfSectors = [];
   var uniqueSectors = [];
@@ -74,7 +74,7 @@ function sector(data) {
 
     // ...update hash in URL (for SPA - Single Page App - purposes)
     window.location.hash = $(this).attr('href');
-    industry(biographical, nameOfSector);
+    renderIndustry(biographical, nameOfSector);
   });
 
 }
@@ -86,7 +86,7 @@ function sector(data) {
 *
 *
 */
-function industry(data, sector) {
+function renderIndustry(data, sector) {
   var sectorName = sector;
   var data = biographical;
   var matchingSectors = [];
@@ -150,7 +150,7 @@ function industry(data, sector) {
 
     // ...update hash in URL (for SPA - Single Page App - purposes)
     window.location.hash = $(this).attr('href');
-    company(biographical, technical, nameOfIndustry);
+    renderCompany(biographical, technical, nameOfIndustry);
     });
   }
 /*
@@ -160,7 +160,7 @@ function industry(data, sector) {
 *
 *
 */
-function company(biographicaljson, technicaljson, industryName) {
+function renderCompany(biographicaljson, technicaljson, industryName) {
 
   var industry = industryName;
 
@@ -168,19 +168,54 @@ function company(biographicaljson, technicaljson, industryName) {
   var companyTable = $("#company"); 
 
   for (var index = 0; index < electricUtilities.length; index++) {
+    console.log("companyname = " + electricUtilities[index]['company_name']);
 
-    companyTable.append(
-      '<tr><td>' + electricUtilities[index]['company_name'] + '</td>' + 
-      '<td>' + electricUtilities[index]['pe_cur'] + '</td>' + 
-      '<td>' + electricUtilities[index]['ps_cur'] + '</td>' + 
-      '<td>' + electricUtilities[index]['pb_cur'] + '</td>' + 
-      '<td>' + electricUtilities[index]['div_cur'] + '</td>' + 
-      '<td>' + electricUtilities[index]['s_rank'] + '</td>' +
-      '</tr>');
+    companyTable.append(createRowString(electricUtilities, index));
   }
   return false; 
 }
 
+
+function createRowString(companyInfo, index) {
+    var rowString = "<tr>";
+
+    rowString += "<td class='black'>" + companyInfo[index]['company_name'] + "</td>";
+    rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"]);
+    rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"]);
+    rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"]);
+    rowString += createTDString(companyInfo[index]["div_cur"], companyInfo[index]["div_avg"]);
+    rowString += "<td class='black'>" + companyInfo[index]['s_rank'] + "</td>";
+
+    rowString += "</tr>";
+    return rowString;
+}
+
+function createTDString(currValue, histValue) {
+    var currValueNum = parseFloat(currValue);
+    var histValueNum = parseFloat(histValue);
+
+    var percent = (currValueNum-histValueNum)/histValueNum;
+
+    if(percent >= 0.25) {
+        color = "brightgreen";
+    }
+    else if(percent <= -0.25) {
+        color = "brightred";
+    }
+    else if(percent < 0.25 && percent >= 0.10){
+        color = "darkgreen";
+    }
+    else if(percent > -0.25 && percent <= -0.10){
+        color = "darkred";
+    }
+    else {
+        color = "black";
+    }
+
+    var tdString = "<td class = '" + color + "'>" + currValue + "</td>";
+
+    return tdString;
+}
 
 // GENERATING HASH URL
 function generateHashURL(list) {
