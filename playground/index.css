@@ -99,8 +99,28 @@ a {
     color: white;
 }
 
-th, td:hover {
+td#sector, #industry:hover {
    color: yellow;
    border-color: yellow;
    border-style: inset;
+}
+
+.darkgreen {
+    background-color: #006400;
+}
+
+.brightgreen {
+    background-color: green;
+}
+
+.darkred {
+    background-color: #8B0000;
+}
+
+.brightred {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
 }

@@ -1,7 +1,4 @@
-$(document).ready(function() {
-  $("#company").tablesorter();
-
-  console.log("will be able to sort company table");
+$(function() {
   sector(biographical);
 });
 
@@ -164,104 +161,26 @@ function industry(data, sector) {
 *
 */
 function company(biographicaljson, technicaljson, industryName) {
+
   var industry = industryName;
-  var biographical = biographicaljson;
-  var matchingIndustries = [];
-  var uniqueCompanies = [];
-  var listOfUniqueCompanies = [];
-  var listOfTickers = [];
-
-  // Step 1: find all companies that match to their respective industry
-  //
-  for (var i = 0; i < biographical.length; i++) {
-    if (industry == biographical[i]['industry'] && !(industry in matchingIndustries)) { // if industry names match and not already in a list of cells
-      matchingIndustries.push(biographical[i]);
-    }
-  }
-
-  // Step 2: remove duplicate companies
-  //
-  uniqueCompanies = matchingIndustries.filter((set => f => !set.has(f.security) && set.add(f.security))(new Set));
-
-  // Step 3: extract only company name from the list of json objects
-  //
-  for (var i = 0; i < uniqueCompanies.length; i++) {
-    listOfUniqueCompanies.push(uniqueCompanies[i]['security']);
-  }
-
-  // Step 4: format each JSON string to array separated by commas
-  JSON.stringify(listOfUniqueCompanies).split(',');
-
-  // Step 5: Construct a list of corresponding tickers for each company name in array
-  for (var i = 0; i < listOfUniqueCompanies.length; i++) {
-    if (listOfUniqueCompanies[i] == uniqueCompanies[i]['security']) {
-      listOfTickers.push(uniqueCompanies[i]['ticker']);
-    }
-  }
-
-  // Step 6: format each JSON string to array separated by commas
-  JSON.stringify(listOfTickers).split(','); // This is splitted
-
-  // Step 7: store length of listOfTickers for reference later
-  var numListOfTickers = listOfTickers.length;
-
-  var technical = technicaljson;
-  var pe_cur = [];
-  var pe_avg = [];
-  var ps_cur = [];
-  var ps_avg = [];
-  var pb_cur = [];
-  var pb_avg = [];
-  var div_cur = [];
-  var div_avg = [];
-  var s_rank = [];
-  var matchingTickers = [];
-
-  // Since technical.json does not have company name listed, use list of tickers
-  for (var x = 0; x < numListOfTickers; x++) {
-    for (var y = 0; y < technical.length; y++) {
-      if (listOfTickers[x] == technical[y]['ticker']) {
-        matchingTickers.push(technical[y]);
-      }
-    }
-  }
-  JSON.stringify(matchingTickers).split(',');
-
-  // Store values of current and historical.
-  for (var i = 0; i < matchingTickers.length; i++) {
-    pe_cur.push(matchingTickers[i]['pe_cur']);
-    pe_avg.push(matchingTickers[i]['pe_avg']);
-
-    ps_cur.push(matchingTickers[i]['ps_cur']);
-    ps_avg.push(matchingTickers[i]['ps_avg']);
-
-    pb_cur.push(matchingTickers[i]['pb_cur']);
-    pb_avg.push(matchingTickers[i]['pb_avg']);
-
-    div_cur.push(matchingTickers[i]['div_cur']);
-    div_avg.push(matchingTickers[i]['div_avg']);
-
-    s_rank.push(matchingTickers[i]['s_rank']);
-  }
 
   // Construct company table
-  var companyTable = $("#company tbody");
+  var companyTable = $("#company"); 
 
-  for (var index = 0; index < listOfUniqueCompanies.length; index++) {
+  for (var index = 0; index < electricUtilities.length; index++) {
 
     companyTable.append(
-      '<tr><td>' + listOfUniqueCompanies[index] + '</td>' + 
-      '<td>' + pe_cur[index] + '</td>' + 
-      '<td>' + ps_cur[index] + '</td>' + 
-      '<td>' + pb_cur[index] + '</td>' + 
-      '<td>' + div_cur[index] + '</td>' + 
-      '<td>' + s_rank[index] + '</td>' +
+      '<tr><td>' + electricUtilities[index]['company_name'] + '</td>' + 
+      '<td>' + electricUtilities[index]['pe_cur'] + '</td>' + 
+      '<td>' + electricUtilities[index]['ps_cur'] + '</td>' + 
+      '<td>' + electricUtilities[index]['pb_cur'] + '</td>' + 
+      '<td>' + electricUtilities[index]['div_cur'] + '</td>' + 
+      '<td>' + electricUtilities[index]['s_rank'] + '</td>' +
       '</tr>');
-    $("#company").trigger("update");
-    $('tr:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
   }
   return false; 
 }
+
 
 // GENERATING HASH URL
 function generateHashURL(list) {
