@@ -1,4 +1,5 @@
 $(function() {
+  $("#company").tablesorter();
   renderSector(biographical);
 });
 
@@ -165,12 +166,13 @@ function renderCompany(biographicaljson, technicaljson, industryName) {
   var industry = industryName;
 
   // Construct company table
-  var companyTable = $("#company"); 
+  var companyTable = $("#company tbody"); 
 
   for (var index = 0; index < electricUtilities.length; index++) {
     console.log("companyname = " + electricUtilities[index]['company_name']);
 
     companyTable.append(createRowString(electricUtilities, index));
+    $("#company").trigger("update");
   }
   return false; 
 }
@@ -196,13 +198,13 @@ function createTDString(currValue, histValue) {
 
     var percent = (currValueNum-histValueNum)/histValueNum;
 
-    if(percent >= 0.25) {
+    if(percent >= 0.30) {
         color = "brightgreen";
     }
     else if(percent <= -0.25) {
         color = "brightred";
     }
-    else if(percent < 0.25 && percent >= 0.10){
+    else if(percent < 0.30 && percent >= 0.10){
         color = "darkgreen";
     }
     else if(percent > -0.25 && percent <= -0.10){
