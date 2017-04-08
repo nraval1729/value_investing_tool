@@ -1,3 +1,7 @@
+
+// Global variables
+var numCol = 4;
+
 $(function() {
   $("#company").tablesorter();
   renderSector(biographical);
@@ -39,25 +43,21 @@ function renderSector(data) {
 
   // Step 4: Populate sectors table on home page with their respective hash URLS.
   //
-  sectorTable.append(
-    '<tr><td><a href="' + urlSectors[0] + '">' + uniqueSectors[0] + '</a>' + 
-    '</td><td><a href="' + urlSectors[1] + '">' + uniqueSectors[1] + '</a>' + 
-    '</td><td><a href="' + urlSectors[2] + '">' + uniqueSectors[2] + '</a>' + 
-    '</td><td><a href="' + urlSectors[3] + '">' + uniqueSectors[3] + '</a>' + 
-    '</td></tr>' +
-    
-    '<tr><td><a href="' + urlSectors[4] + '">' + uniqueSectors[4] + '</a>' +
-    '</td><td><a href="' + urlSectors[5] + '">' + uniqueSectors[5] + '</a>' +
-    '</td><td><a href="' + urlSectors[6] + '">' + uniqueSectors[6] + '</a>' +
-    '</td><td><a href="' + urlSectors[7] + '">' + uniqueSectors[7] + '</a>' +
-    '</td></tr>' + 
 
-    '<tr><td><a href="' + urlSectors[8] + '">' + uniqueSectors[8] + '</a>' +
-    '</td><td><a href="' + urlSectors[9] + '">' + uniqueSectors[9] + '</a>' +
-    '</td><td>' + 
-    " " + '</td><td>' + 
-    " " + '</td></tr>'
-  );
+  var numRow = Math.ceil(listOfSectors.length/numCol);
+  var index = 0;
+
+  for(i=0; i < numRow; i++) {
+    var rowString = "<tr>";
+    for(j=0; j < numCol; j++) {
+        if(index < listOfSectors.length) {
+            rowString += createSectorTD(uniqueSectors, urlSectors, index)
+            index++;
+        }
+    }
+    rowString += "</tr>";
+    sectorTable.append(rowString);
+  }
 
   // Step 5: handle click event. When user clicks on one of sectors on table...
   $('a').click( function(e) {
@@ -78,6 +78,12 @@ function renderSector(data) {
     renderIndustry(biographical, nameOfSector);
   });
 
+}
+
+function createSectorTD(sectorNames, sectorURLs, index) {
+    var tdString = "<td class='hoverable'>";
+    tdString += "<a href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
+    return tdString;
 }
 
 /*
@@ -118,8 +124,7 @@ function renderIndustry(data, sector) {
   var sectorTable = $('#sector');
   var industryTable = $('#industry');
   var companyTable = $('#company');
-  var numCol = 4; // limiting to 4 cols for visual aesthetics
-  var numRow = Math.ceil(listOfUniqueIndustries.length / 4);
+  var numRow = Math.ceil(listOfUniqueIndustries.length / numCol);
   var urlIndustries = generateHashURL(listOfUniqueIndustries); 
   var index = 0;
 
@@ -127,10 +132,10 @@ function renderIndustry(data, sector) {
   for (var i = 0; i < numRow; i++) {
     stringToAppend = stringToAppend + "<tr>";
     for (var j = 0; j < numCol; j++) {
-      
-      stringToAppend = stringToAppend + "<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + "</a></td>";
-      index++;
-      
+        if(index < listOfUniqueIndustries.length) {
+          stringToAppend = stringToAppend + "<td class='hoverable'><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + "</a></td>";
+          index++;
+        }      
     }
     stringToAppend = stringToAppend + "</tr>";
   }
@@ -154,6 +159,7 @@ function renderIndustry(data, sector) {
     renderCompany(biographical, technical, nameOfIndustry);
     });
   }
+
 /*
 *
 *

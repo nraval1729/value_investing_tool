@@ -43,36 +43,6 @@ body {
     margin-right: 10px;
 }
 
-.sector-cell {
-/*  width: 200px;
-  height: 190px;*/
-}
-
-
-table {
-/*    min-width: 800px; 
-    min-height: 570px;*/
-    width: 75%;
-    height: 75%;
-    min-width: 400px; 
-    min-height: 300px;
-
-    border-color: white;
-    border-width: 5px;
-    border-style: ridge;
-    background-color: black;
-    color: white;
-}
-
-th, td {
-    width: 25%;
-    height: 25%;
-    border-color: white;
-    border-width: 5px;
-    border-style: outset;
-    background-color: black;
-}
-
 
 #sector {
    display: table;
@@ -80,29 +50,10 @@ th, td {
 
 #industry {
   display: table;
-/*    min-width: 0px; 
-    min-height: 0px;
-    width: 0px;
-    height: 0px;*/
 }
 
 #company {
   display: table;
-/*    min-width: 0px; 
-    min-height: 0px;
-    width: 0px;
-    height: 0px;*/
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-td#sector, #industry:hover {
-   color: yellow;
-   border-color: yellow;
-   border-style: inset;
 }
 
 .darkgreen {
@@ -124,3 +75,50 @@ td#sector, #industry:hover {
 .black {
     background-color: black;
 }
+
+table {
+/*    min-width: 800px; 
+    min-height: 570px;*/
+/*    width: 75%;
+    height: 75%;
+    min-width: 400px; 
+    min-height: 300px;*/
+
+    border-color: white;
+    border-width: 5px;
+    border-style: ridge;
+    background-color: black;
+    color: white;
+}
+
+
+th, td {
+    border-color: white;
+    border-width: 5px;
+    border-style: outset;
+    background-color: black;
+
+    width: 200px;
+    height: 100px;
+}
+
+.hoverable:hover {
+   color: yellow;
+   border-color: yellow;
+   border-style: inset;
+   cursor: pointer;
+}
+
+td a{
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td a:hover {
+    color: yellow;
+};
