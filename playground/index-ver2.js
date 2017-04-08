@@ -1,5 +1,7 @@
 $(document).ready(function() {
   $("#company").tablesorter();
+
+  console.log("will be able to sort company table");
   sector(biographical);
 });
 
@@ -16,6 +18,12 @@ function sector(data) {
   var uniqueSectors = [];
   var urlSectors = [];
   var sectorTable = $('#sector');
+  var industryTable = $('#industry');
+  var companyTable = $('#company');
+
+  sectorTable.show();
+  industryTable.hide();
+  companyTable.hide();  
 
   // Step 1: find sectors from json file. Because they repeat, use set to remove duplicates
   //
@@ -63,7 +71,9 @@ function sector(data) {
     $('h2').text($(this).text());
 
     // ...hide the sector table so that industry table can be placed where it was
-    sectorTable.hide();
+      sectorTable.hide();
+      industryTable.show();
+      companyTable.hide();  
 
     // ...update hash in URL (for SPA - Single Page App - purposes)
     window.location.hash = $(this).attr('href');
@@ -150,24 +160,32 @@ function industry(data, sector) {
   // After splitting, listOfUniqueIndustries[0] returns "Health Care Equipment" and [1] returns "Pharmaceuticals" ... which is what we want!
 
   // Step 5: construct industry table
-  var industryTable = $("#industry tbody");
+  var sectorTable = $('#sector');
+  var industryTable = $('#industry');
+  var companyTable = $('#company');
   var numCol = 4; // limiting to 4 cols for visual aesthetics
   var numRow = Math.ceil(listOfUniqueIndustries.length / 4);
   var urlIndustries = generateHashURL(listOfUniqueIndustries); 
   var index = 0;
 
+
+  var stringToAppend = "";
   for (var i = 0; i < numRow; i++) {
-    industryTable.append('<tr>');
+    stringToAppend = stringToAppend + "<tr>";
     for (var j = 0; j < numCol; j++) {
-      industryTable.append('<td>');
-      industryTable.append("<a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + '</a>');
-      $('a:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
+      
+      stringToAppend = stringToAppend + "<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + "</a></td>";
+
+      //industryTable.append("<td><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + '</a></td>');
+      //$('a:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
       index++;
-      industryTable.append('</td>');
+      
     }
-    industryTable.append('</tr>');
+    stringToAppend = stringToAppend + "</tr>";
   }
   
+  industryTable.append(stringToAppend);
+
   // When user clicks on one of industries on table...
   $('a.aIndustry').click( function(e) {
     e.preventDefault(); 
@@ -176,7 +194,9 @@ function industry(data, sector) {
     $('h2').text($(this).text());
 
     // ...hide the sector table so that industry table can be placed where it was
-    industryTable.hide();
+     sectorTable.hide();
+     industryTable.hide();
+     companyTable.show();  
 
     // ...update hash in URL (for SPA - Single Page App - purposes)
     window.location.hash = $(this).attr('href');
@@ -284,6 +304,8 @@ function company(biographicaljson, technicaljson, industryName) {
       '<td>' + div_cur[index] + '</td>' + 
       '<td>' + s_rank[index] + '</td>' +
       '</tr>');
+    $("#company").trigger("update");
+    $('tr:contains("undefined")').remove(); // delete any excess empty links that come out as "undefined"
   }
   return false; 
 }
