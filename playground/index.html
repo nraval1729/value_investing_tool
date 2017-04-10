@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="utf-8">
-    <title>Value Investing Tool!</title>
-    <script type="text/javascript" src="jquery-min.js"></script>
-    <script type="text/javascript" src="jquery.tablesorter.js"></script>
-    <script type="text/javascript" src="electric_utilities.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="technical.js"></script>
-    <script type="text/javascript" src="biographical.js"></script>      
-    <link rel="stylesheet" type="text/css" href="index.css">
+<html lang="end">
+<head>
+    <title>Value Investment Tool Home Page</title>
+    <link rel="stylesheet" type="text/css" href="static_pages.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="splashscreen.js"></script>
 </head>
 <body>
-    <h2>Value Investing Tool</h2>
-    <div id="alignSearchAndHeatmap">
-        <!--Search Box-->
-        <div id="searchArea">
-            <label for="search">Search: </label>
-            <input type="search" name="search" id="search" placeholder="search for companies..."/>
+    <div id="page">
+        <div id="header" class="horizontal">
+            <a class="headerNavigationLink" href="search.html">Search</a>
+            <a class="headerNavigationLink" href="explore.html">Explore</a>
         </div>
+        <div id="interior">
 
-        <!--Search Results-->
-        <div id="update">
+            <div id="bannerImageWrapper" class="centerMe">
+                <!-- citation: image sourced from buzzerg.com -->
+                <img id="bannerImage" alt="warren buffett" src="buffett_01.png">
+            </div>
+            <div id="largeCaption" class="centerMe">
+                <p>Value Investing Tool</p>
+            </div>
+
+            <div class="horizontalCenter">
+
+                <a href="search.html" class="messageBoxLink">
+                    <div class="messageBox">
+                        <div class="horizontal">
+                            <!-- citation: image sourced from myiconfinder.com -->
+                            <img class="messageBoxIcon" alt="magnifying glass" src="magnifying_glass_01.png">
+                            <p class="messageBoxCaption">SEARCH<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Search for stocks by company name or symbol.  Our tool will locate the stock 
+                            and present its metrics and that of its industry competitors to you on the screen.    
+                        </p>
+                    </div>
+                </a>
+
+                <a href="explore.html" class="messageBoxLink">
+                    <div class="messageBox"> 
+                        <div class="horizontal">
+                            <!-- citation: image sourced from clipartfest.com -->
+                            <img class="messageBoxIcon"  alt="compass" src="compass_01.png">
+                            <p class="messageBoxCaption">EXPLORE<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Wander from sectors to industries to individual companies.  Learn how the 
+                            overall market fits together, and discover how things are performing.
+                        </p>
+                    </div>    
+                </a>
+
+                <a href="about.html" class="messageBoxLink">
+                    <div class="messageBox">
+                        <div class="horizontal">
+                            <!-- citation: image sourced from iconfinder.com -->
+                            <img class="messageBoxIcon" alt="information symbol" src="information_icon_01.png">
+                            <p class="messageBoxCaption">ABOUT<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Are you new to value investing, or would like to know how our tool 
+                            works? This page is for you.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="centerMe">
+                <div id="splashFooter">
+                </div>
+            </div>
         </div>
-
-        <!--Heatmap-->
-        <div id="heatmapContainer">
-
-            <!--Sectors Table-->
-            <table id="sectors" border="0">
-            </table>
-
-            <!--Industries Table-->
-            <table id="industries" border="0">
-            </table>
-
-            <!--Company Table-->
-            <table id="companies" class="tablesorter" border="0">
-                <thead>
-                    <tr>
-                        <th>
-                        </th>
-                        <th class="hoverable">
-                          P/E
-                        </th>
-                        <th class="hoverable">
-                          P/S
-                        </th>
-                        <th class="hoverable">
-                          P/CF
-                        </th>
-                        <th class="hoverable">
-                          DIV
-                        </th>
-                        <th class="hoverable">
-                          RANK
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div><!-- END: heatmapContainer -->
-    </div><!-- END: alignSearchAndHeatmap -->
+    </div>
 </body>
 </html>
