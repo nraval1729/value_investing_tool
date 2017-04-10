@@ -1,0 +1,259 @@
+/* Note to team: these css names are pretty good for the 
+most part.  I often refine CSS names over many days as
+I write code. I also refine the CSS factoring over time.
+It is alphabetized for the most part.
+*/
+
+/* to style the placeholder text inside of the search bars
+citation: http://stackoverflow.com/questions/2610497/
+change-an-html5-inputs-placeholder-color-with-css */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgb(150,150,150);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(150,150,150);
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(150,150,150);
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(150,150,150);
+}
+
+
+* {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+#alignLeft {
+    justify-content: flex-end;
+}
+
+.spacerBlock {
+    min-height: 200px;
+    height: 200px;
+    clear: both;
+}
+
+#bannerImage {
+    height: 380px;
+}
+
+#bannerImageWrapper {
+    margin-top:20px;
+}
+
+body {
+    background-color: black;
+}
+
+.centerMe {
+    display: flex;
+    justify-content: center;
+}
+
+.font90 {
+    font-size: 90%;
+}
+
+#header {   
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#header2 {   
+    color: white;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerNavigationLink {
+    font-size: 80%;
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(200,200,200);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
+.headerNavigationLink:hover {
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+
+/* makes its interior elements
+go from left to right */
+.horizontal {
+    display: flex;
+    flex-direction: row; 
+}
+
+/* makes its interior elements
+go from left to right, and centers
+the interior elements from left to 
+right */
+.horizontalCenter {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+
+#interior {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#largeCaption {
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+#largeCaption p {
+    font-size: 300%;
+    color: rgb(170,170,170);
+    letter-spacing: 2px;
+}
+
+#logo {
+    font-size: 150%;
+    margin: 10px;
+    font-family: tahoma;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgb(170,170,170);
+}
+
+.messageBox {
+    min-width: 270px;
+    min-height: 270px;
+    width: 270px;
+    height: 270px;
+    background-color: rgb(40,40,40);
+    color: rgb(220,220,220);
+    margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.messageBox:hover {
+    background-color: rgb(20,20,20);
+    transition: background-color 0.15s ease;
+    -webkit-transition: background-color 0.15s ease;
+    cursor: pointer;
+}
+
+.messageBoxCaption {
+    font-size: 200%;
+    font-family: tahoma;
+    letter-spacing: 1px;
+    color: rgb(170,170,170);
+}
+
+.messageBoxIcon {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+.messageBoxLink {
+    text-decoration: none;
+}
+
+.messageBoxParagraph {
+    font-size: 80%; 
+    margin-top: 50px; 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchBarWrapper {
+    margin-top: 100px;
+}
+
+#searchBarInput {
+    width: 550px;
+    height: 50px;
+    border: none;
+    font-size: 140%;
+    padding-left: 10px;
+}
+
+#searchBarDecoration {
+    width: 40px;
+    height: 40px;
+}
+
+#searchBarDecorationWrapper {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* experimental. not currently implemented */
+#searchPageContentWrapper {
+    width: 900px;
+    height: 1000px;
+    background-image: url("ws2.png");
+    background-size: 900px 300px; /* width then height */
+    background-repeat: no-repeat;
+}
+
+#selectedLink {
+    text-decoration: underline;
+}
+
+.spacer100 {
+    height: 100px;
+    min-height: 100px;
+    display: block;
+}
+
+.spacer200 {
+    height: 200px;
+    min-height: 200px;
+    display: block;
+}
+
+
+#splashFooter {
+    margin-top: 70px;
+    width: 850px;
+    min-height: 200px;
+    background-color: rgb(40,40,40);
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* makes its interior elements
+go from top to bottom */
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
