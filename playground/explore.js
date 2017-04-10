@@ -54,7 +54,7 @@ function renderSectors(data) {
     }
 
     // Step 5: handle click event. When user clicks on one of sectors on table...
-    $('a').click( function(e) {
+    $('.spaLinks').click( function(e) {
         // ...we're staying in the same page even after reload
         e.preventDefault(); 
 
@@ -76,7 +76,7 @@ function renderSectors(data) {
 
 function createSectorTD(sectorNames, sectorURLs, index) {
     var tdString = "<td class='hoverable'>";
-    tdString += "<a href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
+    tdString += "<a class='spaLinks' href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
     return tdString;
 }
 
@@ -123,7 +123,7 @@ function renderIndustries(data, sector) {
             stringToAppend = stringToAppend + "<tr>";
             for (var j = 0; j < NUM_COLS; j++) {
                 if (index < listOfUniqueIndustries.length) {
-                    stringToAppend = stringToAppend + "<td class='hoverable'><a href='" + urlIndustries[index] + "' class = 'aIndustry'>" + listOfUniqueIndustries[index] + "</a></td>";
+                    stringToAppend = stringToAppend + "<td class='hoverable'><a href='" + urlIndustries[index] + "' class='spaLinks'>" + listOfUniqueIndustries[index] + "</a></td>";
                     index++;
                 }      
             }
@@ -133,7 +133,7 @@ function renderIndustries(data, sector) {
     industryTable.append(stringToAppend);
 
     // When user clicks on one of industries on table...
-    $('a.aIndustry').click( function(e) {
+    $('.spaLinks').click( function(e) {
         e.preventDefault(); 
         // ...replace heading with user-clicked sector
         var nameOfIndustry = $(this).text();
