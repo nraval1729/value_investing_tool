@@ -174,40 +174,50 @@ function createRowString(companyInfo, index) {
     var rowString = "<tr>";
 
     rowString += "<td class='black'>" + companyInfo[index]['company_name'] + "</td>";
-    rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"]);
-    rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"]);
-    rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"]);
-    rowString += createTDString(companyInfo[index]["div_cur"], companyInfo[index]["div_avg"]);
+    rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"], false);
+    rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"], false);
+    rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"], false);
+    rowString += createTDString(companyInfo[index]["div_cur"], companyInfo[index]["div_avg"], true);
     rowString += "<td class='black'>" + companyInfo[index]['s_rank'] + "</td>";
 
     rowString += "</tr>";
     return rowString;
 }
 
-function createTDString(currValue, histValue) {
+function createTDString(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
+    //var colors = ["brightgreen", "brightred", "darkgreen", "darkred", "black"];
+    var colors = ["brightred", "darkred", "black", "darkgreen", "brightgreen"];
+    var percent = (currValueNum - histValueNum) / histValueNum;
 
-    var percent = (currValueNum-histValueNum)/histValueNum;
-
-    if(percent >= 0.30) {
-        color = "brightgreen";
-    }
-    else if(percent <= -0.25) {
-        color = "brightred";
-    }
-    else if(percent < 0.30 && percent >= 0.10){
-        color = "darkgreen";
-    }
-    else if(percent > -0.25 && percent <= -0.10){
-        color = "darkred";
-    }
-    else {
-        color = "black";
+    if (isDividend) {
+        percent  = 0.50 * percent; //compress the range
     }
 
+    var colorIndex;
+
+    //values chosen to illustrate colors
+    //for 4-12 handin
+    if (percent >= 0.60) {
+        colorIndex = 0;
+    } else if (percent >= 0.40) {
+        colorIndex = 1;
+    } else if (percent >= -0.05) {
+        colorIndex = 2;
+    } else if (percent >= -0.20) {
+        colorIndex = 3;
+    } else {
+        colorIndex = 4;
+    }
+
+    //dividend "good" is opposite of other ratios
+    if (isDividend) {
+        colorIndex = 4 - colorIndex;
+    }
+
+    var color = colors[colorIndex];
     var tdString = "<td class = '" + color + "'>" + currValue + "</td>";
-
     return tdString;
 }
 
