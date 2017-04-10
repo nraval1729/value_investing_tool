@@ -34,11 +34,6 @@ change-an-html5-inputs-placeholder-color-with-css */
     justify-content: flex-end;
 }
 
-.spacerBlock {
-    min-height: 200px;
-    height: 200px;
-    clear: both;
-}
 
 #bannerImage {
     height: 380px;
@@ -50,6 +45,9 @@ change-an-html5-inputs-placeholder-color-with-css */
 
 body {
     background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .centerMe {
@@ -61,7 +59,7 @@ body {
     font-size: 90%;
 }
 
-#header {   
+#header1 {   
     color: white;
     width: 100%;
     display: flex;
@@ -71,10 +69,14 @@ body {
 
 #header2 {   
     color: white;
-    width: 100%;
+    /*width: 100%; */
     margin: 10px;
     display: flex;
     justify-content: space-between;
+
+    /* new */
+    /*width: 1200px; */
+    /*flex-direction: row; */
 }
 
 .headerNavigationLink {
@@ -141,17 +143,16 @@ right */
     min-height: 270px;
     width: 270px;
     height: 270px;
-    background-color: rgb(40,40,40);
+    background-color: rgb(40,40,40); /* almost black */
     color: rgb(220,220,220);
     margin: 10px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-
 }
 
 .messageBox:hover {
-    background-color: rgb(20,20,20);
+    background-color: rgb(20,20,20); /* almost black */
     transition: background-color 0.15s ease;
     -webkit-transition: background-color 0.15s ease;
     cursor: pointer;
@@ -184,7 +185,7 @@ right */
 }
 
 #page {
-    width: 100%;
+    width: 1100px;
     display: flex;
     flex-direction: column;
 }
@@ -240,6 +241,11 @@ right */
     display: block;
 }
 
+.spacerBlock {
+    min-height: 200px;
+    height: 200px;
+    clear: both;
+}
 
 #splashFooter {
     margin-top: 70px;

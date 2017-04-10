@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8">
-    <title>Value Investing Tool!</title>
+    <title>Value Investing Tool - Exploration Page</title>
     <script type="text/javascript" src="jquery-min.js"></script>
     <script type="text/javascript" src="jquery.tablesorter.js"></script>
     <script type="text/javascript" src="electric_utilities.js"></script>
@@ -11,57 +11,70 @@
     <script type="text/javascript" src="biographical.js"></script>      
     <link rel="stylesheet" type="text/css" href="explore.css">
 </head>
-<body>
-    <h2>Value Investing Tool</h2>
-    <div id="alignSearchAndHeatmap">
-        <!--Search Box-->
-        <div id="searchArea">
-            <label for="search">Search: </label>
-            <input type="search" name="search" id="search" placeholder="search for companies..."/>
+<body> 
+
+    <div id="page">
+
+
+        <div id="header" class="horizontal">
+            <div>
+                <a id="logo" href="index.html">Value Investing Tool</a>
+            </div>
+            <div>
+                <a class="headerNavigationLink" id="headerNavigationLink1" href="search.html">Search</a>
+                <a class="headerNavigationLink" id="headerNavigationLink2" href="explore.html">Explore</a>
+            </div>
         </div>
 
-        <!--Search Results-->
-        <div id="update">
-        </div>
+        <div id="interior">
+            <h2></h2><!-- table caption gets inserted here -->
+            <div class="spacer50"></div>
 
-        <!--Heatmap-->
-        <div id="heatmapContainer">
+            <!--Search Results-->
+            <!--div id="update">
+            </div-->
 
-            <!--Sectors Table-->
-            <table id="sectors" border="0">
-            </table>
+            <!--Heatmap-->
+            <div id="heatmapContainer">
 
-            <!--Industries Table-->
-            <table id="industries" border="0">
-            </table>
+                <!--Sectors Table-->
+                <table id="sectors" border="0">
+                </table>
 
-            <!--Company Table-->
-            <table id="companies" class="tablesorter" border="0">
-                <thead>
-                    <tr>
-                        <th>
-                        </th>
-                        <th class="hoverable">
-                          P/E
-                        </th>
-                        <th class="hoverable">
-                          P/S
-                        </th>
-                        <th class="hoverable">
-                          P/CF
-                        </th>
-                        <th class="hoverable">
-                          DIV
-                        </th>
-                        <th class="hoverable">
-                          RANK
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div><!-- END: heatmapContainer -->
-    </div><!-- END: alignSearchAndHeatmap -->
+                <!--Industries Table-->
+                <table id="industries" border="0">
+                </table>
+
+                <!--Company Table-->
+                <table id="companies" class="tablesorter" border="0">
+                    <thead>
+                        <tr>
+                            <th>
+                            </th>
+                            <th class="hoverable">
+                              P/E
+                            </th>
+                            <th class="hoverable">
+                              P/S
+                            </th>
+                            <th class="hoverable">
+                              P/CF
+                            </th>
+                            <th class="hoverable">
+                              DIV
+                            </th>
+                            <th class="hoverable">
+                              RANK
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div><!-- END: heatmapContainer -->
+
+        </div><!-- END: interior -->
+
+    </div><!-- END: page -->
 </body>
 </html>
