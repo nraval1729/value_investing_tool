@@ -187,7 +187,6 @@ function createRowString(companyInfo, index) {
 function createTDString(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
-    //var colors = ["brightgreen", "brightred", "darkgreen", "darkred", "black"];
     var colors = ["brightred", "darkred", "black", "darkgreen", "brightgreen"];
     var percent = (currValueNum - histValueNum) / histValueNum;
 
