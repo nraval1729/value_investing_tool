@@ -24,6 +24,7 @@ function renderSectors(data) {
 
     // Set the page tutle
     $('#tableTitle').text("Market Sectors");
+    $('#breadcrumbs').hide();
 
     sectorTable.show();
     industryTable.hide();
@@ -70,10 +71,13 @@ function renderSectors(data) {
 
 
         // ...add breadcrumbs with links
+        $('#breadcrumbs').show();
+        $('#crumbSpace2').hide();
+        $('#industryCrumb').hide();
+        $('#sectorCrumb').html(nameOfSector);
+
         var marketLink = '<a href=' + window.location.hash + '>' + 'Market' + '</a>';
         $('#marketCrumb').html(marketLink);
-
-        $('#sectorCrumb').html(nameOfSector);
 
         // ...hide the sector table so that industry table can be placed where it was
         sectorTable.hide();
@@ -152,10 +156,14 @@ function renderIndustries(data, sector) {
         var nameOfIndustry = $(this).text();
         $('#tableTitle').text($(this).text());
 
+        // ...change breadcrumbs
+        $('#crumbSpace2').show();
+        $('#industryCrumb').show();
+        $('#industryCrumb').text(nameOfIndustry);
+
         var sectorLink = '<a href=' + window.location.hash + '>' + sectorName + '</a>';
         $('#sectorCrumb').html(sectorLink);
 
-        $('#industryCrumb').text(nameOfIndustry);
 
         // ...hide the sector table so that industry table can be placed where it was
         sectorTable.hide();
@@ -193,7 +201,10 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
         $('#tableTitle').text(sectorName);
 
         $('#sectorCrumb').html(sectorName);
+
         $('#industryCrumb').html('Industry');
+        $('#industryCrumb').hide();
+        $('#crumbSpace2').hide();
 
         // ...hide the sector table so that industry table can be placed where it was
         sectorTable.hide();

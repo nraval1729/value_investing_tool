@@ -259,6 +259,15 @@ h1, h2, h3 {
 }
 
 h3 a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+h3 a:hover{
     color: yellow;
-    text-decoration: none;
+}
+
+#marketCrumb, #sectorCrumb, #industryCrumb {
+    color: yellow;
 }
