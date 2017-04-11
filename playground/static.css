@@ -1,9 +1,3 @@
-/* Note to team: these css names are pretty good for the 
-most part.  I often refine CSS names over many days as
-I write code. I also refine the CSS factoring over time.
-It is alphabetized for the most part.
-*/
-
 /* to style the placeholder text inside of the search bars
 citation: http://stackoverflow.com/questions/2610497/
 change-an-html5-inputs-placeholder-color-with-css */
@@ -50,31 +44,10 @@ body {
     justify-content: center;
 }
 
-.longText {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: left;
-}
-
 .centerMe {
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
-.font90 {
-    font-size: 90%;
-}
-
-.nonHoverBox {
-    margin-top: 70px;
-    width: 850px;
-    min-height: 200px;
-    background-color: rgb(40,40,40);
-    color: white;
-    margin-bottom: 50px;
 }
 
 #footerHomePageLinks {
@@ -104,29 +77,9 @@ body {
 
 #header2 {   
     color: white;
-    /*width: 100%; */
     margin: 10px;
     display: flex;
     justify-content: space-between;
-
-    /* new */
-    /*width: 1200px; */
-    /*flex-direction: row; */
-}
-
-.headerNavigationLink {
-    font-size: 80%;
-    color: white;
-    margin-right: 30px;
-    text-decoration: none;
-    color: rgb(200,200,200);
-    transition: color 0.10s ease;
-    -webkit-transition: color 0.10s ease;
-}
-
-.headerNavigationLink:hover {
-    cursor: pointer;
-    color: rgb(255,255,255);
 }
 
 /* makes its interior elements
@@ -146,7 +99,6 @@ right */
     justify-content: center;
 }
 
-
 #interior {
     display: flex;
     justify-content: center;
@@ -164,13 +116,12 @@ right */
     letter-spacing: 2px;
 }
 
-#logo {
-    font-size: 150%;
-    margin: 10px;
-    font-family: tahoma;
-    text-decoration: none;
-    letter-spacing: 1px;
-    color: rgb(170,170,170);
+.longText {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
 }
 
 .messageBox {
@@ -219,6 +170,15 @@ right */
     margin-right: 10px;
 }
 
+.nonHoverBox {
+    margin-top: 70px;
+    width: 850px;
+    min-height: 200px;
+    background-color: rgb(40,40,40);
+    color: white;
+    margin-bottom: 50px;
+}
+
 #page {
     width: 1100px;
     display: flex;
@@ -252,35 +212,8 @@ right */
     justify-content: center;
 }
 
-/* experimental. not currently implemented */
-#searchPageContentWrapper {
-    width: 900px;
-    height: 1000px;
-    background-image: url("ws2.png");
-    background-size: 900px 300px; /* width then height */
-    background-repeat: no-repeat;
-}
-
 #selectedLink {
     text-decoration: underline;
-}
-
-.spacer100 {
-    height: 100px;
-    min-height: 100px;
-    display: block;
-}
-
-.spacer200 {
-    height: 200px;
-    min-height: 200px;
-    display: block;
-}
-
-.spacerBlock {
-    min-height: 200px;
-    height: 200px;
-    clear: both;
 }
 
 /* makes its interior elements
