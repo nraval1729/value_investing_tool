@@ -49,8 +49,9 @@ Bright Green: for this metric, the stock is currently performing much better tha
 
 The rank cells are all black as it would not make sense to color them.
 
-For our demo purposes, we are using a limited data set.  This means, that which ever path you take
-through our exploration grid, you will end up with the electric uitilities data in the heatmap.
+For our demo purposes, we are using a limited data set, and the backend is elided.  This means, 
+that which ever path you take through our exploration grid, you will end up with the electric 
+utilities data in the heatmap.
 
 Notes regarding the exploration interface:
 Breadcrumbs allow you to travel backwards, and let you know where you are at contextually.
