@@ -50,16 +50,25 @@ body {
     justify-content: center;
 }
 
+.longText {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
 .centerMe {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .font90 {
     font-size: 90%;
 }
 
-#footerHomePage {
+.nonHoverBox {
     margin-top: 70px;
     width: 850px;
     min-height: 200px;

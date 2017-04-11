@@ -211,7 +211,7 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
 function createRowString(companyInfo, index) {
     var rowString = "<tr>";
 
-    rowString += "<td class='black'>" + companyInfo[index]['company_name'] + "</td>";
+    rowString += "<th class='black'>" + companyInfo[index]['company_name'] + "</th>";
     rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"], false);
     rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"], false);
     rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"], false);

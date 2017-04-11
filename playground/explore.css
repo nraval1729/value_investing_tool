@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
     background-color: rgb(0,0,0); /* black */
     color: white;
@@ -40,10 +40,6 @@ body {
 .centerMe {
     display: flex;
     justify-content: center;
-}
-
-#companies {
-  display: table;
 }
 
 .darkgreen {
@@ -134,7 +130,7 @@ body {
 #logo {
     font-size: 150%;
     margin: 10px;
-    font-family: tahoma;
+    font-family: Tahoma;
     text-decoration: none;
     letter-spacing: 1px;
     color: rgb(170,170,170);
@@ -212,10 +208,6 @@ table {
     color: white;
 }
 
-td {
-
-}
-
 td a {
     text-decoration: none;
     color: white;
@@ -239,12 +231,31 @@ td a:hover {
     color: yellow;
 };
 
+#companies {
+  display: table;
+}
+
+#companies th {
+    width: 150px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#companies td {
+    width: 150px;
+    height: 100px;
+    border-style: none;
+}
+
 #breadcrumbs {
     display: inline;
 }
 
-h3 {
+h1, h2, h3 {
     display: inline;  
+    font-family: tahoma;
+    letter-spacing: 1px;
 }
 
 h3 a {
