@@ -24,9 +24,8 @@
 #logo {
     font-size: 150%;
     margin: 10px;
-    font-family: Tahoma;
+    font-family: Tahoma, sans-serif;
     text-decoration: none;
-    letter-spacing: 1px;
     color: rgb(170,170,170);
 }
 

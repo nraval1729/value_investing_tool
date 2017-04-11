@@ -146,8 +146,7 @@ right */
 
 .messageBoxCaption {
     font-size: 200%;
-    font-family: tahoma;
-    letter-spacing: 1px;
+    font-family: Tahoma, sans-serif;
     color: rgb(170,170,170);
 }
 
