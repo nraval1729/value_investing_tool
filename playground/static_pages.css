@@ -59,6 +59,32 @@ body {
     font-size: 90%;
 }
 
+#footerHomePage {
+    margin-top: 70px;
+    width: 850px;
+    min-height: 200px;
+    background-color: rgb(40,40,40);
+    color: white;
+    margin-bottom: 50px;
+}
+
+#footerHomePageLinks {
+    margin: 15px;
+    list-style-type: none;
+}
+
+#footerHomePageLinks a {
+    color: rgb(200,200,200);
+    text-decoration: none;
+}
+
+#footerHomePageLinks a:hover {
+    cursor: pointer;
+    color: rgb(240,240,240);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
 #header1 {   
     color: white;
     width: 100%;
@@ -245,15 +271,6 @@ right */
     min-height: 200px;
     height: 200px;
     clear: both;
-}
-
-#splashFooter {
-    margin-top: 70px;
-    width: 850px;
-    min-height: 200px;
-    background-color: rgb(40,40,40);
-    color: white;
-    margin-bottom: 50px;
 }
 
 /* makes its interior elements
