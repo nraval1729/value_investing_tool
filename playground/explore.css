@@ -239,3 +239,15 @@ td a:hover {
     color: yellow;
 };
 
+#breadcrumbs {
+    display: inline;
+}
+
+h3 {
+    display: inline;  
+}
+
+h3 a {
+    color: yellow;
+    text-decoration: none;
+}

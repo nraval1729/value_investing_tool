@@ -1,5 +1,8 @@
 // Global variables
 var NUM_COLS = 4;
+var sectorTable = $('#sectors');
+var industryTable = $('#industries');
+var companyTable = $('#companies');
 
 $(function() {
     $("#companies").tablesorter();
@@ -14,30 +17,33 @@ function renderSectors(data) {
     var listOfSectors = [];
     var uniqueSectors = [];
     var urlSectors = [];
-    var sectorTable = $('#sectors');
-    var industryTable = $('#industries');
-    var companyTable = $('#companies');
+
+    sectorTable = $('#sectors');
+    industryTable = $('#industries');
+    companyTable = $('#companies');
+
+    // Set the page tutle
+    $('#tableTitle').text("Market Sectors");
 
     sectorTable.show();
     industryTable.hide();
     companyTable.hide();  
 
+    // Step 0: clear any previous info in the table
+    sectorTable.find("tr:gt(0)").remove();
+
     // Step 1: find sectors from json file. Because they repeat, use set to remove duplicates
-    //
     listOfSectors = data.filter((set => f => !set.has(f.sector) && set.add(f.sector))(new Set));
 
     // Step 2: extract sectors only from each json object
-    //
     for (var i = 0; i < listOfSectors.length; i++) {
         uniqueSectors.push(listOfSectors[i]['sector']);
     }
 
     // Step 3: Generate hash URLS
-    //
     urlSectors = generateHashURL(uniqueSectors); 
 
     // Step 4: Populate sectors table on home page with their respective hash URLS.
-    //
     var numRows = Math.ceil(listOfSectors.length / NUM_COLS);
     var index = 0;
 
@@ -60,7 +66,14 @@ function renderSectors(data) {
 
         // ...replace heading with user-clicked sector
         var nameOfSector = $(this).text();
-        $('h2').text($(this).text());
+        $('#tableTitle').text(nameOfSector);
+
+
+        // ...add breadcrumbs with links
+        var marketLink = '<a href=' + window.location.hash + '>' + 'Market' + '</a>';
+        $('#marketCrumb').html(marketLink);
+
+        $('#sectorCrumb').html(nameOfSector);
 
         // ...hide the sector table so that industry table can be placed where it was
         sectorTable.hide();
@@ -90,6 +103,9 @@ function renderIndustries(data, sector) {
     var uniqueIndustries = [];
     var listOfUniqueIndustries = [];
 
+    // Step 0: clear any previous info in the table
+    industryTable.find("tr:gt(0)").remove();
+
     // Step 1: find matching sectors from biographical.json
     for (var i = 0; i < data.length; i++) {
         if (sectorName == data[i]['sector'] && !(sectorName in matchingSectors)) { // if sector names match and not already in a list of cells
@@ -111,9 +127,6 @@ function renderIndustries(data, sector) {
     // After splitting, listOfUniqueIndustries[0] returns "Health Care Equipment" and [1] returns "Pharmaceuticals" ... which is what we want!
 
     // Step 5: construct industry table
-    var sectorTable = $('#sectors');
-    var industryTable = $('#industries');
-    var companyTable = $('#companies');
     var numRows = Math.ceil(listOfUniqueIndustries.length / NUM_COLS);
     var urlIndustries = generateHashURL(listOfUniqueIndustries); 
     var index = 0;
@@ -137,7 +150,12 @@ function renderIndustries(data, sector) {
         e.preventDefault(); 
         // ...replace heading with user-clicked sector
         var nameOfIndustry = $(this).text();
-        $('h2').text($(this).text());
+        $('#tableTitle').text($(this).text());
+
+        var sectorLink = '<a href=' + window.location.hash + '>' + sectorName + '</a>';
+        $('#sectorCrumb').html(sectorLink);
+
+        $('#industryCrumb').text(nameOfIndustry);
 
         // ...hide the sector table so that industry table can be placed where it was
         sectorTable.hide();
@@ -146,27 +164,47 @@ function renderIndustries(data, sector) {
 
         // ...update hash in URL (for SPA - Single Page App - purposes)
         window.location.hash = $(this).attr('href');
-        renderCompanies(biographical, technical, nameOfIndustry);
+        renderCompanies(biographical, technical, nameOfIndustry, sectorName);
     });
 }
 
 /*
 * COMPANIES
 */
-function renderCompanies(biographicaljson, technicaljson, industryName) {
+function renderCompanies(biographicaljson, technicaljson, industryName, sectorName) {
 
     var industry = industryName;
 
     // Construct companies table
-    var companyTable = $("#companies tbody"); 
+    var companyTableBody = $("#companies tbody"); 
+    companyTableBody.find("tr:gt(0)").remove();
 
     for (var index = 0; index < electricUtilities.length; index++) {
-        console.log("companyname = " + electricUtilities[index]['company_name']);
-
-        companyTable.append(createRowString(electricUtilities, index));
+        companyTableBody.append(createRowString(electricUtilities, index));
         $("#companies").trigger("update");
     }
-    return false; 
+    
+
+        // When user clicks on one of industries on table...
+    $('#sectorCrumb').click( function(e) {
+        e.preventDefault(); 
+
+        // ...replace heading with user-clicked sector
+        $('#tableTitle').text(sectorName);
+
+        $('#sectorCrumb').html(sectorName);
+        $('#industryCrumb').html('Industry');
+
+        // ...hide the sector table so that industry table can be placed where it was
+        sectorTable.hide();
+        industryTable.show();
+        companyTable.hide();  
+        
+        // ...update hash in URL (for SPA - Single Page App - purposes)
+        var newHash = '\#' + sectorName.toLowerCase();
+        window.location.hash = newHash;
+        //renderIndustries(biographical, sectorName);
+    });
 }
 
 
