@@ -1,5 +1,5 @@
 Our project is a data-driven application that sources 
-near real-time stock market data, peforms calculatios,
+near real-time stock market data, peforms calculations,
 and provides the user with visualization and data can help 
 them make investing decisions centered around a form
 of investing known as value investing (details regarding
@@ -14,9 +14,9 @@ To get a feel for our site, we recommend the
 following two journeys:
 
 1) Get a feel for our static pages:  Start at
-index.html.  Scroll down, click on the the various
-boxes.  Click on the navigation at the top of the 
-pages as well. Our static pages are the following:
+index.html.  Scroll down, click on the the Search
+and About boxes. Click on the navigation at the top 
+of the pages as well. Our static pages are the following:
 index.html
 about.html
 search.html
