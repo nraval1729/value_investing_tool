@@ -23,8 +23,11 @@ function renderSectors(data) {
     companyTable = $('#companies');
 
     // Set the page tutle
-    $('#tableTitle').text("Market Sectors");
-    $('#breadcrumbs').hide();
+    //$('#tableTitle').text("Market Sectors");
+    $('#crumbSpace1').hide();
+    $('#sectorCrumb').hide();
+    $('#crumbSpace2').hide();
+    $('#industryCrumb').hide();
 
     sectorTable.show();
     industryTable.hide();
@@ -67,13 +70,11 @@ function renderSectors(data) {
 
         // ...replace heading with user-clicked sector
         var nameOfSector = $(this).text();
-        $('#tableTitle').text(nameOfSector);
-
+        //$('#tableTitle').text(nameOfSector);
 
         // ...add breadcrumbs with links
-        $('#breadcrumbs').show();
-        $('#crumbSpace2').hide();
-        $('#industryCrumb').hide();
+        $('#crumbSpace1').show();
+        $('#sectorCrumb').show();
         $('#sectorCrumb').html(nameOfSector);
 
         var marketLink = '<a href=' + window.location.hash + '>' + 'Market' + '</a>';
@@ -154,7 +155,7 @@ function renderIndustries(data, sector) {
         e.preventDefault(); 
         // ...replace heading with user-clicked sector
         var nameOfIndustry = $(this).text();
-        $('#tableTitle').text($(this).text());
+        //$('#tableTitle').text($(this).text());
 
         // ...change breadcrumbs
         $('#crumbSpace2').show();
@@ -198,7 +199,7 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
         e.preventDefault(); 
 
         // ...replace heading with user-clicked sector
-        $('#tableTitle').text(sectorName);
+        //$('#tableTitle').text(sectorName);
 
         $('#sectorCrumb').html(sectorName);
 

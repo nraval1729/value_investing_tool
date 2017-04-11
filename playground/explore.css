@@ -258,13 +258,13 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
-h3 a {
+h2 a {
     color: white;
     text-decoration: underline;
     text-decoration-style: double;
 }
 
-h3 a:hover{
+h2 a:hover{
     color: yellow;
 }
 
