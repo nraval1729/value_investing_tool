@@ -53,23 +53,28 @@
                 <table id="companies" class="tablesorter" border="0">
                     <thead>
                         <tr>
-                            <th class="hoverable">
+                            <th class="hoverable popup" id="nameBox" oncontextmenu="return false;">
                               Name
                             </th>
-                            <th class="hoverable">
-                              P/E
+                            <th class="hoverable popup" id="peBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="pePopup">P/E: price-to-earning ratio</span>
+                                P/E
                             </th>
-                            <th class="hoverable">
-                              P/S
+                            <th class="hoverable popup" id="psBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="psPopup">P/S: price-to-sales ratio</span>
+                                P/S
                             </th>
-                            <th class="hoverable">
-                              P/CF
+                            <th class="hoverable popup" id="pcfBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="pcfPopup">P/CF: price-to-cashflow ratio</span>
+                                P/CF
                             </th>
-                            <th class="hoverable">
-                              DIV
+                            <th class="hoverable popup" id="divBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="divPopup">DIV: dividend yield (as a percentage)</span>
+                                DIV
                             </th>
-                            <th class="hoverable">
-                              RANK
+                            <th class="hoverable popup" id="rankBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="rankPopup">RANK: aggregate ratio performance (lower = better)</span>
+                                RANK
                             </th>
                         </tr>
                     </thead>

@@ -115,13 +115,6 @@ h2 a:hover {
     flex-direction: column;
 }
 
-.hoverable:hover {
-   color: yellow;
-   border-color: yellow;
-   border-style: inset;
-   cursor: pointer;
-}
-
 #industries {
   display: table;
 }
@@ -167,7 +160,18 @@ table {
     color: white;
 }
 
-td a {
+.hoverable:hover {
+   color: yellow;
+   border-color: yellow;
+   border-style: inset;
+   cursor: pointer;
+}
+
+.hoverlink:hover {
+    color: yellow;
+}
+
+td a, th a {
     text-decoration: none;
     color: white;
     width: 200px;
@@ -186,7 +190,62 @@ td, th {
     height: 100px;
 }
 
-td a:hover {
-    color: yellow;
-};
+/** Tooltip code - taken from https://www.w3schools.com/howto/howto_js_popup.asp **/
+/* Popup container */
+.popup {
+/*    position: relative;
+    display: inline-block;
+    cursor: pointer;*/
+}
 
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    display: none;
+/*    width: 250px;*/
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-color: yellow;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: relative;
+    z-index: 10;
+    bottom: 10%;
+    left: 40%;
+    margin-left: -125px;
+    margin-top: -45px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: yellow transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    display: block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}

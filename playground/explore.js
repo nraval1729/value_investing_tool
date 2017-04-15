@@ -89,12 +89,11 @@ function renderSectors(data) {
         window.location.hash = $(this).attr('href');
         renderIndustries(biographical, nameOfSector);
     });
-
 }
 
 function createSectorTD(sectorNames, sectorURLs, index) {
     var tdString = "<td class='hoverable'>";
-    tdString += "<a class='spaLinks' href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
+    tdString += "<a class='spaLinks hoverlink' href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
     return tdString;
 }
 
@@ -141,7 +140,7 @@ function renderIndustries(data, sector) {
             stringToAppend = stringToAppend + "<tr>";
             for (var j = 0; j < NUM_COLS; j++) {
                 if (index < listOfUniqueIndustries.length) {
-                    stringToAppend = stringToAppend + "<td class='hoverable'><a href='" + urlIndustries[index] + "' class='spaLinks'>" + listOfUniqueIndustries[index] + "</a></td>";
+                    stringToAppend = stringToAppend + "<td class='hoverable'><a href='" + urlIndustries[index] + "' class='spaLinks hoverlink'>" + listOfUniqueIndustries[index] + "</a></td>";
                     index++;
                 }      
             }
@@ -185,7 +184,7 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
 
     // Construct companies table
     var companyTableBody = $("#companies tbody"); 
-    companyTableBody.find("tr:gt(0)").remove();
+    companyTableBody.find("tr:gt(-1)").remove();
 
     for (var index = 0; index < electricUtilities.length; index++) {
         companyTableBody.append(createRowString(electricUtilities, index));
@@ -216,13 +215,52 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
         window.location.hash = newHash;
         //renderIndustries(biographical, sectorName);
     });
+
+    // Tooltip displays
+    var pePopup = $('#pePopup');
+    var psPopup = $('#psPopup');
+    var pcfPopup = $('#pcfPopup');
+    var divPopup = $('#divPopup');
+    var rankPopup = $('#rankPopup');
+    $('#peBox').mousedown(function(e){displayToolTip(e, pePopup)});
+    $('#psBox').mousedown(function(e){displayToolTip(e, psPopup)});
+    $('#pcfBox').mousedown(function(e){displayToolTip(e, pcfPopup)});
+    $('#divBox').mousedown(function(e){displayToolTip(e, divPopup)});
+    $('#rankBox').mousedown(function(e){displayToolTip(e, rankPopup)});
+
+    $('#page').click(function(){
+        if(pePopup.hasClass('show')) {
+            pePopup.toggleClass('show');
+        }
+        if(psPopup.hasClass('show')) {
+            psPopup.toggleClass('show');
+        }
+        if(pcfPopup.hasClass('show')) {
+            pcfPopup.toggleClass('show');
+        }
+        if(divPopup.hasClass('show')) {
+            divPopup.toggleClass('show');
+        }
+        if(rankPopup.hasClass('show')) {
+            rankPopup.toggleClass('show');
+        }
+    });
 }
 
+// Function to display tooltips
+function displayToolTip(event, popup) {
+    if(event.which == 3) {
+        popup.toggleClass('show');
+        event.stopPropagation();
+    }
+}
 
 function createRowString(companyInfo, index) {
     var rowString = "<tr>";
 
-    rowString += "<th class='black'>" + companyInfo[index]['company_name'] + "</th>";
+    var link = "http://finance.yahoo.com/quote/" + companyInfo[index]['ticker'] + "?p=" + companyInfo[index]['ticker'];
+    rowString += "<th class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + companyInfo[index]['company_name'] + "</a></th>";
+
     rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"], false);
     rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"], false);
     rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"], false);
