@@ -1,67 +1,90 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <title>Value Investing Tool!</title>
+    <title>Explore</title>
     <script type="text/javascript" src="jquery-min.js"></script>
     <script type="text/javascript" src="jquery.tablesorter.js"></script>
     <script type="text/javascript" src="electric_utilities.js"></script>
     <script type="text/javascript" src="explore.js"></script>
     <script type="text/javascript" src="technical.js"></script>
-    <script type="text/javascript" src="biographical.js"></script>      
-    <link rel="stylesheet" type="text/css" href="explore.css">
+    <script type="text/javascript" src="biographical.js"></script>
+    <link rel="stylesheet" type="text/css" href="base.css">      
+    <link rel="stylesheet" type="text/css" href="dynamic.css">
 </head>
-<body>
-    <h2>Value Investing Tool</h2>
-    <div id="alignSearchAndHeatmap">
-        <!--Search Box-->
-        <div id="searchArea">
-            <label for="search">Search: </label>
-            <input type="search" name="search" id="search" placeholder="search for companies..."/>
+<body> 
+
+    <div id="page">
+
+        <div id="header" class="horizontal">
+            <div>
+                <a id="logo" href="index.html">Value Investing Tool</a>
+            </div>
+            <div>
+                <a class="headerNavigationLink" id="headerNavigationLink1" href="search.html">Search</a>
+                <a class="headerNavigationLink" id="headerNavigationLink2" href="explore.html">Explore</a>
+            </div>
         </div>
 
-        <!--Search Results-->
-        <div id="update">
-        </div>
+        <div id="interior">
 
-        <!--Heatmap-->
-        <div id="heatmapContainer">
+            <div id="breadcrumbs">
+                <h2 id="marketCrumb">Market Sectors<h3>
+                <h2 id="crumbSpace1"> >> <h3>
+                <h2 id="sectorCrumb">Sector<h3>
+                <h2 id="crumbSpace2"> >> <h3>
+                <h2 id="industryCrumb">Industry<h3>
+            </div>
 
-            <!--Sectors Table-->
-            <table id="sectors" border="0">
-            </table>
+            <div class="spacer50"></div>
 
-            <!--Industries Table-->
-            <table id="industries" border="0">
-            </table>
+            <!--Heatmap-->
+            <div id="heatmapContainer">
 
-            <!--Company Table-->
-            <table id="companies" class="tablesorter" border="0">
-                <thead>
-                    <tr>
-                        <th>
-                        </th>
-                        <th class="hoverable">
-                          P/E
-                        </th>
-                        <th class="hoverable">
-                          P/S
-                        </th>
-                        <th class="hoverable">
-                          P/CF
-                        </th>
-                        <th class="hoverable">
-                          DIV
-                        </th>
-                        <th class="hoverable">
-                          RANK
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div><!-- END: heatmapContainer -->
-    </div><!-- END: alignSearchAndHeatmap -->
+                <!--Sectors Table-->
+                <table id="sectors" border="0">
+                </table>
+
+                <!--Industries Table-->
+                <table id="industries" border="0">
+                </table>
+
+                <!--Company Table-->
+                <table id="companies" class="tablesorter" border="0">
+                    <thead>
+                        <tr>
+                            <th class="hoverable popup" id="nameBox" oncontextmenu="return false;">
+                              Name
+                            </th>
+                            <th class="hoverable popup" id="peBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="pePopup">P/E: price-to-earning ratio</span>
+                                P/E
+                            </th>
+                            <th class="hoverable popup" id="psBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="psPopup">P/S: price-to-sales ratio</span>
+                                P/S
+                            </th>
+                            <th class="hoverable popup" id="pcfBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="pcfPopup">P/CF: price-to-cashflow ratio</span>
+                                P/CF
+                            </th>
+                            <th class="hoverable popup" id="divBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="divPopup">DIV: dividend yield (as a percentage)</span>
+                                DIV
+                            </th>
+                            <th class="hoverable popup" id="rankBox" oncontextmenu="return false;">
+                                <span class="popuptext" id="rankPopup">RANK: aggregate ratio performance (lower = better)</span>
+                                RANK
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div><!-- END: heatmapContainer -->
+
+        </div><!-- END: interior -->
+
+    </div><!-- END: page -->
 </body>
 </html>

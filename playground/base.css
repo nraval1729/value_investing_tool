@@ -1,0 +1,66 @@
+.headerNavigationLink {
+    font-size: 80%;
+    font-weight: normal;
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(200,200,200);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
+.headerNavigationLink:hover {
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+
+#interior {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#logo {
+    font-size: 150%;
+    margin: 10px;
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    color: rgb(170,170,170);
+}
+
+.spacer25 {
+    display: block;
+    clear: both;
+    min-height: 25px;
+    height: 25px;
+}
+
+.spacer50 {
+    display: block;
+    clear: both;
+    min-height: 50px;
+    height: 50px;
+}
+
+.spacer100 {
+    display: block;
+    clear: both;
+    min-height: 100px;
+    height: 100px;
+}
+
+.spacer150 {
+    display: block;
+    clear: both;
+    min-height: 150px;
+    height: 150px;
+}
+
+.spacer200 {
+    display: block;
+    clear: both;
+    min-height: 200px;
+    height: 200px;
+}
+
