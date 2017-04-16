@@ -661,50 +661,5 @@
     }, 
     {
         "RSG": "Industrials"
-    }, 
-    {
-        "RTN": "Industrials"
-    }, 
-    {
-        "SBUX": "Consumer Discretionary"
-    }, 
-    {
-        "SCG": "Utilities"
-    }, 
-    {
-        "SCHW": "Financials"
-    }, 
-    {
-        "SEE": "Materials"
-    }, 
-    {
-        "SHW": "Materials"
-    }, 
-    {
-        "SIG": "Consumer Discretionary"
-    }, 
-    {
-        "SJM": "Consumer Staples"
-    }, 
-    {
-        "SLG": "Real Estate"
-    }, 
-    {
-        "SNA": "Consumer Discretionary"
-    }, 
-    {
-        "SNI": "Consumer Discretionary"
-    }, 
-    {
-        "SO": "Utilities"
-    }, 
-    {
-        "SPG": "Real Estate"
-    }, 
-    {
-        "SPGI": "Financials"
-    }, 
-    {
-        "SRE": "Utilities"
     }
 ]

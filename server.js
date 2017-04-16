@@ -25,14 +25,19 @@ var util = require('util');
 // Python bridge to run python from node
 var spawn = require("child_process").spawn;
 
+// File system module to read json files
+var fs = require('fs');
+
+// Async module to allow sending multiple json files in one handler
+var async = require('async');
+
 launchCurrentScraper();
+launchValidTickersGenerator()
+launchBiographicalMapsGenerator()
 launchTechnicalJsonGenerator();
 
 // To get home page
 app.get("/", function(req, res) {
-    launchBiographicalScraper();
-
-	// Renders the main page
 	res.render('index.html');
 });
 
@@ -64,6 +69,70 @@ app.get("/technical", function(req, res) {
 	res.sendFile(technicalFilePath);
 });
 
+app.get("/industry_to_sector", function(req, res) {
+	path = __dirname + '/public/json_files/industry_to_sector.json';
+	console.log("Inside /industry_to_sector, sending industry_to_sector.json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/industry_to_tickers", function(req, res) {
+	path = __dirname + '/public/json_files/industry_to_tickers.json';
+	console.log("Inside /industry_to_tickers, sending industry_to_tickers.json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/sector_to_industries", function(req, res) {
+	path = __dirname + '/public/json_files/sector_to_industries.json';
+	console.log("Inside /sector_to_industries, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/security_to_industry", function(req, res) {
+	path = __dirname + '/public/json_files/security_to_industry.json';
+	console.log("Inside /technical, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/security_to_sector", function(req, res) {
+	path = __dirname + '/public/json_files/security_to_sector.json';
+	console.log("Inside /technical, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/security_to_ticker", function(req, res) {
+	path = __dirname + '/public/json_files/security_to_ticker.json';
+	console.log("Inside /security_to_ticker, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/ticker_to_industry", function(req, res) {
+	path = __dirname + '/public/json_files/ticker_to_industry.json';
+	console.log("Inside /ticker_to_industry, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/ticker_to_sector", function(req, res) {
+	path = __dirname + '/public/json_files/ticker_to_sector.json';
+	console.log("Inside /ticker_to_sector, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/ticker_to_security", function(req, res) {
+	path = __dirname + '/public/json_files/ticker_to_security.json';
+	console.log("Inside /ticker_to_security, sending technical json at path: " +path);
+	res.sendFile(path);
+});
+
+function launchValidTickersGenerator() {
+	var filePath = __dirname + "/public/scripts/python/valid_tickers_generator.py"
+	spawnPythonProcess(filePath)
+}
+
+function launchBiographicalMapsGenerator() {
+	var filePath = __dirname + "/public/scripts/python/biographical_maps_generator.py"
+	spawnPythonProcess(filePath)
+}
+
 function launchCurrentScraper() {
 	var filePath = __dirname + "/public/scripts/python/current_scraper.py";
 	spawnPythonProcess(filePath);
@@ -73,11 +142,6 @@ function launchTechnicalJsonGenerator() {
 	var filePath = __dirname + "/public/scripts/python/technical_json_generator.py";
     console.log("tech");
 	spawnPythonProcess(filePath);
-}
-
-function launchBiographicalScraper() {
-    var scriptPath = __dirname + "/public/scripts/python/biographical_scraper.py";
-    spawnPythonProcess(scriptPath);
 }
 
 function spawnPythonProcess(scriptPath) {

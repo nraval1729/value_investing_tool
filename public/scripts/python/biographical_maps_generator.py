@@ -1,5 +1,9 @@
 import json
 import math
+import os
+import time
+
+cwd = os.getcwd()
 
 # for testing purposes
 def display_json_array(json_array):
@@ -89,79 +93,82 @@ def prune_json(json_array, valid_tickers):
 
 
 def main():
-	# get handles on the json files
-	with open('biographical.json') as infile:
-		raw_data_biographical = json.load(infile)
+	while True:
+		# get handles on the json files
+		with open(cwd+'/public/json_files/biographical.json') as infile:
+			raw_data_biographical = json.load(infile)
 
-	with open('valid_tickers.json') as infile:
-		tickers_json = json.load(infile)
+		with open(cwd+'/public/json_files/valid_tickers.json') as infile:
+			tickers_json = json.load(infile)
 
-	tickers = set(tickers_json['valid_tickers'])
-	biographical_json_pruned = prune_json(raw_data_biographical, tickers)
+		tickers = set(tickers_json['valid_tickers'])
+		biographical_json_pruned = prune_json(raw_data_biographical, tickers)
 
-	industry_to_tickers_dictionary = create_dictionary(biographical_json_pruned, "industry")
-	populate_dictionary(industry_to_tickers_dictionary, biographical_json_pruned, "industry", "ticker")
-	industry_to_tickers_list = condition_dictionary(industry_to_tickers_dictionary)
+		industry_to_tickers_dictionary = create_dictionary(biographical_json_pruned, "industry")
+		populate_dictionary(industry_to_tickers_dictionary, biographical_json_pruned, "industry", "ticker")
+		industry_to_tickers_list = condition_dictionary(industry_to_tickers_dictionary)
 
-	sector_to_industries_dictionary = create_dictionary(biographical_json_pruned, "sector")
-	populate_dictionary(sector_to_industries_dictionary, biographical_json_pruned, "sector", "industry")
-	sector_to_industries_list = condition_dictionary(sector_to_industries_dictionary)
+		sector_to_industries_dictionary = create_dictionary(biographical_json_pruned, "sector")
+		populate_dictionary(sector_to_industries_dictionary, biographical_json_pruned, "sector", "industry")
+		sector_to_industries_list = condition_dictionary(sector_to_industries_dictionary)
 
-	industry_to_sector_list = create_simple_dictionary(biographical_json_pruned, "industry", "sector")
-	ticker_to_security_list = create_simple_dictionary(biographical_json_pruned, "ticker", "security")
-	ticker_to_industry_list = create_simple_dictionary(biographical_json_pruned, "ticker", "industry")
-	ticker_to_sector_list = create_simple_dictionary(biographical_json_pruned, "ticker", "sector")
-	security_to_ticker_list = create_simple_dictionary(biographical_json_pruned, "security", "ticker")
-	security_to_industry_list = create_simple_dictionary(biographical_json_pruned, "security", "industry")
-	security_to_sector_list = create_simple_dictionary(biographical_json_pruned, "security", "sector")
+		industry_to_sector_list = create_simple_dictionary(biographical_json_pruned, "industry", "sector")
+		ticker_to_security_list = create_simple_dictionary(biographical_json_pruned, "ticker", "security")
+		ticker_to_industry_list = create_simple_dictionary(biographical_json_pruned, "ticker", "industry")
+		ticker_to_sector_list = create_simple_dictionary(biographical_json_pruned, "ticker", "sector")
+		security_to_ticker_list = create_simple_dictionary(biographical_json_pruned, "security", "ticker")
+		security_to_industry_list = create_simple_dictionary(biographical_json_pruned, "security", "industry")
+		security_to_sector_list = create_simple_dictionary(biographical_json_pruned, "security", "sector")
 
-	# print industry_to_tickers_list
-	# print sector_to_industries_list
-	# print industry_to_sector_list
+		# print industry_to_tickers_list
+		# print sector_to_industries_list
+		# print industry_to_sector_list
 
-	# print ticker_to_security_list
-	# print ticker_to_industry_list
-	# print ticker_to_sector_list
+		# print ticker_to_security_list
+		# print ticker_to_industry_list
+		# print ticker_to_sector_list
 
-	# print security_to_ticker_list
-	# print security_to_industry_list
-	# print security_to_sector_list
+		# print security_to_ticker_list
+		# print security_to_industry_list
+		# print security_to_sector_list
 
-	# industries to tickers
-	with open('industry_to_tickers.json', 'w') as outfile:
- 		json.dump(industry_to_tickers_list, outfile, indent=4)
+		# industries to tickers
+		with open(cwd+'/public/json_files/industry_to_tickers.json', 'w') as outfile:
+	 		json.dump(industry_to_tickers_list, outfile, indent=4)
 
- 	# sectors to industries
- 	with open('sector_to_industries.json', 'w') as outfile:
- 		json.dump(sector_to_industries_list, outfile, indent=4)
+	 	# sectors to industries
+	 	with open(cwd+'/public/json_files/sector_to_industries.json', 'w') as outfile:
+	 		json.dump(sector_to_industries_list, outfile, indent=4)
 
- 	# industry to sector
- 	with open('industry_to_sector.json', 'w') as outfile:
- 		json.dump(industry_to_sector_list, outfile, indent=4)
+	 	# industry to sector
+	 	with open(cwd+'/public/json_files/industry_to_sector.json', 'w') as outfile:
+	 		json.dump(industry_to_sector_list, outfile, indent=4)
 
- 	# ticker to security
- 	with open('ticker_to_security.json', 'w') as outfile:
- 		json.dump(ticker_to_security_list, outfile, indent=4)
+	 	# ticker to security
+	 	with open(cwd+'/public/json_files/ticker_to_security.json', 'w') as outfile:
+	 		json.dump(ticker_to_security_list, outfile, indent=4)
 
- 	# ticker to industry
-	with open('ticker_to_industry.json', 'w') as outfile:
- 		json.dump(ticker_to_industry_list, outfile, indent=4)
+	 	# ticker to industry
+		with open(cwd+'/public/json_files/ticker_to_industry.json', 'w') as outfile:
+	 		json.dump(ticker_to_industry_list, outfile, indent=4)
 
- 	# ticker to sector
-	with open('ticker_to_sector.json', 'w') as outfile:
- 		json.dump(ticker_to_sector_list, outfile, indent=4)
+	 	# ticker to sector
+		with open(cwd+'/public/json_files/ticker_to_sector.json', 'w') as outfile:
+	 		json.dump(ticker_to_sector_list, outfile, indent=4)
 
- 	# security to ticker
- 	with open('security_to_ticker.json', 'w') as outfile:
- 		json.dump(security_to_ticker_list, outfile, indent=4)
+	 	# security to ticker
+	 	with open(cwd+'/public/json_files/security_to_ticker.json', 'w') as outfile:
+	 		json.dump(security_to_ticker_list, outfile, indent=4)
 
- 	# security to industry
- 	with open('security_to_industry.json', 'w') as outfile:
- 		json.dump(security_to_industry_list, outfile, indent=4)
+	 	# security to industry
+	 	with open(cwd+'/public/json_files/security_to_industry.json', 'w') as outfile:
+	 		json.dump(security_to_industry_list, outfile, indent=4)
 
- 	# security to sector
-	with open('security_to_sector.json', 'w') as outfile:
- 		json.dump(security_to_sector_list, outfile, indent=4)
+	 	# security to sector
+		with open(cwd+'/public/json_files/security_to_sector.json', 'w') as outfile:
+	 		json.dump(security_to_sector_list, outfile, indent=4)
+
+	 	time.sleep(300)
 
 
 if __name__ == "__main__":

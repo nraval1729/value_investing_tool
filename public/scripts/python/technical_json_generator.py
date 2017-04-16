@@ -2,6 +2,7 @@ import json
 import math
 import os
 import time
+import sys
 
 # Current working directory. Top level aka where server.js is
 cwd = os.getcwd()
@@ -155,6 +156,9 @@ while True:
 
 	# write the json file
 	with open(cwd+'/public/json_files/technical.json', 'w') as outfile:
+		print "WRITING TO TECHNICAL.JSON nowwwwwww"
 		json.dump(bigList, outfile, indent=4)
 
-	time.sleep(300)
+	print "going to sleep now...."
+	sys.stdout.flush()
+	time.sleep(10)

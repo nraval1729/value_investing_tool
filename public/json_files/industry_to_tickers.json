@@ -19,6 +19,7 @@
         "CMI", 
         "FLS", 
         "IR", 
+        "GWW", 
         "ITW", 
         "PH", 
         "DOV"
@@ -45,15 +46,12 @@
     "Investment Banking & Brokerage": [
         "RJF", 
         "GS", 
-        "MS", 
-        "SCHW"
+        "MS"
     ], 
     "Multi-Utilities": [
         "NI", 
         "EXC", 
         "CNP", 
-        "SRE", 
-        "SCG", 
         "NEE", 
         "DTE", 
         "AEE", 
@@ -62,12 +60,10 @@
         "ES"
     ], 
     "Office REITs": [
-        "BXP", 
-        "SLG"
+        "BXP"
     ], 
     "Aerospace & Defense": [
         "BA", 
-        "RTN", 
         "LMT", 
         "NOC", 
         "GD", 
@@ -78,8 +74,7 @@
         "MLM"
     ], 
     "Restaurants": [
-        "DRI", 
-        "SBUX"
+        "DRI"
     ], 
     "Automotive Retail": [
         "AAP"
@@ -136,16 +131,10 @@
         "GE", 
         "ROP"
     ], 
-    "Household Appliances": [
-        "SNA"
-    ], 
     "Multi-line Insurance": [
         "L", 
         "LNC", 
         "AIZ"
-    ], 
-    "Industrial Materials": [
-        "GWW"
     ], 
     "Integrated Telecommunication Services": [
         "CTL"
@@ -185,7 +174,6 @@
         "HRL", 
         "CPB", 
         "MDLZ", 
-        "SJM", 
         "MKC", 
         "HSY", 
         "CAG"
@@ -218,19 +206,15 @@
         "FL", 
         "GPS"
     ], 
-    "Cable & Satellite": [
-        "SNI"
-    ], 
     "Fertilizers & Agricultural Chemicals": [
         "MOS", 
         "FMC"
     ], 
     "Specialty Chemicals": [
         "PPG", 
-        "SHW", 
+        "IFF", 
         "ECL", 
         "ALB", 
-        "IFF", 
         "LYB"
     ], 
     "Diversified Banks": [
@@ -273,8 +257,7 @@
         "MAC", 
         "KIM", 
         "FRT", 
-        "REG", 
-        "SPG"
+        "REG"
     ], 
     "Electronic Equipment & Instruments": [
         "FLIR"
@@ -317,7 +300,6 @@
         "LUK"
     ], 
     "Specialty Stores": [
-        "SIG", 
         "GPC"
     ], 
     "Managed Health Care": [
@@ -327,7 +309,6 @@
     ], 
     "Paper Packaging": [
         "IP", 
-        "SEE", 
         "AVY"
     ], 
     "Publishing": [
@@ -412,7 +393,6 @@
         "MAT"
     ], 
     "Financial Exchanges & Data": [
-        "SPGI", 
         "CME", 
         "CBOE", 
         "NDAQ"
@@ -424,7 +404,6 @@
         "EIX", 
         "ED", 
         "PPL", 
-        "SO", 
         "LNT"
     ]
 }
