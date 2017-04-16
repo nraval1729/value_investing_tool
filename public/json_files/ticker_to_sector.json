@@ -1,0 +1,710 @@
+[
+    {
+        "A": "Health Care"
+    }, 
+    {
+        "AAP": "Consumer Discretionary"
+    }, 
+    {
+        "ABT": "Health Care"
+    }, 
+    {
+        "ACN": "Information Technology"
+    }, 
+    {
+        "ADI": "Information Technology"
+    }, 
+    {
+        "ADM": "Consumer Staples"
+    }, 
+    {
+        "ADP": "Information Technology"
+    }, 
+    {
+        "AEE": "Utilities"
+    }, 
+    {
+        "AEP": "Utilities"
+    }, 
+    {
+        "AET": "Health Care"
+    }, 
+    {
+        "AFL": "Financials"
+    }, 
+    {
+        "AIZ": "Financials"
+    }, 
+    {
+        "AJG": "Financials"
+    }, 
+    {
+        "ALB": "Materials"
+    }, 
+    {
+        "ALL": "Financials"
+    }, 
+    {
+        "AMAT": "Information Technology"
+    }, 
+    {
+        "AME": "Industrials"
+    }, 
+    {
+        "AMGN": "Health Care"
+    }, 
+    {
+        "AMP": "Financials"
+    }, 
+    {
+        "AMT": "Real Estate"
+    }, 
+    {
+        "ANTM": "Health Care"
+    }, 
+    {
+        "AON": "Financials"
+    }, 
+    {
+        "APD": "Materials"
+    }, 
+    {
+        "APH": "Information Technology"
+    }, 
+    {
+        "ATVI": "Information Technology"
+    }, 
+    {
+        "AVB": "Real Estate"
+    }, 
+    {
+        "AVY": "Materials"
+    }, 
+    {
+        "AWK": "Utilities"
+    }, 
+    {
+        "AXP": "Financials"
+    }, 
+    {
+        "AYI": "Industrials"
+    }, 
+    {
+        "BA": "Industrials"
+    }, 
+    {
+        "BAC": "Financials"
+    }, 
+    {
+        "BAX": "Health Care"
+    }, 
+    {
+        "BBT": "Financials"
+    }, 
+    {
+        "BBY": "Consumer Discretionary"
+    }, 
+    {
+        "BCR": "Health Care"
+    }, 
+    {
+        "BEN": "Financials"
+    }, 
+    {
+        "BLK": "Financials"
+    }, 
+    {
+        "BLL": "Materials"
+    }, 
+    {
+        "BMY": "Health Care"
+    }, 
+    {
+        "BXP": "Real Estate"
+    }, 
+    {
+        "C": "Financials"
+    }, 
+    {
+        "CA": "Information Technology"
+    }, 
+    {
+        "CAG": "Consumer Staples"
+    }, 
+    {
+        "CAH": "Health Care"
+    }, 
+    {
+        "CB": "Financials"
+    }, 
+    {
+        "CBOE": "Financials"
+    }, 
+    {
+        "CBS": "Consumer Discretionary"
+    }, 
+    {
+        "CCL": "Consumer Discretionary"
+    }, 
+    {
+        "CHD": "Consumer Staples"
+    }, 
+    {
+        "CHRW": "Industrials"
+    }, 
+    {
+        "CINF": "Financials"
+    }, 
+    {
+        "CLX": "Consumer Staples"
+    }, 
+    {
+        "CMA": "Financials"
+    }, 
+    {
+        "CME": "Financials"
+    }, 
+    {
+        "CMI": "Industrials"
+    }, 
+    {
+        "CMS": "Utilities"
+    }, 
+    {
+        "CNP": "Utilities"
+    }, 
+    {
+        "COF": "Financials"
+    }, 
+    {
+        "COH": "Consumer Discretionary"
+    }, 
+    {
+        "COL": "Industrials"
+    }, 
+    {
+        "CPB": "Consumer Staples"
+    }, 
+    {
+        "CSCO": "Information Technology"
+    }, 
+    {
+        "CSX": "Industrials"
+    }, 
+    {
+        "CTAS": "Industrials"
+    }, 
+    {
+        "CTL": "Telecommunication Services"
+    }, 
+    {
+        "CVS": "Consumer Staples"
+    }, 
+    {
+        "D": "Utilities"
+    }, 
+    {
+        "DFS": "Financials"
+    }, 
+    {
+        "DGX": "Health Care"
+    }, 
+    {
+        "DHI": "Consumer Discretionary"
+    }, 
+    {
+        "DLR": "Real Estate"
+    }, 
+    {
+        "DOV": "Industrials"
+    }, 
+    {
+        "DPS": "Consumer Staples"
+    }, 
+    {
+        "DRI": "Consumer Discretionary"
+    }, 
+    {
+        "DTE": "Utilities"
+    }, 
+    {
+        "DUK": "Utilities"
+    }, 
+    {
+        "ECL": "Materials"
+    }, 
+    {
+        "ED": "Utilities"
+    }, 
+    {
+        "EFX": "Industrials"
+    }, 
+    {
+        "EIX": "Utilities"
+    }, 
+    {
+        "EL": "Consumer Staples"
+    }, 
+    {
+        "EMN": "Materials"
+    }, 
+    {
+        "EQR": "Real Estate"
+    }, 
+    {
+        "ES": "Utilities"
+    }, 
+    {
+        "ESS": "Real Estate"
+    }, 
+    {
+        "ETN": "Industrials"
+    }, 
+    {
+        "EXC": "Utilities"
+    }, 
+    {
+        "EXPD": "Industrials"
+    }, 
+    {
+        "EXPE": "Consumer Discretionary"
+    }, 
+    {
+        "EXR": "Real Estate"
+    }, 
+    {
+        "F": "Consumer Discretionary"
+    }, 
+    {
+        "FAST": "Industrials"
+    }, 
+    {
+        "FDX": "Industrials"
+    }, 
+    {
+        "FIS": "Information Technology"
+    }, 
+    {
+        "FL": "Consumer Discretionary"
+    }, 
+    {
+        "FLIR": "Information Technology"
+    }, 
+    {
+        "FLR": "Industrials"
+    }, 
+    {
+        "FLS": "Industrials"
+    }, 
+    {
+        "FMC": "Materials"
+    }, 
+    {
+        "FOX": "Consumer Discretionary"
+    }, 
+    {
+        "FOXA": "Consumer Discretionary"
+    }, 
+    {
+        "FRT": "Real Estate"
+    }, 
+    {
+        "GD": "Industrials"
+    }, 
+    {
+        "GE": "Industrials"
+    }, 
+    {
+        "GGP": "Real Estate"
+    }, 
+    {
+        "GIS": "Consumer Staples"
+    }, 
+    {
+        "GLW": "Information Technology"
+    }, 
+    {
+        "GPC": "Consumer Discretionary"
+    }, 
+    {
+        "GPN": "Information Technology"
+    }, 
+    {
+        "GPS": "Consumer Discretionary"
+    }, 
+    {
+        "GRMN": "Consumer Discretionary"
+    }, 
+    {
+        "GS": "Financials"
+    }, 
+    {
+        "GWW": "Industrials"
+    }, 
+    {
+        "HAS": "Consumer Discretionary"
+    }, 
+    {
+        "HBAN": "Financials"
+    }, 
+    {
+        "HCN": "Real Estate"
+    }, 
+    {
+        "HCP": "Real Estate"
+    }, 
+    {
+        "HD": "Consumer Discretionary"
+    }, 
+    {
+        "HOG": "Consumer Discretionary"
+    }, 
+    {
+        "HON": "Industrials"
+    }, 
+    {
+        "HRL": "Consumer Staples"
+    }, 
+    {
+        "HRS": "Information Technology"
+    }, 
+    {
+        "HSY": "Consumer Staples"
+    }, 
+    {
+        "HUM": "Health Care"
+    }, 
+    {
+        "IBM": "Information Technology"
+    }, 
+    {
+        "IFF": "Materials"
+    }, 
+    {
+        "INTC": "Information Technology"
+    }, 
+    {
+        "INTU": "Information Technology"
+    }, 
+    {
+        "IP": "Materials"
+    }, 
+    {
+        "IPG": "Consumer Discretionary"
+    }, 
+    {
+        "IR": "Industrials"
+    }, 
+    {
+        "IRM": "Real Estate"
+    }, 
+    {
+        "ITW": "Industrials"
+    }, 
+    {
+        "IVZ": "Financials"
+    }, 
+    {
+        "JBHT": "Industrials"
+    }, 
+    {
+        "JPM": "Financials"
+    }, 
+    {
+        "JWN": "Consumer Discretionary"
+    }, 
+    {
+        "KEY": "Financials"
+    }, 
+    {
+        "KIM": "Real Estate"
+    }, 
+    {
+        "KLAC": "Information Technology"
+    }, 
+    {
+        "KMI": "Energy"
+    }, 
+    {
+        "KO": "Consumer Staples"
+    }, 
+    {
+        "KR": "Consumer Staples"
+    }, 
+    {
+        "KSS": "Consumer Discretionary"
+    }, 
+    {
+        "KSU": "Industrials"
+    }, 
+    {
+        "L": "Financials"
+    }, 
+    {
+        "LEG": "Consumer Discretionary"
+    }, 
+    {
+        "LEN": "Consumer Discretionary"
+    }, 
+    {
+        "LLL": "Industrials"
+    }, 
+    {
+        "LLY": "Health Care"
+    }, 
+    {
+        "LMT": "Industrials"
+    }, 
+    {
+        "LNC": "Financials"
+    }, 
+    {
+        "LNT": "Utilities"
+    }, 
+    {
+        "LUK": "Financials"
+    }, 
+    {
+        "LUV": "Industrials"
+    }, 
+    {
+        "LYB": "Materials"
+    }, 
+    {
+        "M": "Consumer Discretionary"
+    }, 
+    {
+        "MA": "Information Technology"
+    }, 
+    {
+        "MAA": "Real Estate"
+    }, 
+    {
+        "MAC": "Real Estate"
+    }, 
+    {
+        "MAR": "Consumer Discretionary"
+    }, 
+    {
+        "MAT": "Consumer Discretionary"
+    }, 
+    {
+        "MCHP": "Information Technology"
+    }, 
+    {
+        "MCK": "Health Care"
+    }, 
+    {
+        "MDLZ": "Consumer Staples"
+    }, 
+    {
+        "MDT": "Health Care"
+    }, 
+    {
+        "MET": "Financials"
+    }, 
+    {
+        "MKC": "Consumer Staples"
+    }, 
+    {
+        "MLM": "Materials"
+    }, 
+    {
+        "MMC": "Financials"
+    }, 
+    {
+        "MMM": "Industrials"
+    }, 
+    {
+        "MO": "Consumer Staples"
+    }, 
+    {
+        "MOS": "Materials"
+    }, 
+    {
+        "MPC": "Energy"
+    }, 
+    {
+        "MS": "Financials"
+    }, 
+    {
+        "NDAQ": "Financials"
+    }, 
+    {
+        "NEE": "Utilities"
+    }, 
+    {
+        "NI": "Utilities"
+    }, 
+    {
+        "NKE": "Consumer Discretionary"
+    }, 
+    {
+        "NOC": "Industrials"
+    }, 
+    {
+        "NSC": "Industrials"
+    }, 
+    {
+        "NTRS": "Financials"
+    }, 
+    {
+        "NUE": "Materials"
+    }, 
+    {
+        "NVDA": "Information Technology"
+    }, 
+    {
+        "NWL": "Consumer Discretionary"
+    }, 
+    {
+        "O": "Real Estate"
+    }, 
+    {
+        "OKE": "Energy"
+    }, 
+    {
+        "OMC": "Consumer Discretionary"
+    }, 
+    {
+        "ORCL": "Information Technology"
+    }, 
+    {
+        "PAYX": "Information Technology"
+    }, 
+    {
+        "PCAR": "Industrials"
+    }, 
+    {
+        "PDCO": "Health Care"
+    }, 
+    {
+        "PEP": "Consumer Staples"
+    }, 
+    {
+        "PFE": "Health Care"
+    }, 
+    {
+        "PFG": "Financials"
+    }, 
+    {
+        "PG": "Consumer Staples"
+    }, 
+    {
+        "PGR": "Financials"
+    }, 
+    {
+        "PH": "Industrials"
+    }, 
+    {
+        "PLD": "Real Estate"
+    }, 
+    {
+        "PNC": "Financials"
+    }, 
+    {
+        "PNR": "Industrials"
+    }, 
+    {
+        "PNW": "Utilities"
+    }, 
+    {
+        "PPG": "Materials"
+    }, 
+    {
+        "PPL": "Utilities"
+    }, 
+    {
+        "PRU": "Financials"
+    }, 
+    {
+        "PSA": "Real Estate"
+    }, 
+    {
+        "PVH": "Consumer Discretionary"
+    }, 
+    {
+        "PX": "Materials"
+    }, 
+    {
+        "R": "Industrials"
+    }, 
+    {
+        "RAI": "Consumer Staples"
+    }, 
+    {
+        "RCL": "Consumer Discretionary"
+    }, 
+    {
+        "REG": "Real Estate"
+    }, 
+    {
+        "RF": "Financials"
+    }, 
+    {
+        "RHI": "Industrials"
+    }, 
+    {
+        "RJF": "Financials"
+    }, 
+    {
+        "RL": "Consumer Discretionary"
+    }, 
+    {
+        "ROK": "Industrials"
+    }, 
+    {
+        "ROP": "Industrials"
+    }, 
+    {
+        "ROST": "Consumer Discretionary"
+    }, 
+    {
+        "RSG": "Industrials"
+    }, 
+    {
+        "RTN": "Industrials"
+    }, 
+    {
+        "SBUX": "Consumer Discretionary"
+    }, 
+    {
+        "SCG": "Utilities"
+    }, 
+    {
+        "SCHW": "Financials"
+    }, 
+    {
+        "SEE": "Materials"
+    }, 
+    {
+        "SHW": "Materials"
+    }, 
+    {
+        "SIG": "Consumer Discretionary"
+    }, 
+    {
+        "SJM": "Consumer Staples"
+    }, 
+    {
+        "SLG": "Real Estate"
+    }, 
+    {
+        "SNA": "Consumer Discretionary"
+    }, 
+    {
+        "SNI": "Consumer Discretionary"
+    }, 
+    {
+        "SO": "Utilities"
+    }, 
+    {
+        "SPG": "Real Estate"
+    }, 
+    {
+        "SPGI": "Financials"
+    }, 
+    {
+        "SRE": "Utilities"
+    }
+]
