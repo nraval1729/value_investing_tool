@@ -1,65 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script
-    src="https://code.jquery.com/	jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../scripts/javascript/index-ver2.js"></script>
-    <script type="text/javascript" src="../scripts/javascript/technical.js"></script>
-    <script type="text/javascript" src="../scripts/javascript/biographical.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-	<title>Value Investing Tool!</title>
+    <meta charset="utf-8" />
+    <title>Value Investment Tool - Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">     
+    <link rel="stylesheet" type="text/css" href="../css/static.css">
 </head>
 <body>
-    <h2> Value Investment Tool </h2>
+    <div id="page">
+        <div id="header1" class="horizontal">
+            <a class="headerNavigationLink" href="search.html">Search</a>
+            <a class="headerNavigationLink" href="explore.html">Explore</a>
+        </div>
+        <div id="interior">
 
-    <div id="align-search-and-heatmap">
-      <!--Search Box-->
-      <div id="searchArea">
-        <label for="search">Search: </label>
-        <input type="search" name="search" id="search" placeholder="search symbol"/>
-      </div>
+            <div id="bannerImageWrapper" class="centerMe">
+                <!-- citation: image sourced from buzzerg.com -->
+                <img id="bannerImage" alt="warren buffett" src="../images/buffett_01.png">
+            </div>
+            <div class="spacer25"></div>
+            <div id="largeCaption" class="centerMe">
+                <p>Value Investing Tool</p>
+            </div>
 
-      <!--Search Results-->
-      <div id="update">
-      </div>
+            <div class="horizontalCenter">
 
-      <!--Heatmap-->
-      <div id="heatmap-container">
-          <!--Sector Table-->
-          <table id="sector" border="0">
-          </table>
+                <a href="search.html" class="messageBoxLink">
+                    <div class="messageBox">
+                        <div class="horizontal">
+                            <!-- citation: image sourced from myiconfinder.com -->
+                            <img class="messageBoxIcon" alt="magnifying glass" src="../images/magnifying_glass_01.png">
+                            <p class="messageBoxCaption">SEARCH<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Search for stocks by company name or symbol.  Our tool will locate the stock 
+                            and present its metrics and that of its industry competitors to you on the screen.    
+                        </p>
+                    </div>
+                </a>
 
-          <!--Industry Table-->
-          <table id="industry" border="0">
-          </table>
+                <a href="explore.html" class="messageBoxLink">
+                    <div class="messageBox"> 
+                        <div class="horizontal">
+                            <!-- citation: image sourced from clipartfest.com -->
+                            <img class="messageBoxIcon"  alt="compass" src="../images/compass_01.png">
+                            <p class="messageBoxCaption">EXPLORE<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Wander from sectors to industries to individual companies.  Learn how the 
+                            overall market fits together, and discover how things are performing.
+                        </p>
+                    </div>    
+                </a>
 
-          <!--Company Table-->
-          <table id="company" border="0">
-            <tr>
-              <td>
-              </td>
-              <td>
-                P/E
-              </td>
-              <td>
-                P/S
-              </td>
-              <td>
-                P/CF
-              </td>
-              <td>
-                DIV
-              </td>
-              <td>
-                RANK
-              </td>
-            </tr>
-          </table>
-      </div>
+                <a href="about.html" class="messageBoxLink">
+                    <div class="messageBox">
+                        <div class="horizontal">
+                            <!-- citation: image sourced from iconfinder.com -->
+                            <img class="messageBoxIcon" alt="information symbol" src="../images/information_icon_01.png">
+                            <p class="messageBoxCaption">ABOUT<p>
+                        </div>
+                        <p class="messageBoxParagraph">
+                            Are you new to value investing, or would like to know how our tool 
+                            works? This page is for you.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="centerMe">
+                <div class="nonHoverBox">
+                    <ul id="footerHomePageLinks">
+                        <a href="privacy_policy.html">Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>

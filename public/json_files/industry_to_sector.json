@@ -114,151 +114,37 @@
         "Hotels, Resorts & Cruise Lines": "Consumer Discretionary"
     }, 
     {
-        "Household Products": "Consumer Staples"
-    }, 
-    {
-        "Air Freight & Logistics": "Industrials"
-    }, 
-    {
-        "Industrial Machinery": "Industrials"
-    }, 
-    {
-        "Apparel, Accessories & Luxury Goods": "Consumer Discretionary"
-    }, 
-    {
-        "Communications Equipment": "Information Technology"
-    }, 
-    {
-        "Railroads": "Industrials"
-    }, 
-    {
-        "Diversified Support Services": "Industrials"
-    }, 
-    {
-        "Integrated Telecommunication Services": "Telecommunication Services"
-    }, 
-    {
-        "Drug Retail": "Consumer Staples"
-    }, 
-    {
-        "Health Care Services": "Health Care"
-    }, 
-    {
-        "Homebuilding": "Consumer Discretionary"
-    }, 
-    {
-        "Soft Drinks": "Consumer Staples"
-    }, 
-    {
-        "Restaurants": "Consumer Discretionary"
-    }, 
-    {
-        "Research & Consulting Services": "Industrials"
-    }, 
-    {
-        "Personal Products": "Consumer Staples"
-    }, 
-    {
-        "Diversified Chemicals": "Materials"
-    }, 
-    {
-        "Internet & Direct Marketing Retail": "Consumer Discretionary"
-    }, 
-    {
-        "Automobile Manufacturers": "Consumer Discretionary"
-    }, 
-    {
-        "Building Products": "Industrials"
-    }, 
-    {
-        "Apparel Retail": "Consumer Discretionary"
-    }, 
-    {
-        "Electronic Equipment & Instruments": "Information Technology"
-    }, 
-    {
-        "Construction & Engineering": "Industrials"
-    }, 
-    {
-        "Fertilizers & Agricultural Chemicals": "Materials"
-    }, 
-    {
-        "Publishing": "Consumer Discretionary"
-    }, 
-    {
-        "Retail REITs": "Real Estate"
+        "Construction Materials": "Materials"
     }, 
     {
         "Industrial Conglomerates": "Industrials"
     }, 
     {
-        "Specialty Stores": "Consumer Discretionary"
-    }, 
-    {
-        "Data Processing & Outsourced Services": "Information Technology"
-    }, 
-    {
-        "Consumer Electronics": "Consumer Discretionary"
+        "Oil & Gas Refining & Marketing": "Energy"
     }, 
     {
         "Investment Banking & Brokerage": "Financials"
     }, 
     {
-        "Leisure Products": "Consumer Discretionary"
+        "Apparel, Accessories & Luxury Goods": "Consumer Discretionary"
     }, 
     {
-        "Health Care REITs": "Real Estate"
-    }, 
-    {
-        "Home Improvement Retail": "Consumer Discretionary"
-    }, 
-    {
-        "Motorcycle Manufacturers": "Consumer Discretionary"
-    }, 
-    {
-        "Advertising": "Consumer Discretionary"
-    }, 
-    {
-        "Trucking": "Industrials"
-    }, 
-    {
-        "Department Stores": "Consumer Discretionary"
-    }, 
-    {
-        "Oil & Gas Storage & Transportation": "Energy"
-    }, 
-    {
-        "Food Retail": "Consumer Staples"
-    }, 
-    {
-        "General Merchandise Stores": "Consumer Discretionary"
-    }, 
-    {
-        "Home Furnishings": "Consumer Discretionary"
-    }, 
-    {
-        "Pharmaceuticals": "Health Care"
-    }, 
-    {
-        "Multi-Sector Holdings": "Financials"
-    }, 
-    {
-        "Airlines": "Industrials"
-    }, 
-    {
-        "Construction Materials": "Materials"
-    }, 
-    {
-        "Tobacco": "Consumer Staples"
-    }, 
-    {
-        "Oil & Gas Refining & Marketing": "Energy"
+        "Railroads": "Industrials"
     }, 
     {
         "Steel": "Materials"
     }, 
     {
         "Housewares & Specialties": "Consumer Discretionary"
+    }, 
+    {
+        "Retail REITs": "Real Estate"
+    }, 
+    {
+        "Oil & Gas Storage & Transportation": "Energy"
+    }, 
+    {
+        "Advertising": "Consumer Discretionary"
     }, 
     {
         "Application Software": "Information Technology"
@@ -270,10 +156,31 @@
         "Health Care Supplies": "Health Care"
     }, 
     {
+        "Soft Drinks": "Consumer Staples"
+    }, 
+    {
+        "Pharmaceuticals": "Health Care"
+    }, 
+    {
+        "Personal Products": "Consumer Staples"
+    }, 
+    {
+        "Industrial Machinery": "Industrials"
+    }, 
+    {
         "Industrial REITs": "Real Estate"
     }, 
     {
+        "Trucking": "Industrials"
+    }, 
+    {
+        "Tobacco": "Consumer Staples"
+    }, 
+    {
         "Human Resource & Employment Services": "Industrials"
+    }, 
+    {
+        "Apparel Retail": "Consumer Discretionary"
     }, 
     {
         "Environmental & Facilities Services": "Industrials"
