@@ -12,28 +12,11 @@ var companyTable = $('#companies');
 
 $(function() {
     $("#companies").tablesorter();
-    // $.getJSON('/biographical', function(data) {
-    //     var biographical = data;
-    //     renderSectors(biographical);
-    // });
+
     $.get("/biographical", function(data) {
-        console.log("got here");
-        console.log("Data: " + data);
+        // TODO
     });
     renderSectors(biographical);
-    // $.ajax({
-    //     type: "GET",
-    //     url: "../json_files/biographical.json",
-    //     dataType: "jsonp",
-    //     success: function (data) {
-    //         console.log(data);
-    //         renderSectors(data);
-    //     },
-    //     error: function (xhr, ajaxOptions, thrownError) {
-    //         console.log(xhr.status);
-    //         console.log(thrownError);
-    //     }
-    // });
 });
 
 /*

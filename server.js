@@ -1,25 +1,30 @@
-// Express shit
+// Express
 var express = require('express');
 var app = express();
 
-// Scraperjs shit
+// Scraperjs
 var scraperjs = require('scraperjs');
 
-// Templating shit
+// Path
+var path = require('path');
+
+// Templating
 var engines = require('consolidate');
 app.engine('html', engines.hogan);
-app.set('views', __dirname + '/public/html');
+
+app.set('views', path.join(path.join(__dirname, 'public'), 'html'));
 app.set('view engine', 'html');
 
-// Post request body parser shit.
+// Post request body parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// Static files shit
-app.use(express.static(__dirname + '/public/html'));
+// Static files
+app.use(express.static(path.join(__dirname, 'public')));
+console.log('static dir ' + path.join(__dirname, 'public'));
 
-// Util shit to inspect shit
+// Util
 var util = require('util');
 
 // Python bridge to run python from node
