@@ -8,7 +8,7 @@ var scraperjs = require('scraperjs');
 // Templating shit
 var engines = require('consolidate');
 app.engine('html', engines.hogan);
-app.set('views', __dirname + '/public/templates');
+app.set('views', __dirname + '/public/html');
 app.set('view engine', 'html');
 
 // Post request body parser shit.
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 // Static files shit
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/html'));
 
 // Util shit to inspect shit
 var util = require('util');

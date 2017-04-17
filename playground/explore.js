@@ -6,6 +6,10 @@ var companyTable = $('#companies');
 
 $(function() {
     $("#companies").tablesorter();
+    $.get("/biographical", function(data) {
+        console.log("got here");
+        console.log("Data: " + data);
+    });
     renderSectors(biographical);
 });
 
