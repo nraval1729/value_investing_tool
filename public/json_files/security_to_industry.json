@@ -1,0 +1,665 @@
+[
+    {
+        "Agilent Technologies Inc": "Health Care Equipment"
+    }, 
+    {
+        "Advance Auto Parts": "Automotive Retail"
+    }, 
+    {
+        "Abbott Laboratories": "Health Care Equipment"
+    }, 
+    {
+        "Accenture plc": "IT Consulting & Other Services"
+    }, 
+    {
+        "Analog Devices, Inc.": "Semiconductors"
+    }, 
+    {
+        "Archer-Daniels-Midland Co": "Agricultural Products"
+    }, 
+    {
+        "Automatic Data Processing": "Internet Software & Services"
+    }, 
+    {
+        "Ameren Corp": "Multi-Utilities"
+    }, 
+    {
+        "American Electric Power": "Electric Utilities"
+    }, 
+    {
+        "Aetna Inc": "Managed Health Care"
+    }, 
+    {
+        "AFLAC Inc": "Life & Health Insurance"
+    }, 
+    {
+        "Assurant Inc": "Multi-line Insurance"
+    }, 
+    {
+        "Arthur J. Gallagher & Co.": "Insurance Brokers"
+    }, 
+    {
+        "Albemarle Corp": "Specialty Chemicals"
+    }, 
+    {
+        "Allstate Corp": "Property & Casualty Insurance"
+    }, 
+    {
+        "Applied Materials Inc": "Semiconductor Equipment"
+    }, 
+    {
+        "AMETEK Inc": "Electrical Components & Equipment"
+    }, 
+    {
+        "Amgen Inc": "Biotechnology"
+    }, 
+    {
+        "Ameriprise Financial": "Asset Management & Custody Banks"
+    }, 
+    {
+        "American Tower Corp A": "Specialized REITs"
+    }, 
+    {
+        "Anthem Inc.": "Managed Health Care"
+    }, 
+    {
+        "Aon plc": "Insurance Brokers"
+    }, 
+    {
+        "Air Products & Chemicals Inc": "Industrial Gases"
+    }, 
+    {
+        "Amphenol Corp": "Electronic Components"
+    }, 
+    {
+        "Activision Blizzard": "Home Entertainment Software"
+    }, 
+    {
+        "AvalonBay Communities, Inc.": "Residential REITs"
+    }, 
+    {
+        "Avery Dennison Corp": "Paper Packaging"
+    }, 
+    {
+        "American Water Works Company Inc": "Water Utilities"
+    }, 
+    {
+        "American Express Co": "Consumer Finance"
+    }, 
+    {
+        "Acuity Brands Inc": "Electrical Components & Equipment"
+    }, 
+    {
+        "Boeing Company": "Aerospace & Defense"
+    }, 
+    {
+        "Bank of America Corp": "Diversified Banks"
+    }, 
+    {
+        "Baxter International Inc.": "Health Care Equipment"
+    }, 
+    {
+        "BB&T Corporation": "Regional Banks"
+    }, 
+    {
+        "Best Buy Co. Inc.": "Computer & Electronics Retail"
+    }, 
+    {
+        "Bard (C.R.) Inc.": "Health Care Equipment"
+    }, 
+    {
+        "Franklin Resources": "Asset Management & Custody Banks"
+    }, 
+    {
+        "BlackRock": "Asset Management & Custody Banks"
+    }, 
+    {
+        "Ball Corp": "Metal & Glass Containers"
+    }, 
+    {
+        "Bristol-Myers Squibb": "Health Care Distributors"
+    }, 
+    {
+        "Boston Properties": "Office REITs"
+    }, 
+    {
+        "Citigroup Inc.": "Diversified Banks"
+    }, 
+    {
+        "CA, Inc.": "Systems Software"
+    }, 
+    {
+        "ConAgra Foods Inc.": "Packaged Foods & Meats"
+    }, 
+    {
+        "Cardinal Health Inc.": "Health Care Distributors"
+    }, 
+    {
+        "Chubb Limited": "Property & Casualty Insurance"
+    }, 
+    {
+        "CBOE Holdings": "Financial Exchanges & Data"
+    }, 
+    {
+        "CBS Corp.": "Broadcasting"
+    }, 
+    {
+        "Carnival Corp.": "Hotels, Resorts & Cruise Lines"
+    }, 
+    {
+        "Church & Dwight": "Household Products"
+    }, 
+    {
+        "C. H. Robinson Worldwide": "Air Freight & Logistics"
+    }, 
+    {
+        "Cincinnati Financial": "Property & Casualty Insurance"
+    }, 
+    {
+        "The Clorox Company": "Household Products"
+    }, 
+    {
+        "Comerica Inc.": "Diversified Banks"
+    }, 
+    {
+        "CME Group Inc.": "Financial Exchanges & Data"
+    }, 
+    {
+        "Cummins Inc.": "Industrial Machinery"
+    }, 
+    {
+        "CMS Energy": "Multi-Utilities"
+    }, 
+    {
+        "CenterPoint Energy": "Multi-Utilities"
+    }, 
+    {
+        "Capital One Financial": "Consumer Finance"
+    }, 
+    {
+        "Coach Inc.": "Apparel, Accessories & Luxury Goods"
+    }, 
+    {
+        "Rockwell Collins": "Aerospace & Defense"
+    }, 
+    {
+        "Campbell Soup": "Packaged Foods & Meats"
+    }, 
+    {
+        "Cisco Systems": "Communications Equipment"
+    }, 
+    {
+        "CSX Corp.": "Railroads"
+    }, 
+    {
+        "Cintas Corporation": "Diversified Support Services"
+    }, 
+    {
+        "CenturyLink Inc": "Integrated Telecommunication Services"
+    }, 
+    {
+        "CVS Health": "Drug Retail"
+    }, 
+    {
+        "Dominion Resources": "Electric Utilities"
+    }, 
+    {
+        "Discover Financial Services": "Consumer Finance"
+    }, 
+    {
+        "Quest Diagnostics": "Health Care Services"
+    }, 
+    {
+        "D. R. Horton": "Homebuilding"
+    }, 
+    {
+        "Digital Realty Trust": "Specialized REITs"
+    }, 
+    {
+        "Dover Corp.": "Industrial Machinery"
+    }, 
+    {
+        "Dr Pepper Snapple Group": "Soft Drinks"
+    }, 
+    {
+        "Darden Restaurants": "Restaurants"
+    }, 
+    {
+        "DTE Energy Co.": "Multi-Utilities"
+    }, 
+    {
+        "Duke Energy": "Electric Utilities"
+    }, 
+    {
+        "Ecolab Inc.": "Specialty Chemicals"
+    }, 
+    {
+        "Consolidated Edison": "Electric Utilities"
+    }, 
+    {
+        "Equifax Inc.": "Research & Consulting Services"
+    }, 
+    {
+        "Edison Int'l": "Electric Utilities"
+    }, 
+    {
+        "Estee Lauder Cos.": "Personal Products"
+    }, 
+    {
+        "Eastman Chemical": "Diversified Chemicals"
+    }, 
+    {
+        "Equity Residential": "Residential REITs"
+    }, 
+    {
+        "Eversource Energy": "Multi-Utilities"
+    }, 
+    {
+        "Essex Property Trust, Inc.": "Residential REITs"
+    }, 
+    {
+        "Eaton Corporation": "Electrical Components & Equipment"
+    }, 
+    {
+        "Exelon Corp.": "Multi-Utilities"
+    }, 
+    {
+        "Expeditors International": "Air Freight & Logistics"
+    }, 
+    {
+        "Expedia Inc.": "Internet & Direct Marketing Retail"
+    }, 
+    {
+        "Extra Space Storage": "Specialized REITs"
+    }, 
+    {
+        "Ford Motor": "Automobile Manufacturers"
+    }, 
+    {
+        "Fastenal Co": "Building Products"
+    }, 
+    {
+        "FedEx Corporation": "Air Freight & Logistics"
+    }, 
+    {
+        "Fidelity National Information Services": "Internet Software & Services"
+    }, 
+    {
+        "Foot Locker Inc": "Apparel Retail"
+    }, 
+    {
+        "FLIR Systems": "Electronic Equipment & Instruments"
+    }, 
+    {
+        "Fluor Corp.": "Construction & Engineering"
+    }, 
+    {
+        "Flowserve Corporation": "Industrial Machinery"
+    }, 
+    {
+        "FMC Corporation": "Fertilizers & Agricultural Chemicals"
+    }, 
+    {
+        "Twenty-First Century Fox Class B": "Publishing"
+    }, 
+    {
+        "Twenty-First Century Fox Class A": "Publishing"
+    }, 
+    {
+        "Federal Realty Investment Trust": "Retail REITs"
+    }, 
+    {
+        "General Dynamics": "Aerospace & Defense"
+    }, 
+    {
+        "General Electric": "Industrial Conglomerates"
+    }, 
+    {
+        "General Growth Properties Inc.": "Retail REITs"
+    }, 
+    {
+        "General Mills": "Packaged Foods & Meats"
+    }, 
+    {
+        "Corning Inc.": "Electronic Components"
+    }, 
+    {
+        "Genuine Parts": "Specialty Stores"
+    }, 
+    {
+        "Global Payments Inc": "Data Processing & Outsourced Services"
+    }, 
+    {
+        "Gap (The)": "Apparel Retail"
+    }, 
+    {
+        "Garmin Ltd.": "Consumer Electronics"
+    }, 
+    {
+        "Goldman Sachs Group": "Investment Banking & Brokerage"
+    }, 
+    {
+        "Grainger (W.W.) Inc.": "Industrial Machinery"
+    }, 
+    {
+        "Hasbro Inc.": "Leisure Products"
+    }, 
+    {
+        "Huntington Bancshares": "Regional Banks"
+    }, 
+    {
+        "Welltower Inc.": "Health Care REITs"
+    }, 
+    {
+        "HCP Inc.": "Health Care REITs"
+    }, 
+    {
+        "Home Depot": "Home Improvement Retail"
+    }, 
+    {
+        "Harley-Davidson": "Motorcycle Manufacturers"
+    }, 
+    {
+        "Honeywell Int'l Inc.": "Industrial Conglomerates"
+    }, 
+    {
+        "Hormel Foods Corp.": "Packaged Foods & Meats"
+    }, 
+    {
+        "Harris Corporation": "Communications Equipment"
+    }, 
+    {
+        "The Hershey Company": "Packaged Foods & Meats"
+    }, 
+    {
+        "Humana Inc.": "Managed Health Care"
+    }, 
+    {
+        "International Business Machines": "IT Consulting & Other Services"
+    }, 
+    {
+        "Intl Flavors & Fragrances": "Specialty Chemicals"
+    }, 
+    {
+        "Intel Corp.": "Semiconductors"
+    }, 
+    {
+        "Intuit Inc.": "Internet Software & Services"
+    }, 
+    {
+        "International Paper": "Paper Packaging"
+    }, 
+    {
+        "Interpublic Group": "Advertising"
+    }, 
+    {
+        "Ingersoll-Rand PLC": "Industrial Machinery"
+    }, 
+    {
+        "Iron Mountain Incorporated": "Specialized REITs"
+    }, 
+    {
+        "Illinois Tool Works": "Industrial Machinery"
+    }, 
+    {
+        "Invesco Ltd.": "Asset Management & Custody Banks"
+    }, 
+    {
+        "J. B. Hunt Transport Services": "Trucking"
+    }, 
+    {
+        "JPMorgan Chase & Co.": "Diversified Banks"
+    }, 
+    {
+        "Nordstrom": "Department Stores"
+    }, 
+    {
+        "KeyCorp": "Regional Banks"
+    }, 
+    {
+        "Kimco Realty": "Retail REITs"
+    }, 
+    {
+        "KLA-Tencor Corp.": "Semiconductor Equipment"
+    }, 
+    {
+        "Kinder Morgan": "Oil & Gas Storage & Transportation"
+    }, 
+    {
+        "Coca Cola Company": "Soft Drinks"
+    }, 
+    {
+        "Kroger Co.": "Food Retail"
+    }, 
+    {
+        "Kohl's Corp.": "General Merchandise Stores"
+    }, 
+    {
+        "Kansas City Southern": "Railroads"
+    }, 
+    {
+        "Loews Corp.": "Multi-line Insurance"
+    }, 
+    {
+        "Leggett & Platt": "Home Furnishings"
+    }, 
+    {
+        "Lennar Corp.": "Homebuilding"
+    }, 
+    {
+        "L-3 Communications Holdings": "Aerospace & Defense"
+    }, 
+    {
+        "Lilly (Eli) & Co.": "Pharmaceuticals"
+    }, 
+    {
+        "Lockheed Martin Corp.": "Aerospace & Defense"
+    }, 
+    {
+        "Lincoln National": "Multi-line Insurance"
+    }, 
+    {
+        "Alliant Energy Corp": "Electric Utilities"
+    }, 
+    {
+        "Leucadia National Corp.": "Multi-Sector Holdings"
+    }, 
+    {
+        "Southwest Airlines": "Airlines"
+    }, 
+    {
+        "LyondellBasell": "Specialty Chemicals"
+    }, 
+    {
+        "Macy's Inc.": "Department Stores"
+    }, 
+    {
+        "Mastercard Inc.": "Internet Software & Services"
+    }, 
+    {
+        "Mid-America Apartments": "Residential REITs"
+    }, 
+    {
+        "Macerich": "Retail REITs"
+    }, 
+    {
+        "Marriott Int'l.": "Hotels, Resorts & Cruise Lines"
+    }, 
+    {
+        "Mattel Inc.": "Leisure Products"
+    }, 
+    {
+        "Microchip Technology": "Semiconductors"
+    }, 
+    {
+        "McKesson Corp.": "Health Care Distributors"
+    }, 
+    {
+        "Mondelez International": "Packaged Foods & Meats"
+    }, 
+    {
+        "Medtronic plc": "Health Care Equipment"
+    }, 
+    {
+        "MetLife Inc.": "Life & Health Insurance"
+    }, 
+    {
+        "McCormick & Co.": "Packaged Foods & Meats"
+    }, 
+    {
+        "Martin Marietta Materials": "Construction Materials"
+    }, 
+    {
+        "Marsh & McLennan": "Insurance Brokers"
+    }, 
+    {
+        "3M Company": "Industrial Conglomerates"
+    }, 
+    {
+        "Altria Group Inc": "Tobacco"
+    }, 
+    {
+        "The Mosaic Company": "Fertilizers & Agricultural Chemicals"
+    }, 
+    {
+        "Marathon Petroleum": "Oil & Gas Refining & Marketing"
+    }, 
+    {
+        "Morgan Stanley": "Investment Banking & Brokerage"
+    }, 
+    {
+        "Nasdaq, Inc.": "Financial Exchanges & Data"
+    }, 
+    {
+        "NextEra Energy": "Multi-Utilities"
+    }, 
+    {
+        "NiSource Inc.": "Multi-Utilities"
+    }, 
+    {
+        "Nike": "Apparel, Accessories & Luxury Goods"
+    }, 
+    {
+        "Northrop Grumman Corp.": "Aerospace & Defense"
+    }, 
+    {
+        "Norfolk Southern Corp.": "Railroads"
+    }, 
+    {
+        "Northern Trust Corp.": "Asset Management & Custody Banks"
+    }, 
+    {
+        "Nucor Corp.": "Steel"
+    }, 
+    {
+        "Nvidia Corporation": "Semiconductors"
+    }, 
+    {
+        "Newell Brands": "Housewares & Specialties"
+    }, 
+    {
+        "Realty Income Corporation": "Retail REITs"
+    }, 
+    {
+        "ONEOK": "Oil & Gas Storage & Transportation"
+    }, 
+    {
+        "Omnicom Group": "Advertising"
+    }, 
+    {
+        "Oracle Corp.": "Application Software"
+    }, 
+    {
+        "Paychex Inc.": "Internet Software & Services"
+    }, 
+    {
+        "PACCAR Inc.": "Construction Machinery & Heavy Trucks"
+    }, 
+    {
+        "Patterson Companies": "Health Care Supplies"
+    }, 
+    {
+        "PepsiCo Inc.": "Soft Drinks"
+    }, 
+    {
+        "Pfizer Inc.": "Pharmaceuticals"
+    }, 
+    {
+        "Principal Financial Group": "Life & Health Insurance"
+    }, 
+    {
+        "Procter & Gamble": "Personal Products"
+    }, 
+    {
+        "Progressive Corp.": "Property & Casualty Insurance"
+    }, 
+    {
+        "Parker-Hannifin": "Industrial Machinery"
+    }, 
+    {
+        "Prologis": "Industrial REITs"
+    }, 
+    {
+        "PNC Financial Services": "Regional Banks"
+    }, 
+    {
+        "Pentair Ltd.": "Industrial Machinery"
+    }, 
+    {
+        "Pinnacle West Capital": "Multi-Utilities"
+    }, 
+    {
+        "PPG Industries": "Specialty Chemicals"
+    }, 
+    {
+        "PPL Corp.": "Electric Utilities"
+    }, 
+    {
+        "Prudential Financial": "Life & Health Insurance"
+    }, 
+    {
+        "Public Storage": "Specialized REITs"
+    }, 
+    {
+        "PVH Corp.": "Apparel, Accessories & Luxury Goods"
+    }, 
+    {
+        "Praxair Inc.": "Industrial Gases"
+    }, 
+    {
+        "Ryder System": "Trucking"
+    }, 
+    {
+        "Reynolds American Inc.": "Tobacco"
+    }, 
+    {
+        "Royal Caribbean Cruises Ltd": "Hotels, Resorts & Cruise Lines"
+    }, 
+    {
+        "Regency Centers Corporation": "Retail REITs"
+    }, 
+    {
+        "Regions Financial Corp.": "Regional Banks"
+    }, 
+    {
+        "Robert Half International": "Human Resource & Employment Services"
+    }, 
+    {
+        "Raymond James Financial Inc.": "Investment Banking & Brokerage"
+    }, 
+    {
+        "Polo Ralph Lauren Corp.": "Apparel, Accessories & Luxury Goods"
+    }, 
+    {
+        "Rockwell Automation Inc.": "Electrical Components & Equipment"
+    }, 
+    {
+        "Roper Technologies": "Industrial Conglomerates"
+    }, 
+    {
+        "Ross Stores": "Apparel Retail"
+    }, 
+    {
+        "Republic Services Inc": "Environmental & Facilities Services"
+    }
+]
