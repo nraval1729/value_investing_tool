@@ -204,9 +204,6 @@
         "Investment Banking & Brokerage": "Financials"
     }, 
     {
-        "Industrial Materials": "Industrials"
-    }, 
-    {
         "Leisure Products": "Consumer Discretionary"
     }, 
     {
@@ -280,11 +277,5 @@
     }, 
     {
         "Environmental & Facilities Services": "Industrials"
-    }, 
-    {
-        "Household Appliances": "Consumer Discretionary"
-    }, 
-    {
-        "Cable & Satellite": "Consumer Discretionary"
     }
 ]

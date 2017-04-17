@@ -339,7 +339,7 @@
         "GS": "Investment Banking & Brokerage"
     }, 
     {
-        "GWW": "Industrial Materials"
+        "GWW": "Industrial Machinery"
     }, 
     {
         "HAS": "Leisure Products"
@@ -661,50 +661,5 @@
     }, 
     {
         "RSG": "Environmental & Facilities Services"
-    }, 
-    {
-        "RTN": "Aerospace & Defense"
-    }, 
-    {
-        "SBUX": "Restaurants"
-    }, 
-    {
-        "SCG": "Multi-Utilities"
-    }, 
-    {
-        "SCHW": "Investment Banking & Brokerage"
-    }, 
-    {
-        "SEE": "Paper Packaging"
-    }, 
-    {
-        "SHW": "Specialty Chemicals"
-    }, 
-    {
-        "SIG": "Specialty Stores"
-    }, 
-    {
-        "SJM": "Packaged Foods & Meats"
-    }, 
-    {
-        "SLG": "Office REITs"
-    }, 
-    {
-        "SNA": "Household Appliances"
-    }, 
-    {
-        "SNI": "Cable & Satellite"
-    }, 
-    {
-        "SO": "Electric Utilities"
-    }, 
-    {
-        "SPG": "Retail REITs"
-    }, 
-    {
-        "SPGI": "Financial Exchanges & Data"
-    }, 
-    {
-        "SRE": "Multi-Utilities"
     }
 ]
