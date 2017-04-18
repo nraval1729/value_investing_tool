@@ -2,27 +2,29 @@
     "Industrials": [
         "Electrical Components & Equipment", 
         "Industrial Machinery", 
-        "Human Resource & Employment Services", 
         "Railroads", 
         "Construction Machinery & Heavy Trucks", 
-        "Environmental & Facilities Services", 
+        "Construction & Engineering", 
         "Trucking", 
         "Air Freight & Logistics", 
         "Aerospace & Defense", 
-        "Industrial Conglomerates", 
-        "Building Products"
+        "Industrial Conglomerates"
     ], 
     "Consumer Discretionary": [
-        "Automotive Retail", 
+        "Household Appliances", 
+        "Publishing", 
+        "Specialty Stores", 
         "Hotels, Resorts & Cruise Lines", 
-        "Automobile Manufacturers", 
         "Apparel, Accessories & Luxury Goods", 
+        "Cable & Satellite", 
+        "Department Stores", 
         "Broadcasting", 
         "Computer & Electronics Retail", 
         "Advertising", 
-        "Internet & Direct Marketing Retail", 
         "Housewares & Specialties", 
-        "Apparel Retail"
+        "Restaurants", 
+        "Apparel Retail", 
+        "Automotive Retail"
     ], 
     "Utilities": [
         "Water Utilities", 
@@ -31,9 +33,7 @@
     ], 
     "Consumer Staples": [
         "Agricultural Products", 
-        "Tobacco", 
         "Soft Drinks", 
-        "Personal Products", 
         "Packaged Foods & Meats"
     ], 
     "Health Care": [
@@ -47,6 +47,7 @@
     "Materials": [
         "Steel", 
         "Industrial Gases", 
+        "Fertilizers & Agricultural Chemicals", 
         "Specialty Chemicals", 
         "Paper Packaging", 
         "Metal & Glass Containers", 
@@ -68,8 +69,7 @@
         "Residential REITs", 
         "Specialized REITs", 
         "Retail REITs", 
-        "Office REITs", 
-        "Industrial REITs"
+        "Office REITs"
     ], 
     "Energy": [
         "Oil & Gas Refining & Marketing", 
@@ -80,6 +80,7 @@
         "Semiconductors", 
         "Home Entertainment Software", 
         "Electronic Components", 
+        "Electronic Equipment & Instruments", 
         "IT Consulting & Other Services", 
         "Internet Software & Services", 
         "Systems Software", 

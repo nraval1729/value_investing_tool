@@ -117,19 +117,40 @@
         "Air Freight & Logistics": "Industrials"
     }, 
     {
-        "Internet & Direct Marketing Retail": "Consumer Discretionary"
+        "Apparel Retail": "Consumer Discretionary"
     }, 
     {
-        "Automobile Manufacturers": "Consumer Discretionary"
+        "Electronic Equipment & Instruments": "Information Technology"
     }, 
     {
-        "Building Products": "Industrials"
+        "Construction & Engineering": "Industrials"
     }, 
     {
-        "Construction Materials": "Materials"
+        "Industrial Machinery": "Industrials"
+    }, 
+    {
+        "Fertilizers & Agricultural Chemicals": "Materials"
+    }, 
+    {
+        "Publishing": "Consumer Discretionary"
+    }, 
+    {
+        "Retail REITs": "Real Estate"
     }, 
     {
         "Industrial Conglomerates": "Industrials"
+    }, 
+    {
+        "Advertising": "Consumer Discretionary"
+    }, 
+    {
+        "Trucking": "Industrials"
+    }, 
+    {
+        "Department Stores": "Consumer Discretionary"
+    }, 
+    {
+        "Construction Materials": "Materials"
     }, 
     {
         "Oil & Gas Refining & Marketing": "Energy"
@@ -150,13 +171,7 @@
         "Housewares & Specialties": "Consumer Discretionary"
     }, 
     {
-        "Retail REITs": "Real Estate"
-    }, 
-    {
         "Oil & Gas Storage & Transportation": "Energy"
-    }, 
-    {
-        "Advertising": "Consumer Discretionary"
     }, 
     {
         "Application Software": "Information Technology"
@@ -174,27 +189,15 @@
         "Pharmaceuticals": "Health Care"
     }, 
     {
-        "Personal Products": "Consumer Staples"
+        "Restaurants": "Consumer Discretionary"
     }, 
     {
-        "Industrial Machinery": "Industrials"
+        "Specialty Stores": "Consumer Discretionary"
     }, 
     {
-        "Industrial REITs": "Real Estate"
+        "Household Appliances": "Consumer Discretionary"
     }, 
     {
-        "Trucking": "Industrials"
-    }, 
-    {
-        "Tobacco": "Consumer Staples"
-    }, 
-    {
-        "Human Resource & Employment Services": "Industrials"
-    }, 
-    {
-        "Apparel Retail": "Consumer Discretionary"
-    }, 
-    {
-        "Environmental & Facilities Services": "Industrials"
+        "Cable & Satellite": "Consumer Discretionary"
     }
 ]

@@ -150,37 +150,79 @@
         "CME Group Inc.": "Financials"
     }, 
     {
-        "Equity Residential": "Real Estate"
+        "FedEx Corporation": "Industrials"
     }, 
     {
-        "Eversource Energy": "Utilities"
+        "Fidelity National Information Services": "Information Technology"
     }, 
     {
-        "Essex Property Trust, Inc.": "Real Estate"
+        "Foot Locker Inc": "Consumer Discretionary"
     }, 
     {
-        "Eaton Corporation": "Industrials"
+        "FLIR Systems": "Information Technology"
     }, 
     {
-        "Exelon Corp.": "Utilities"
+        "Fluor Corp.": "Industrials"
     }, 
     {
-        "Expeditors International": "Industrials"
+        "Flowserve Corporation": "Industrials"
     }, 
     {
-        "Expedia Inc.": "Consumer Discretionary"
+        "FMC Corporation": "Materials"
     }, 
     {
-        "Extra Space Storage": "Real Estate"
+        "Twenty-First Century Fox Class B": "Consumer Discretionary"
     }, 
     {
-        "Ford Motor": "Consumer Discretionary"
+        "Twenty-First Century Fox Class A": "Consumer Discretionary"
     }, 
     {
-        "Fastenal Co": "Industrials"
+        "Federal Realty Investment Trust": "Real Estate"
+    }, 
+    {
+        "General Dynamics": "Industrials"
+    }, 
+    {
+        "General Electric": "Industrials"
+    }, 
+    {
+        "General Growth Properties Inc.": "Real Estate"
+    }, 
+    {
+        "Intel Corp.": "Information Technology"
+    }, 
+    {
+        "Intuit Inc.": "Information Technology"
+    }, 
+    {
+        "International Paper": "Materials"
+    }, 
+    {
+        "Interpublic Group": "Consumer Discretionary"
+    }, 
+    {
+        "Ingersoll-Rand PLC": "Industrials"
+    }, 
+    {
+        "Iron Mountain Incorporated": "Real Estate"
+    }, 
+    {
+        "Illinois Tool Works": "Industrials"
     }, 
     {
         "Invesco Ltd.": "Financials"
+    }, 
+    {
+        "J. B. Hunt Transport Services": "Industrials"
+    }, 
+    {
+        "JPMorgan Chase & Co.": "Financials"
+    }, 
+    {
+        "Nordstrom": "Consumer Discretionary"
+    }, 
+    {
+        "KeyCorp": "Financials"
     }, 
     {
         "Martin Marietta Materials": "Materials"
@@ -252,81 +294,48 @@
         "Pfizer Inc.": "Health Care"
     }, 
     {
-        "Principal Financial Group": "Financials"
+        "Raytheon Co.": "Industrials"
     }, 
     {
-        "Procter & Gamble": "Consumer Staples"
+        "Starbucks Corp.": "Consumer Discretionary"
     }, 
     {
-        "Progressive Corp.": "Financials"
+        "SCANA Corp": "Utilities"
     }, 
     {
-        "Parker-Hannifin": "Industrials"
+        "Charles Schwab Corporation": "Financials"
     }, 
     {
-        "Prologis": "Real Estate"
+        "Sealed Air": "Materials"
     }, 
     {
-        "PNC Financial Services": "Financials"
+        "Sherwin-Williams": "Materials"
     }, 
     {
-        "Pentair Ltd.": "Industrials"
+        "Signet Jewelers": "Consumer Discretionary"
     }, 
     {
-        "Pinnacle West Capital": "Utilities"
+        "JM Smucker": "Consumer Staples"
     }, 
     {
-        "PPG Industries": "Materials"
+        "SL Green Realty": "Real Estate"
     }, 
     {
-        "PPL Corp.": "Utilities"
+        "Snap-On Inc.": "Consumer Discretionary"
     }, 
     {
-        "Prudential Financial": "Financials"
+        "Scripps Networks Interactive Inc.": "Consumer Discretionary"
     }, 
     {
-        "Public Storage": "Real Estate"
+        "Southern Co.": "Utilities"
     }, 
     {
-        "PVH Corp.": "Consumer Discretionary"
+        "Simon Property Group Inc": "Real Estate"
     }, 
     {
-        "Praxair Inc.": "Materials"
+        "S&P Global, Inc.": "Financials"
     }, 
     {
-        "Ryder System": "Industrials"
-    }, 
-    {
-        "Reynolds American Inc.": "Consumer Staples"
-    }, 
-    {
-        "Royal Caribbean Cruises Ltd": "Consumer Discretionary"
-    }, 
-    {
-        "Regency Centers Corporation": "Real Estate"
-    }, 
-    {
-        "Regions Financial Corp.": "Financials"
-    }, 
-    {
-        "Robert Half International": "Industrials"
-    }, 
-    {
-        "Raymond James Financial Inc.": "Financials"
-    }, 
-    {
-        "Polo Ralph Lauren Corp.": "Consumer Discretionary"
-    }, 
-    {
-        "Rockwell Automation Inc.": "Industrials"
-    }, 
-    {
-        "Roper Technologies": "Industrials"
-    }, 
-    {
-        "Ross Stores": "Consumer Discretionary"
-    }, 
-    {
-        "Republic Services Inc": "Industrials"
+        "Sempra Energy": "Utilities"
     }
 ]

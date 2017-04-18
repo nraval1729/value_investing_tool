@@ -150,37 +150,79 @@
         "CME Group Inc.": "Financial Exchanges & Data"
     }, 
     {
-        "Equity Residential": "Residential REITs"
+        "FedEx Corporation": "Air Freight & Logistics"
     }, 
     {
-        "Eversource Energy": "Multi-Utilities"
+        "Fidelity National Information Services": "Internet Software & Services"
     }, 
     {
-        "Essex Property Trust, Inc.": "Residential REITs"
+        "Foot Locker Inc": "Apparel Retail"
     }, 
     {
-        "Eaton Corporation": "Electrical Components & Equipment"
+        "FLIR Systems": "Electronic Equipment & Instruments"
     }, 
     {
-        "Exelon Corp.": "Multi-Utilities"
+        "Fluor Corp.": "Construction & Engineering"
     }, 
     {
-        "Expeditors International": "Air Freight & Logistics"
+        "Flowserve Corporation": "Industrial Machinery"
     }, 
     {
-        "Expedia Inc.": "Internet & Direct Marketing Retail"
+        "FMC Corporation": "Fertilizers & Agricultural Chemicals"
     }, 
     {
-        "Extra Space Storage": "Specialized REITs"
+        "Twenty-First Century Fox Class B": "Publishing"
     }, 
     {
-        "Ford Motor": "Automobile Manufacturers"
+        "Twenty-First Century Fox Class A": "Publishing"
     }, 
     {
-        "Fastenal Co": "Building Products"
+        "Federal Realty Investment Trust": "Retail REITs"
+    }, 
+    {
+        "General Dynamics": "Aerospace & Defense"
+    }, 
+    {
+        "General Electric": "Industrial Conglomerates"
+    }, 
+    {
+        "General Growth Properties Inc.": "Retail REITs"
+    }, 
+    {
+        "Intel Corp.": "Semiconductors"
+    }, 
+    {
+        "Intuit Inc.": "Internet Software & Services"
+    }, 
+    {
+        "International Paper": "Paper Packaging"
+    }, 
+    {
+        "Interpublic Group": "Advertising"
+    }, 
+    {
+        "Ingersoll-Rand PLC": "Industrial Machinery"
+    }, 
+    {
+        "Iron Mountain Incorporated": "Specialized REITs"
+    }, 
+    {
+        "Illinois Tool Works": "Industrial Machinery"
     }, 
     {
         "Invesco Ltd.": "Asset Management & Custody Banks"
+    }, 
+    {
+        "J. B. Hunt Transport Services": "Trucking"
+    }, 
+    {
+        "JPMorgan Chase & Co.": "Diversified Banks"
+    }, 
+    {
+        "Nordstrom": "Department Stores"
+    }, 
+    {
+        "KeyCorp": "Regional Banks"
     }, 
     {
         "Martin Marietta Materials": "Construction Materials"
@@ -252,81 +294,48 @@
         "Pfizer Inc.": "Pharmaceuticals"
     }, 
     {
-        "Principal Financial Group": "Life & Health Insurance"
+        "Raytheon Co.": "Aerospace & Defense"
     }, 
     {
-        "Procter & Gamble": "Personal Products"
+        "Starbucks Corp.": "Restaurants"
     }, 
     {
-        "Progressive Corp.": "Property & Casualty Insurance"
+        "SCANA Corp": "Multi-Utilities"
     }, 
     {
-        "Parker-Hannifin": "Industrial Machinery"
+        "Charles Schwab Corporation": "Investment Banking & Brokerage"
     }, 
     {
-        "Prologis": "Industrial REITs"
+        "Sealed Air": "Paper Packaging"
     }, 
     {
-        "PNC Financial Services": "Regional Banks"
+        "Sherwin-Williams": "Specialty Chemicals"
     }, 
     {
-        "Pentair Ltd.": "Industrial Machinery"
+        "Signet Jewelers": "Specialty Stores"
     }, 
     {
-        "Pinnacle West Capital": "Multi-Utilities"
+        "JM Smucker": "Packaged Foods & Meats"
     }, 
     {
-        "PPG Industries": "Specialty Chemicals"
+        "SL Green Realty": "Office REITs"
     }, 
     {
-        "PPL Corp.": "Electric Utilities"
+        "Snap-On Inc.": "Household Appliances"
     }, 
     {
-        "Prudential Financial": "Life & Health Insurance"
+        "Scripps Networks Interactive Inc.": "Cable & Satellite"
     }, 
     {
-        "Public Storage": "Specialized REITs"
+        "Southern Co.": "Electric Utilities"
     }, 
     {
-        "PVH Corp.": "Apparel, Accessories & Luxury Goods"
+        "Simon Property Group Inc": "Retail REITs"
     }, 
     {
-        "Praxair Inc.": "Industrial Gases"
+        "S&P Global, Inc.": "Financial Exchanges & Data"
     }, 
     {
-        "Ryder System": "Trucking"
-    }, 
-    {
-        "Reynolds American Inc.": "Tobacco"
-    }, 
-    {
-        "Royal Caribbean Cruises Ltd": "Hotels, Resorts & Cruise Lines"
-    }, 
-    {
-        "Regency Centers Corporation": "Retail REITs"
-    }, 
-    {
-        "Regions Financial Corp.": "Regional Banks"
-    }, 
-    {
-        "Robert Half International": "Human Resource & Employment Services"
-    }, 
-    {
-        "Raymond James Financial Inc.": "Investment Banking & Brokerage"
-    }, 
-    {
-        "Polo Ralph Lauren Corp.": "Apparel, Accessories & Luxury Goods"
-    }, 
-    {
-        "Rockwell Automation Inc.": "Electrical Components & Equipment"
-    }, 
-    {
-        "Roper Technologies": "Industrial Conglomerates"
-    }, 
-    {
-        "Ross Stores": "Apparel Retail"
-    }, 
-    {
-        "Republic Services Inc": "Environmental & Facilities Services"
+        "Sempra Energy": "Multi-Utilities"
     }
 ]

@@ -150,37 +150,79 @@
         "CME": "Financials"
     }, 
     {
-        "EQR": "Real Estate"
+        "FDX": "Industrials"
     }, 
     {
-        "ES": "Utilities"
+        "FIS": "Information Technology"
     }, 
     {
-        "ESS": "Real Estate"
+        "FL": "Consumer Discretionary"
     }, 
     {
-        "ETN": "Industrials"
+        "FLIR": "Information Technology"
     }, 
     {
-        "EXC": "Utilities"
+        "FLR": "Industrials"
     }, 
     {
-        "EXPD": "Industrials"
+        "FLS": "Industrials"
     }, 
     {
-        "EXPE": "Consumer Discretionary"
+        "FMC": "Materials"
     }, 
     {
-        "EXR": "Real Estate"
+        "FOX": "Consumer Discretionary"
     }, 
     {
-        "F": "Consumer Discretionary"
+        "FOXA": "Consumer Discretionary"
     }, 
     {
-        "FAST": "Industrials"
+        "FRT": "Real Estate"
+    }, 
+    {
+        "GD": "Industrials"
+    }, 
+    {
+        "GE": "Industrials"
+    }, 
+    {
+        "GGP": "Real Estate"
+    }, 
+    {
+        "INTC": "Information Technology"
+    }, 
+    {
+        "INTU": "Information Technology"
+    }, 
+    {
+        "IP": "Materials"
+    }, 
+    {
+        "IPG": "Consumer Discretionary"
+    }, 
+    {
+        "IR": "Industrials"
+    }, 
+    {
+        "IRM": "Real Estate"
+    }, 
+    {
+        "ITW": "Industrials"
     }, 
     {
         "IVZ": "Financials"
+    }, 
+    {
+        "JBHT": "Industrials"
+    }, 
+    {
+        "JPM": "Financials"
+    }, 
+    {
+        "JWN": "Consumer Discretionary"
+    }, 
+    {
+        "KEY": "Financials"
     }, 
     {
         "MLM": "Materials"
@@ -252,81 +294,48 @@
         "PFE": "Health Care"
     }, 
     {
-        "PFG": "Financials"
+        "RTN": "Industrials"
     }, 
     {
-        "PG": "Consumer Staples"
+        "SBUX": "Consumer Discretionary"
     }, 
     {
-        "PGR": "Financials"
+        "SCG": "Utilities"
     }, 
     {
-        "PH": "Industrials"
+        "SCHW": "Financials"
     }, 
     {
-        "PLD": "Real Estate"
+        "SEE": "Materials"
     }, 
     {
-        "PNC": "Financials"
+        "SHW": "Materials"
     }, 
     {
-        "PNR": "Industrials"
+        "SIG": "Consumer Discretionary"
     }, 
     {
-        "PNW": "Utilities"
+        "SJM": "Consumer Staples"
     }, 
     {
-        "PPG": "Materials"
+        "SLG": "Real Estate"
     }, 
     {
-        "PPL": "Utilities"
+        "SNA": "Consumer Discretionary"
     }, 
     {
-        "PRU": "Financials"
+        "SNI": "Consumer Discretionary"
     }, 
     {
-        "PSA": "Real Estate"
+        "SO": "Utilities"
     }, 
     {
-        "PVH": "Consumer Discretionary"
+        "SPG": "Real Estate"
     }, 
     {
-        "PX": "Materials"
+        "SPGI": "Financials"
     }, 
     {
-        "R": "Industrials"
-    }, 
-    {
-        "RAI": "Consumer Staples"
-    }, 
-    {
-        "RCL": "Consumer Discretionary"
-    }, 
-    {
-        "REG": "Real Estate"
-    }, 
-    {
-        "RF": "Financials"
-    }, 
-    {
-        "RHI": "Industrials"
-    }, 
-    {
-        "RJF": "Financials"
-    }, 
-    {
-        "RL": "Consumer Discretionary"
-    }, 
-    {
-        "ROK": "Industrials"
-    }, 
-    {
-        "ROP": "Industrials"
-    }, 
-    {
-        "ROST": "Consumer Discretionary"
-    }, 
-    {
-        "RSG": "Industrials"
+        "SRE": "Utilities"
     }
 ]

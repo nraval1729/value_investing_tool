@@ -150,37 +150,79 @@
         "CME": "Financial Exchanges & Data"
     }, 
     {
-        "EQR": "Residential REITs"
+        "FDX": "Air Freight & Logistics"
     }, 
     {
-        "ES": "Multi-Utilities"
+        "FIS": "Internet Software & Services"
     }, 
     {
-        "ESS": "Residential REITs"
+        "FL": "Apparel Retail"
     }, 
     {
-        "ETN": "Electrical Components & Equipment"
+        "FLIR": "Electronic Equipment & Instruments"
     }, 
     {
-        "EXC": "Multi-Utilities"
+        "FLR": "Construction & Engineering"
     }, 
     {
-        "EXPD": "Air Freight & Logistics"
+        "FLS": "Industrial Machinery"
     }, 
     {
-        "EXPE": "Internet & Direct Marketing Retail"
+        "FMC": "Fertilizers & Agricultural Chemicals"
     }, 
     {
-        "EXR": "Specialized REITs"
+        "FOX": "Publishing"
     }, 
     {
-        "F": "Automobile Manufacturers"
+        "FOXA": "Publishing"
     }, 
     {
-        "FAST": "Building Products"
+        "FRT": "Retail REITs"
+    }, 
+    {
+        "GD": "Aerospace & Defense"
+    }, 
+    {
+        "GE": "Industrial Conglomerates"
+    }, 
+    {
+        "GGP": "Retail REITs"
+    }, 
+    {
+        "INTC": "Semiconductors"
+    }, 
+    {
+        "INTU": "Internet Software & Services"
+    }, 
+    {
+        "IP": "Paper Packaging"
+    }, 
+    {
+        "IPG": "Advertising"
+    }, 
+    {
+        "IR": "Industrial Machinery"
+    }, 
+    {
+        "IRM": "Specialized REITs"
+    }, 
+    {
+        "ITW": "Industrial Machinery"
     }, 
     {
         "IVZ": "Asset Management & Custody Banks"
+    }, 
+    {
+        "JBHT": "Trucking"
+    }, 
+    {
+        "JPM": "Diversified Banks"
+    }, 
+    {
+        "JWN": "Department Stores"
+    }, 
+    {
+        "KEY": "Regional Banks"
     }, 
     {
         "MLM": "Construction Materials"
@@ -252,81 +294,48 @@
         "PFE": "Pharmaceuticals"
     }, 
     {
-        "PFG": "Life & Health Insurance"
+        "RTN": "Aerospace & Defense"
     }, 
     {
-        "PG": "Personal Products"
+        "SBUX": "Restaurants"
     }, 
     {
-        "PGR": "Property & Casualty Insurance"
+        "SCG": "Multi-Utilities"
     }, 
     {
-        "PH": "Industrial Machinery"
+        "SCHW": "Investment Banking & Brokerage"
     }, 
     {
-        "PLD": "Industrial REITs"
+        "SEE": "Paper Packaging"
     }, 
     {
-        "PNC": "Regional Banks"
+        "SHW": "Specialty Chemicals"
     }, 
     {
-        "PNR": "Industrial Machinery"
+        "SIG": "Specialty Stores"
     }, 
     {
-        "PNW": "Multi-Utilities"
+        "SJM": "Packaged Foods & Meats"
     }, 
     {
-        "PPG": "Specialty Chemicals"
+        "SLG": "Office REITs"
     }, 
     {
-        "PPL": "Electric Utilities"
+        "SNA": "Household Appliances"
     }, 
     {
-        "PRU": "Life & Health Insurance"
+        "SNI": "Cable & Satellite"
     }, 
     {
-        "PSA": "Specialized REITs"
+        "SO": "Electric Utilities"
     }, 
     {
-        "PVH": "Apparel, Accessories & Luxury Goods"
+        "SPG": "Retail REITs"
     }, 
     {
-        "PX": "Industrial Gases"
+        "SPGI": "Financial Exchanges & Data"
     }, 
     {
-        "R": "Trucking"
-    }, 
-    {
-        "RAI": "Tobacco"
-    }, 
-    {
-        "RCL": "Hotels, Resorts & Cruise Lines"
-    }, 
-    {
-        "REG": "Retail REITs"
-    }, 
-    {
-        "RF": "Regional Banks"
-    }, 
-    {
-        "RHI": "Human Resource & Employment Services"
-    }, 
-    {
-        "RJF": "Investment Banking & Brokerage"
-    }, 
-    {
-        "RL": "Apparel, Accessories & Luxury Goods"
-    }, 
-    {
-        "ROK": "Electrical Components & Equipment"
-    }, 
-    {
-        "ROP": "Industrial Conglomerates"
-    }, 
-    {
-        "ROST": "Apparel Retail"
-    }, 
-    {
-        "RSG": "Environmental & Facilities Services"
+        "SRE": "Multi-Utilities"
     }
 ]

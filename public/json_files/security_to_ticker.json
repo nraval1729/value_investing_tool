@@ -150,37 +150,79 @@
         "CME Group Inc.": "CME"
     }, 
     {
-        "Equity Residential": "EQR"
+        "FedEx Corporation": "FDX"
     }, 
     {
-        "Eversource Energy": "ES"
+        "Fidelity National Information Services": "FIS"
     }, 
     {
-        "Essex Property Trust, Inc.": "ESS"
+        "Foot Locker Inc": "FL"
     }, 
     {
-        "Eaton Corporation": "ETN"
+        "FLIR Systems": "FLIR"
     }, 
     {
-        "Exelon Corp.": "EXC"
+        "Fluor Corp.": "FLR"
     }, 
     {
-        "Expeditors International": "EXPD"
+        "Flowserve Corporation": "FLS"
     }, 
     {
-        "Expedia Inc.": "EXPE"
+        "FMC Corporation": "FMC"
     }, 
     {
-        "Extra Space Storage": "EXR"
+        "Twenty-First Century Fox Class B": "FOX"
     }, 
     {
-        "Ford Motor": "F"
+        "Twenty-First Century Fox Class A": "FOXA"
     }, 
     {
-        "Fastenal Co": "FAST"
+        "Federal Realty Investment Trust": "FRT"
+    }, 
+    {
+        "General Dynamics": "GD"
+    }, 
+    {
+        "General Electric": "GE"
+    }, 
+    {
+        "General Growth Properties Inc.": "GGP"
+    }, 
+    {
+        "Intel Corp.": "INTC"
+    }, 
+    {
+        "Intuit Inc.": "INTU"
+    }, 
+    {
+        "International Paper": "IP"
+    }, 
+    {
+        "Interpublic Group": "IPG"
+    }, 
+    {
+        "Ingersoll-Rand PLC": "IR"
+    }, 
+    {
+        "Iron Mountain Incorporated": "IRM"
+    }, 
+    {
+        "Illinois Tool Works": "ITW"
     }, 
     {
         "Invesco Ltd.": "IVZ"
+    }, 
+    {
+        "J. B. Hunt Transport Services": "JBHT"
+    }, 
+    {
+        "JPMorgan Chase & Co.": "JPM"
+    }, 
+    {
+        "Nordstrom": "JWN"
+    }, 
+    {
+        "KeyCorp": "KEY"
     }, 
     {
         "Martin Marietta Materials": "MLM"
@@ -252,81 +294,48 @@
         "Pfizer Inc.": "PFE"
     }, 
     {
-        "Principal Financial Group": "PFG"
+        "Raytheon Co.": "RTN"
     }, 
     {
-        "Procter & Gamble": "PG"
+        "Starbucks Corp.": "SBUX"
     }, 
     {
-        "Progressive Corp.": "PGR"
+        "SCANA Corp": "SCG"
     }, 
     {
-        "Parker-Hannifin": "PH"
+        "Charles Schwab Corporation": "SCHW"
     }, 
     {
-        "Prologis": "PLD"
+        "Sealed Air": "SEE"
     }, 
     {
-        "PNC Financial Services": "PNC"
+        "Sherwin-Williams": "SHW"
     }, 
     {
-        "Pentair Ltd.": "PNR"
+        "Signet Jewelers": "SIG"
     }, 
     {
-        "Pinnacle West Capital": "PNW"
+        "JM Smucker": "SJM"
     }, 
     {
-        "PPG Industries": "PPG"
+        "SL Green Realty": "SLG"
     }, 
     {
-        "PPL Corp.": "PPL"
+        "Snap-On Inc.": "SNA"
     }, 
     {
-        "Prudential Financial": "PRU"
+        "Scripps Networks Interactive Inc.": "SNI"
     }, 
     {
-        "Public Storage": "PSA"
+        "Southern Co.": "SO"
     }, 
     {
-        "PVH Corp.": "PVH"
+        "Simon Property Group Inc": "SPG"
     }, 
     {
-        "Praxair Inc.": "PX"
+        "S&P Global, Inc.": "SPGI"
     }, 
     {
-        "Ryder System": "R"
-    }, 
-    {
-        "Reynolds American Inc.": "RAI"
-    }, 
-    {
-        "Royal Caribbean Cruises Ltd": "RCL"
-    }, 
-    {
-        "Regency Centers Corporation": "REG"
-    }, 
-    {
-        "Regions Financial Corp.": "RF"
-    }, 
-    {
-        "Robert Half International": "RHI"
-    }, 
-    {
-        "Raymond James Financial Inc.": "RJF"
-    }, 
-    {
-        "Polo Ralph Lauren Corp.": "RL"
-    }, 
-    {
-        "Rockwell Automation Inc.": "ROK"
-    }, 
-    {
-        "Roper Technologies": "ROP"
-    }, 
-    {
-        "Ross Stores": "ROST"
-    }, 
-    {
-        "Republic Services Inc": "RSG"
+        "Sempra Energy": "SRE"
     }
 ]
