@@ -1,43 +1,24 @@
 {
     "Industrials": [
         "Electrical Components & Equipment", 
-        "Construction Machinery & Heavy Trucks", 
         "Industrial Machinery", 
-        "Research & Consulting Services", 
         "Human Resource & Employment Services", 
         "Railroads", 
-        "Airlines", 
-        "Construction & Engineering", 
-        "Trucking", 
+        "Construction Machinery & Heavy Trucks", 
         "Environmental & Facilities Services", 
-        "Air Freight & Logistics", 
+        "Trucking", 
         "Aerospace & Defense", 
-        "Industrial Conglomerates", 
-        "Diversified Support Services", 
-        "Building Products"
+        "Industrial Conglomerates"
     ], 
     "Consumer Discretionary": [
-        "Consumer Electronics", 
-        "Home Improvement Retail", 
         "Automotive Retail", 
-        "Specialty Stores", 
         "Hotels, Resorts & Cruise Lines", 
-        "Automobile Manufacturers", 
-        "General Merchandise Stores", 
         "Apparel, Accessories & Luxury Goods", 
-        "Motorcycle Manufacturers", 
-        "Department Stores", 
         "Broadcasting", 
-        "Computer & Electronics Retail", 
-        "Advertising", 
-        "Internet & Direct Marketing Retail", 
-        "Publishing", 
         "Housewares & Specialties", 
-        "Leisure Products", 
-        "Home Furnishings", 
-        "Homebuilding", 
-        "Apparel Retail", 
-        "Restaurants"
+        "Advertising", 
+        "Computer & Electronics Retail", 
+        "Apparel Retail"
     ], 
     "Utilities": [
         "Water Utilities", 
@@ -45,54 +26,27 @@
         "Electric Utilities"
     ], 
     "Consumer Staples": [
-        "Food Retail", 
-        "Household Products", 
-        "Tobacco", 
-        "Personal Products", 
-        "Packaged Foods & Meats", 
         "Agricultural Products", 
-        "Drug Retail", 
-        "Soft Drinks"
+        "Tobacco", 
+        "Soft Drinks", 
+        "Personal Products", 
+        "Packaged Foods & Meats"
     ], 
     "Health Care": [
         "Managed Health Care", 
         "Health Care Equipment", 
         "Pharmaceuticals", 
         "Health Care Distributors", 
-        "Health Care Services", 
         "Biotechnology", 
         "Health Care Supplies"
     ], 
     "Materials": [
         "Steel", 
         "Industrial Gases", 
-        "Fertilizers & Agricultural Chemicals", 
         "Specialty Chemicals", 
-        "Diversified Chemicals", 
         "Paper Packaging", 
         "Metal & Glass Containers", 
         "Construction Materials"
-    ], 
-    "Information Technology": [
-        "Data Processing & Outsourced Services", 
-        "Application Software", 
-        "Semiconductors", 
-        "Communications Equipment", 
-        "Home Entertainment Software", 
-        "Electronic Components", 
-        "Electronic Equipment & Instruments", 
-        "IT Consulting & Other Services", 
-        "Internet Software & Services", 
-        "Systems Software", 
-        "Semiconductor Equipment"
-    ], 
-    "Real Estate": [
-        "Health Care REITs", 
-        "Residential REITs", 
-        "Retail REITs", 
-        "Office REITs", 
-        "Specialized REITs", 
-        "Industrial REITs"
     ], 
     "Financials": [
         "Investment Banking & Brokerage", 
@@ -104,14 +58,27 @@
         "Diversified Banks", 
         "Property & Casualty Insurance", 
         "Insurance Brokers", 
-        "Financial Exchanges & Data", 
-        "Multi-Sector Holdings"
+        "Financial Exchanges & Data"
+    ], 
+    "Real Estate": [
+        "Residential REITs", 
+        "Specialized REITs", 
+        "Retail REITs", 
+        "Office REITs", 
+        "Industrial REITs"
     ], 
     "Energy": [
         "Oil & Gas Refining & Marketing", 
         "Oil & Gas Storage & Transportation"
     ], 
-    "Telecommunication Services": [
-        "Integrated Telecommunication Services"
+    "Information Technology": [
+        "Application Software", 
+        "Semiconductors", 
+        "Home Entertainment Software", 
+        "Electronic Components", 
+        "IT Consulting & Other Services", 
+        "Internet Software & Services", 
+        "Systems Software", 
+        "Semiconductor Equipment"
     ]
 }

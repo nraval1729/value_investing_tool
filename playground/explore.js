@@ -6,6 +6,10 @@ var companyTable = $('#companies');
 
 $(function() {
     $("#companies").tablesorter();
+    $.get("/biographical", function(data) {
+        console.log("got here");
+        console.log("Data: " + data);
+    });
     renderSectors(biographical);
 });
 
@@ -219,12 +223,12 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
     // Tooltip displays
     var pePopup = $('#pePopup');
     var psPopup = $('#psPopup');
-    var pcfPopup = $('#pcfPopup');
+    var pbPopup = $('#pbPopup');
     var divPopup = $('#divPopup');
     var rankPopup = $('#rankPopup');
     $('#peBox').mousedown(function(e){displayToolTip(e, pePopup)});
     $('#psBox').mousedown(function(e){displayToolTip(e, psPopup)});
-    $('#pcfBox').mousedown(function(e){displayToolTip(e, pcfPopup)});
+    $('#pbBox').mousedown(function(e){displayToolTip(e, pbPopup)});
     $('#divBox').mousedown(function(e){displayToolTip(e, divPopup)});
     $('#rankBox').mousedown(function(e){displayToolTip(e, rankPopup)});
 
@@ -235,8 +239,8 @@ function renderCompanies(biographicaljson, technicaljson, industryName, sectorNa
         if(psPopup.hasClass('show')) {
             psPopup.toggleClass('show');
         }
-        if(pcfPopup.hasClass('show')) {
-            pcfPopup.toggleClass('show');
+        if(pbPopup.hasClass('show')) {
+            pbPopup.toggleClass('show');
         }
         if(divPopup.hasClass('show')) {
             divPopup.toggleClass('show');
