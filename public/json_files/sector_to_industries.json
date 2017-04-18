@@ -7,17 +7,21 @@
         "Construction Machinery & Heavy Trucks", 
         "Environmental & Facilities Services", 
         "Trucking", 
+        "Air Freight & Logistics", 
         "Aerospace & Defense", 
-        "Industrial Conglomerates"
+        "Industrial Conglomerates", 
+        "Building Products"
     ], 
     "Consumer Discretionary": [
         "Automotive Retail", 
         "Hotels, Resorts & Cruise Lines", 
+        "Automobile Manufacturers", 
         "Apparel, Accessories & Luxury Goods", 
         "Broadcasting", 
-        "Housewares & Specialties", 
-        "Advertising", 
         "Computer & Electronics Retail", 
+        "Advertising", 
+        "Internet & Direct Marketing Retail", 
+        "Housewares & Specialties", 
         "Apparel Retail"
     ], 
     "Utilities": [

@@ -150,6 +150,36 @@
         "CME": "Financial Exchanges & Data"
     }, 
     {
+        "EQR": "Residential REITs"
+    }, 
+    {
+        "ES": "Multi-Utilities"
+    }, 
+    {
+        "ESS": "Residential REITs"
+    }, 
+    {
+        "ETN": "Electrical Components & Equipment"
+    }, 
+    {
+        "EXC": "Multi-Utilities"
+    }, 
+    {
+        "EXPD": "Air Freight & Logistics"
+    }, 
+    {
+        "EXPE": "Internet & Direct Marketing Retail"
+    }, 
+    {
+        "EXR": "Specialized REITs"
+    }, 
+    {
+        "F": "Automobile Manufacturers"
+    }, 
+    {
+        "FAST": "Building Products"
+    }, 
+    {
         "IVZ": "Asset Management & Custody Banks"
     }, 
     {

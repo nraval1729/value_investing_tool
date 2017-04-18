@@ -10,12 +10,17 @@
     "Electrical Components & Equipment": [
         "AYI", 
         "ROK", 
-        "AME"
+        "AME", 
+        "ETN"
     ], 
     "Regional Banks": [
         "PNC", 
         "BBT", 
         "RF"
+    ], 
+    "Electric Utilities": [
+        "AEP", 
+        "PPL"
     ], 
     "Property & Casualty Insurance": [
         "CB", 
@@ -44,18 +49,18 @@
     "Agricultural Products": [
         "ADM"
     ], 
-    "Paper Packaging": [
-        "AVY"
+    "Housewares & Specialties": [
+        "NWL"
     ], 
-    "IT Consulting & Other Services": [
-        "ACN"
+    "Air Freight & Logistics": [
+        "EXPD"
+    ], 
+    "Soft Drinks": [
+        "PEP"
     ], 
     "Industrial Conglomerates": [
         "MMM", 
         "ROP"
-    ], 
-    "Water Utilities": [
-        "AWK"
     ], 
     "Life & Health Insurance": [
         "AFL", 
@@ -65,8 +70,8 @@
     "Multi-line Insurance": [
         "AIZ"
     ], 
-    "Construction Materials": [
-        "MLM"
+    "IT Consulting & Other Services": [
+        "ACN"
     ], 
     "Human Resource & Employment Services": [
         "RHI"
@@ -95,7 +100,11 @@
     ], 
     "Specialized REITs": [
         "PSA", 
+        "EXR", 
         "AMT"
+    ], 
+    "Water Utilities": [
+        "AWK"
     ], 
     "Metal & Glass Containers": [
         "BLL"
@@ -109,9 +118,11 @@
     ], 
     "Multi-Utilities": [
         "NI", 
+        "EXC", 
         "NEE", 
+        "PNW", 
         "AEE", 
-        "PNW"
+        "ES"
     ], 
     "Tobacco": [
         "RAI"
@@ -130,6 +141,8 @@
         "R"
     ], 
     "Residential REITs": [
+        "EQR", 
+        "ESS", 
         "AVB"
     ], 
     "Broadcasting": [
@@ -174,15 +187,18 @@
         "BCR", 
         "BAX"
     ], 
+    "Managed Health Care": [
+        "ANTM", 
+        "AET"
+    ], 
     "Automotive Retail": [
         "AAP"
     ], 
     "Consumer Finance": [
         "AXP"
     ], 
-    "Health Care Distributors": [
-        "BMY", 
-        "CAH"
+    "Automobile Manufacturers": [
+        "F"
     ], 
     "Semiconductors": [
         "NVDA", 
@@ -198,18 +214,21 @@
     "Railroads": [
         "NSC"
     ], 
-    "Soft Drinks": [
-        "PEP"
+    "Construction Materials": [
+        "MLM"
     ], 
     "Office REITs": [
         "BXP"
     ], 
-    "Managed Health Care": [
-        "ANTM", 
-        "AET"
+    "Internet & Direct Marketing Retail": [
+        "EXPE"
     ], 
-    "Housewares & Specialties": [
-        "NWL"
+    "Paper Packaging": [
+        "AVY"
+    ], 
+    "Health Care Distributors": [
+        "BMY", 
+        "CAH"
     ], 
     "Financial Exchanges & Data": [
         "CME", 
@@ -219,8 +238,7 @@
     "Apparel Retail": [
         "ROST"
     ], 
-    "Electric Utilities": [
-        "AEP", 
-        "PPL"
+    "Building Products": [
+        "FAST"
     ]
 }

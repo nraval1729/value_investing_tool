@@ -46,6 +46,16 @@ app.get("/", function(req, res) {
 	res.render('index.html');
 });
 
+// To get search page
+app.get("/search", function(req, res) {
+	res.render('search.html');
+});
+
+// To get explore page
+app.get("/explore", function(req, res) {
+	res.render('explore.html');
+});
+
 // To get current.json
 app.get("/current", function(req, res) {
 	currentFilePath = __dirname + '/public/json_files/current.json';

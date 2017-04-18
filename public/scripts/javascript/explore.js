@@ -3,20 +3,18 @@ var NUM_COLS = 4;
 var sectorTable = $('#sectors');
 var industryTable = $('#industries');
 var companyTable = $('#companies');
-
-// $(function() {
-//     $("#companies").tablesorter();
-//     renderSectors(biographical);
-// });
-
+var biographicalData;
+var technicalData;
 
 $(function() {
     $("#companies").tablesorter();
-
     $.get("/biographical", function(data) {
-        // TODO
+        biographicalData = data;
+        $.get("/technical", function(data) {
+            technicalData = data; 
+            renderSectors(biographicalData);
+        });
     });
-    renderSectors(biographical);
 });
 
 /*
@@ -97,7 +95,11 @@ function renderSectors(data) {
 
         // ...update hash in URL (for SPA - Single Page App - purposes)
         window.location.hash = $(this).attr('href');
-        renderIndustries(biographical, nameOfSector);
+
+        // function clickSector() {
+            renderIndustries(biographicalData, nameOfSector);
+        //}
+
     });
 }
 
@@ -181,7 +183,11 @@ function renderIndustries(data, sector) {
 
         // ...update hash in URL (for SPA - Single Page App - purposes)
         window.location.hash = $(this).attr('href');
-        renderCompanies(biographical, technical, nameOfIndustry, sectorName);
+
+        //function clickIndustry() {
+            renderCompanies(biographicalData, technicalData, nameOfIndustry, sectorName);
+        //}
+
     });
 }
 

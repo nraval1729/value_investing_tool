@@ -150,6 +150,36 @@
         "CME": "Financials"
     }, 
     {
+        "EQR": "Real Estate"
+    }, 
+    {
+        "ES": "Utilities"
+    }, 
+    {
+        "ESS": "Real Estate"
+    }, 
+    {
+        "ETN": "Industrials"
+    }, 
+    {
+        "EXC": "Utilities"
+    }, 
+    {
+        "EXPD": "Industrials"
+    }, 
+    {
+        "EXPE": "Consumer Discretionary"
+    }, 
+    {
+        "EXR": "Real Estate"
+    }, 
+    {
+        "F": "Consumer Discretionary"
+    }, 
+    {
+        "FAST": "Industrials"
+    }, 
+    {
         "IVZ": "Financials"
     }, 
     {
