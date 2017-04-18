@@ -5,6 +5,8 @@ var industryTable = $('#industries');
 var companyTable = $('#companies');
 var biographicalData;
 var technicalData;
+var industryToTickersMapData;
+var technicalMapData;
 
 $(function() {
     $("#companies").tablesorter();
@@ -12,7 +14,14 @@ $(function() {
         biographicalData = data;
         $.get("/technical", function(data) {
             technicalData = data; 
-            renderSectors(biographicalData);
+                $.get("/industry_to_tickers_map", function(data) {
+                    industryToTickersMapData = data;   
+                    $.get("/technical_map", function(data) {
+                        technicalMapData = data;
+                        renderSectors(biographicalData);
+                    });
+                });
+           
         });
     });
 });
@@ -21,7 +30,7 @@ $(function() {
 * SECTORS
 */
 function renderSectors(data) {
-    var data = biographical;
+    //var data = biographical;
     var listOfSectors = [];
     var uniqueSectors = [];
     var urlSectors = [];
@@ -114,7 +123,7 @@ function createSectorTD(sectorNames, sectorURLs, index) {
 */
 function renderIndustries(data, sector) {
     var sectorName = sector;
-    var data = biographical;
+    //var data = biographical;
     var matchingSectors = [];
     var uniqueIndustries = [];
     var listOfUniqueIndustries = [];
@@ -197,17 +206,19 @@ function renderIndustries(data, sector) {
 function renderCompanies(biographicaljson, technicaljson, industryName, sectorName) {
 
     var industry = industryName;
+    var listOfTickersToCreateRows = [];
 
     // Construct companies table
     var companyTableBody = $("#companies tbody"); 
     companyTableBody.find("tr:gt(-1)").remove();
 
-    for (var index = 0; index < electricUtilities.length; index++) {
-        companyTableBody.append(createRowString(electricUtilities, index));
+    listOfTickersToCreateRows = industryToTickersMapData[industry];
+
+    for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
+        companyTableBody.append(createRowString(technicalMapData[listOfTickersToCreateRows[index]], index));
         $("#companies").trigger("update");
     }
     
-
     // When user clicks on one of industries on table...
     $('#sectorCrumb').click( function(e) {
         e.preventDefault(); 
@@ -273,15 +284,14 @@ function displayToolTip(event, popup) {
 
 function createRowString(companyInfo, index) {
     var rowString = "<tr>";
+    var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']) + "?p=" + JSON.stringify(companyInfo['ticker']);
+    rowString += "<th class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + JSON.stringify(companyInfo['security']) + "</a></th>";
 
-    var link = "http://finance.yahoo.com/quote/" + companyInfo[index]['ticker'] + "?p=" + companyInfo[index]['ticker'];
-    rowString += "<th class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + companyInfo[index]['company_name'] + "</a></th>";
-
-    rowString += createTDString(companyInfo[index]["pe_cur"], companyInfo[index]["pe_avg"], false);
-    rowString += createTDString(companyInfo[index]["ps_cur"], companyInfo[index]["ps_avg"], false);
-    rowString += createTDString(companyInfo[index]["pb_cur"], companyInfo[index]["pb_avg"], false);
-    rowString += createTDString(companyInfo[index]["div_cur"], companyInfo[index]["div_avg"], true);
-    rowString += "<td class='black'>" + companyInfo[index]['s_rank'] + "</td>";
+    rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
+    rowString += createTDString(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
+    rowString += createTDString(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
+    rowString += createTDString(companyInfo["div_cur"], companyInfo["div_avg"], true);
+    rowString += "<td class='black'>" + companyInfo['s_rank'] + "</td>";
 
     rowString += "</tr>";
     return rowString;
