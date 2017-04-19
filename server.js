@@ -38,8 +38,7 @@ var async = require('async');
 
 launchCurrentScraper();
 launchValidTickersGenerator()
-launchBiographicalMapsGenerator()
-launchTechnicalJsonGenerator();
+launchInfoJsonGenerator()
 
 // To get home page
 app.get("/", function(req, res) {
@@ -54,6 +53,13 @@ app.get("/search", function(req, res) {
 // To get explore page
 app.get("/explore", function(req, res) {
 	res.render('explore.html');
+});
+
+// To get info.json
+app.get("/info", function(req, res) {
+	infoFilePath = __dirname + '/public/json_files/info.json';
+	console.log("Inside /info, sending current json at path: " +infoFilePath);
+	res.sendFile(infoFilePath);
 });
 
 // To get current.json
@@ -156,25 +162,18 @@ app.get("/industry_to_tickers_map", function(req, res) {
 	res.sendFile(path);
 });
 
+function launchInfoJsonGenerator() {
+	var filePath = __dirname + "/public/scripts/python/info_json_generator.py"
+	spawnPythonProcess(filePath)
+}
 
 function launchValidTickersGenerator() {
 	var filePath = __dirname + "/public/scripts/python/valid_tickers_generator.py"
 	spawnPythonProcess(filePath)
 }
 
-function launchBiographicalMapsGenerator() {
-	var filePath = __dirname + "/public/scripts/python/biographical_maps_generator.py"
-	spawnPythonProcess(filePath)
-}
-
 function launchCurrentScraper() {
 	var filePath = __dirname + "/public/scripts/python/current_scraper.py";
-	spawnPythonProcess(filePath);
-}
-
-function launchTechnicalJsonGenerator() {
-	var filePath = __dirname + "/public/scripts/python/technical_json_generator.py";
-    console.log("tech");
 	spawnPythonProcess(filePath);
 }
 
