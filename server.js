@@ -56,6 +56,11 @@ app.get("/explore", function(req, res) {
 	res.render('explore.html');
 });
 
+// *NEW* the spa page
+app.get("/spa", function(req, res) {
+	res.render('spa.html');
+});
+
 // To get current.json
 app.get("/current", function(req, res) {
 	currentFilePath = __dirname + '/public/json_files/current.json';
