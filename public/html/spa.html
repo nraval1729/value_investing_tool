@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Explore</title>
+    <!--script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script-->
+    <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--script type="text/javascript" src="../scripts/javascript/explore.js"></script-->
+    <script type="text/javascript" src="../scripts/javascript/spa.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">      
+    <link rel="stylesheet" type="text/css" href="../css/dynamic.css">
+    <link rel="stylesheet" type="text/css" href="../css/spa.css">
+    <style>
+
+
+
+    </style>
+</head>
+<body> 
+
+    <div id="page">
+        <div id="spaHeader">
+            <span style="float:left; margin-top:5px">
+                <a id="logo" href="/">Value Investing Tool</a>
+            </span>
+            <span style="float:right">
+                <button class="spaButton" onclick="showSearch()">Search</button>
+                <button class="spaButton" onclick="showExplore()">Explore</button>
+            </span>
+        </div>
+
+        <div id="interior">
+            <div class="spacer150"></div>
+
+            <div id="searchSection"> 
+                <div class="horizontalCenter">
+                    <input type="text" id="searchBarInput" placeholder="Search for stocks..." maxlength="40"></input>
+                    <div id="searchBarDecorationWrapper">
+                        <span onclick="doSomething()">
+                            <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="exploreSection">
+                <p style="font-size: 400%; margin-left: 20px">EXPLORE</p>
+            </div>
+
+        </div><!-- END: interior -->
+
+    </div><!-- END: page -->
+</body>
+</html>

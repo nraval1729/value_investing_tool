@@ -60,6 +60,11 @@ app.get("/info", function(req, res) {
 	infoFilePath = __dirname + '/public/json_files/info.json';
 	console.log("Inside /info, sending current json at path: " +infoFilePath);
 	res.sendFile(infoFilePath);
+
+
+// *NEW* the spa page
+app.get("/spa", function(req, res) {
+	res.render('spa.html');
 });
 
 // To get current.json
