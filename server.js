@@ -2,9 +2,6 @@
 var express = require('express');
 var app = express();
 
-// Scraperjs
-var scraperjs = require('scraperjs');
-
 // Path
 var path = require('path');
 
@@ -24,21 +21,14 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 console.log('static dir ' + path.join(__dirname, 'public'));
 
-// Util
-var util = require('util');
-
 // Python bridge to run python from node
 var spawn = require("child_process").spawn;
 
-// File system module to read json files
-var fs = require('fs');
 
-// Async module to allow sending multiple json files in one handler
-var async = require('async');
 
 launchCurrentScraper();
-launchValidTickersGenerator()
-launchInfoJsonGenerator()
+launchValidTickersGenerator();
+launchInfoJsonGenerator();
 
 // To get home page
 app.get("/", function(req, res) {
@@ -57,9 +47,10 @@ app.get("/explore", function(req, res) {
 
 // To get info.json
 app.get("/info", function(req, res) {
-	infoFilePath = __dirname + '/public/json_files/info.json';
+	var infoFilePath = __dirname + '/public/json_files/info.json';
 	console.log("Inside /info, sending current json at path: " +infoFilePath);
 	res.sendFile(infoFilePath);
+});
 
 
 // *NEW* the spa page
@@ -69,40 +60,40 @@ app.get("/spa", function(req, res) {
 
 // To get current.json
 app.get("/current", function(req, res) {
-	currentFilePath = __dirname + '/public/json_files/current.json';
+	var currentFilePath = __dirname + '/public/json_files/current.json';
 	console.log("Inside /current, sending current json at path: " +currentFilePath);
 	res.sendFile(currentFilePath);
 });
 
 // To get historical.json
 app.get("/historical", function(req, res) {
-	historicalFilePath = __dirname + '/public/json_files/historical.json';
+	var historicalFilePath = __dirname + '/public/json_files/historical.json';
 	console.log("Inside /historical, sending historical json at path: " +historicalFilePath);
 	res.sendFile(historicalFilePath);
 });
 
 // To get biographical.json
 app.get("/biographical", function(req, res) {
-	biographicalFilePath = __dirname + '/public/json_files/biographical.json';
+	var biographicalFilePath = __dirname + '/public/json_files/biographical.json';
 	console.log("Inside /biographical, sending biographical json at path: " +biographicalFilePath);
 	res.sendFile(biographicalFilePath);
 });
 
 // To get technical.json
 app.get("/technical", function(req, res) {
-	technicalFilePath = __dirname + '/public/json_files/technical.json';
+	var technicalFilePath = __dirname + '/public/json_files/technical.json';
 	console.log("Inside /technical, sending technical json at path: " +technicalFilePath);
 	res.sendFile(technicalFilePath);
 });
 
 app.get("/industry_to_sector", function(req, res) {
-	path = __dirname + '/public/json_files/industry_to_sector.json';
+	var path = __dirname + '/public/json_files/industry_to_sector.json';
 	console.log("Inside /industry_to_sector, sending industry_to_sector.json at path: " +path);
 	res.sendFile(path);
 });
 
 app.get("/industry_to_tickers", function(req, res) {
-	path = __dirname + '/public/json_files/industry_to_tickers.json';
+	var path = __dirname + '/public/json_files/industry_to_tickers.json';
 	console.log("Inside /industry_to_tickers, sending industry_to_tickers.json at path: " +path);
 	res.sendFile(path);
 });
@@ -150,31 +141,31 @@ app.get("/ticker_to_security", function(req, res) {
 });
 
 app.get("/technical_map", function(req, res) {
-	path = __dirname + '/public/json_files/technical_map.json';
+	var path = __dirname + '/public/json_files/technical_map.json';
 	console.log("Inside /technical_map, sending technical_map json at path: " +path);
 	res.sendFile(path);
 });
 
 app.get("/technical_list", function(req, res) {
-	path = __dirname + '/public/json_files/technical_list.json';
+	var path = __dirname + '/public/json_files/technical_list.json';
 	console.log("Inside /technical_list, sending technical_list json at path: " +path);
 	res.sendFile(path);
 });
 
 app.get("/industry_to_tickers_map", function(req, res) {
-	path = __dirname + '/public/json_files/industry_to_tickers_map.json';
+	var path = __dirname + '/public/json_files/industry_to_tickers_map.json';
 	console.log("Inside /industry_to_tickers_map, sending industry_to_tickers_map json at path: " +path);
 	res.sendFile(path);
 });
 
 function launchInfoJsonGenerator() {
-	var filePath = __dirname + "/public/scripts/python/info_json_generator.py"
-	spawnPythonProcess(filePath)
+	var filePath = __dirname + "/public/scripts/python/info_json_generator.py";
+	spawnPythonProcess(filePath);
 }
 
 function launchValidTickersGenerator() {
-	var filePath = __dirname + "/public/scripts/python/valid_tickers_generator.py"
-	spawnPythonProcess(filePath)
+	var filePath = __dirname + "/public/scripts/python/valid_tickers_generator.py";
+	spawnPythonProcess(filePath);
 }
 
 function launchCurrentScraper() {
@@ -189,4 +180,4 @@ function spawnPythonProcess(scriptPath) {
     });
 }
 
-app.listen(8080)
+app.listen(8080);
