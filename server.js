@@ -45,6 +45,16 @@ app.get("/explore", function(req, res) {
 	res.render('explore.html');
 });
 
+// To get about page
+app.get("/about", function(req, res) {
+	res.render('about.html');
+});
+
+// To get privacy policy page
+app.get("/privacy_policy", function(req, res) {
+	res.render('privacy_policy.html');
+});
+
 // To get info.json
 app.get("/info", function(req, res) {
 	var infoFilePath = __dirname + '/public/json_files/info.json';
