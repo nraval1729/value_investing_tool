@@ -4,11 +4,13 @@ $(function(){
 		$('#searchResults').show(); // When a user types input, show results
 		var searchInput = $('#searchBarInput').val();
 		var processedSearchInput = new RegExp(searchInput, "i");
-		var matchingTickers = [];
-		var tickerToIndustryString = JSON.stringify(tickerToIndustry);
-
-		console.log(getIndustry(tickerToIndustry, searchInput));
-		console.log(searchInput);
+		
+		var matchingIndustry = getIndustry(tickerToIndustry, searchInput);
+		console.log(JSON.stringify(industryToTickers));
+		console.log("this is industry: " + matchingIndustry);
+		var competitors = getCompetitors(industryToTickers, matchingIndustry);
+		console.log("these are list of competitors: " + competitors);
+		//console.log(searchInput);
 
 		$.get('/ticker_to_industry', function (data) {
 			console.log(data);
@@ -51,12 +53,24 @@ $(function(){
 	        } 
 	        else if (i == searchInput) {
 	            industry.push(tickerToIndustry[i]);
-	            console.log("got to second if")
 	        }
 	    }
 	    return industry;
 	}
-	function getCompetitors() {
-
+	function getCompetitors(tickerToIndustry, searchInput) {
+	    var competitors = [];
+	    for (var i in tickerToIndustry) {
+	    	for (var j = 0; j < tickerToIndustry.length; j++) {
+	    		console.log("tickerToIndustry[i] " + JSON.stringify(tickerToIndustry[i][j]));
+	    	}
+	        if (typeof tickerToIndustry[i] == 'object') {
+	            competitors = competitors.concat(getIndustry(tickerToIndustry[i], searchInput));
+	            console.log("got to getCompetitors's first if " + competitors);
+	        } 
+	        else if (i == searchInput) {
+	            competitors.push(tickerToIndustry[i]);
+	        }
+	    }
+	    return competitors;
 	}
 });

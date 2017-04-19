@@ -3,14 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <title>Value Investment Tool - Home</title>
+    <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/index.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
     <link rel="stylesheet" type="text/css" href="../css/static.css">
 </head>
 <body>
     <div id="page">
         <div id="header1" class="horizontal">
-            <a class="headerNavigationLink" href="search.html">Search</a>
-            <a class="headerNavigationLink" href="explore.html">Explore</a>
+
+            <form action="/search">
+                <input type="submit" value="Search" id="searchLink" class="headerNavigationLink"/>
+            </form>
+            <form action="/explore">
+                <input type="submit" value="Explore" id="exploreLink" class="headerNavigationLink"/>
+            </form>
+
         </div>
         <div id="interior">
 

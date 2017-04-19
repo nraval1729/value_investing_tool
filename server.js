@@ -46,6 +46,16 @@ app.get("/", function(req, res) {
 	res.render('index.html');
 });
 
+// To get search page
+app.get("/search", function(req, res) {
+	res.render('search.html');
+});
+
+// To get explore page
+app.get("/explore", function(req, res) {
+	res.render('explore.html');
+});
+
 // To get current.json
 app.get("/current", function(req, res) {
 	currentFilePath = __dirname + '/public/json_files/current.json';
@@ -127,6 +137,25 @@ app.get("/ticker_to_security", function(req, res) {
 	console.log("Inside /ticker_to_security, sending technical json at path: " +path);
 	res.sendFile(path);
 });
+
+app.get("/technical_map", function(req, res) {
+	path = __dirname + '/public/json_files/technical_map.json';
+	console.log("Inside /technical_map, sending technical_map json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/technical_list", function(req, res) {
+	path = __dirname + '/public/json_files/technical_list.json';
+	console.log("Inside /technical_list, sending technical_list json at path: " +path);
+	res.sendFile(path);
+});
+
+app.get("/industry_to_tickers_map", function(req, res) {
+	path = __dirname + '/public/json_files/industry_to_tickers_map.json';
+	console.log("Inside /industry_to_tickers_map, sending industry_to_tickers_map json at path: " +path);
+	res.sendFile(path);
+});
+
 
 function launchValidTickersGenerator() {
 	var filePath = __dirname + "/public/scripts/python/valid_tickers_generator.py"

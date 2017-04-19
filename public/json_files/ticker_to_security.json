@@ -147,16 +147,379 @@
         "CCL": "Carnival Corp."
     }, 
     {
+        "CHD": "Church & Dwight"
+    }, 
+    {
+        "CHRW": "C. H. Robinson Worldwide"
+    }, 
+    {
+        "CINF": "Cincinnati Financial"
+    }, 
+    {
+        "CLX": "The Clorox Company"
+    }, 
+    {
+        "CMA": "Comerica Inc."
+    }, 
+    {
         "CME": "CME Group Inc."
+    }, 
+    {
+        "CMI": "Cummins Inc."
+    }, 
+    {
+        "CMS": "CMS Energy"
+    }, 
+    {
+        "CNP": "CenterPoint Energy"
+    }, 
+    {
+        "COF": "Capital One Financial"
+    }, 
+    {
+        "COH": "Coach Inc."
+    }, 
+    {
+        "COL": "Rockwell Collins"
+    }, 
+    {
+        "CPB": "Campbell Soup"
+    }, 
+    {
+        "CSCO": "Cisco Systems"
+    }, 
+    {
+        "CSX": "CSX Corp."
+    }, 
+    {
+        "CTAS": "Cintas Corporation"
+    }, 
+    {
+        "CTL": "CenturyLink Inc"
+    }, 
+    {
+        "CVS": "CVS Health"
+    }, 
+    {
+        "D": "Dominion Resources"
+    }, 
+    {
+        "DFS": "Discover Financial Services"
+    }, 
+    {
+        "DGX": "Quest Diagnostics"
+    }, 
+    {
+        "DHI": "D. R. Horton"
+    }, 
+    {
+        "DLR": "Digital Realty Trust"
+    }, 
+    {
+        "DOV": "Dover Corp."
+    }, 
+    {
+        "DPS": "Dr Pepper Snapple Group"
+    }, 
+    {
+        "DRI": "Darden Restaurants"
+    }, 
+    {
+        "DTE": "DTE Energy Co."
+    }, 
+    {
+        "DUK": "Duke Energy"
+    }, 
+    {
+        "ECL": "Ecolab Inc."
+    }, 
+    {
+        "ED": "Consolidated Edison"
+    }, 
+    {
+        "EFX": "Equifax Inc."
+    }, 
+    {
+        "EIX": "Edison Int'l"
+    }, 
+    {
+        "EL": "Estee Lauder Cos."
+    }, 
+    {
+        "EMN": "Eastman Chemical"
+    }, 
+    {
+        "EQR": "Equity Residential"
+    }, 
+    {
+        "ES": "Eversource Energy"
+    }, 
+    {
+        "ESS": "Essex Property Trust, Inc."
+    }, 
+    {
+        "ETN": "Eaton Corporation"
+    }, 
+    {
+        "EXC": "Exelon Corp."
+    }, 
+    {
+        "EXPD": "Expeditors International"
+    }, 
+    {
+        "EXPE": "Expedia Inc."
+    }, 
+    {
+        "EXR": "Extra Space Storage"
+    }, 
+    {
+        "F": "Ford Motor"
+    }, 
+    {
+        "FAST": "Fastenal Co"
+    }, 
+    {
+        "FDX": "FedEx Corporation"
+    }, 
+    {
+        "FIS": "Fidelity National Information Services"
+    }, 
+    {
+        "FL": "Foot Locker Inc"
+    }, 
+    {
+        "FLIR": "FLIR Systems"
+    }, 
+    {
+        "FLR": "Fluor Corp."
+    }, 
+    {
+        "FLS": "Flowserve Corporation"
+    }, 
+    {
+        "FMC": "FMC Corporation"
+    }, 
+    {
+        "FOX": "Twenty-First Century Fox Class B"
+    }, 
+    {
+        "FOXA": "Twenty-First Century Fox Class A"
+    }, 
+    {
+        "FRT": "Federal Realty Investment Trust"
+    }, 
+    {
+        "GD": "General Dynamics"
+    }, 
+    {
+        "GE": "General Electric"
+    }, 
+    {
+        "GGP": "General Growth Properties Inc."
+    }, 
+    {
+        "GIS": "General Mills"
+    }, 
+    {
+        "GLW": "Corning Inc."
+    }, 
+    {
+        "GPC": "Genuine Parts"
+    }, 
+    {
+        "GPN": "Global Payments Inc"
+    }, 
+    {
+        "GPS": "Gap (The)"
+    }, 
+    {
+        "GRMN": "Garmin Ltd."
+    }, 
+    {
+        "GS": "Goldman Sachs Group"
+    }, 
+    {
+        "GWW": "Grainger (W.W.) Inc."
+    }, 
+    {
+        "HAS": "Hasbro Inc."
+    }, 
+    {
+        "HBAN": "Huntington Bancshares"
+    }, 
+    {
+        "HCN": "Welltower Inc."
+    }, 
+    {
+        "HCP": "HCP Inc."
+    }, 
+    {
+        "HD": "Home Depot"
+    }, 
+    {
+        "HOG": "Harley-Davidson"
+    }, 
+    {
+        "HON": "Honeywell Int'l Inc."
+    }, 
+    {
+        "HRL": "Hormel Foods Corp."
+    }, 
+    {
+        "HRS": "Harris Corporation"
+    }, 
+    {
+        "HSY": "The Hershey Company"
+    }, 
+    {
+        "HUM": "Humana Inc."
+    }, 
+    {
+        "IBM": "International Business Machines"
+    }, 
+    {
+        "IFF": "Intl Flavors & Fragrances"
+    }, 
+    {
+        "INTC": "Intel Corp."
+    }, 
+    {
+        "INTU": "Intuit Inc."
+    }, 
+    {
+        "IP": "International Paper"
+    }, 
+    {
+        "IPG": "Interpublic Group"
+    }, 
+    {
+        "IR": "Ingersoll-Rand PLC"
+    }, 
+    {
+        "IRM": "Iron Mountain Incorporated"
+    }, 
+    {
+        "ITW": "Illinois Tool Works"
     }, 
     {
         "IVZ": "Invesco Ltd."
     }, 
     {
+        "JBHT": "J. B. Hunt Transport Services"
+    }, 
+    {
+        "JPM": "JPMorgan Chase & Co."
+    }, 
+    {
+        "JWN": "Nordstrom"
+    }, 
+    {
+        "KEY": "KeyCorp"
+    }, 
+    {
+        "KIM": "Kimco Realty"
+    }, 
+    {
+        "KLAC": "KLA-Tencor Corp."
+    }, 
+    {
+        "KMI": "Kinder Morgan"
+    }, 
+    {
+        "KO": "Coca Cola Company"
+    }, 
+    {
+        "KR": "Kroger Co."
+    }, 
+    {
+        "KSS": "Kohl's Corp."
+    }, 
+    {
+        "KSU": "Kansas City Southern"
+    }, 
+    {
+        "L": "Loews Corp."
+    }, 
+    {
+        "LEG": "Leggett & Platt"
+    }, 
+    {
+        "LEN": "Lennar Corp."
+    }, 
+    {
+        "LLL": "L-3 Communications Holdings"
+    }, 
+    {
+        "LLY": "Lilly (Eli) & Co."
+    }, 
+    {
+        "LMT": "Lockheed Martin Corp."
+    }, 
+    {
+        "LNC": "Lincoln National"
+    }, 
+    {
+        "LNT": "Alliant Energy Corp"
+    }, 
+    {
+        "LUK": "Leucadia National Corp."
+    }, 
+    {
+        "LUV": "Southwest Airlines"
+    }, 
+    {
+        "LYB": "LyondellBasell"
+    }, 
+    {
+        "M": "Macy's Inc."
+    }, 
+    {
+        "MA": "Mastercard Inc."
+    }, 
+    {
+        "MAA": "Mid-America Apartments"
+    }, 
+    {
+        "MAC": "Macerich"
+    }, 
+    {
+        "MAR": "Marriott Int'l."
+    }, 
+    {
+        "MAT": "Mattel Inc."
+    }, 
+    {
+        "MCHP": "Microchip Technology"
+    }, 
+    {
+        "MCK": "McKesson Corp."
+    }, 
+    {
+        "MDLZ": "Mondelez International"
+    }, 
+    {
+        "MDT": "Medtronic plc"
+    }, 
+    {
+        "MET": "MetLife Inc."
+    }, 
+    {
+        "MKC": "McCormick & Co."
+    }, 
+    {
         "MLM": "Martin Marietta Materials"
     }, 
     {
+        "MMC": "Marsh & McLennan"
+    }, 
+    {
         "MMM": "3M Company"
+    }, 
+    {
+        "MO": "Altria Group Inc"
+    }, 
+    {
+        "MOS": "The Mosaic Company"
     }, 
     {
         "MPC": "Marathon Petroleum"

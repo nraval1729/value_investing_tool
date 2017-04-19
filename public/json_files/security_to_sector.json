@@ -147,16 +147,379 @@
         "Carnival Corp.": "Consumer Discretionary"
     }, 
     {
+        "Church & Dwight": "Consumer Staples"
+    }, 
+    {
+        "C. H. Robinson Worldwide": "Industrials"
+    }, 
+    {
+        "Cincinnati Financial": "Financials"
+    }, 
+    {
+        "The Clorox Company": "Consumer Staples"
+    }, 
+    {
+        "Comerica Inc.": "Financials"
+    }, 
+    {
         "CME Group Inc.": "Financials"
+    }, 
+    {
+        "Cummins Inc.": "Industrials"
+    }, 
+    {
+        "CMS Energy": "Utilities"
+    }, 
+    {
+        "CenterPoint Energy": "Utilities"
+    }, 
+    {
+        "Capital One Financial": "Financials"
+    }, 
+    {
+        "Coach Inc.": "Consumer Discretionary"
+    }, 
+    {
+        "Rockwell Collins": "Industrials"
+    }, 
+    {
+        "Campbell Soup": "Consumer Staples"
+    }, 
+    {
+        "Cisco Systems": "Information Technology"
+    }, 
+    {
+        "CSX Corp.": "Industrials"
+    }, 
+    {
+        "Cintas Corporation": "Industrials"
+    }, 
+    {
+        "CenturyLink Inc": "Telecommunication Services"
+    }, 
+    {
+        "CVS Health": "Consumer Staples"
+    }, 
+    {
+        "Dominion Resources": "Utilities"
+    }, 
+    {
+        "Discover Financial Services": "Financials"
+    }, 
+    {
+        "Quest Diagnostics": "Health Care"
+    }, 
+    {
+        "D. R. Horton": "Consumer Discretionary"
+    }, 
+    {
+        "Digital Realty Trust": "Real Estate"
+    }, 
+    {
+        "Dover Corp.": "Industrials"
+    }, 
+    {
+        "Dr Pepper Snapple Group": "Consumer Staples"
+    }, 
+    {
+        "Darden Restaurants": "Consumer Discretionary"
+    }, 
+    {
+        "DTE Energy Co.": "Utilities"
+    }, 
+    {
+        "Duke Energy": "Utilities"
+    }, 
+    {
+        "Ecolab Inc.": "Materials"
+    }, 
+    {
+        "Consolidated Edison": "Utilities"
+    }, 
+    {
+        "Equifax Inc.": "Industrials"
+    }, 
+    {
+        "Edison Int'l": "Utilities"
+    }, 
+    {
+        "Estee Lauder Cos.": "Consumer Staples"
+    }, 
+    {
+        "Eastman Chemical": "Materials"
+    }, 
+    {
+        "Equity Residential": "Real Estate"
+    }, 
+    {
+        "Eversource Energy": "Utilities"
+    }, 
+    {
+        "Essex Property Trust, Inc.": "Real Estate"
+    }, 
+    {
+        "Eaton Corporation": "Industrials"
+    }, 
+    {
+        "Exelon Corp.": "Utilities"
+    }, 
+    {
+        "Expeditors International": "Industrials"
+    }, 
+    {
+        "Expedia Inc.": "Consumer Discretionary"
+    }, 
+    {
+        "Extra Space Storage": "Real Estate"
+    }, 
+    {
+        "Ford Motor": "Consumer Discretionary"
+    }, 
+    {
+        "Fastenal Co": "Industrials"
+    }, 
+    {
+        "FedEx Corporation": "Industrials"
+    }, 
+    {
+        "Fidelity National Information Services": "Information Technology"
+    }, 
+    {
+        "Foot Locker Inc": "Consumer Discretionary"
+    }, 
+    {
+        "FLIR Systems": "Information Technology"
+    }, 
+    {
+        "Fluor Corp.": "Industrials"
+    }, 
+    {
+        "Flowserve Corporation": "Industrials"
+    }, 
+    {
+        "FMC Corporation": "Materials"
+    }, 
+    {
+        "Twenty-First Century Fox Class B": "Consumer Discretionary"
+    }, 
+    {
+        "Twenty-First Century Fox Class A": "Consumer Discretionary"
+    }, 
+    {
+        "Federal Realty Investment Trust": "Real Estate"
+    }, 
+    {
+        "General Dynamics": "Industrials"
+    }, 
+    {
+        "General Electric": "Industrials"
+    }, 
+    {
+        "General Growth Properties Inc.": "Real Estate"
+    }, 
+    {
+        "General Mills": "Consumer Staples"
+    }, 
+    {
+        "Corning Inc.": "Information Technology"
+    }, 
+    {
+        "Genuine Parts": "Consumer Discretionary"
+    }, 
+    {
+        "Global Payments Inc": "Information Technology"
+    }, 
+    {
+        "Gap (The)": "Consumer Discretionary"
+    }, 
+    {
+        "Garmin Ltd.": "Consumer Discretionary"
+    }, 
+    {
+        "Goldman Sachs Group": "Financials"
+    }, 
+    {
+        "Grainger (W.W.) Inc.": "Industrials"
+    }, 
+    {
+        "Hasbro Inc.": "Consumer Discretionary"
+    }, 
+    {
+        "Huntington Bancshares": "Financials"
+    }, 
+    {
+        "Welltower Inc.": "Real Estate"
+    }, 
+    {
+        "HCP Inc.": "Real Estate"
+    }, 
+    {
+        "Home Depot": "Consumer Discretionary"
+    }, 
+    {
+        "Harley-Davidson": "Consumer Discretionary"
+    }, 
+    {
+        "Honeywell Int'l Inc.": "Industrials"
+    }, 
+    {
+        "Hormel Foods Corp.": "Consumer Staples"
+    }, 
+    {
+        "Harris Corporation": "Information Technology"
+    }, 
+    {
+        "The Hershey Company": "Consumer Staples"
+    }, 
+    {
+        "Humana Inc.": "Health Care"
+    }, 
+    {
+        "International Business Machines": "Information Technology"
+    }, 
+    {
+        "Intl Flavors & Fragrances": "Materials"
+    }, 
+    {
+        "Intel Corp.": "Information Technology"
+    }, 
+    {
+        "Intuit Inc.": "Information Technology"
+    }, 
+    {
+        "International Paper": "Materials"
+    }, 
+    {
+        "Interpublic Group": "Consumer Discretionary"
+    }, 
+    {
+        "Ingersoll-Rand PLC": "Industrials"
+    }, 
+    {
+        "Iron Mountain Incorporated": "Real Estate"
+    }, 
+    {
+        "Illinois Tool Works": "Industrials"
     }, 
     {
         "Invesco Ltd.": "Financials"
     }, 
     {
+        "J. B. Hunt Transport Services": "Industrials"
+    }, 
+    {
+        "JPMorgan Chase & Co.": "Financials"
+    }, 
+    {
+        "Nordstrom": "Consumer Discretionary"
+    }, 
+    {
+        "KeyCorp": "Financials"
+    }, 
+    {
+        "Kimco Realty": "Real Estate"
+    }, 
+    {
+        "KLA-Tencor Corp.": "Information Technology"
+    }, 
+    {
+        "Kinder Morgan": "Energy"
+    }, 
+    {
+        "Coca Cola Company": "Consumer Staples"
+    }, 
+    {
+        "Kroger Co.": "Consumer Staples"
+    }, 
+    {
+        "Kohl's Corp.": "Consumer Discretionary"
+    }, 
+    {
+        "Kansas City Southern": "Industrials"
+    }, 
+    {
+        "Loews Corp.": "Financials"
+    }, 
+    {
+        "Leggett & Platt": "Consumer Discretionary"
+    }, 
+    {
+        "Lennar Corp.": "Consumer Discretionary"
+    }, 
+    {
+        "L-3 Communications Holdings": "Industrials"
+    }, 
+    {
+        "Lilly (Eli) & Co.": "Health Care"
+    }, 
+    {
+        "Lockheed Martin Corp.": "Industrials"
+    }, 
+    {
+        "Lincoln National": "Financials"
+    }, 
+    {
+        "Alliant Energy Corp": "Utilities"
+    }, 
+    {
+        "Leucadia National Corp.": "Financials"
+    }, 
+    {
+        "Southwest Airlines": "Industrials"
+    }, 
+    {
+        "LyondellBasell": "Materials"
+    }, 
+    {
+        "Macy's Inc.": "Consumer Discretionary"
+    }, 
+    {
+        "Mastercard Inc.": "Information Technology"
+    }, 
+    {
+        "Mid-America Apartments": "Real Estate"
+    }, 
+    {
+        "Macerich": "Real Estate"
+    }, 
+    {
+        "Marriott Int'l.": "Consumer Discretionary"
+    }, 
+    {
+        "Mattel Inc.": "Consumer Discretionary"
+    }, 
+    {
+        "Microchip Technology": "Information Technology"
+    }, 
+    {
+        "McKesson Corp.": "Health Care"
+    }, 
+    {
+        "Mondelez International": "Consumer Staples"
+    }, 
+    {
+        "Medtronic plc": "Health Care"
+    }, 
+    {
+        "MetLife Inc.": "Financials"
+    }, 
+    {
+        "McCormick & Co.": "Consumer Staples"
+    }, 
+    {
         "Martin Marietta Materials": "Materials"
     }, 
     {
+        "Marsh & McLennan": "Financials"
+    }, 
+    {
         "3M Company": "Industrials"
+    }, 
+    {
+        "Altria Group Inc": "Consumer Staples"
+    }, 
+    {
+        "The Mosaic Company": "Materials"
     }, 
     {
         "Marathon Petroleum": "Energy"
