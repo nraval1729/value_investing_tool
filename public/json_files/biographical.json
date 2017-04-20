@@ -271,7 +271,7 @@
     }, 
     {
         "ticker": "ARE", 
-        "security": "Alexandria Real Estate Equities", 
+        "security": "Alexandria Real Estate Equities Inc", 
         "sector": "Real Estate", 
         "industry": "Office REITs"
     }, 
@@ -1275,7 +1275,7 @@
         "ticker": "GWW", 
         "security": "Grainger (W.W.) Inc.", 
         "sector": "Industrials", 
-        "industry": "Industrial Materials"
+        "industry": "Industrial Machinery"
     }, 
     {
         "ticker": "HAL", 
@@ -2548,12 +2548,6 @@
         "security": "Skyworks Solutions", 
         "sector": "Information Technology", 
         "industry": "Semiconductors"
-    }, 
-    {
-        "ticker": "SWN", 
-        "security": "Southwestern Energy", 
-        "sector": "Energy", 
-        "industry": "Oil & Gas Exploration & Production"
     }, 
     {
         "ticker": "SYF", 
