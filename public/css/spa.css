@@ -99,3 +99,6 @@ right */
     -webkit-transition: color 0.10s ease;
 }
 
+li {
+    color: red;
+}
