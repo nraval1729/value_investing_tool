@@ -29,6 +29,24 @@
     color: rgb(170,170,170);
 }
 
+.navButton {
+    /*color: white; */
+    color: rgb(200,200,200); /* light gray */
+    background-color:black;
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-top: -7px;
+    font-size: 105%;
+}
+
+.navButton:hover {
+    cursor: pointer;
+    color: rgb(255,255,255);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
 .spacer25 {
     display: block;
     clear: both;
