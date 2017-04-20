@@ -4,8 +4,10 @@
     <meta charset="utf-8" />
     <title>Value Investment Tool - Home</title>
     <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
-    <script type="text/javascript" src="../scripts/javascript/index.js"></script>   
+    <script type="text/javascript" src="../scripts/javascript/explore.js"></script>   
+    <script type="text/javascript" src="../scripts/javascript/index.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
@@ -127,7 +129,59 @@
 
             <div id="exploreSection">
                 <div class="spacer150"></div>
-                <p style="font-size: 400%" class="centerMe">EXPLORE</p>
+                <!-- <p style="font-size: 400%" class="centerMe">EXPLORE</p> -->
+
+                <div id="breadcrumbs">
+                    <h2 id="marketCrumb">Market Sectors<h3>
+                    <h2 id="crumbSpace1"> >> <h3>
+                    <h2 id="sectorCrumb">Sector<h3>
+                    <h2 id="crumbSpace2"> >> <h3>
+                    <h2 id="industryCrumb">Industry<h3>
+                </div>
+                
+                    <div id="heatmapContainer">
+
+                    <!--Sectors Table-->
+                        <table id="sectors" border="0">
+                        </table>
+
+                        <!--Industries Table-->
+                        <table id="industries" border="0">
+                        </table>
+
+                        <!--Company Table-->
+                        <table id="companies" class="tablesorter" border="0">
+                            <thead>
+                                <tr>
+                                    <th class="hoverable popup" id="nameBox" oncontextmenu="return false;">
+                                      Name
+                                    </th>
+                                    <th class="hoverable popup" id="peBox" oncontextmenu="return false;">
+                                        <span class="popuptext" id="pePopup">P/E: price-to-earnings ratio</span>
+                                        P/E
+                                    </th>
+                                    <th class="hoverable popup" id="psBox" oncontextmenu="return false;">
+                                        <span class="popuptext" id="psPopup">P/S: price-to-sales ratio</span>
+                                        P/S
+                                    </th>
+                                    <th class="hoverable popup" id="pbBox" oncontextmenu="return false;">
+                                        <span class="popuptext" id="pbPopup">P/B: price-to-book ratio</span>
+                                        P/B
+                                    </th>
+                                    <th class="hoverable popup" id="divBox" oncontextmenu="return false;">
+                                        <span class="popuptext" id="divPopup">DIV: dividend yield (as a percentage)</span>
+                                        DIV
+                                    </th>
+                                    <th class="hoverable popup" id="rankBox" oncontextmenu="return false;">
+                                        <span class="popuptext" id="rankPopup">RANK: aggregate ratio performance (lower = better)</span>
+                                        RANK
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div><!-- END: heatmapContainer -->
             </div><!-- end: exploreSection -->
 
         </div><!-- end: interior -->

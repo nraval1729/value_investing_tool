@@ -1,7 +1,10 @@
+var infoJSON;
+
 $(document).ready(function() {
 	showHome(); /* production: use this */
 	/*showSearch(); */
 	$.get("/info", function(data) {
+		infoJSON = data;
 		var securityToTicker = data["security_to_ticker"];
 		var tickerToSecurity = data["ticker_to_security"];
 		populateSearchSuggestions(securityToTicker);
@@ -31,6 +34,11 @@ function showSearch() {
 
 function showExplore() {
 	//alert("inside showExplore");
+	// Add loading icon after so that we wait until infoJSON is populated.
+
+
+	hello();
+	renderSectors(infoJSON['sector_to_industries']);
 	$( "#exploreButton" ).addClass( "underline" );
 	$( "#searchButton" ).removeClass( "underline" );
 	$("#logoButton").toggle(true);

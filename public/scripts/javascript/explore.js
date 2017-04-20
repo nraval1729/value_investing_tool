@@ -10,20 +10,20 @@ var technicalMapData;
 
 $(function() {
     $("#companies").tablesorter();
-    $.get("/biographical", function(data) {
-        biographicalData = data;
-        $.get("/technical", function(data) {
-            technicalData = data; 
-                $.get("/industry_to_tickers_map", function(data) {
-                    industryToTickersMapData = data;   
-                    $.get("/technical_map", function(data) {
-                        technicalMapData = data;
-                        renderSectors(biographicalData);
-                    });
-                });
+    // $.get("/biographical", function(data) {
+    //     biographicalData = data;
+    //     $.get("/technical", function(data) {
+    //         technicalData = data; 
+    //             $.get("/industry_to_tickers_map", function(data) {
+    //                 industryToTickersMapData = data;   
+    //                 $.get("/technical_map", function(data) {
+    //                     technicalMapData = data;
+    //                     renderSectors(biographicalData);
+    //                 });
+    //             });
            
-        });
-    });
+    //     });
+    // });
 });
 
 /*
@@ -32,10 +32,11 @@ $(function() {
 function renderSectors(data) {
     //var data = biographical;
     var listOfSectors = [];
-    var uniqueSectors = [];
-    var urlSectors = [];
+
 
     sectorTable = $('#sectors');
+    
+    $('#sectors tr').remove();
     industryTable = $('#industries');
     companyTable = $('#companies');
 
@@ -51,18 +52,18 @@ function renderSectors(data) {
     companyTable.hide();  
 
     // Step 0: clear any previous info in the table
-    sectorTable.find("tr:gt(0)").remove();
+    // sectorTable.find("tr:gt(0)").remove();
 
     // Step 1: find sectors from json file. Because they repeat, use set to remove duplicates
-    listOfSectors = data.filter((set => f => !set.has(f.sector) && set.add(f.sector))(new Set));
+    listOfSectors = Object.keys(data);
 
     // Step 2: extract sectors only from each json object
-    for (var i = 0; i < listOfSectors.length; i++) {
-        uniqueSectors.push(listOfSectors[i]['sector']);
-    }
+    // for (var i = 0; i < listOfSectors.length; i++) {
+    //     uniqueSectors.push(listOfSectors[i]['sector']);
+    // }
 
     // Step 3: Generate hash URLS
-    urlSectors = generateHashURL(uniqueSectors); 
+    // urlSectors = generateHashURL(uniqueSectors); 
 
     // Step 4: Populate sectors table on home page with their respective hash URLS.
     var numRows = Math.ceil(listOfSectors.length / NUM_COLS);
@@ -72,49 +73,43 @@ function renderSectors(data) {
         var rowString = "<tr>";
         for(j = 0; j < NUM_COLS; j++) {
             if(index < listOfSectors.length) {
-                rowString += createSectorTD(uniqueSectors, urlSectors, index)
+                rowString += createSectorTD(listOfSectors, index);
                 index++;
             }
         }
+        console.log("string: " +rowString);
         rowString += "</tr>";
         sectorTable.append(rowString);
     }
 
     // Step 5: handle click event. When user clicks on one of sectors on table...
-    $('.spaLinks').click( function(e) {
-        // ...we're staying in the same page even after reload
-        e.preventDefault(); 
-
-        // ...replace heading with user-clicked sector
-        var nameOfSector = $(this).text();
-        //$('#tableTitle').text(nameOfSector);
-
-        // ...add breadcrumbs with links
-        $('#crumbSpace1').show();
-        $('#sectorCrumb').show();
-        $('#sectorCrumb').html(nameOfSector);
-
-        var marketLink = '<a href=' + window.location.hash + '>' + 'Market' + '</a>';
-        $('#marketCrumb').html(marketLink);
-
-        // ...hide the sector table so that industry table can be placed where it was
-        sectorTable.hide();
-        industryTable.show();
-        companyTable.hide();  
-
-        // ...update hash in URL (for SPA - Single Page App - purposes)
-        window.location.hash = $(this).attr('href');
-
-        // function clickSector() {
-            renderIndustries(biographicalData, nameOfSector);
-        //}
-
-    });
 }
 
-function createSectorTD(sectorNames, sectorURLs, index) {
+function clickSector() {
+	 var nameOfSector = $(this).text();
+
+    // ...add breadcrumbs with links
+    $('#crumbSpace1').show();
+    $('#sectorCrumb').show();
+    $('#sectorCrumb').html(nameOfSector);
+
+    var marketLink = '<a href=' + window.location.hash + '>' + 'Market' + '</a>';
+    $('#marketCrumb').html(marketLink);
+
+    // ...hide the sector table so that industry table can be placed where it was
+    sectorTable.hide();
+    industryTable.show();
+    companyTable.hide();  
+
+    // ...update hash in URL (for SPA - Single Page App - purposes)
+    window.location.hash = $(this).attr('href');
+
+    renderIndustries(biographicalData, nameOfSector);
+}
+
+function createSectorTD(sectorNames, index) {
     var tdString = "<td class='hoverable'>";
-    tdString += "<a class='spaLinks hoverlink' href=" + sectorURLs[index] + ">" + sectorNames[index] + "</a></td>";
+    tdString += "<a class='spaLinks hoverlink' onclick='clickSector()'>" + sectorNames[index] + "</a></td>";
     return tdString;
 }
 
@@ -340,6 +335,10 @@ function generateHashURL(list) {
         hashURL.push("#" + list[i].replace(/\s+/g, '-').toLowerCase());
     }
     return hashURL;
+}
+
+function hello() {
+	alert("hi from explore");
 }
 
 // Delete hashes upon page reload/refresh
