@@ -13,6 +13,14 @@
     /*margin-left: 200px; */
 }
 
+.floatLeft {
+    float:left;
+}
+
+.floatRight {
+    float:right;
+}
+
 #headerNavigationLink1 {
     font-family: Arial, sans-serif;
 }
@@ -73,7 +81,7 @@ right */
     justify-content: space-between;
 } */
 
-.spaButton {
+.navButton {
     /*color: white; */
     color: rgb(200,200,200); /* light gray */
     background-color:black;
@@ -84,7 +92,7 @@ right */
     font-size: 105%;
 }
 
-.spaButton:hover {
+.navButton:hover {
     cursor: pointer;
     color: rgb(255,255,255);
     transition: color 0.10s ease;

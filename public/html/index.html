@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>Value Investment Tool - Home</title>
     <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
-    <script type="text/javascript" src="../scripts/javascript/index.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/index.js"></script>    
+    <script type="text/javascript" src="../scripts/javascript/base.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
     <link rel="stylesheet" type="text/css" href="../css/static.css">
 </head>
@@ -12,12 +13,25 @@
     <div id="page">
         <div id="header1" class="horizontal">
 
-            <form action="/spa">
+            <span>
+                <!--a href="/spa" class="messageBoxLink"-->
+                <a href="/spa">
+                    <button class="navButton" onclick="showSearch()">Search</button>
+                </a>
+            </span>
+
+            <span style="floatRight">
+                <a href="/spa">
+                    <button class="navButton" onclick="showExplore()">Explore</button>
+                </a>
+            </span>
+
+            <!--form action="/spa">
                 <input type="submit" value="Search" id="searchLink" class="headerNavigationLink"/>
             </form>
             <form action="/spa">
                 <input type="submit" value="Explore" id="exploreLink" class="headerNavigationLink"/>
-            </form>
+            </form-->
 
         </div>
         <div id="interior">
