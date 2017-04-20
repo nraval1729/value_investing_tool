@@ -1,15 +1,25 @@
-function showExplore() {
-    //alert('inside showExplore');
-    $("#exploreSection").toggle(true);
-    $("#searchSection").toggle(false);
-}
 
-function showSearch() {
-    //alert('inside showSearch')
-    $("#searchSection").toggle(true);
-    $("#exploreSection").toggle(false);
-}
 
-function doSomething() {
-    alert("I did something");
-}
+// function showHome() {
+//     alert('inside showSearch');
+//     $("homeSection").toggle(false)
+//     $("#searchSection").toggle(false);
+//     $("#exploreSection").toggle(true);
+// }
+
+// function showSearch() {
+//     $("homeSection").toggle(false)
+//     $("#searchSection").toggle(false);
+//     $("#exploreSection").toggle(true);
+// }
+
+// function showExplore() {
+//     $("homeSection").toggle(false)
+//     $("#searchSection").toggle(false);
+//     $("#exploreSection").toggle(true);
+// }
+
+
+// function doSomething() {
+//     alert("I did something");
+// }

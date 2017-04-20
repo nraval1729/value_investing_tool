@@ -41,10 +41,11 @@ function processUserSelection(e, securityToTicker, tickerToSecurity, data) {
 		dataForUserSelection = data["technical_map"][userSelection];
 	}
 
+    console.log(dataForUserSelection);
 
 	// CRAIG SHOULD USE THE VARIABLE dataForUserSelection variable
 
-	// alert(JSON.stringify(dataForUserSelection, null, 4));
+	//alert(JSON.stringify(dataForUserSelection, null, 4));
 }
 
 function showExplore() {
@@ -56,11 +57,8 @@ function doSomething() {
     alert("I did something");
 }
 
-$(document).ready(function() {
-    $('#searchBarInput').keypress(function (e) {
-        if (e.which == 13) doSomething();
-    });
-});
-=======
-}
->>>>>>> c8cb8d89cdf5afb01e15fb36e107bd86d7ce3b0e
+// $(document).ready(function() {
+//     $('#searchBarInput').keypress(function (e) {
+//         if (e.which == 13) doSomething();
+//     });
+// });

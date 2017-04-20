@@ -29,6 +29,20 @@
     color: rgb(170,170,170);
 }
 
+#logoButton {
+    background-color:black;
+    font-size: 150%;
+    margin: 10px;
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    border:none;
+    color: rgb(170,170,170);
+}
+
+#logoButton:hover {
+    cursor: pointer;
+}
+
 .navButton {
     /*color: white; */
     color: rgb(200,200,200); /* light gray */

@@ -1,0 +1,83 @@
+
+.black {
+    background-color: black;
+}
+
+.brightGreen {
+    background-color: #00FF00;
+}
+
+.brightRed {
+    background-color: red;
+}
+
+.darkGreen {
+    background-color: #006400;
+}
+
+.darkRed {
+    background-color: #8B0000;
+}
+
+
+#indexHeader {   
+    width: 1100px;
+}
+
+li {
+    color: red;
+}
+
+#myList {
+    margin: 0px;
+    padding: 0px;  
+}
+
+#myList li {
+    list-style-type: none;
+    color:green;
+}
+
+#searchBarDecoration {
+    width: 40px;
+    height: 40px;
+}
+
+#searchBarDecorationWrapper {
+    background-color: white;
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -49px;
+    z-index: 1000;
+}
+
+.securityCell {
+    width: 70px;
+    height: 50px;
+}
+
+.securityCellCompanyName {
+    width: 100px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+.securityCellCompanyName a {
+    text-decoration: none;
+}
+
+.securityCellCompanyName a:hover {
+    color: rgb(200, 200, 200); /* light gray */
+}
+
+.securityTableHeader {
+    height: 60px;
+    padding-bottom: 10px;
+}
+   
+.underline {
+    text-decoration: underline;
+}
