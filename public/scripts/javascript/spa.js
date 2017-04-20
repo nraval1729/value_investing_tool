@@ -4,16 +4,17 @@
 
 
 $(document).ready(function() {
+    
 });
-
-function showExplore() {
-    $("#exploreSection").toggle(true);
-    $("#searchSection").toggle(false);
-}
 
 function showSearch() {
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
+}
+
+function showExplore() {
+    $("#exploreSection").toggle(true);
+    $("#searchSection").toggle(false);
 }
 
 function doSomething() {
