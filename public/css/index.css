@@ -1,7 +1,25 @@
+* { 
+    margin: 0px;
+    border: 0px;
+}
+
 
 .black {
     background-color: black;
 }
+
+/* imported from dynamic
+cant use, clobbers other's css 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(0,0,0); /* black */
+   /* color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
 
 .brightGreen {
     background-color: #00FF00;
@@ -22,21 +40,19 @@
 
 #indexHeader {   
     width: 1100px;
+    margin-top: 5px;
 }
 
-li {
+/*li {
     color: red;
+} */
+
+
+#page {
+    display: flex;
+    flex-direction: column;
 }
 
-#myList {
-    margin: 0px;
-    padding: 0px;  
-}
-
-#myList li {
-    list-style-type: none;
-    color:green;
-}
 
 #searchBarDecoration {
     width: 40px;
@@ -54,37 +70,290 @@ li {
     z-index: 1000;
 }
 
-.securityCell {
+#searchBarInput li {
+    color: red;
+}
+
+.searchResultButton {
+    height: 50px;
     width: 70px;
-    height: 50px;
+    color: white;
+    background-color: black;
+    border: 0px;
 }
 
-.securityCellCompanyName {
-    width: 100px;
-    height: 50px;
-    padding-right: 10px;
+.searchResultButton:hover {
+    cursor: pointer;
 }
 
-.securityCellCompanyName a {
-    text-decoration: none;
+.searchResultButtonImage {
+    height: 40px;
+    width: 40px;
+    color: white;
 }
 
-.securityCellCompanyName a:hover {
-    color: rgb(200, 200, 200); /* light gray */
+.securityCell {
+    font-weight: normal;
+    width: 70px;
+    height: 60px;
+    border: 0px;
+    border-collapse: collapse;
+    border: 10px solid black;
 }
 
 .securityTableHeader {
     height: 60px;
     padding-bottom: 10px;
+    border: 0px;
+
+}
+
+.securityCellCompanyName {
+    width: 100px;
+    height: 60px;
+    padding-right: 10px;
+    border: 0px;
+    border-left: 10px;
+    border-top: 10px;
+    border-bottom: 10px;
+    font-weight: normal;
+}
+
+.securityCellCompanyName a {
+    text-decoration: none;
+    color: rgb(220, 220, 220); /* light gray */
+}
+
+.securityCellCompanyName a:hover {
+    color: rgb(180, 180, 180); /* medium-light gray */
+}
+
+.securityTableHeader {
+    height: 60px;
+    padding-bottom: 10px;
+    border: 0px;
+
+}
+
+.securityTableHeader td {
+    color: rgb(220, 220, 220); /* light gray */ 
 }
    
 .underline {
     text-decoration: underline;
 }
 
-table, th, td {
+/*table, th, td {
     border: 1px solid red;
     font-family: Arial;
     font-size: 18px;
 
+}*/
+
+
+/* below this line: migrated from dynamic.css */
+
+#alignSearchAndHeatmap {
+    width: 100%;
+    height: 800px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+}
+
+/*#breadcrumbs */
+#breadCrumbs {
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#companies {
+    display: table;
+}
+
+#companies th {
+    width: 150px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#companies td {
+    width: 150px;
+    height: 100px;
+    border-style: none;
+}
+
+
+#heatmapContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hoverable:hover {
+   color: yellow;
+   border-color: yellow;
+   border-style: inset;
+   cursor: pointer;
+
+}
+
+.hoverlink:hover {
+    color: yellow;
+    background-color: rgb(30,30,20); /* new craig */
+}
+
+#industries {
+  display: table;
+}
+
+#marketCrumb, #sectorCrumb, #industryCrumb {
+    color: yellow;
+}
+
+
+/** Tooltip code - taken from https://www.w3schools.com/howto/howto_js_popup.asp **/
+/* Popup container */
+.popup {
+/*    position: relative;
+    display: inline-block;
+    cursor: pointer;*/
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    display: none;
+/*    width: 250px;*/
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-color: yellow;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: relative;
+    z-index: 10;
+    bottom: 10%;
+    left: 40%;
+    margin-left: -125px;
+    margin-top: -45px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: yellow transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    display: block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+#searchArea {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#searchLabel {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#search {
+    font-family: Arial, sans-serif;
+}
+
+#sectors {
+   display: table;
+}
+
+#selectedNavigationLink {
+    text-decoration: underline;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+
+/* code below this line adapted from dynamic.css */
+.exploreHeatMapTH {/* new craig for heatmap */
+    font-weight: normal;
+}
+
+.exploreTD1 a {
+    text-decoration: none;
+    color: white;
+    width: 170px; /* 200px */
+    height: 90px; /* 100px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* new craig */
+}
+
+.exploreTH1 a {
+    text-decoration: none;
+    color: white;
+    width: 170px; /* 200px */
+    height: 90px; /* 100px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* */
+.exploreTD2 {
+    width: 50px;
+    border: 10px solid black;
+}
+
+/* */
+.exploreTH2 {
+    width: 50px;
+    border: 10px solid black;
+}
+
+
+/* code below this line is new */
+
+.breadCrumb {
+    font-size: 105%;
+}
+
+
+.hoverlink {
+    text-decoration: none;
 }

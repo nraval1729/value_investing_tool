@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
-    <link rel="stylesheet" type="text/css" href="../css/dynamic.css">
     <link rel="stylesheet" type="text/css" href="../css/static.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
@@ -20,9 +19,8 @@
     <div id="page">
 
         <div id="indexHeader">
-            <span style="float:left; margin-top:5px">
+            <span style="float:left; margin-top:-5px">
                 <button id="logoButton" onclick="showHome()">Value Investing Tool</button>
-                <!--a id="logo" href="">Value Investing Tool</a-->
             </span>
             <span style="float:right">
                 <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
@@ -45,7 +43,6 @@
 
                 <div class="horizontalCenter">
 
-                    <!--a href="#" class="messageBoxLink"-->
                         <div class="messageBox" onclick="showSearch()">
                             <div class="horizontal">
                                 <!-- citation: image sourced from myiconfinder.com -->
@@ -57,9 +54,7 @@
                                 and present its metrics and that of its industry competitors to you on the screen.    
                             </p>
                         </div>
-                    <!--/a-->
 
-                    <!--a href="/spa" class="messageBoxLink"-->
                         <div class="messageBox" onclick="showExplore()"> 
                             <div class="horizontal">
                                 <!-- citation: image sourced from clipartfest.com -->
@@ -71,7 +66,6 @@
                                 overall market fits together, and discover how things are performing.
                             </p>
                         </div>    
-                    <!--/a-->
 
                     <a href="/about" class="messageBoxLink">
                         <div class="messageBox">
@@ -86,7 +80,7 @@
                             </p>
                         </div>
                     </a>
-                </div>
+                </div><!-- end: horizontalCenter -->
 
                 <div class="centerMe">
                     <div class="nonHoverBox">
@@ -100,7 +94,7 @@
             </div><!-- end: homeSection -->      
     
             <div id="searchSection"> 
-                <!--div class="spacer150"></div--><!-- production code: use this -->
+                <div class="spacer50"></div>
                 <div class="horizontalCenter">
                     <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
                     <div id="searchBarDecorationWrapper">
@@ -109,31 +103,29 @@
                         </span>
                     </div>
                 </div>
-                <div class="spacer100"></div>
+                <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="myTable"></table>
+                   <table id="searchTable"></table>
                 </div>
-                <!--div class="centerMe">
-                    <button id="clearSearchTableButton" onclick="clearSearchTable()">Clear</button>
-                </div-->
             </div><!-- end: searchSection -->
             
 
             <div id="exploreSection">
-                <div class="spacer150"></div>
-                <!-- <p style="font-size: 400%" class="centerMe">EXPLORE</p> -->
-
-                <div id="breadcrumbs">
-                    <a id="marketCrumb" onclick='renderSectorsCaller()'>Market Sectors</a>
+                <div class="spacer50"></div>
+                <!--p style="font-size: 400%" class="centerMe">EXPLORE</p-->
+            <span class='centerMe'>
+                <div id="breadCrumbs">
+                    <a id="marketCrumb" class="breadCrumb" onclick='renderSectorsCaller()'>Market Sectors</a>
                     <a id="crumbSpace1"> >> </a>
-                    <a id="sectorCrumb" onclick='clickSector(this)'>Sector</a>
+                    <a id="sectorCrumb" class="breadCrumb" onclick='clickSector(this)'>Sector</a>
                     <a id="crumbSpace2"> >> </a>
-                    <a id="industryCrumb" onclick='clickIndustry(this)'>Industry</a>
+                    <a id="industryCrumb" class="breadCrumb" onclick='clickIndustry(this)'>Industry</a>
                 </div>
-                
+            </span>
+                <span class="centerMe">
                     <div id="heatmapContainer">
 
-                    <!--Sectors Table-->
+                        <!--Sectors Table-->
                         <table id="sectors" border="0">
                         </table>
 
@@ -145,26 +137,26 @@
                         <table id="companies" class="tablesorter" border="0">
                             <thead>
                                 <tr>
-                                    <th class="hoverable popup" id="nameBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="nameBox" oncontextmenu="return false;">
                                       Name
                                     </th>
-                                    <th class="hoverable popup" id="peBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="peBox" oncontextmenu="return false;">
                                         <span class="popuptext" id="pePopup">P/E: price-to-earnings ratio</span>
                                         P/E
                                     </th>
-                                    <th class="hoverable popup" id="psBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="psBox" oncontextmenu="return false;">
                                         <span class="popuptext" id="psPopup">P/S: price-to-sales ratio</span>
                                         P/S
                                     </th>
-                                    <th class="hoverable popup" id="pbBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="pbBox" oncontextmenu="return false;">
                                         <span class="popuptext" id="pbPopup">P/B: price-to-book ratio</span>
                                         P/B
                                     </th>
-                                    <th class="hoverable popup" id="divBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="divBox" oncontextmenu="return false;">
                                         <span class="popuptext" id="divPopup">DIV: dividend yield (as a percentage)</span>
                                         DIV
                                     </th>
-                                    <th class="hoverable popup" id="rankBox" oncontextmenu="return false;">
+                                    <th class="exploreHeatMapTH hoverable popup" id="rankBox" oncontextmenu="return false;">
                                         <span class="popuptext" id="rankPopup">RANK: aggregate ratio performance (lower = better)</span>
                                         RANK
                                     </th>
@@ -174,6 +166,19 @@
                             </tbody>
                         </table>
                     </div><!-- END: heatmapContainer -->
+                </span>
+
+
+
+
+
+
+
+
+
+
+
+
             </div><!-- end: exploreSection -->
 
         </div><!-- end: interior -->

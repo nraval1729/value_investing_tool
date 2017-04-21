@@ -77,6 +77,7 @@
 		position: relative;
 		padding: .2em .5em;
 		cursor: pointer;
+        color: rgb(20,20,20); /* new craig */
 	}
 	
 	.awesomplete > ul > li:hover {
@@ -86,11 +87,13 @@
 	
 	.awesomplete > ul > li[aria-selected="true"] {
 		background: hsl(205, 40%, 40%);
-		color: white;
+		/* color: white; */
+        color: rgb(20,20,20); /* new: craig */
 	}
 	
 		.awesomplete mark {
 			background: hsl(65, 100%, 50%);
+            color: rgb(20,20,20); /* new: craig */
 		}
 		
 		.awesomplete li:hover mark {
@@ -99,6 +102,7 @@
 		
 		.awesomplete li[aria-selected="true"] mark {
 			background: hsl(86, 100%, 21%);
-			color: inherit;
+			/*color: inherit; */
+            color: rgb(20,20,20); /* new craig */
 		}
 /*# sourceMappingURL=awesomplete.css.map */

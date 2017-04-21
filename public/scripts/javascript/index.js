@@ -1,6 +1,8 @@
+//PAGE-WIDE VARIABLES
 var NUM_COLS = 4;
 var infoJSON;
 
+//PAGE INITIALIZATION
 $(document).ready(function() {
 	showHome();
 
@@ -16,6 +18,7 @@ $(document).ready(function() {
 	});
 });
 
+//VISIBILITY SECTION
 function showHome() {
 	//alert("inside showHome");
 	$( "#exploreButton" ).removeClass( "underline" );
@@ -37,7 +40,7 @@ function showSearch() {
 }
 
 function showExplore() {
-	// TODOOOO
+	// TODO
 	// Add loading icon after so that we wait until infoJSON is populated.
 	$( "#exploreButton" ).addClass( "underline" );
 	$( "#searchButton" ).removeClass( "underline" );
@@ -49,6 +52,10 @@ function showExplore() {
 	renderSectors(infoJSON['sector_to_industries']);
 
 }
+
+// **********************************************
+// SEARCH SECTION FUNCTIONS BEGIN HERE
+// **********************************************
 
 function populateSearchSuggestions(security_to_ticker) {
 	var companyNames = Object.keys(security_to_ticker);
@@ -84,7 +91,7 @@ function processUserSelection(e, securityToTicker, tickerToSecurity, data) {
 		dataForUserSelection = data["technical_map"][userSelection];
 	}
 
-	// CRAIG SHOULD USE THE VARIABLE dataForUserSelection variable
+    //hand data off to rendering...
 	renderSearchResult(dataForUserSelection);
 }
 
@@ -92,85 +99,125 @@ var hasHeader = false;
 
 //appends the search result table with a row
 function appendTable(str) {
-	var myTable = $("#myTable");
-	var tr = str;
-	myTable.append(str);
+    var searchTable = $("#searchTable");
+    var tr = str;
+    searchTable.append(str);
 }
 
 //takes search bar result as input, and
 //renders it into the table.  also determines
 //if table needs header, and adds such accordingly.
 function renderSearchResult(data) {
-	s = new security(data);
-	if (hasHeader == false) {
-		tableHeader = renderSecurityTableHeader();
-		appendTable(tableHeader);
-		hasHeader = true;
-	}
-	tableRow = renderSecurityRow(s);
-	appendTable(tableRow);
+    //todo: clear the search bar
+    s = new security(data);
+    if (hasHeader == false) {
+        tableHeader = renderSecurityTableHeader();
+        appendTable(tableHeader);
+        hasHeader = true;
+    } 
+    tableRow = renderSecurityRow(s);
+    appendTable(tableRow);
 }
 
-//takes the json data and makes an
-//object out of it, consisting of the 
-//data for a single security
+//takes the json data and makes an object out of
+//it, consisting of the data for a single security
 function security(data) {
-	this.div_avg = data['div_avg'];
-	this.div_cur = data['div_cur'];
-	this.pb_avg = data['pb_avg'];
-	this.pb_cur = data['pb_cur'];
-	this.pe_avg = data['pe_avg'];
-	this.pe_cur = data['pe_cur'];
-	this.ps_avg = data['ps_avg'];
-	this.ps_cur = data['ps_cur'];
-	this.s_rank = data['s_rank'];
-	this.security = data['security'];
-	this.ticker = data['ticker'];
+    this.div_avg = data['div_avg'];
+    this.div_cur = data['div_cur'];
+    this.pb_avg = data['pb_avg'];
+    this.pb_cur = data['pb_cur'];
+    this.pe_avg = data['pe_avg'];
+    this.pe_cur = data['pe_cur'];
+    this.ps_avg = data['ps_avg'];
+    this.ps_cur = data['ps_cur'];
+    this.s_rank = data['s_rank'];
+    this.security = data['security'];
+    this.ticker = data['ticker'];
 }
 
 //renders the table header row for the search result table
 function renderSecurityTableHeader() {
-	var str = '<tr class="securityTableHeader">';
-	str +=	'<td class="securityCellCompanyName"></td>';
-	str +=	'<td class="securityCell">p/e</td>';
-	str += 	'<td class="securityCell">p/s</td>';
-	str +=	'<td class="securityCell">p/b</td>';
-	str +=	'<td class="securityCell">div</td>';
-	str +=	'<td class="securityCell">rank</td>';
-	str += '</tr>';
-	return str;
+    var str = '<tr class="securityTableHeader">';
+    str +=  '<td class="securityCellCompanyName"></td>';
+    str +=  '<td class="securityCell">p/e</td>';
+    str +=  '<td class="securityCell">p/s</td>';
+    str +=  '<td class="securityCell">p/b</td>';
+    str +=  '<td class="securityCell">div</td>';
+    str +=  '<td class="securityCell">rank</td>';
+    str +=  '<td class="securityCell"></td>';
+    str +=  '<td class="securityCell"></td>';
+    str +=  '<td class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></td>';
+    str += '</tr>';
+    return str;
 }
 
-//EXPERIMENTAL: clear contents of security table
-//not yet implemented/tested
+//clears the table contents, including the header
+//but does not remove the table itself from the DOM
 function clearSearchTable() {
-	$("#clearSearchTableButton").click(function() {
-		$("#myTable").empty();
-	});
+    $("#searchTable tr").remove(); 
+    hasHeader = false;
+}
+
+//deletes a row from the search results
+function deleteSearchResultRow(row) {
+    //citation: w3schools.com
+    var index = row.parentNode.parentNode.rowIndex;
+    document.getElementById("searchTable").deleteRow(index);
+}
+
+//moves search results up one row
+function moveSearchResultUp(row) {
+    //citation: http://jsfiddle.net/shemeemsha/4dnoyo77/
+    //citation: https://www.w3schools.com/jsref/met_table_deleterow.asp
+    var index = row.parentNode.parentNode.rowIndex;
+    if (index > 1) {
+        var $element = row;
+        var row = $($element).parents("tr:first"); 
+        row.insertBefore(row.prev());
+    }
+}
+
+//moves search results down one row
+function moveSearchResultDown(row) {
+    //citation: http://jsfiddle.net/shemeemsha/4dnoyo77/
+    var $element = row;
+    var row = $($element).parents("tr:first"); 
+    row.insertAfter(row.next());
 }
 
 //renders a table row for a single security
 function renderSecurityRow(security) {
-	("inside createSecurityRow");
-	var rowString = '<tr>';
+    //citation: arrow buttons image source: http://www.freeiconspng.com
+    //citation: x-button image source: http://www.iconsdb.com
+    var rowString = '<tr>';
     var link = "http://finance.yahoo.com/quote/" + security.ticker + "?p=" + security.ticker;
-	rowString += "<td class='securityCellCompanyName black hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
+    rowString += "<td class='securityCellCompanyName black hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
     rowString += renderSecurityCell(security.pe_cur, security.pe_avg, false);
     rowString += renderSecurityCell(security.ps_cur, security.ps_avg, false);
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='black'>" + security.s_rank + "</td>";
+    rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_01.png"></button></td>';
+    rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_01.png"></button></td>';
+    rowString += '<td class="black"><button class="searchResultButton" onclick="deleteSearchResult(this)"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_01.png"></td>';
     rowString += "</tr>";
-    console.log(rowString);
+    //console.log(rowString);
     return rowString;
 }
 
-//renders a single cell for the table
+//deletes a saearch result row 
+function deleteSearchResult(row) {
+    //citation: concept derived from w3schools.com
+    var index = row.parentNode.parentNode.rowIndex;
+    document.getElementById("searchTable").deleteRow(index);
+}
+
+//renders a single cell for the search results table
 function renderSecurityCell(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
     var excursion = (currValueNum - histValueNum) / histValueNum;
-	if (isDividend) excursion  = - 0.50 * excursion; //compress the range and flip sign
+    if (isDividend) excursion  = - 0.50 * excursion; //compress the range and flip sign
     var color = determineColor(excursion);
     var tdString = '<td class = "securityCell ' + color + '">' + currValue + '</td>';
     return tdString;
@@ -195,6 +242,7 @@ function determineColor(excursion) {
     }
     return colors[index];
 }
+
 
 
 // **********************************************
@@ -228,10 +276,10 @@ function renderSectors(sectorToIndustries) {
     var numRows = Math.ceil(listOfSectors.length / NUM_COLS);
     var index = 0;
 
-    for(i = 0; i < numRows; i++) {
+    for (i = 0; i < numRows; i++) {
         var rowString = "<tr>";
-        for(j = 0; j < NUM_COLS; j++) {
-            if(index < listOfSectors.length) {
+        for (j = 0; j < NUM_COLS; j++) {
+            if (index < listOfSectors.length) {
                 rowString += createSectorTD(listOfSectors, index);
                 index++;
             }
@@ -242,7 +290,7 @@ function renderSectors(sectorToIndustries) {
 }
 
 function createSectorTD(sectorNames, index) {
-    var tdString = "<td class='hoverable'>";
+    var tdString = "<td class='exploreTD1 hoverable'>";
     tdString += "<a class='spaLinks hoverlink' onclick='clickSector(this)'>" + sectorNames[index] + "</a></td>";
     return tdString;
 }
@@ -269,9 +317,7 @@ function clickSector(sector) {
 function renderIndustries(nameOfSector) {
 
 	var listOfUniqueIndustries = infoJSON["sector_to_industries"][nameOfSector];
-
 	var industryTable = $("#industries");
-
     var numRows = Math.ceil(listOfUniqueIndustries.length / NUM_COLS);
     var index = 0;
 
@@ -280,7 +326,7 @@ function renderIndustries(nameOfSector) {
             stringToAppend = stringToAppend + "<tr>";
             for (var j = 0; j < NUM_COLS; j++) {
                 if (index < listOfUniqueIndustries.length) {
-                    stringToAppend = stringToAppend + "<td><a class='spaLinks hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>";
+                    stringToAppend = stringToAppend + "<td class='exploreTD1'><a class='hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>"; //removed spalinks as a class for the a tag, as it is not in the css collection
                     index++;
                 }      
             }
@@ -309,9 +355,12 @@ function renderCompanies(nameOfIndustry) {
     var companyTableBody = $("#companies tbody"); 
 
     var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
-
     for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
-        companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]], index));
+        //companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]], index));
+        var rowString = createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]]);
+        //console.log(rowString);
+        companyTableBody.append(rowString);
+        //companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]]));
         $("#companies").trigger("update");
     }
 
@@ -346,59 +395,35 @@ function renderCompanies(nameOfIndustry) {
     });
 }
 
-function createRowString(companyInfo, index) {
-    var rowString = "<tr>";
+//function createRowString(companyInfo, index) {
+function createRowString(companyInfo) {
+    var rowString = "<tr class='height:10px'>";
     var ticker = JSON.stringify(companyInfo['ticker']);
     var security = JSON.stringify(companyInfo['security']);
     ticker = removeLeadingAndTrailingQuotes(ticker);
     security = removeLeadingAndTrailingQuotes(security);
 
     var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']) + "?p=" + ticker ;
-    rowString += "<td class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></td>";
+    rowString += "<td class='black, hoverable exploreTD2'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></td>";
 
     rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
     rowString += createTDString(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
     rowString += createTDString(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
     rowString += createTDString(companyInfo["div_cur"], companyInfo["div_avg"], true);
-    rowString += "<td class='black'>" + companyInfo['s_rank'] + "</td>";
+    rowString += "<td class='exploreTD2 black'>" + companyInfo['s_rank'] + "</td>";
 
     rowString += "</tr>";
     return rowString;
 }
 
+
 function createTDString(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
-    var colors = ["brightred", "darkred", "black", "darkgreen", "brightgreen"];
-    var percent = (currValueNum - histValueNum) / histValueNum;
-
-    if (isDividend) {
-        percent  = 0.50 * percent; //compress the range
-    }
-
-    var colorIndex;
-
-    //values chosen to illustrate colors
-    //for 4-12 handin
-    if (percent >= 0.60) {
-        colorIndex = 0;
-    } else if (percent >= 0.40) {
-        colorIndex = 1;
-    } else if (percent >= -0.05) {
-        colorIndex = 2;
-    } else if (percent >= -0.20) {
-        colorIndex = 3;
-    } else {
-        colorIndex = 4;
-    }
-
-    //dividend "good" is opposite of other ratios
-    if (isDividend) {
-        colorIndex = 4 - colorIndex;
-    }
-
-    var color = colors[colorIndex];
-    var tdString = "<td class = '" + color + "'>" + currValue + "</td>";
+    var excursion = (currValueNum - histValueNum) / histValueNum;
+    if (isDividend) excursion = -0.50 * excursion; //compress the range and flip sign
+    var color = determineColor(excursion);
+    var tdString = "<td class = ' " + color + "'>" + currValue + "</td>";
     return tdString;
 }
 

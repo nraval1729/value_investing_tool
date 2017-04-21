@@ -1,3 +1,9 @@
+
+.centerMe {
+    display: flex;
+    justify-content: center;
+}
+
 .headerNavigationLink {
     font-size: 80%;
     font-weight: normal;
