@@ -1,0 +1,686 @@
+1492806443454	geckodriver	INFO	Listening on 127.0.0.1:52777
+1492806444494	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.KF8MzLLm3dVT
+1492806444495	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1492806444506	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35550
+1492806444702	addons.manager	DEBUG	Application has been upgraded
+1492806444725	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
+1492806444728	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1492806444734	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1492806444736	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1492806444737	addons.manager	DEBUG	Starting provider: XPIProvider
+1492806444737	addons.xpi	DEBUG	startup
+1492806444738	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1492806444738	addons.xpi	INFO	Mapping firefox@getpocket.com to /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1492806444738	addons.xpi	INFO	Mapping deployment-checker@mozilla.org to /usr/lib/firefox/browser/features/deployment-checker@mozilla.org.xpi
+1492806444739	addons.xpi	INFO	Mapping e10srollout@mozilla.org to /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1492806444739	addons.xpi	INFO	Mapping webcompat@mozilla.org to /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1492806444739	addons.xpi	INFO	Mapping aushelper@mozilla.org to /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1492806444740	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to /usr/lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1492806444740	addons.xpi	INFO	Mapping langpack-en-GB@firefox.mozilla.org to /usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
+1492806444740	addons.xpi	INFO	Mapping langpack-en-ZA@firefox.mozilla.org to /usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
+1492806444741	addons.xpi	DEBUG	checkForChanges
+1492806444741	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1492806444741	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1492806444742	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1492806444743	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1492806444743	addons.xpi	DEBUG	New add-on deployment-checker@mozilla.org in app-system-defaults
+1492806444743	addons.xpi	DEBUG	getModTime: Recursive scan of deployment-checker@mozilla.org
+1492806444744	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1492806444744	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1492806444744	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
+1492806444744	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1492806444745	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
+1492806444745	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1492806444745	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1492806444746	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1492806444746	addons.xpi	DEBUG	New add-on langpack-en-GB@firefox.mozilla.org in app-global
+1492806444746	addons.xpi	DEBUG	getModTime: Recursive scan of langpack-en-GB@firefox.mozilla.org
+1492806444747	addons.xpi	DEBUG	New add-on langpack-en-ZA@firefox.mozilla.org in app-global
+1492806444747	addons.xpi	DEBUG	getModTime: Recursive scan of langpack-en-ZA@firefox.mozilla.org
+1492806444748	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-system-defaults":{"firefox@getpocket.com":{"d":"/usr/lib/firefox/browser/features/firefox@getpocket.com.xpi","st":1490804147000},"deployment-checker@mozilla.org":{"d":"/usr/lib/firefox/browser/features/deployment-checker@mozilla.org.xpi","st":1490804147000},"e10srollout@mozilla.org":{"d":"/usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi","st":1490804147000},"webcompat@mozilla.org":{"d":"/usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi","st":1490804147000},"aushelper@mozilla.org":{"d":"/usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi","st":1490804147000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/usr/lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1490804147000},"langpack-en-GB@firefox.mozilla.org":{"d":"/usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi","st":1490804544000},"langpack-en-ZA@firefox.mozilla.org":{"d":"/usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi","st":1490804544000}}}
+1492806444755	addons.xpi-utils	DEBUG	Opening XPI database /tmp/rust_mozprofile.KF8MzLLm3dVT/extensions.json
+1492806444756	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1492806444768	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444768	addons.xpi-utils	DEBUG	New add-on deployment-checker@mozilla.org installed in app-system-defaults
+1492806444771	DeferredSave.extensions.json	DEBUG	Starting timer
+1492806444772	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444772	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1492806444776	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444776	addons.xpi-utils	DEBUG	New add-on webcompat@mozilla.org installed in app-system-defaults
+1492806444780	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444782	addons.xpi-utils	DEBUG	New add-on aushelper@mozilla.org installed in app-system-defaults
+1492806444786	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444786	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1492806444791	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444791	addons.xpi-utils	DEBUG	New add-on langpack-en-GB@firefox.mozilla.org installed in app-global
+1492806444800	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444801	addons.xpi-utils	DEBUG	New add-on langpack-en-ZA@firefox.mozilla.org installed in app-global
+1492806444808	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444809	addons.manager	DEBUG	Registering startup change 'installed' for firefox@getpocket.com
+1492806444819	addons.xpi	DEBUG	Loading bootstrap scope from /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1492806444823	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.5
+1492806444823	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1492806444823	DeferredSave.extensions.json	DEBUG	Save changes
+1492806444823	addons.manager	DEBUG	Registering startup change 'installed' for deployment-checker@mozilla.org
+1492806444824	addons.xpi	DEBUG	Loading bootstrap scope from /usr/lib/firefox/browser/features/deployment-checker@mozilla.org.xpi
+1492806444828	addons.xpi	DEBUG	Calling bootstrap method install on deployment-checker@mozilla.org version 1.0
+1492806445728	addons.xpi-utils	DEBUG	Make addon app-system-defaults:deployment-checker@mozilla.org visible
+1492806445729	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445729	addons.manager	DEBUG	Registering startup change 'installed' for e10srollout@mozilla.org
+1492806445730	addons.xpi	DEBUG	Loading bootstrap scope from /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1492806445732	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.9
+1492806445733	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1492806445734	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445734	addons.manager	DEBUG	Registering startup change 'installed' for webcompat@mozilla.org
+1492806445734	addons.xpi	DEBUG	Loading bootstrap scope from /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1492806445735	addons.xpi	DEBUG	Calling bootstrap method install on webcompat@mozilla.org version 1.0
+1492806445735	addons.xpi-utils	DEBUG	Make addon app-system-defaults:webcompat@mozilla.org visible
+1492806445736	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445736	addons.manager	DEBUG	Registering startup change 'installed' for aushelper@mozilla.org
+1492806445736	addons.xpi	DEBUG	Loading bootstrap scope from /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1492806445738	addons.xpi	DEBUG	Calling bootstrap method install on aushelper@mozilla.org version 2.0
+1492806445738	addons.xpi-utils	DEBUG	Make addon app-system-defaults:aushelper@mozilla.org visible
+1492806445738	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445738	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1492806445738	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445738	addons.manager	DEBUG	Registering startup change 'installed' for langpack-en-GB@firefox.mozilla.org
+1492806445738	addons.manager	DEBUG	Registering startup change 'installed' for langpack-en-GB@firefox.mozilla.org
+1492806445739	addons.xpi-utils	DEBUG	Make addon app-global:langpack-en-GB@firefox.mozilla.org visible
+1492806445739	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445739	addons.manager	DEBUG	Registering startup change 'installed' for langpack-en-ZA@firefox.mozilla.org
+1492806445739	addons.manager	DEBUG	Registering startup change 'installed' for langpack-en-ZA@firefox.mozilla.org
+1492806445739	addons.xpi-utils	DEBUG	Make addon app-global:langpack-en-ZA@firefox.mozilla.org visible
+1492806445740	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445740	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{bbf1fa76-36de-473e-bd0c-fce82b2ee026}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/features/firefox@getpocket.com.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":920281,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1492806445740	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1492806445740	addons.xpi	DEBUG	Updating XPIState for {"id":"deployment-checker@mozilla.org","syncGUID":"{4bb559da-0374-4628-8145-9824156331a3}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Site Deployment Checker","description":"Check that Users Encounter Mozilla Sites as Deployed by Mozilla","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/features/deployment-checker@mozilla.org.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":11555,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1492806445740	addons.xpi	DEBUG	getModTime: Recursive scan of deployment-checker@mozilla.org
+1492806445741	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"{7c55ff9c-666d-494b-ad7e-5a9960b7a2b5}","location":"app-system-defaults","version":"1.9","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":7183,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1492806445741	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1492806445741	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{ccd07b05-0e8d-4ee9-b9b7-fdf44a59f6fe}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":1456,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1492806445742	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1492806445742	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{89a05564-a917-4824-a786-7b86cf502579}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":8488,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1492806445742	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1492806445743	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{46dfade7-174b-4734-8826-05dd5247005f}","location":"app-global","version":"52.0.2","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1490804147000,"updateDate":1490804147000,"applyBackgroundUpdates":1,"skinnable":true,"size":4932,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.0.2"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1492806445743	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1492806445743	addons.xpi	DEBUG	Updating XPIState for {"id":"langpack-en-GB@firefox.mozilla.org","syncGUID":"{2c1f664c-b5a1-49ab-ac74-7ce07239dac0}","location":"app-global","version":"52.0.2","type":"locale","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"English (GB) Language Pack","description":null,"creator":"Mark Tyndall","homepageURL":null,"contributors":["David Bartlett","Constantine Murenin","Ian Neal"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi","installDate":1490804544000,"updateDate":1490804544000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":1155239,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1492806445743	addons.xpi	DEBUG	getModTime: Recursive scan of langpack-en-GB@firefox.mozilla.org
+1492806445744	addons.xpi	DEBUG	Updating XPIState for {"id":"langpack-en-ZA@firefox.mozilla.org","syncGUID":"{0e805417-3039-4a3d-8363-cd6d8c93c99d}","location":"app-global","version":"52.0.2","type":"locale","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"English (South Africa) Language Pack","description":null,"creator":"Translate.org.za","homepageURL":null,"contributors":["Translate.org.za","Dwayne Bailey"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"/usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi","installDate":1490804544000,"updateDate":1490804544000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":1197397,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0.2","maxVersion":"52.*"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1492806445744	addons.xpi	DEBUG	getModTime: Recursive scan of langpack-en-ZA@firefox.mozilla.org
+1492806445745	DeferredSave.extensions.json	DEBUG	Save changes
+1492806445745	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1492806445745	addons.xpi-utils	DEBUG	Updating add-on states
+1492806445746	addons.xpi-utils	DEBUG	Writing add-ons list
+1492806445748	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1492806445748	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1492806445749	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/deployment-checker@mozilla.org.xpi
+1492806445749	addons.xpi	DEBUG	Calling bootstrap method startup on deployment-checker@mozilla.org version 1.0
+1492806445750	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1492806445750	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.9
+1492806445750	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1492806445751	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1492806445751	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
+1492806445752	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
+1492806445753	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1492806445753	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1492806445755	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1492806445755	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1492806445755	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1492806445755	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1492806445755	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1492806445756	addons.manager	DEBUG	Starting provider: GMPProvider
+1492806445761	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1492806445761	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1492806445761	addons.manager	DEBUG	Starting provider: PluginProvider
+1492806445761	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1492806445761	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1492806445762	addons.manager	DEBUG	Completed startup sequence
+1492806445899	Marionette	INFO	Listening on port 35550
+1492806446955	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1492806446955	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1492806446955	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1492806446971	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1492806446971	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1492806446971	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1492806446974	DeferredSave.extensions.json	DEBUG	Starting write
+1492806447017	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492806447064	DeferredSave.extensions.json	DEBUG	Write succeeded
+1492806447064	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+1492806507953	addons.productaddons	INFO	sending request to: https://aus5.mozilla.org/update/3/GMP/52.0.2/20170329150444/Linux_x86_64-gcc3/null/release-cck- ubuntu/Linux%204.4.0-72-generic%20(GTK%203.18.9%2Clibpulse%208.0.0)/canonical/1.0/update.xml
+1492806508353	addons.productaddons	INFO	Completed downloading document
+1492806509025	addons.productaddons	INFO	downloadXHR File download. status=200
+1492806509029	addons.productaddons	INFO	Downloaded file will be saved to /tmp/tmpaddon
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript error: https://s0.2mdn.net/807725/1485793805510/C1_MoneyMarket_NationsBest_W_728x90.js?1484642752085, line 650: TypeError: this.top is not a function
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript error: https://s0.2mdn.net/807725/1485793805510/C1_MoneyMarket_NationsBest_W_728x90.js?1484642752085, line 650: TypeError: this.top is not a function
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+1492806835819	addons.manager	INFO	Skipping background update check
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript error: https://s0.2mdn.net/807725/1485793805510/C1_MoneyMarket_NationsBest_W_728x90.js?1484642752085, line 650: TypeError: this.top is not a function
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+1492807075828	DeferredSave.extensions.json	DEBUG	Save changes
+1492807075829	DeferredSave.extensions.json	DEBUG	Starting timer
+1492807075852	DeferredSave.extensions.json	DEBUG	Starting write
+1492807075855	DeferredSave.extensions.json	DEBUG	Write succeeded
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript error: https://s0.2mdn.net/807725/1485793805510/C1_MoneyMarket_NationsBest_W_728x90.js?1484642752085, line 650: TypeError: this.top is not a function
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+[GFX1-]: Failed to allocate a surface due to invalid size (CDT) Size(0,0)
+[GFX1-]: Failed to allocate a surface due to invalid size (CDT) Size(0,0)
+[GFX1-]: Failed to allocate a surface due to invalid size (CDT) Size(0,0)
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+JavaScript warning: http://financials.morningstar.com/valuate/static/common/js/jquery-1.3.2.min.js, line 19: unreachable code after return statement
+1492809829533	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.0
+1492809829534	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1492809829535	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 1.9
+1492809829535	addons.xpi	DEBUG	Calling bootstrap method shutdown on deployment-checker@mozilla.org version 1.0
+1492809829536	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1492809829674	addons.manager	DEBUG	shutdown
+1492809829675	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1492809829675	addons.xpi	DEBUG	shutdown
+1492809829675	addons.xpi-utils	DEBUG	shutdown
+1492809829676	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1492809829676	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1492809829678	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1492809829679	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1492809829681	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1492809829684	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1492809829689	addons.manager	DEBUG	Async provider shutdown done

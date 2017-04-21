@@ -1,0 +1,3537 @@
+[
+    {
+        "ticker": "A", 
+        "pe_avg": "22.4", 
+        "pb_avg": "3.1", 
+        "ps_avg": "2.5", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "AAL", 
+        "pe_avg": "6.5", 
+        "pb_avg": "8.9", 
+        "ps_avg": "0.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AAP", 
+        "pe_avg": "20.4", 
+        "pb_avg": "5.2", 
+        "ps_avg": "1.1", 
+        "div_avg": "0.2"
+    }, 
+    {
+        "ticker": "AAPL", 
+        "pe_avg": "13.5", 
+        "pb_avg": "4.6", 
+        "ps_avg": "3.1", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "ABBV", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ABC", 
+        "pe_avg": "98.5", 
+        "pb_avg": "8.8", 
+        "ps_avg": "0.2", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "ABT", 
+        "pe_avg": "24.4", 
+        "pb_avg": "3.0", 
+        "ps_avg": "2.6", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "ACN", 
+        "pe_avg": "18.3", 
+        "pb_avg": "10.3", 
+        "ps_avg": "1.9", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "ADBE", 
+        "pe_avg": "73.4", 
+        "pb_avg": "4.8", 
+        "ps_avg": "7.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ADI", 
+        "pe_avg": "23.6", 
+        "pb_avg": "3.4", 
+        "ps_avg": "5.5", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "ADM", 
+        "pe_avg": "16.7", 
+        "pb_avg": "1.3", 
+        "ps_avg": "0.3", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "ADP", 
+        "pe_avg": "25.2", 
+        "pb_avg": "6.5", 
+        "ps_avg": "3.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "ADS", 
+        "pe_avg": "29.2", 
+        "pb_avg": "14.3", 
+        "ps_avg": "2.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ADSK", 
+        "pe_avg": "63.2", 
+        "pb_avg": "5.9", 
+        "ps_avg": "4.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AEE", 
+        "pe_avg": "31.9", 
+        "pb_avg": "1.4", 
+        "ps_avg": "1.5", 
+        "div_avg": "4.0"
+    }, 
+    {
+        "ticker": "AEP", 
+        "pe_avg": "17.5", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.6", 
+        "div_avg": "3.8"
+    }, 
+    {
+        "ticker": "AES", 
+        "pe_avg": "34.4", 
+        "pb_avg": "2.1", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "AET", 
+        "pe_avg": "13.8", 
+        "pb_avg": "2.0", 
+        "ps_avg": "0.6", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "AFL", 
+        "pe_avg": "9.7", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "AGN", 
+        "pe_avg": "112.5", 
+        "pb_avg": "3.2", 
+        "ps_avg": "3.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AIG", 
+        "pe_avg": "44.0", 
+        "pb_avg": "0.7", 
+        "ps_avg": "1.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AIV", 
+        "pe_avg": "65.0", 
+        "pb_avg": "5.8", 
+        "ps_avg": "4.8", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "AIZ", 
+        "pe_avg": "13.5", 
+        "pb_avg": "0.9", 
+        "ps_avg": "0.5", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "AJG", 
+        "pe_avg": "23.5", 
+        "pb_avg": "2.7", 
+        "ps_avg": "1.7", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "AKAM", 
+        "pe_avg": "34.2", 
+        "pb_avg": "3.4", 
+        "ps_avg": "5.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ALB", 
+        "pe_avg": "18.9", 
+        "pb_avg": "3.0", 
+        "ps_avg": "2.0", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "ALK", 
+        "pe_avg": "12.0", 
+        "pb_avg": "3.1", 
+        "ps_avg": "1.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ALL", 
+        "pe_avg": "12.6", 
+        "pb_avg": "1.2", 
+        "ps_avg": "0.7", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "ALLE", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ALXN", 
+        "pe_avg": "125.6", 
+        "pb_avg": "9.2", 
+        "ps_avg": "16.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AMAT", 
+        "pe_avg": "56.6", 
+        "pb_avg": "2.9", 
+        "ps_avg": "2.5", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "AMD", 
+        "pe_avg": "40.8", 
+        "pb_avg": "12.4", 
+        "ps_avg": "0.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AME", 
+        "pe_avg": "21.7", 
+        "pb_avg": "3.8", 
+        "ps_avg": "3.1", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "AMG", 
+        "pe_avg": "30.6", 
+        "pb_avg": "3.8", 
+        "ps_avg": "4.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AMGN", 
+        "pe_avg": "18.6", 
+        "pb_avg": "3.9", 
+        "ps_avg": "5.0", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "AMP", 
+        "pe_avg": "14.4", 
+        "pb_avg": "2.2", 
+        "ps_avg": "1.7", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "AMT", 
+        "pe_avg": "56.8", 
+        "pb_avg": "7.8", 
+        "ps_avg": "9.8", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "AMZN", 
+        "pe_avg": "706.6", 
+        "pb_avg": "17.1", 
+        "ps_avg": "2.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "AN", 
+        "pe_avg": "16.3", 
+        "pb_avg": "2.9", 
+        "ps_avg": "0.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ANTM", 
+        "pe_avg": "12.1", 
+        "pb_avg": "1.2", 
+        "ps_avg": "0.4", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "AON", 
+        "pe_avg": "20.9", 
+        "pb_avg": "3.4", 
+        "ps_avg": "2.1", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "APA", 
+        "pe_avg": "14.0", 
+        "pb_avg": "2.0", 
+        "ps_avg": "2.3", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "APC", 
+        "pe_avg": "32.1", 
+        "pb_avg": "2.2", 
+        "ps_avg": "2.9", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "APD", 
+        "pe_avg": "22.8", 
+        "pb_avg": "3.6", 
+        "ps_avg": "2.5", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "APH", 
+        "pe_avg": "22.6", 
+        "pb_avg": "5.0", 
+        "ps_avg": "3.0", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "ARE", 
+        "pe_avg": "63.7", 
+        "pb_avg": "1.7", 
+        "ps_avg": "9.0", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "ARNC", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ATVI", 
+        "pe_avg": "21.4", 
+        "pb_avg": "2.1", 
+        "ps_avg": "4.1", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "AVB", 
+        "pe_avg": "70.3", 
+        "pb_avg": "2.4", 
+        "ps_avg": "12.5", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "AVGO", 
+        "pe_avg": "110.1", 
+        "pb_avg": "5.8", 
+        "ps_avg": "5.2", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "AVY", 
+        "pe_avg": "21.4", 
+        "pb_avg": "3.8", 
+        "ps_avg": "0.8", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "AWK", 
+        "pe_avg": "22.0", 
+        "pb_avg": "1.9", 
+        "ps_avg": "3.0", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "AXP", 
+        "pe_avg": "15.0", 
+        "pb_avg": "3.7", 
+        "ps_avg": "2.4", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "AYI", 
+        "pe_avg": "33.6", 
+        "pb_avg": "5.0", 
+        "ps_avg": "2.4", 
+        "div_avg": "0.4"
+    }, 
+    {
+        "ticker": "AZO", 
+        "pe_avg": "18.2", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "2.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BA", 
+        "pe_avg": "18.3", 
+        "pb_avg": "18.7", 
+        "ps_avg": "1.0", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "BAC", 
+        "pe_avg": "64.9", 
+        "pb_avg": "0.7", 
+        "ps_avg": "1.8", 
+        "div_avg": "0.7"
+    }, 
+    {
+        "ticker": "BAX", 
+        "pe_avg": "16.8", 
+        "pb_avg": "4.2", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "BBBY", 
+        "pe_avg": "13.3", 
+        "pb_avg": "3.6", 
+        "ps_avg": "1.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BBT", 
+        "pe_avg": "14.3", 
+        "pb_avg": "1.2", 
+        "ps_avg": "2.7", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "BBY", 
+        "pe_avg": "12.5", 
+        "pb_avg": "2.5", 
+        "ps_avg": "0.2", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "BCR", 
+        "pe_avg": "45.6", 
+        "pb_avg": "6.7", 
+        "ps_avg": "3.7", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "BDX", 
+        "pe_avg": "25.6", 
+        "pb_avg": "4.3", 
+        "ps_avg": "2.7", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "BEN", 
+        "pe_avg": "14.0", 
+        "pb_avg": "2.7", 
+        "ps_avg": "3.7", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "BF.B", 
+        "pe_avg": "26.6", 
+        "pb_avg": "9.8", 
+        "ps_avg": "5.6", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "BHI", 
+        "pe_avg": "24.0", 
+        "pb_avg": "1.4", 
+        "ps_avg": "1.2", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "BIIB", 
+        "pe_avg": "27.9", 
+        "pb_avg": "6.6", 
+        "ps_avg": "7.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BK", 
+        "pe_avg": "16.5", 
+        "pb_avg": "1.1", 
+        "ps_avg": "2.6", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "BLK", 
+        "pe_avg": "17.5", 
+        "pb_avg": "1.8", 
+        "ps_avg": "4.9", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "BLL", 
+        "pe_avg": "25.6", 
+        "pb_avg": "7.0", 
+        "ps_avg": "1.0", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "BMY", 
+        "pe_avg": "40.2", 
+        "pb_avg": "5.7", 
+        "ps_avg": "5.1", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "BRK.B", 
+        "pe_avg": "16.4", 
+        "pb_avg": "1.4", 
+        "ps_avg": "1.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BSX", 
+        "pe_avg": "86.9", 
+        "pb_avg": "2.7", 
+        "ps_avg": "2.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BWA", 
+        "pe_avg": "17.8", 
+        "pb_avg": "3.0", 
+        "ps_avg": "1.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "BXP", 
+        "pe_avg": "46.1", 
+        "pb_avg": "3.3", 
+        "ps_avg": "8.2", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "C", 
+        "pe_avg": "13.8", 
+        "pb_avg": "0.7", 
+        "ps_avg": "1.9", 
+        "div_avg": "0.3"
+    }, 
+    {
+        "ticker": "CA", 
+        "pe_avg": "15.2", 
+        "pb_avg": "2.3", 
+        "ps_avg": "2.9", 
+        "div_avg": "3.5"
+    }, 
+    {
+        "ticker": "CAG", 
+        "pe_avg": "35.9", 
+        "pb_avg": "3.4", 
+        "ps_avg": "1.0", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "CAH", 
+        "pe_avg": "27.3", 
+        "pb_avg": "3.4", 
+        "ps_avg": "0.2", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "CAT", 
+        "pe_avg": "19.6", 
+        "pb_avg": "3.2", 
+        "ps_avg": "1.0", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "CB", 
+        "pe_avg": "12.4", 
+        "pb_avg": "1.2", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "CBG", 
+        "pe_avg": "23.9", 
+        "pb_avg": "4.6", 
+        "ps_avg": "1.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CBOE", 
+        "pe_avg": "24.3", 
+        "pb_avg": "16.4", 
+        "ps_avg": "7.4", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "CBS", 
+        "pe_avg": "18.5", 
+        "pb_avg": "3.5", 
+        "ps_avg": "2.0", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "CCI", 
+        "pe_avg": "123.9", 
+        "pb_avg": "5.3", 
+        "ps_avg": "7.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CCL", 
+        "pe_avg": "22.4", 
+        "pb_avg": "1.3", 
+        "ps_avg": "2.0", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "CELG", 
+        "pe_avg": "41.9", 
+        "pb_avg": "11.8", 
+        "ps_avg": "9.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CERN", 
+        "pe_avg": "41.4", 
+        "pb_avg": "5.6", 
+        "ps_avg": "5.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CF", 
+        "pe_avg": "13.1", 
+        "pb_avg": "2.4", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "CFG", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CHD", 
+        "pe_avg": "25.9", 
+        "pb_avg": "4.7", 
+        "ps_avg": "3.1", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "CHK", 
+        "pe_avg": "18.3", 
+        "pb_avg": "1.2", 
+        "ps_avg": "0.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CHRW", 
+        "pe_avg": "20.6", 
+        "pb_avg": "8.3", 
+        "ps_avg": "0.8", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "CHTR", 
+        "pe_avg": "16.5", 
+        "pb_avg": "123.9", 
+        "ps_avg": "1.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CI", 
+        "pe_avg": "14.3", 
+        "pb_avg": "2.3", 
+        "ps_avg": "0.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CINF", 
+        "pe_avg": "18.4", 
+        "pb_avg": "1.4", 
+        "ps_avg": "1.8", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "CL", 
+        "pe_avg": "28.6", 
+        "pb_avg": "57.5", 
+        "ps_avg": "3.5", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "CLX", 
+        "pe_avg": "21.9", 
+        "pb_avg": "101.9", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "CMA", 
+        "pe_avg": "15.5", 
+        "pb_avg": "1.0", 
+        "ps_avg": "3.0", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "CMCSA", 
+        "pe_avg": "18.6", 
+        "pb_avg": "2.3", 
+        "ps_avg": "1.9", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "CME", 
+        "pe_avg": "23.1", 
+        "pb_avg": "1.2", 
+        "ps_avg": "8.4", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "CMG", 
+        "pe_avg": "50.1", 
+        "pb_avg": "9.3", 
+        "ps_avg": "4.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CMI", 
+        "pe_avg": "14.5", 
+        "pb_avg": "3.2", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "CMS", 
+        "pe_avg": "18.7", 
+        "pb_avg": "2.4", 
+        "ps_avg": "1.3", 
+        "div_avg": "3.4"
+    }, 
+    {
+        "ticker": "CNC", 
+        "pe_avg": "112.2", 
+        "pb_avg": "3.0", 
+        "ps_avg": "0.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CNP", 
+        "pe_avg": "22.3", 
+        "pb_avg": "2.3", 
+        "ps_avg": "1.2", 
+        "div_avg": "4.3"
+    }, 
+    {
+        "ticker": "COF", 
+        "pe_avg": "9.9", 
+        "pb_avg": "0.9", 
+        "ps_avg": "1.8", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "COG", 
+        "pe_avg": "109.7", 
+        "pb_avg": "5.1", 
+        "ps_avg": "9.5", 
+        "div_avg": "0.3"
+    }, 
+    {
+        "ticker": "COH", 
+        "pe_avg": "18.6", 
+        "pb_avg": "5.7", 
+        "ps_avg": "2.8", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "COL", 
+        "pe_avg": "16.3", 
+        "pb_avg": "6.3", 
+        "ps_avg": "2.1", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "COO", 
+        "pe_avg": "27.1", 
+        "pb_avg": "2.6", 
+        "ps_avg": "4.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "COP", 
+        "pe_avg": "12.4", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.3", 
+        "div_avg": "4.2"
+    }, 
+    {
+        "ticker": "COST", 
+        "pe_avg": "27.0", 
+        "pb_avg": "4.8", 
+        "ps_avg": "0.5", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "COTY", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CPB", 
+        "pe_avg": "20.4", 
+        "pb_avg": "10.3", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "CRM", 
+        "pe_avg": "391.8", 
+        "pb_avg": "10.7", 
+        "ps_avg": "7.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CSCO", 
+        "pe_avg": "14.6", 
+        "pb_avg": "2.2", 
+        "ps_avg": "2.7", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "CSRA", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CSX", 
+        "pe_avg": "14.8", 
+        "pb_avg": "2.6", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "CTAS", 
+        "pe_avg": "21.8", 
+        "pb_avg": "3.7", 
+        "ps_avg": "1.8", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "CTL", 
+        "pe_avg": "27.9", 
+        "pb_avg": "1.2", 
+        "ps_avg": "1.1", 
+        "div_avg": "7.5"
+    }, 
+    {
+        "ticker": "CTSH", 
+        "pe_avg": "22.8", 
+        "pb_avg": "4.4", 
+        "ps_avg": "3.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CTXS", 
+        "pe_avg": "38.7", 
+        "pb_avg": "4.7", 
+        "ps_avg": "4.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "CVS", 
+        "pe_avg": "20.0", 
+        "pb_avg": "2.3", 
+        "ps_avg": "0.7", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "CVX", 
+        "pe_avg": "19.3", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.1", 
+        "div_avg": "3.7"
+    }, 
+    {
+        "ticker": "CXO", 
+        "pe_avg": "42.4", 
+        "pb_avg": "2.8", 
+        "ps_avg": "5.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "D", 
+        "pe_avg": "40.8", 
+        "pb_avg": "3.2", 
+        "ps_avg": "3.0", 
+        "div_avg": "3.6"
+    }, 
+    {
+        "ticker": "DAL", 
+        "pe_avg": "11.9", 
+        "pb_avg": "22.0", 
+        "ps_avg": "0.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DD", 
+        "pe_avg": "20.5", 
+        "pb_avg": "4.7", 
+        "ps_avg": "1.7", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "DE", 
+        "pe_avg": "11.9", 
+        "pb_avg": "3.8", 
+        "ps_avg": "0.9", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "DFS", 
+        "pe_avg": "10.6", 
+        "pb_avg": "2.3", 
+        "ps_avg": "3.0", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "DG", 
+        "pe_avg": "19.3", 
+        "pb_avg": "3.7", 
+        "ps_avg": "1.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DGX", 
+        "pe_avg": "15.4", 
+        "pb_avg": "2.3", 
+        "ps_avg": "1.3", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "DHI", 
+        "pe_avg": "16.0", 
+        "pb_avg": "1.8", 
+        "ps_avg": "1.2", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "DHR", 
+        "pe_avg": "20.9", 
+        "pb_avg": "2.4", 
+        "ps_avg": "2.7", 
+        "div_avg": "0.4"
+    }, 
+    {
+        "ticker": "DIS", 
+        "pe_avg": "19.6", 
+        "pb_avg": "3.1", 
+        "ps_avg": "2.9", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "DISCA", 
+        "pe_avg": "35.2", 
+        "pb_avg": "3.8", 
+        "ps_avg": "7.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DISCK", 
+        "pe_avg": "20.6", 
+        "pb_avg": "2.3", 
+        "ps_avg": "4.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DISH", 
+        "pe_avg": "29.9", 
+        "pb_avg": "67.2", 
+        "ps_avg": "1.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DLPH", 
+        "pe_avg": "15.1", 
+        "pb_avg": "7.1", 
+        "ps_avg": "1.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DLR", 
+        "pe_avg": "55.8", 
+        "pb_avg": "3.4", 
+        "ps_avg": "5.9", 
+        "div_avg": "4.7"
+    }, 
+    {
+        "ticker": "DLTR", 
+        "pe_avg": "28.8", 
+        "pb_avg": "7.1", 
+        "ps_avg": "1.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DOV", 
+        "pe_avg": "15.9", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.6", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "DOW", 
+        "pe_avg": "18.3", 
+        "pb_avg": "2.5", 
+        "ps_avg": "1.0", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "DPS", 
+        "pe_avg": "18.4", 
+        "pb_avg": "5.5", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "DRI", 
+        "pe_avg": "29.6", 
+        "pb_avg": "3.6", 
+        "ps_avg": "1.0", 
+        "div_avg": "3.6"
+    }, 
+    {
+        "ticker": "DTE", 
+        "pe_avg": "17.7", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.3", 
+        "div_avg": "3.5"
+    }, 
+    {
+        "ticker": "DUK", 
+        "pe_avg": "21.1", 
+        "pb_avg": "1.3", 
+        "ps_avg": "2.1", 
+        "div_avg": "4.4"
+    }, 
+    {
+        "ticker": "DVA", 
+        "pe_avg": "26.4", 
+        "pb_avg": "3.3", 
+        "ps_avg": "1.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "DVN", 
+        "pe_avg": "16.3", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.9", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "DXC", 
+        "pe_avg": "95.1", 
+        "pb_avg": "2.4", 
+        "ps_avg": "0.6", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "EA", 
+        "pe_avg": "131.7", 
+        "pb_avg": "4.5", 
+        "ps_avg": "3.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "EBAY", 
+        "pe_avg": "89.1", 
+        "pb_avg": "3.5", 
+        "ps_avg": "4.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ECL", 
+        "pe_avg": "33.0", 
+        "pb_avg": "4.4", 
+        "ps_avg": "2.3", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "ED", 
+        "pe_avg": "16.5", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.5", 
+        "div_avg": "4.1"
+    }, 
+    {
+        "ticker": "EFX", 
+        "pe_avg": "27.8", 
+        "pb_avg": "4.3", 
+        "ps_avg": "4.0", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "EIX", 
+        "pe_avg": "16.6", 
+        "pb_avg": "1.7", 
+        "ps_avg": "1.5", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "EL", 
+        "pe_avg": "27.8", 
+        "pb_avg": "8.2", 
+        "ps_avg": "2.8", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "EMN", 
+        "pe_avg": "14.6", 
+        "pb_avg": "3.1", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "EMR", 
+        "pe_avg": "18.9", 
+        "pb_avg": "4.0", 
+        "ps_avg": "1.7", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "EOG", 
+        "pe_avg": "31.1", 
+        "pb_avg": "3.0", 
+        "ps_avg": "3.6", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "EQIX", 
+        "pe_avg": "133.9", 
+        "pb_avg": "5.3", 
+        "ps_avg": "5.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "EQR", 
+        "pe_avg": "118.1", 
+        "pb_avg": "2.5", 
+        "ps_avg": "9.4", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "EQT", 
+        "pe_avg": "40.9", 
+        "pb_avg": "2.6", 
+        "ps_avg": "5.6", 
+        "div_avg": "0.4"
+    }, 
+    {
+        "ticker": "ES", 
+        "pe_avg": "19.1", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.9", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "ESRX", 
+        "pe_avg": "27.9", 
+        "pb_avg": "3.7", 
+        "ps_avg": "0.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ESS", 
+        "pe_avg": "73.7", 
+        "pb_avg": "3.1", 
+        "ps_avg": "11.1", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "ETFC", 
+        "pe_avg": "28.8", 
+        "pb_avg": "1.1", 
+        "ps_avg": "3.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ETN", 
+        "pe_avg": "16.3", 
+        "pb_avg": "2.0", 
+        "ps_avg": "1.3", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "ETR", 
+        "pe_avg": "17.4", 
+        "pb_avg": "1.3", 
+        "ps_avg": "1.1", 
+        "div_avg": "4.8"
+    }, 
+    {
+        "ticker": "EVHC", 
+        "pe_avg": "26.5", 
+        "pb_avg": "1.9", 
+        "ps_avg": "1.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "EW", 
+        "pe_avg": "31.3", 
+        "pb_avg": "6.8", 
+        "ps_avg": "6.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "EXC", 
+        "pe_avg": "17.0", 
+        "pb_avg": "1.3", 
+        "ps_avg": "1.1", 
+        "div_avg": "4.4"
+    }, 
+    {
+        "ticker": "EXPD", 
+        "pe_avg": "23.4", 
+        "pb_avg": "4.4", 
+        "ps_avg": "1.4", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "EXPE", 
+        "pe_avg": "35.6", 
+        "pb_avg": "4.5", 
+        "ps_avg": "2.1", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "EXR", 
+        "pe_avg": "39.9", 
+        "pb_avg": "3.8", 
+        "ps_avg": "11.2", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "F", 
+        "pe_avg": "9.1", 
+        "pb_avg": "2.5", 
+        "ps_avg": "0.4", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "FAST", 
+        "pe_avg": "29.5", 
+        "pb_avg": "7.7", 
+        "ps_avg": "3.9", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "FB", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FBHS", 
+        "pe_avg": "42.4", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FCX", 
+        "pe_avg": "11.3", 
+        "pb_avg": "1.9", 
+        "ps_avg": "1.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FDX", 
+        "pe_avg": "24.8", 
+        "pb_avg": "2.5", 
+        "ps_avg": "0.9", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "FE", 
+        "pe_avg": "37.2", 
+        "pb_avg": "1.2", 
+        "ps_avg": "1.0", 
+        "div_avg": "5.0"
+    }, 
+    {
+        "ticker": "FFIV", 
+        "pe_avg": "27.3", 
+        "pb_avg": "6.0", 
+        "ps_avg": "5.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FIS", 
+        "pe_avg": "28.2", 
+        "pb_avg": "2.3", 
+        "ps_avg": "2.5", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "FISV", 
+        "pe_avg": "24.2", 
+        "pb_avg": "5.1", 
+        "ps_avg": "3.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FITB", 
+        "pe_avg": "10.6", 
+        "pb_avg": "1.1", 
+        "ps_avg": "2.5", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "FL", 
+        "pe_avg": "15.8", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.1", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "FLIR", 
+        "pe_avg": "21.1", 
+        "pb_avg": "2.5", 
+        "ps_avg": "2.8", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "FLR", 
+        "pe_avg": "18.5", 
+        "pb_avg": "2.7", 
+        "ps_avg": "0.4", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "FLS", 
+        "pe_avg": "19.3", 
+        "pb_avg": "4.0", 
+        "ps_avg": "1.6", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "FMC", 
+        "pe_avg": "31.8", 
+        "pb_avg": "4.9", 
+        "ps_avg": "2.0", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "FOX", 
+        "pe_avg": "17.1", 
+        "pb_avg": "3.3", 
+        "ps_avg": "2.1", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "FOXA", 
+        "pe_avg": "17.1", 
+        "pb_avg": "3.4", 
+        "ps_avg": "2.1", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "FRT", 
+        "pe_avg": "54.1", 
+        "pb_avg": "5.6", 
+        "ps_avg": "12.4", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "FTI", 
+        "pe_avg": "45.6", 
+        "pb_avg": "1.8", 
+        "ps_avg": "0.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "FTV", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GD", 
+        "pe_avg": "14.8", 
+        "pb_avg": "3.0", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "GE", 
+        "pe_avg": "41.5", 
+        "pb_avg": "2.2", 
+        "ps_avg": "1.9", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "GGP", 
+        "pe_avg": "59.4", 
+        "pb_avg": "2.7", 
+        "ps_avg": "8.8", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "GILD", 
+        "pe_avg": "20.0", 
+        "pb_avg": "8.2", 
+        "ps_avg": "6.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GIS", 
+        "pe_avg": "20.6", 
+        "pb_avg": "5.5", 
+        "ps_avg": "1.9", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "GLW", 
+        "pe_avg": "15.0", 
+        "pb_avg": "1.2", 
+        "ps_avg": "3.0", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "GM", 
+        "pe_avg": "12.2", 
+        "pb_avg": "1.4", 
+        "ps_avg": "0.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GOOG", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GOOGL", 
+        "pe_avg": "27.9", 
+        "pb_avg": "3.9", 
+        "ps_avg": "5.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GPC", 
+        "pe_avg": "19.0", 
+        "pb_avg": "4.0", 
+        "ps_avg": "0.9", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "GPN", 
+        "pe_avg": "24.0", 
+        "pb_avg": "5.7", 
+        "ps_avg": "2.3", 
+        "div_avg": "0.1"
+    }, 
+    {
+        "ticker": "GPS", 
+        "pe_avg": "14.5", 
+        "pb_avg": "5.1", 
+        "ps_avg": "1.0", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "GRMN", 
+        "pe_avg": "18.3", 
+        "pb_avg": "2.5", 
+        "ps_avg": "3.1", 
+        "div_avg": "4.3"
+    }, 
+    {
+        "ticker": "GS", 
+        "pe_avg": "12.9", 
+        "pb_avg": "1.0", 
+        "ps_avg": "2.4", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "GT", 
+        "pe_avg": "14.5", 
+        "pb_avg": "11.2", 
+        "ps_avg": "0.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "GWW", 
+        "pe_avg": "21.5", 
+        "pb_avg": "5.3", 
+        "ps_avg": "1.7", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "HAL", 
+        "pe_avg": "23.7", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.4", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "HAS", 
+        "pe_avg": "19.6", 
+        "pb_avg": "4.8", 
+        "ps_avg": "1.7", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "HBAN", 
+        "pe_avg": "12.5", 
+        "pb_avg": "1.3", 
+        "ps_avg": "2.7", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "HBI", 
+        "pe_avg": "22.9", 
+        "pb_avg": "6.9", 
+        "ps_avg": "1.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "HCA", 
+        "pe_avg": "13.1", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "0.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "HCN", 
+        "pe_avg": "124.5", 
+        "pb_avg": "1.8", 
+        "ps_avg": "6.6", 
+        "div_avg": "4.9"
+    }, 
+    {
+        "ticker": "HCP", 
+        "pe_avg": "30.1", 
+        "pb_avg": "1.8", 
+        "ps_avg": "8.5", 
+        "div_avg": "5.6"
+    }, 
+    {
+        "ticker": "HD", 
+        "pe_avg": "22.4", 
+        "pb_avg": "12.4", 
+        "ps_avg": "1.6", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "HES", 
+        "pe_avg": "11.3", 
+        "pb_avg": "1.0", 
+        "ps_avg": "1.4", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "HIG", 
+        "pe_avg": "26.5", 
+        "pb_avg": "0.8", 
+        "ps_avg": "0.7", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "HOG", 
+        "pe_avg": "16.8", 
+        "pb_avg": "4.4", 
+        "ps_avg": "2.1", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "HOLX", 
+        "pe_avg": "109.6", 
+        "pb_avg": "3.3", 
+        "ps_avg": "3.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "HON", 
+        "pe_avg": "19.7", 
+        "pb_avg": "4.3", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "HP", 
+        "pe_avg": "15.5", 
+        "pb_avg": "1.6", 
+        "ps_avg": "2.4", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "HPE", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "HPQ", 
+        "pe_avg": "9.6", 
+        "pb_avg": "1.8", 
+        "ps_avg": "0.4", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "HRB", 
+        "pe_avg": "17.9", 
+        "pb_avg": "18.2", 
+        "ps_avg": "2.5", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "HRL", 
+        "pe_avg": "22.8", 
+        "pb_avg": "3.8", 
+        "ps_avg": "1.5", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "HRS", 
+        "pe_avg": "27.0", 
+        "pb_avg": "3.5", 
+        "ps_avg": "1.4", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "HSIC", 
+        "pe_avg": "23.7", 
+        "pb_avg": "3.7", 
+        "ps_avg": "1.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "HST", 
+        "pe_avg": "323.3", 
+        "pb_avg": "1.9", 
+        "ps_avg": "2.5", 
+        "div_avg": "3.4"
+    }, 
+    {
+        "ticker": "HSY", 
+        "pe_avg": "29.1", 
+        "pb_avg": "18.0", 
+        "ps_avg": "2.9", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "HUM", 
+        "pe_avg": "16.7", 
+        "pb_avg": "2.0", 
+        "ps_avg": "0.4", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "IBM", 
+        "pe_avg": "12.4", 
+        "pb_avg": "11.0", 
+        "ps_avg": "2.0", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "ICE", 
+        "pe_avg": "29.8", 
+        "pb_avg": "2.6", 
+        "ps_avg": "7.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "IDXX", 
+        "pe_avg": "35.8", 
+        "pb_avg": "81.4", 
+        "ps_avg": "4.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "IFF", 
+        "pe_avg": "22.1", 
+        "pb_avg": "5.2", 
+        "ps_avg": "2.6", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "ILMN", 
+        "pe_avg": "80.7", 
+        "pb_avg": "11.4", 
+        "ps_avg": "10.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "INCY", 
+        "pe_avg": "917.0", 
+        "pb_avg": "175.3", 
+        "ps_avg": "20.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "INTC", 
+        "pe_avg": "13.4", 
+        "pb_avg": "2.5", 
+        "ps_avg": "2.7", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "INTU", 
+        "pe_avg": "36.8", 
+        "pb_avg": "12.6", 
+        "ps_avg": "5.4", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "IP", 
+        "pe_avg": "21.0", 
+        "pb_avg": "3.3", 
+        "ps_avg": "0.7", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "IPG", 
+        "pe_avg": "18.4", 
+        "pb_avg": "3.6", 
+        "ps_avg": "1.1", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "IR", 
+        "pe_avg": "21.3", 
+        "pb_avg": "2.4", 
+        "ps_avg": "1.2", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "IRM", 
+        "pe_avg": "45.3", 
+        "pb_avg": "7.6", 
+        "ps_avg": "2.1", 
+        "div_avg": "4.8"
+    }, 
+    {
+        "ticker": "ISRG", 
+        "pe_avg": "35.2", 
+        "pb_avg": "5.4", 
+        "ps_avg": "9.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "IT", 
+        "pe_avg": "37.0", 
+        "pb_avg": "24.3", 
+        "ps_avg": "3.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "ITW", 
+        "pe_avg": "17.7", 
+        "pb_avg": "4.6", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "IVZ", 
+        "pe_avg": "16.7", 
+        "pb_avg": "1.7", 
+        "ps_avg": "3.0", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "JBHT", 
+        "pe_avg": "24.8", 
+        "pb_avg": "8.5", 
+        "ps_avg": "1.5", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "JCI", 
+        "pe_avg": "27.4", 
+        "pb_avg": "2.5", 
+        "ps_avg": "0.7", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "JEC", 
+        "pe_avg": "18.6", 
+        "pb_avg": "1.5", 
+        "ps_avg": "0.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "JNJ", 
+        "pe_avg": "19.8", 
+        "pb_avg": "3.7", 
+        "ps_avg": "3.8", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "JNPR", 
+        "pe_avg": "30.1", 
+        "pb_avg": "1.7", 
+        "ps_avg": "2.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "JPM", 
+        "pe_avg": "10.9", 
+        "pb_avg": "1.0", 
+        "ps_avg": "2.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "JWN", 
+        "pe_avg": "17.8", 
+        "pb_avg": "6.5", 
+        "ps_avg": "0.9", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "K", 
+        "pe_avg": "30.0", 
+        "pb_avg": "9.1", 
+        "ps_avg": "1.6", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "KEY", 
+        "pe_avg": "12.4", 
+        "pb_avg": "1.0", 
+        "ps_avg": "2.6", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "KHC", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "KIM", 
+        "pe_avg": "44.0", 
+        "pb_avg": "2.0", 
+        "ps_avg": "9.4", 
+        "div_avg": "4.0"
+    }, 
+    {
+        "ticker": "KLAC", 
+        "pe_avg": "18.4", 
+        "pb_avg": "10.3", 
+        "ps_avg": "3.5", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "KMB", 
+        "pe_avg": "28.5", 
+        "pb_avg": "115.6", 
+        "ps_avg": "2.0", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "KMI", 
+        "pe_avg": "166.1", 
+        "pb_avg": "3.3", 
+        "ps_avg": "3.8", 
+        "div_avg": "5.5"
+    }, 
+    {
+        "ticker": "KMX", 
+        "pe_avg": "20.8", 
+        "pb_avg": "3.3", 
+        "ps_avg": "0.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "KO", 
+        "pe_avg": "22.7", 
+        "pb_avg": "5.9", 
+        "ps_avg": "3.9", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "KORS", 
+        "pe_avg": "29.6", 
+        "pb_avg": "9.9", 
+        "ps_avg": "4.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "KR", 
+        "pe_avg": "17.9", 
+        "pb_avg": "4.8", 
+        "ps_avg": "0.2", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "KSS", 
+        "pe_avg": "13.2", 
+        "pb_avg": "1.8", 
+        "ps_avg": "0.6", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "KSU", 
+        "pe_avg": "25.8", 
+        "pb_avg": "3.1", 
+        "ps_avg": "4.5", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "L", 
+        "pe_avg": "53.4", 
+        "pb_avg": "0.8", 
+        "ps_avg": "1.1", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "LB", 
+        "pe_avg": "20.7", 
+        "pb_avg": "624.8", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "LEG", 
+        "pe_avg": "23.5", 
+        "pb_avg": "4.1", 
+        "ps_avg": "1.4", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "LEN", 
+        "pe_avg": "18.6", 
+        "pb_avg": "1.9", 
+        "ps_avg": "1.5", 
+        "div_avg": "0.4"
+    }, 
+    {
+        "ticker": "LH", 
+        "pe_avg": "19.1", 
+        "pb_avg": "3.1", 
+        "ps_avg": "1.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "LKQ", 
+        "pe_avg": "24.4", 
+        "pb_avg": "3.3", 
+        "ps_avg": "1.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "LLL", 
+        "pe_avg": "20.0", 
+        "pb_avg": "1.7", 
+        "ps_avg": "0.8", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "LLY", 
+        "pe_avg": "22.8", 
+        "pb_avg": "4.5", 
+        "ps_avg": "3.2", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "LMT", 
+        "pe_avg": "15.9", 
+        "pb_avg": "72.9", 
+        "ps_avg": "1.1", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "LNC", 
+        "pe_avg": "12.4", 
+        "pb_avg": "0.7", 
+        "ps_avg": "0.9", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "LNT", 
+        "pe_avg": "17.8", 
+        "pb_avg": "1.9", 
+        "ps_avg": "1.9", 
+        "div_avg": "3.5"
+    }, 
+    {
+        "ticker": "LOW", 
+        "pe_avg": "23.3", 
+        "pb_avg": "5.2", 
+        "ps_avg": "1.0", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "LRCX", 
+        "pe_avg": "37.9", 
+        "pb_avg": "2.1", 
+        "ps_avg": "2.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "LUK", 
+        "pe_avg": "57.6", 
+        "pb_avg": "0.9", 
+        "ps_avg": "1.0", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "LUV", 
+        "pe_avg": "20.7", 
+        "pb_avg": "2.5", 
+        "ps_avg": "1.0", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "LVLT", 
+        "pe_avg": "50.4", 
+        "pb_avg": "4.3", 
+        "ps_avg": "1.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "LYB", 
+        "pe_avg": "11.5", 
+        "pb_avg": "4.1", 
+        "ps_avg": "1.0", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "M", 
+        "pe_avg": "13.8", 
+        "pb_avg": "3.2", 
+        "ps_avg": "0.7", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "MA", 
+        "pe_avg": "27.8", 
+        "pb_avg": "13.2", 
+        "ps_avg": "10.1", 
+        "div_avg": "0.5"
+    }, 
+    {
+        "ticker": "MAA", 
+        "pe_avg": "57.3", 
+        "pb_avg": "2.7", 
+        "ps_avg": "5.9", 
+        "div_avg": "3.9"
+    }, 
+    {
+        "ticker": "MAC", 
+        "pe_avg": "39.3", 
+        "pb_avg": "2.7", 
+        "ps_avg": "9.4", 
+        "div_avg": "3.6"
+    }, 
+    {
+        "ticker": "MAR", 
+        "pe_avg": "30.9", 
+        "pb_avg": "6.0", 
+        "ps_avg": "1.3", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "MAS", 
+        "pe_avg": "29.8", 
+        "pb_avg": "13.9", 
+        "ps_avg": "1.0", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "MAT", 
+        "pe_avg": "20.0", 
+        "pb_avg": "4.1", 
+        "ps_avg": "1.9", 
+        "div_avg": "4.5"
+    }, 
+    {
+        "ticker": "MCD", 
+        "pe_avg": "19.7", 
+        "pb_avg": "16.0", 
+        "ps_avg": "3.7", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "MCHP", 
+        "pe_avg": "45.6", 
+        "pb_avg": "4.2", 
+        "ps_avg": "5.0", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "MCK", 
+        "pe_avg": "22.8", 
+        "pb_avg": "4.3", 
+        "ps_avg": "0.2", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "MCO", 
+        "pe_avg": "20.3", 
+        "pb_avg": "54.7", 
+        "ps_avg": "5.4", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "MDLZ", 
+        "pe_avg": "25.6", 
+        "pb_avg": "2.0", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "MDT", 
+        "pe_avg": "23.9", 
+        "pb_avg": "2.8", 
+        "ps_avg": "3.5", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "MET", 
+        "pe_avg": "18.6", 
+        "pb_avg": "0.7", 
+        "ps_avg": "0.7", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "MHK", 
+        "pe_avg": "25.5", 
+        "pb_avg": "2.3", 
+        "ps_avg": "1.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "MJN", 
+        "pe_avg": "27.3", 
+        "pb_avg": "167.5", 
+        "ps_avg": "4.1", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "MKC", 
+        "pe_avg": "25.7", 
+        "pb_avg": "5.5", 
+        "ps_avg": "2.4", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "MLM", 
+        "pe_avg": "47.0", 
+        "pb_avg": "3.0", 
+        "ps_avg": "2.6", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "MMC", 
+        "pe_avg": "19.7", 
+        "pb_avg": "3.8", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "MMM", 
+        "pe_avg": "19.1", 
+        "pb_avg": "5.9", 
+        "ps_avg": "2.9", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "MNK", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "MNST", 
+        "pe_avg": "39.9", 
+        "pb_avg": "10.7", 
+        "ps_avg": "7.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "MO", 
+        "pe_avg": "19.5", 
+        "pb_avg": "27.2", 
+        "ps_avg": "5.0", 
+        "div_avg": "4.3"
+    }, 
+    {
+        "ticker": "MON", 
+        "pe_avg": "24.9", 
+        "pb_avg": "5.9", 
+        "ps_avg": "3.6", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "MOS", 
+        "pe_avg": "12.2", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.9", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "MPC", 
+        "pe_avg": "10.0", 
+        "pb_avg": "2.0", 
+        "ps_avg": "0.3", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "MRK", 
+        "pe_avg": "25.7", 
+        "pb_avg": "3.1", 
+        "ps_avg": "3.5", 
+        "div_avg": "3.5"
+    }, 
+    {
+        "ticker": "MRO", 
+        "pe_avg": "17.2", 
+        "pb_avg": "1.0", 
+        "ps_avg": "1.6", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "MS", 
+        "pe_avg": "99.0", 
+        "pb_avg": "0.8", 
+        "ps_avg": "1.7", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "MSFT", 
+        "pe_avg": "20.5", 
+        "pb_avg": "4.3", 
+        "ps_avg": "4.1", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "MSI", 
+        "pe_avg": "21.5", 
+        "pb_avg": "4.7", 
+        "ps_avg": "2.2", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "MTB", 
+        "pe_avg": "15.3", 
+        "pb_avg": "1.4", 
+        "ps_avg": "3.4", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "MTD", 
+        "pe_avg": "25.1", 
+        "pb_avg": "11.0", 
+        "ps_avg": "3.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "MU", 
+        "pe_avg": "14.2", 
+        "pb_avg": "1.8", 
+        "ps_avg": "1.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "MUR", 
+        "pe_avg": "12.5", 
+        "pb_avg": "1.1", 
+        "ps_avg": "1.2", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "MYL", 
+        "pe_avg": "26.2", 
+        "pb_avg": "3.9", 
+        "ps_avg": "2.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NAVI", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NBL", 
+        "pe_avg": "254.4", 
+        "pb_avg": "2.0", 
+        "ps_avg": "4.4", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "NDAQ", 
+        "pe_avg": "18.7", 
+        "pb_avg": "1.3", 
+        "ps_avg": "2.2", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "NEE", 
+        "pe_avg": "18.5", 
+        "pb_avg": "2.2", 
+        "ps_avg": "2.5", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "NEM", 
+        "pe_avg": "80.9", 
+        "pb_avg": "1.4", 
+        "ps_avg": "1.9", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "NFLX", 
+        "pe_avg": "237.7", 
+        "pb_avg": "15.3", 
+        "ps_avg": "4.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NFX", 
+        "pe_avg": "33.4", 
+        "pb_avg": "2.4", 
+        "ps_avg": "2.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NI", 
+        "pe_avg": "23.5", 
+        "pb_avg": "1.7", 
+        "ps_avg": "1.6", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "NKE", 
+        "pe_avg": "26.0", 
+        "pb_avg": "6.3", 
+        "ps_avg": "2.7", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "NLSN", 
+        "pe_avg": "42.8", 
+        "pb_avg": "3.1", 
+        "ps_avg": "2.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NOC", 
+        "pe_avg": "13.9", 
+        "pb_avg": "3.5", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "NOV", 
+        "pe_avg": "12.5", 
+        "pb_avg": "1.3", 
+        "ps_avg": "1.4", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "NRG", 
+        "pe_avg": "87.5", 
+        "pb_avg": "0.9", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "NSC", 
+        "pe_avg": "15.0", 
+        "pb_avg": "2.3", 
+        "ps_avg": "2.4", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "NTAP", 
+        "pe_avg": "24.1", 
+        "pb_avg": "3.0", 
+        "ps_avg": "2.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NTRS", 
+        "pe_avg": "19.1", 
+        "pb_avg": "1.8", 
+        "ps_avg": "3.5", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "NUE", 
+        "pe_avg": "28.6", 
+        "pb_avg": "1.9", 
+        "ps_avg": "0.8", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "NVDA", 
+        "pe_avg": "23.4", 
+        "pb_avg": "3.1", 
+        "ps_avg": "3.1", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "NWL", 
+        "pe_avg": "32.8", 
+        "pb_avg": "4.6", 
+        "ps_avg": "1.6", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "NWS", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "NWSA", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "O", 
+        "pe_avg": "51.9", 
+        "pb_avg": "2.4", 
+        "ps_avg": "11.8", 
+        "div_avg": "4.7"
+    }, 
+    {
+        "ticker": "OKE", 
+        "pe_avg": "32.6", 
+        "pb_avg": "14.5", 
+        "ps_avg": "0.8", 
+        "div_avg": "4.8"
+    }, 
+    {
+        "ticker": "OMC", 
+        "pe_avg": "17.1", 
+        "pb_avg": "5.8", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "ORCL", 
+        "pe_avg": "16.9", 
+        "pb_avg": "3.6", 
+        "ps_avg": "4.5", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "ORLY", 
+        "pe_avg": "25.1", 
+        "pb_avg": "8.6", 
+        "ps_avg": "2.6", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "OXY", 
+        "pe_avg": "13.4", 
+        "pb_avg": "1.8", 
+        "ps_avg": "3.3", 
+        "div_avg": "3.5"
+    }, 
+    {
+        "ticker": "PAYX", 
+        "pe_avg": "24.9", 
+        "pb_avg": "8.9", 
+        "ps_avg": "6.2", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "PBCT", 
+        "pe_avg": "19.1", 
+        "pb_avg": "1.0", 
+        "ps_avg": "3.6", 
+        "div_avg": "4.3"
+    }, 
+    {
+        "ticker": "PCAR", 
+        "pe_avg": "18.0", 
+        "pb_avg": "3.0", 
+        "ps_avg": "1.1", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "PCG", 
+        "pe_avg": "24.7", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.4", 
+        "div_avg": "3.8"
+    }, 
+    {
+        "ticker": "PCLN", 
+        "pe_avg": "28.5", 
+        "pb_avg": "8.7", 
+        "ps_avg": "7.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "PDCO", 
+        "pe_avg": "20.3", 
+        "pb_avg": "3.0", 
+        "ps_avg": "1.0", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "PEG", 
+        "pe_avg": "13.6", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.8", 
+        "div_avg": "4.1"
+    }, 
+    {
+        "ticker": "PEP", 
+        "pe_avg": "21.8", 
+        "pb_avg": "7.5", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "PFE", 
+        "pe_avg": "22.3", 
+        "pb_avg": "2.6", 
+        "ps_avg": "3.8", 
+        "div_avg": "3.4"
+    }, 
+    {
+        "ticker": "PFG", 
+        "pe_avg": "13.2", 
+        "pb_avg": "1.3", 
+        "ps_avg": "1.3", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "PG", 
+        "pe_avg": "22.1", 
+        "pb_avg": "3.3", 
+        "ps_avg": "2.9", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "PGR", 
+        "pe_avg": "14.6", 
+        "pb_avg": "2.3", 
+        "ps_avg": "0.9", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "PH", 
+        "pe_avg": "16.2", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.2", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "PHM", 
+        "pe_avg": "16.1", 
+        "pb_avg": "1.9", 
+        "ps_avg": "1.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "PKI", 
+        "pe_avg": "341.9", 
+        "pb_avg": "2.3", 
+        "ps_avg": "2.2", 
+        "div_avg": "0.7"
+    }, 
+    {
+        "ticker": "PLD", 
+        "pe_avg": "137.4", 
+        "pb_avg": "1.5", 
+        "ps_avg": "10.2", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "PM", 
+        "pe_avg": "18.2", 
+        "pb_avg": "953.2", 
+        "ps_avg": "4.8", 
+        "div_avg": "4.4"
+    }, 
+    {
+        "ticker": "PNC", 
+        "pe_avg": "12.1", 
+        "pb_avg": "1.0", 
+        "ps_avg": "2.7", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "PNR", 
+        "pe_avg": "54.5", 
+        "pb_avg": "2.2", 
+        "ps_avg": "1.7", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "PNW", 
+        "pe_avg": "16.7", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.9", 
+        "div_avg": "3.7"
+    }, 
+    {
+        "ticker": "PPG", 
+        "pe_avg": "22.3", 
+        "pb_avg": "5.0", 
+        "ps_avg": "1.6", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "PPL", 
+        "pe_avg": "14.5", 
+        "pb_avg": "1.8", 
+        "ps_avg": "2.0", 
+        "div_avg": "4.6"
+    }, 
+    {
+        "ticker": "PRGO", 
+        "pe_avg": "72.7", 
+        "pb_avg": "3.6", 
+        "ps_avg": "3.8", 
+        "div_avg": "0.4"
+    }, 
+    {
+        "ticker": "PRU", 
+        "pe_avg": "20.5", 
+        "pb_avg": "0.8", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "PSA", 
+        "pe_avg": "38.3", 
+        "pb_avg": "6.1", 
+        "ps_avg": "15.1", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "PSX", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "PVH", 
+        "pe_avg": "25.3", 
+        "pb_avg": "2.2", 
+        "ps_avg": "1.2", 
+        "div_avg": "0.1"
+    }, 
+    {
+        "ticker": "PWR", 
+        "pe_avg": "25.2", 
+        "pb_avg": "1.4", 
+        "ps_avg": "0.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "PX", 
+        "pe_avg": "21.0", 
+        "pb_avg": "6.0", 
+        "ps_avg": "3.0", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "PXD", 
+        "pe_avg": "93.0", 
+        "pb_avg": "2.9", 
+        "ps_avg": "5.9", 
+        "div_avg": "0.1"
+    }, 
+    {
+        "ticker": "PYPL", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "QCOM", 
+        "pe_avg": "18.3", 
+        "pb_avg": "3.1", 
+        "ps_avg": "4.8", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "QRVO", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "R", 
+        "pe_avg": "15.3", 
+        "pb_avg": "2.1", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "RAI", 
+        "pe_avg": "18.6", 
+        "pb_avg": "5.2", 
+        "ps_avg": "4.2", 
+        "div_avg": "4.2"
+    }, 
+    {
+        "ticker": "RCL", 
+        "pe_avg": "67.4", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.6", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "REG", 
+        "pe_avg": "79.1", 
+        "pb_avg": "3.5", 
+        "ps_avg": "10.1", 
+        "div_avg": "3.3"
+    }, 
+    {
+        "ticker": "REGN", 
+        "pe_avg": "82.8", 
+        "pb_avg": "16.3", 
+        "ps_avg": "16.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "RF", 
+        "pe_avg": "15.0", 
+        "pb_avg": "0.8", 
+        "ps_avg": "2.3", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "RHI", 
+        "pe_avg": "21.8", 
+        "pb_avg": "6.1", 
+        "ps_avg": "1.3", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "RHT", 
+        "pe_avg": "68.0", 
+        "pb_avg": "8.2", 
+        "ps_avg": "7.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "RIG", 
+        "pe_avg": "10.3", 
+        "pb_avg": "0.7", 
+        "ps_avg": "1.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "RJF", 
+        "pe_avg": "17.3", 
+        "pb_avg": "1.8", 
+        "ps_avg": "1.5", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "RL", 
+        "pe_avg": "21.2", 
+        "pb_avg": "3.3", 
+        "ps_avg": "1.8", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "ROK", 
+        "pe_avg": "18.5", 
+        "pb_avg": "6.2", 
+        "ps_avg": "2.3", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "ROP", 
+        "pe_avg": "25.1", 
+        "pb_avg": "3.3", 
+        "ps_avg": "4.3", 
+        "div_avg": "0.5"
+    }, 
+    {
+        "ticker": "ROST", 
+        "pe_avg": "20.4", 
+        "pb_avg": "8.5", 
+        "ps_avg": "1.7", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "RRC", 
+        "pe_avg": "188.7", 
+        "pb_avg": "3.8", 
+        "ps_avg": "5.8", 
+        "div_avg": "0.3"
+    }, 
+    {
+        "ticker": "RSG", 
+        "pe_avg": "22.2", 
+        "pb_avg": "1.7", 
+        "ps_avg": "1.6", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "RTN", 
+        "pe_avg": "14.5", 
+        "pb_avg": "2.9", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "SBUX", 
+        "pe_avg": "386.4", 
+        "pb_avg": "11.4", 
+        "ps_avg": "3.8", 
+        "div_avg": "1.3"
+    }, 
+    {
+        "ticker": "SCG", 
+        "pe_avg": "14.8", 
+        "pb_avg": "1.6", 
+        "ps_avg": "1.7", 
+        "div_avg": "3.8"
+    }, 
+    {
+        "ticker": "SCHW", 
+        "pe_avg": "28.3", 
+        "pb_avg": "3.1", 
+        "ps_avg": "5.5", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "SEE", 
+        "pe_avg": "37.8", 
+        "pb_avg": "7.4", 
+        "ps_avg": "1.0", 
+        "div_avg": "1.7"
+    }, 
+    {
+        "ticker": "SHW", 
+        "pe_avg": "27.2", 
+        "pb_avg": "18.0", 
+        "ps_avg": "2.0", 
+        "div_avg": "1.0"
+    }, 
+    {
+        "ticker": "SIG", 
+        "pe_avg": "19.1", 
+        "pb_avg": "2.8", 
+        "ps_avg": "1.5", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "SJM", 
+        "pe_avg": "23.7", 
+        "pb_avg": "2.0", 
+        "ps_avg": "1.9", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "SLB", 
+        "pe_avg": "23.4", 
+        "pb_avg": "2.9", 
+        "ps_avg": "2.6", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "SLG", 
+        "pe_avg": "80.6", 
+        "pb_avg": "1.5", 
+        "ps_avg": "6.3", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "SNA", 
+        "pe_avg": "17.8", 
+        "pb_avg": "3.2", 
+        "ps_avg": "2.2", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "SNI", 
+        "pe_avg": "16.4", 
+        "pb_avg": "5.5", 
+        "ps_avg": "3.8", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "SNPS", 
+        "pe_avg": "28.1", 
+        "pb_avg": "2.2", 
+        "ps_avg": "3.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SO", 
+        "pe_avg": "19.3", 
+        "pb_avg": "2.1", 
+        "ps_avg": "2.3", 
+        "div_avg": "4.6"
+    }, 
+    {
+        "ticker": "SPG", 
+        "pe_avg": "37.3", 
+        "pb_avg": "10.5", 
+        "ps_avg": "10.6", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "SPGI", 
+        "pe_avg": "22.8", 
+        "pb_avg": "36.2", 
+        "ps_avg": "4.2", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "SPLS", 
+        "pe_avg": "80.2", 
+        "pb_avg": "1.4", 
+        "ps_avg": "0.4", 
+        "div_avg": "4.0"
+    }, 
+    {
+        "ticker": "SRCL", 
+        "pe_avg": "33.5", 
+        "pb_avg": "5.2", 
+        "ps_avg": "4.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SRE", 
+        "pe_avg": "20.8", 
+        "pb_avg": "2.0", 
+        "ps_avg": "2.2", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "STI", 
+        "pe_avg": "13.1", 
+        "pb_avg": "0.9", 
+        "ps_avg": "2.2", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "STT", 
+        "pe_avg": "14.4", 
+        "pb_avg": "1.4", 
+        "ps_avg": "2.8", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "STX", 
+        "pe_avg": "12.4", 
+        "pb_avg": "5.0", 
+        "ps_avg": "1.1", 
+        "div_avg": "4.5"
+    }, 
+    {
+        "ticker": "STZ", 
+        "pe_avg": "20.5", 
+        "pb_avg": "3.4", 
+        "ps_avg": "3.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SWK", 
+        "pe_avg": "21.5", 
+        "pb_avg": "2.2", 
+        "ps_avg": "1.3", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "SWKS", 
+        "pe_avg": "21.9", 
+        "pb_avg": "3.7", 
+        "ps_avg": "4.1", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SYF", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SYK", 
+        "pe_avg": "31.4", 
+        "pb_avg": "3.6", 
+        "ps_avg": "3.3", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "SYMC", 
+        "pe_avg": "16.8", 
+        "pb_avg": "2.8", 
+        "ps_avg": "2.5", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "SYY", 
+        "pe_avg": "24.3", 
+        "pb_avg": "4.6", 
+        "ps_avg": "0.5", 
+        "div_avg": "2.9"
+    }, 
+    {
+        "ticker": "T", 
+        "pe_avg": "27.0", 
+        "pb_avg": "2.0", 
+        "ps_avg": "1.5", 
+        "div_avg": "5.2"
+    }, 
+    {
+        "ticker": "TAP", 
+        "pe_avg": "26.4", 
+        "pb_avg": "1.6", 
+        "ps_avg": "3.3", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "TDC", 
+        "pe_avg": "35.0", 
+        "pb_avg": "4.6", 
+        "ps_avg": "2.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "TDG", 
+        "pe_avg": "45.3", 
+        "pb_avg": "8.5", 
+        "ps_avg": "4.7", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "TEL", 
+        "pe_avg": "15.7", 
+        "pb_avg": "2.5", 
+        "ps_avg": "1.7", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "TGNA", 
+        "pe_avg": "11.6", 
+        "pb_avg": "2.1", 
+        "ps_avg": "1.1", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "TGT", 
+        "pe_avg": "17.4", 
+        "pb_avg": "2.9", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "TIF", 
+        "pe_avg": "28.6", 
+        "pb_avg": "3.6", 
+        "ps_avg": "2.5", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "TJX", 
+        "pe_avg": "20.7", 
+        "pb_avg": "10.2", 
+        "ps_avg": "1.5", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "TMK", 
+        "pe_avg": "12.8", 
+        "pb_avg": "1.5", 
+        "ps_avg": "1.8", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "TMO", 
+        "pe_avg": "26.6", 
+        "pb_avg": "2.2", 
+        "ps_avg": "2.8", 
+        "div_avg": "0.5"
+    }, 
+    {
+        "ticker": "TRIP", 
+        "pe_avg": "48.6", 
+        "pb_avg": "10.5", 
+        "ps_avg": "9.2", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "TROW", 
+        "pe_avg": "18.9", 
+        "pb_avg": "4.2", 
+        "ps_avg": "5.5", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "TRV", 
+        "pe_avg": "11.3", 
+        "pb_avg": "1.2", 
+        "ps_avg": "1.2", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "TSCO", 
+        "pe_avg": "28.7", 
+        "pb_avg": "7.6", 
+        "ps_avg": "1.8", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "TSN", 
+        "pe_avg": "15.3", 
+        "pb_avg": "1.8", 
+        "ps_avg": "0.4", 
+        "div_avg": "0.8"
+    }, 
+    {
+        "ticker": "TSO", 
+        "pe_avg": "11.5", 
+        "pb_avg": "1.7", 
+        "ps_avg": "0.3", 
+        "div_avg": "1.6"
+    }, 
+    {
+        "ticker": "TSS", 
+        "pe_avg": "23.1", 
+        "pb_avg": "3.9", 
+        "ps_avg": "2.7", 
+        "div_avg": "1.2"
+    }, 
+    {
+        "ticker": "TWX", 
+        "pe_avg": "16.8", 
+        "pb_avg": "2.1", 
+        "ps_avg": "2.1", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "TXN", 
+        "pe_avg": "21.5", 
+        "pb_avg": "4.7", 
+        "ps_avg": "3.9", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "TXT", 
+        "pe_avg": "18.7", 
+        "pb_avg": "2.4", 
+        "ps_avg": "0.8", 
+        "div_avg": "0.2"
+    }, 
+    {
+        "ticker": "UA", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "UAA", 
+        "pe_avg": "70.9", 
+        "pb_avg": "9.9", 
+        "ps_avg": "4.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "UAL", 
+        "pe_avg": "14.1", 
+        "pb_avg": "11.7", 
+        "ps_avg": "0.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "UDR", 
+        "pe_avg": "91.6", 
+        "pb_avg": "2.7", 
+        "ps_avg": "9.0", 
+        "div_avg": "3.4"
+    }, 
+    {
+        "ticker": "UHS", 
+        "pe_avg": "16.4", 
+        "pb_avg": "2.5", 
+        "ps_avg": "1.1", 
+        "div_avg": "0.3"
+    }, 
+    {
+        "ticker": "ULTA", 
+        "pe_avg": "38.1", 
+        "pb_avg": "8.3", 
+        "ps_avg": "3.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "UNH", 
+        "pe_avg": "15.9", 
+        "pb_avg": "2.7", 
+        "ps_avg": "0.7", 
+        "div_avg": "1.5"
+    }, 
+    {
+        "ticker": "UNM", 
+        "pe_avg": "15.1", 
+        "pb_avg": "0.9", 
+        "ps_avg": "0.8", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "UNP", 
+        "pe_avg": "17.5", 
+        "pb_avg": "3.7", 
+        "ps_avg": "3.5", 
+        "div_avg": "2.1"
+    }, 
+    {
+        "ticker": "UPS", 
+        "pe_avg": "38.0", 
+        "pb_avg": "25.4", 
+        "ps_avg": "1.6", 
+        "div_avg": "2.7"
+    }, 
+    {
+        "ticker": "URI", 
+        "pe_avg": "27.0", 
+        "pb_avg": "7.6", 
+        "ps_avg": "1.4", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "USB", 
+        "pe_avg": "13.2", 
+        "pb_avg": "1.9", 
+        "ps_avg": "3.6", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "UTX", 
+        "pe_avg": "17.4", 
+        "pb_avg": "3.1", 
+        "ps_avg": "1.5", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "V", 
+        "pe_avg": "32.4", 
+        "pb_avg": "5.0", 
+        "ps_avg": "11.5", 
+        "div_avg": "0.7"
+    }, 
+    {
+        "ticker": "VAR", 
+        "pe_avg": "20.1", 
+        "pb_avg": "4.9", 
+        "ps_avg": "2.8", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "VFC", 
+        "pe_avg": "22.0", 
+        "pb_avg": "4.6", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "VIAB", 
+        "pe_avg": "13.0", 
+        "pb_avg": "5.7", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "VLO", 
+        "pe_avg": "9.0", 
+        "pb_avg": "1.2", 
+        "ps_avg": "0.2", 
+        "div_avg": "2.3"
+    }, 
+    {
+        "ticker": "VMC", 
+        "pe_avg": "133.4", 
+        "pb_avg": "2.3", 
+        "ps_avg": "3.2", 
+        "div_avg": "0.3"
+    }, 
+    {
+        "ticker": "VNO", 
+        "pe_avg": "249.2", 
+        "pb_avg": "3.2", 
+        "ps_avg": "7.5", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "VRSK", 
+        "pe_avg": "29.1", 
+        "pb_avg": "31.1", 
+        "ps_avg": "6.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "VRSN", 
+        "pe_avg": "26.0", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "8.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "VRTX", 
+        "pe_avg": "102.2", 
+        "pb_avg": "19.4", 
+        "ps_avg": "20.3", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "VTR", 
+        "pe_avg": "44.2", 
+        "pb_avg": "2.1", 
+        "ps_avg": "6.9", 
+        "div_avg": "4.5"
+    }, 
+    {
+        "ticker": "VZ", 
+        "pe_avg": "41.7", 
+        "pb_avg": "9.4", 
+        "ps_avg": "1.3", 
+        "div_avg": "4.5"
+    }, 
+    {
+        "ticker": "WAT", 
+        "pe_avg": "21.0", 
+        "pb_avg": "5.4", 
+        "ps_avg": "4.9", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "WBA", 
+        "pe_avg": "22.2", 
+        "pb_avg": "2.7", 
+        "ps_avg": "0.7", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "WDC", 
+        "pe_avg": "14.2", 
+        "pb_avg": "1.8", 
+        "ps_avg": "1.1", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "WEC", 
+        "pe_avg": "18.9", 
+        "pb_avg": "2.2", 
+        "ps_avg": "2.3", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "WFC", 
+        "pe_avg": "12.1", 
+        "pb_avg": "1.5", 
+        "ps_avg": "2.8", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "WFM", 
+        "pe_avg": "30.5", 
+        "pb_avg": "4.2", 
+        "ps_avg": "1.2", 
+        "div_avg": "1.1"
+    }, 
+    {
+        "ticker": "WHR", 
+        "pe_avg": "17.1", 
+        "pb_avg": "2.3", 
+        "ps_avg": "0.6", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "WLTW", 
+        "pe_avg": "24.8", 
+        "pb_avg": "3.7", 
+        "ps_avg": "2.1", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "WM", 
+        "pe_avg": "53.7", 
+        "pb_avg": "3.7", 
+        "ps_avg": "1.6", 
+        "div_avg": "3.1"
+    }, 
+    {
+        "ticker": "WMB", 
+        "pe_avg": "39.8", 
+        "pb_avg": "5.3", 
+        "ps_avg": "3.5", 
+        "div_avg": "5.3"
+    }, 
+    {
+        "ticker": "WMT", 
+        "pe_avg": "15.0", 
+        "pb_avg": "3.1", 
+        "ps_avg": "0.5", 
+        "div_avg": "2.6"
+    }, 
+    {
+        "ticker": "WRK", 
+        "pe_avg": "26.1", 
+        "pb_avg": "1.7", 
+        "ps_avg": "0.7", 
+        "div_avg": "1.8"
+    }, 
+    {
+        "ticker": "WU", 
+        "pe_avg": "11.0", 
+        "pb_avg": "8.6", 
+        "ps_avg": "1.8", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "WY", 
+        "pe_avg": "34.3", 
+        "pb_avg": "3.1", 
+        "ps_avg": "2.2", 
+        "div_avg": "3.2"
+    }, 
+    {
+        "ticker": "WYN", 
+        "pe_avg": "19.0", 
+        "pb_avg": "6.4", 
+        "ps_avg": "1.8", 
+        "div_avg": "2.0"
+    }, 
+    {
+        "ticker": "WYNN", 
+        "pe_avg": "27.1", 
+        "pb_avg": "2586.2", 
+        "ps_avg": "2.6", 
+        "div_avg": "2.8"
+    }, 
+    {
+        "ticker": "XEC", 
+        "pe_avg": "16.3", 
+        "pb_avg": "2.6", 
+        "ps_avg": "4.9", 
+        "div_avg": "0.6"
+    }, 
+    {
+        "ticker": "XEL", 
+        "pe_avg": "17.0", 
+        "pb_avg": "1.7", 
+        "ps_avg": "1.5", 
+        "div_avg": "3.6"
+    }, 
+    {
+        "ticker": "XL", 
+        "pe_avg": "25.3", 
+        "pb_avg": "0.8", 
+        "ps_avg": "1.2", 
+        "div_avg": "1.9"
+    }, 
+    {
+        "ticker": "XLNX", 
+        "pe_avg": "20.8", 
+        "pb_avg": "4.1", 
+        "ps_avg": "5.2", 
+        "div_avg": "2.4"
+    }, 
+    {
+        "ticker": "XOM", 
+        "pe_avg": "15.0", 
+        "pb_avg": "2.3", 
+        "ps_avg": "1.0", 
+        "div_avg": "3.0"
+    }, 
+    {
+        "ticker": "XRAY", 
+        "pe_avg": "24.2", 
+        "pb_avg": "2.8", 
+        "ps_avg": "2.5", 
+        "div_avg": "0.5"
+    }, 
+    {
+        "ticker": "XRX", 
+        "pe_avg": "13.9", 
+        "pb_avg": "1.1", 
+        "ps_avg": "0.6", 
+        "div_avg": "2.5"
+    }, 
+    {
+        "ticker": "XYL", 
+        "pe_avg": "21.8", 
+        "pb_avg": "3.0", 
+        "ps_avg": "1.7", 
+        "div_avg": "1.4"
+    }, 
+    {
+        "ticker": "YHOO", 
+        "pe_avg": "21.0", 
+        "pb_avg": "1.7", 
+        "ps_avg": "7.0", 
+        "div_avg": "\u2014"
+    }, 
+    {
+        "ticker": "YUM", 
+        "pe_avg": "26.9", 
+        "pb_avg": "26.6", 
+        "ps_avg": "2.6", 
+        "div_avg": "2.2"
+    }, 
+    {
+        "ticker": "ZBH", 
+        "pe_avg": "56.0", 
+        "pb_avg": "2.4", 
+        "ps_avg": "3.4", 
+        "div_avg": "0.9"
+    }, 
+    {
+        "ticker": "ZION", 
+        "pe_avg": "21.0", 
+        "pb_avg": "0.9", 
+        "ps_avg": "2.4", 
+        "div_avg": "0.5"
+    }, 
+    {
+        "ticker": "ZTS", 
+        "pe_avg": "\u2014", 
+        "pb_avg": "\u2014", 
+        "ps_avg": "\u2014", 
+        "div_avg": "\u2014"
+    }
+]
