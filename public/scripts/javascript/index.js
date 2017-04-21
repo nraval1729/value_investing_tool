@@ -20,7 +20,6 @@ $(document).ready(function() {
 
 //VISIBILITY SECTION
 function showHome() {
-	//alert("inside showHome");
 	$( "#exploreButton" ).removeClass( "underline" );
 	$( "#searchButton" ).removeClass( "underline" );
 	$("#logoButton").toggle(false);
@@ -30,7 +29,6 @@ function showHome() {
 }
 
 function showSearch() {
-	//alert("inside showSearch");
 	$( "#exploreButton" ).removeClass( "underline" );
 	$( "#searchButton" ).addClass( "underline" );
 	$("#logoButton").toggle(true);
