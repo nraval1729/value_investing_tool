@@ -6,11 +6,11 @@
     <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
     <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
-    <script type="text/javascript" src="../scripts/javascript/explore.js"></script>   
     <script type="text/javascript" src="../scripts/javascript/index.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
+    <link rel="stylesheet" type="text/css" href="../css/dynamic.css">
     <link rel="stylesheet" type="text/css" href="../css/static.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
@@ -18,7 +18,6 @@
 <body>
 
     <div id="page">
-        <!--div id="header1" class="horizontal"-->
 
         <div id="indexHeader">
             <span style="float:left; margin-top:5px">
@@ -100,10 +99,6 @@
                 </div>
             </div><!-- end: homeSection -->      
     
-
-
-
-
             <div id="searchSection"> 
                 <!--div class="spacer150"></div--><!-- production code: use this -->
                 <div class="horizontalCenter">
@@ -122,21 +117,18 @@
                     <button id="clearSearchTableButton" onclick="clearSearchTable()">Clear</button>
                 </div-->
             </div><!-- end: searchSection -->
-
-
-
-
+            
 
             <div id="exploreSection">
                 <div class="spacer150"></div>
                 <!-- <p style="font-size: 400%" class="centerMe">EXPLORE</p> -->
 
                 <div id="breadcrumbs">
-                    <h2 id="marketCrumb">Market Sectors<h3>
-                    <h2 id="crumbSpace1"> >> <h3>
-                    <h2 id="sectorCrumb">Sector<h3>
-                    <h2 id="crumbSpace2"> >> <h3>
-                    <h2 id="industryCrumb">Industry<h3>
+                    <a id="marketCrumb" onclick='renderSectorsCaller()'>Market Sectors</a>
+                    <a id="crumbSpace1"> >> </a>
+                    <a id="sectorCrumb" onclick='clickSector(this)'>Sector</a>
+                    <a id="crumbSpace2"> >> </a>
+                    <a id="industryCrumb" onclick='clickIndustry(this)'>Industry</a>
                 </div>
                 
                     <div id="heatmapContainer">

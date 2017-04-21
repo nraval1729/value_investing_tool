@@ -85,8 +85,10 @@ function renderSectors(data) {
     // Step 5: handle click event. When user clicks on one of sectors on table...
 }
 
-function clickSector() {
-	 var nameOfSector = $(this).text();
+function clickSector(sector) {
+	// var nameOfSector = $(this).text();
+
+    var nameOfSector = sector.text;
 
     // ...add breadcrumbs with links
     $('#crumbSpace1').show();
@@ -104,12 +106,12 @@ function clickSector() {
     // ...update hash in URL (for SPA - Single Page App - purposes)
     window.location.hash = $(this).attr('href');
 
-    renderIndustries(biographicalData, nameOfSector);
+    renderIndustries(nameOfSector);
 }
 
 function createSectorTD(sectorNames, index) {
     var tdString = "<td class='hoverable'>";
-    tdString += "<a class='spaLinks hoverlink' onclick='clickSector()'>" + sectorNames[index] + "</a></td>";
+    tdString += "<a class='spaLinks hoverlink' onclick='clickSector(this)'>" + sectorNames[index] + "</a></td>";
     return tdString;
 }
 
@@ -166,33 +168,33 @@ function renderIndustries(data, sector) {
     industryTable.append(stringToAppend);
 
     // When user clicks on one of industries on table...
-    $('.spaLinks').click( function(e) {
-        e.preventDefault(); 
-        // ...replace heading with user-clicked sector
-        var nameOfIndustry = $(this).text();
-        //$('#tableTitle').text($(this).text());
+    // $('.spaLinks').click( function(e) {
+    //     e.preventDefault(); 
+    //     // ...replace heading with user-clicked sector
+    //     var nameOfIndustry = $(this).text();
+    //     //$('#tableTitle').text($(this).text());
 
-        // ...change breadcrumbs
-        $('#crumbSpace2').show();
-        $('#industryCrumb').show();
-        $('#industryCrumb').text(nameOfIndustry);
+    //     // ...change breadcrumbs
+    //     $('#crumbSpace2').show();
+    //     $('#industryCrumb').show();
+    //     $('#industryCrumb').text(nameOfIndustry);
 
-        var sectorLink = '<a href=' + window.location.hash + '>' + sectorName + '</a>';
-        $('#sectorCrumb').html(sectorLink);
+    //     var sectorLink = '<a href=' + window.location.hash + '>' + sectorName + '</a>';
+    //     $('#sectorCrumb').html(sectorLink);
 
-        // ...hide the sector table so that industry table can be placed where it was
-        sectorTable.hide();
-        industryTable.hide();
-        companyTable.show();  
+    //     // ...hide the sector table so that industry table can be placed where it was
+    //     sectorTable.hide();
+    //     industryTable.hide();
+    //     companyTable.show();  
 
-        // ...update hash in URL (for SPA - Single Page App - purposes)
-        window.location.hash = $(this).attr('href');
+    //     // ...update hash in URL (for SPA - Single Page App - purposes)
+    //     window.location.hash = $(this).attr('href');
 
-        //function clickIndustry() {
-            renderCompanies(biographicalData, technicalData, nameOfIndustry, sectorName);
-        //}
+    //     //function clickIndustry() {
+    //         renderCompanies(biographicalData, technicalData, nameOfIndustry, sectorName);
+    //     //}
 
-    });
+    // });
 }
 
 /*

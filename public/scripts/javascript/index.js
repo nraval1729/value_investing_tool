@@ -1,8 +1,12 @@
+var NUM_COLS = 4;
 var infoJSON;
 
 $(document).ready(function() {
-	showHome(); /* production: use this */
-	/*showSearch(); */
+	showHome();
+
+	// Make the company table sortable
+    $("#companies").tablesorter();
+
 	$.get("/info", function(data) {
 		infoJSON = data;
 		var securityToTicker = data["security_to_ticker"];
@@ -33,18 +37,17 @@ function showSearch() {
 }
 
 function showExplore() {
-	//alert("inside showExplore");
+	// TODOOOO
 	// Add loading icon after so that we wait until infoJSON is populated.
-
-
-	hello();
-	renderSectors(infoJSON['sector_to_industries']);
 	$( "#exploreButton" ).addClass( "underline" );
 	$( "#searchButton" ).removeClass( "underline" );
 	$("#logoButton").toggle(true);
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(true);
+
+	renderSectors(infoJSON['sector_to_industries']);
+
 }
 
 function populateSearchSuggestions(security_to_ticker) {
@@ -191,4 +194,221 @@ function determineColor(excursion) {
         index = 4;
     }
     return colors[index];
+}
+
+
+// **********************************************
+// EXPLORE SECTION FUNCTIONS BEGIN HERE
+// **********************************************
+
+function renderSectorsCaller() {
+	renderSectors(infoJSON['sector_to_industries']);
+}
+
+function renderSectors(sectorToIndustries) {
+    var listOfSectors = [];
+
+    sectorTable = $('#sectors');
+    
+    $('#sectors tr').remove();
+    industryTable = $('#industries');
+    companyTable = $('#companies');
+
+    $('#crumbSpace1').hide();
+    $('#sectorCrumb').hide();
+    $('#crumbSpace2').hide();
+    $('#industryCrumb').hide();
+
+    sectorTable.show();
+    industryTable.hide();
+    companyTable.hide();  
+
+    listOfSectors = Object.keys(sectorToIndustries);
+
+    var numRows = Math.ceil(listOfSectors.length / NUM_COLS);
+    var index = 0;
+
+    for(i = 0; i < numRows; i++) {
+        var rowString = "<tr>";
+        for(j = 0; j < NUM_COLS; j++) {
+            if(index < listOfSectors.length) {
+                rowString += createSectorTD(listOfSectors, index);
+                index++;
+            }
+        }
+        rowString += "</tr>";
+        sectorTable.append(rowString);
+    }
+}
+
+function createSectorTD(sectorNames, index) {
+    var tdString = "<td class='hoverable'>";
+    tdString += "<a class='spaLinks hoverlink' onclick='clickSector(this)'>" + sectorNames[index] + "</a></td>";
+    return tdString;
+}
+
+function clickSector(sector) {
+    $('#crumbSpace2').hide();
+    $('#industryCrumb').hide();
+
+    var nameOfSector = sector.text;
+
+    $('#crumbSpace1').show();
+    $('#sectorCrumb').show();
+    $('#sectorCrumb').html(nameOfSector);
+
+    sectorTable.hide();
+
+    $('#industries tr').remove();
+    industryTable.show();
+    companyTable.hide();  
+
+    renderIndustries(nameOfSector);
+}
+
+function renderIndustries(nameOfSector) {
+
+	var listOfUniqueIndustries = infoJSON["sector_to_industries"][nameOfSector];
+
+	var industryTable = $("#industries");
+
+    var numRows = Math.ceil(listOfUniqueIndustries.length / NUM_COLS);
+    var index = 0;
+
+    var stringToAppend = "";
+        for (var i = 0; i < numRows; i++) {
+            stringToAppend = stringToAppend + "<tr>";
+            for (var j = 0; j < NUM_COLS; j++) {
+                if (index < listOfUniqueIndustries.length) {
+                    stringToAppend = stringToAppend + "<td><a class='spaLinks hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>";
+                    index++;
+                }      
+            }
+        stringToAppend = stringToAppend + "</tr>";
+    }
+
+    industryTable.append(stringToAppend);
+}
+
+function clickIndustry(industry) {
+    var nameOfIndustry = industry.text;
+
+    $('#crumbSpace2').show();
+    $('#industryCrumb').show();
+    $('#industryCrumb').html(nameOfIndustry);
+
+    sectorTable.hide();
+    industryTable.hide();
+
+    $('#companies tbody').empty();
+    companyTable.show();  
+    renderCompanies(nameOfIndustry);
+}
+
+function renderCompanies(nameOfIndustry) {
+    var companyTableBody = $("#companies tbody"); 
+
+    var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
+
+    for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
+        companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]], index));
+        $("#companies").trigger("update");
+    }
+
+    // Tooltip displays
+    var pePopup = $('#pePopup');
+    var psPopup = $('#psPopup');
+    var pbPopup = $('#pbPopup');
+    var divPopup = $('#divPopup');
+    var rankPopup = $('#rankPopup');
+    $('#peBox').mousedown(function(e){displayToolTip(e, pePopup)});
+    $('#psBox').mousedown(function(e){displayToolTip(e, psPopup)});
+    $('#pbBox').mousedown(function(e){displayToolTip(e, pbPopup)});
+    $('#divBox').mousedown(function(e){displayToolTip(e, divPopup)});
+    $('#rankBox').mousedown(function(e){displayToolTip(e, rankPopup)});
+
+    $('#page').click(function(){
+        if(pePopup.hasClass('show')) {
+            pePopup.toggleClass('show');
+        }
+        if(psPopup.hasClass('show')) {
+            psPopup.toggleClass('show');
+        }
+        if(pbPopup.hasClass('show')) {
+            pbPopup.toggleClass('show');
+        }
+        if(divPopup.hasClass('show')) {
+            divPopup.toggleClass('show');
+        }
+        if(rankPopup.hasClass('show')) {
+            rankPopup.toggleClass('show');
+        }
+    });
+}
+
+function createRowString(companyInfo, index) {
+    var rowString = "<tr>";
+    var ticker = JSON.stringify(companyInfo['ticker']);
+    var security = JSON.stringify(companyInfo['security']);
+    ticker = removeLeadingAndTrailingQuotes(ticker);
+    security = removeLeadingAndTrailingQuotes(security);
+
+    var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']) + "?p=" + ticker ;
+    rowString += "<td class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></td>";
+
+    rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
+    rowString += createTDString(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
+    rowString += createTDString(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
+    rowString += createTDString(companyInfo["div_cur"], companyInfo["div_avg"], true);
+    rowString += "<td class='black'>" + companyInfo['s_rank'] + "</td>";
+
+    rowString += "</tr>";
+    return rowString;
+}
+
+function createTDString(currValue, histValue, isDividend) {
+    var currValueNum = parseFloat(currValue);
+    var histValueNum = parseFloat(histValue);
+    var colors = ["brightred", "darkred", "black", "darkgreen", "brightgreen"];
+    var percent = (currValueNum - histValueNum) / histValueNum;
+
+    if (isDividend) {
+        percent  = 0.50 * percent; //compress the range
+    }
+
+    var colorIndex;
+
+    //values chosen to illustrate colors
+    //for 4-12 handin
+    if (percent >= 0.60) {
+        colorIndex = 0;
+    } else if (percent >= 0.40) {
+        colorIndex = 1;
+    } else if (percent >= -0.05) {
+        colorIndex = 2;
+    } else if (percent >= -0.20) {
+        colorIndex = 3;
+    } else {
+        colorIndex = 4;
+    }
+
+    //dividend "good" is opposite of other ratios
+    if (isDividend) {
+        colorIndex = 4 - colorIndex;
+    }
+
+    var color = colors[colorIndex];
+    var tdString = "<td class = '" + color + "'>" + currValue + "</td>";
+    return tdString;
+}
+
+function removeLeadingAndTrailingQuotes(s) {
+	return s.replace(/^"(.*)"$/, '$1');
+}
+
+function displayToolTip(event, popup) {
+    if(event.which == 3) {
+        popup.toggleClass('show');
+        event.stopPropagation();
+    }
 }
