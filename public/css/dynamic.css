@@ -23,6 +23,7 @@ h2 a {
 
 h2 a:hover {
     color: yellow;
+    cursor: pointer;
 }
 
 /*  don't need... using #indexHeader

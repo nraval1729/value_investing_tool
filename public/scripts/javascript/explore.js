@@ -281,7 +281,7 @@ function displayToolTip(event, popup) {
 
 function createRowString(companyInfo, index) {
     var rowString = "<tr>";
-    var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']) + "?p=" + JSON.stringify(companyInfo['ticker']);
+    var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']).replace(/\"/g, "") + "?p=" + JSON.stringify(companyInfo['ticker']);
     rowString += "<th class='black, hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + JSON.stringify(companyInfo['security']) + "</a></th>";
 
     rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);

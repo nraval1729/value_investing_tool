@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
-console.log('static dir ' + path.join(__dirname, 'public'));
 
 // Python bridge to run python from node
 var spawn = require("child_process").spawn;
@@ -71,4 +70,6 @@ function spawnPythonProcess(scriptPath) {
     });
 }
 
-app.listen(8080);
+app.listen(8080, function(){
+      console.log('- Server listening on port 8080');
+});

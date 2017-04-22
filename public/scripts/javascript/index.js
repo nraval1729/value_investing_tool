@@ -137,11 +137,11 @@ function security(data) {
 function renderSecurityTableHeader() {
     var str = '<tr class="securityTableHeader">';
     str +=  '<td class="securityCellCompanyName"></td>';
-    str +=  '<td class="securityCell">p/e</td>';
-    str +=  '<td class="securityCell">p/s</td>';
-    str +=  '<td class="securityCell">p/b</td>';
-    str +=  '<td class="securityCell">div</td>';
-    str +=  '<td class="securityCell">rank</td>';
+    str +=  '<td class="securityCell">P/E</td>';
+    str +=  '<td class="securityCell">P/S</td>';
+    str +=  '<td class="securityCell">P/B</td>';
+    str +=  '<td class="securityCell">DIV</td>';
+    str +=  '<td class="securityCell">RANK</td>';
     str +=  '<td class="securityCell"></td>';
     str +=  '<td class="securityCell"></td>';
     str +=  '<td class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></td>';
@@ -189,7 +189,7 @@ function renderSecurityRow(security) {
     //citation: x-button image source: http://www.iconsdb.com
     var rowString = '<tr>';
     var link = "http://finance.yahoo.com/quote/" + security.ticker + "?p=" + security.ticker;
-    rowString += "<td class='securityCellCompanyName black hoverable'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
+    rowString += "<td class='securityCellCompanyName black'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
     rowString += renderSecurityCell(security.pe_cur, security.pe_avg, false);
     rowString += renderSecurityCell(security.ps_cur, security.ps_avg, false);
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
@@ -288,7 +288,7 @@ function renderSectors(sectorToIndustries) {
 }
 
 function createSectorTD(sectorNames, index) {
-    var tdString = "<td class='exploreTD1 hoverable'>";
+    var tdString = "<td class='exploreTD1 '>";
     tdString += "<a class='spaLinks hoverlink' onclick='clickSector(this)'>" + sectorNames[index] + "</a></td>";
     return tdString;
 }
@@ -401,8 +401,8 @@ function createRowString(companyInfo) {
     ticker = removeLeadingAndTrailingQuotes(ticker);
     security = removeLeadingAndTrailingQuotes(security);
 
-    var link = "http://finance.yahoo.com/quote/" + JSON.stringify(companyInfo['ticker']) + "?p=" + ticker ;
-    rowString += "<td class='black, hoverable exploreTD2'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></td>";
+    var link = "http://finance.yahoo.com/quote/" + ticker + "?p=" + ticker ;
+    rowString += "<th class='exploreHeatMapTH hoverlink'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></th>";
 
     rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
     rowString += createTDString(companyInfo["ps_cur"], companyInfo["ps_avg"], false);

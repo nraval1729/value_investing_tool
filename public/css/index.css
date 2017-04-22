@@ -84,6 +84,7 @@ body {
 
 .searchResultButton:hover {
     cursor: pointer;
+    cursor: hand;
 }
 
 .searchResultButtonImage {
@@ -199,17 +200,11 @@ body {
     flex-direction: column;
 }
 
-.hoverable:hover {
-   color: yellow;
-   border-color: yellow;
-   border-style: inset;
-   cursor: pointer;
-
-}
-
 .hoverlink:hover {
     color: yellow;
     background-color: rgb(30,30,20); /* new craig */
+    cursor: pointer;
+    cursor: hand;
 }
 
 #industries {
@@ -356,4 +351,6 @@ body {
 
 .hoverlink {
     text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
 }
