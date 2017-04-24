@@ -1,17 +1,10 @@
 //PAGE-WIDE VARIABLES
 var NUM_COLS = 4;
 var infoJSON;
-// old values we used for demo purposes
-// var colorBreakPoint1 = 0.60;
-// var colorBreakPoint2 = 0.40;
-// var colorBreakPoint3 = -0.05;
-// var colorBreakPoint4 = -0.20;
-// var dividend_compression = 0.50;
-var colorBreakPoint1 = 0.50; //colorBreakPoint
-var colorBreakPoint2 = 0.25;
-var colorBreakPoint3 = -0.25;
-var colorBreakPoint4 = -0.50;
-var dividendCoefficient = 1.0;
+var value_point_1;
+var value_point_2;
+var value_point_3;
+var value_point_4;
 
 //PAGE INITIALIZATION
 $(document).ready(function() {
@@ -226,7 +219,7 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
     var excursion = (currValueNum - histValueNum) / histValueNum;
-    if (isDividend) excursion  = - dividendCoefficient * excursion; //compress the range and flip sign
+    if (isDividend) excursion  = - 0.50 * excursion; //compress the range and flip sign
     var color = determineColor(excursion);
     var tdString = '<td class = "securityCell ' + color + '">' + currValue + '</td>';
     return tdString;
@@ -238,13 +231,13 @@ function determineColor(excursion) {
     var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
     var index;
     //values chosen for illustration purposes
-    if (excursion >= colorBreakPoint1) {
+    if (excursion >= 0.60) {
         index = 0;
-    } else if (excursion >= colorBreakPoint2) {
+    } else if (excursion >= 0.40) {
         index = 1;
-    } else if (excursion >= colorBreakPoint3) {
+    } else if (excursion >= -0.05) {
         index = 2;
-    } else if (excursion >= colorBreakPoint4) {
+    } else if (excursion >= -0.20) {
         index = 3;
     } else {
         index = 4;
