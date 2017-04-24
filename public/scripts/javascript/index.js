@@ -7,7 +7,7 @@ var infoJSON;
 // var colorBreakPoint3 = -0.05;
 // var colorBreakPoint4 = -0.20;
 // var dividend_compression = 0.50;
-var colorBreakPoint1 = 0.50; //colorBreakPoint
+var colorBreakPoint1 = 0.50;
 var colorBreakPoint2 = 0.25;
 var colorBreakPoint3 = -0.25;
 var colorBreakPoint4 = -0.50;
