@@ -13,10 +13,10 @@ var colorBreakPoint3 = -0.25;   //above or equal to this value and below colorBr
 var colorBreakPoint4 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
-var dividendCoefficient = 1.0;  //the dividend doesn't always move a lot, sometimes you will want
-                                //to set this to 0.5 to produce colors. otherwise, you will usually
-                                //get only black colors for the dividend.
-
+var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, resulting in all black
+                                //colors for the dividend.  this coefficient allows you to adjust the
+                                //sensitivity of the dividend to colors.  greater than 1 will produce
+                                //more colors, less than 1 will produce less colors.
 //PAGE INITIALIZATION
 $(document).ready(function() {
 	showHome();
@@ -230,7 +230,7 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
     var excursion = (currValueNum - histValueNum) / histValueNum;
-    if (isDividend) excursion  = - dividendCoefficient * excursion; //compress the range and flip sign
+    if (isDividend) excursion  = - dividendCoefficient * excursion; //adjust the range and flip sign
     var color = determineColor(excursion);
     var tdString = '<td class = "securityCell ' + color + '">' + currValue + '</td>';
     return tdString;
@@ -238,6 +238,9 @@ function renderSecurityCell(currValue, histValue, isDividend) {
 
 //returns which color to use for the
 //table cell based on the input value
+//note: excursion is how far away from zero
+//(do some research on audio speakers to see
+//usage of this word "speaker excursion")
 function determineColor(excursion) {
     var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
     var index;
@@ -434,7 +437,8 @@ function createTDString(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
     var excursion = (currValueNum - histValueNum) / histValueNum;
-    if (isDividend) excursion = -0.50 * excursion; //compress the range and flip sign
+    if (isDividend) excursion = -dividendCoefficient * excursion; //adjust the range and flip sign
+    //if (isDividend) excursion = -0.50 * excursion; //compress the range and flip sign
     var color = determineColor(excursion);
     var tdString = "<td class = ' " + color + "'>" + currValue + "</td>";
     return tdString;
