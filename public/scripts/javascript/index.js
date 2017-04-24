@@ -7,11 +7,15 @@ var infoJSON;
 // var colorBreakPoint3 = -0.05;
 // var colorBreakPoint4 = -0.20;
 // var dividend_compression = 0.50;
-var colorBreakPoint1 = 0.50;
-var colorBreakPoint2 = 0.25;
-var colorBreakPoint3 = -0.25;
-var colorBreakPoint4 = -0.50;
-var dividendCoefficient = 1.0;
+var colorBreakPoint1 = 0.50;    //above or equal to this value: bright red
+var colorBreakPoint2 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
+var colorBreakPoint3 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
+var colorBreakPoint4 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
+                                //below colorBreakPoint4: bright green
+
+var dividendCoefficient = 1.0;  //the dividend doesn't always move a lot, sometimes you will want
+                                //to set this to 0.5 to produce colors. otherwise, you will usually
+                                //get only black colors for the dividend.
 
 //PAGE INITIALIZATION
 $(document).ready(function() {
