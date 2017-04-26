@@ -19,51 +19,67 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
                                 //more colors, less than 1 will produce less colors.
 //PAGE INITIALIZATION
 $(document).ready(function() {
-	showHome();
+    showHome();
 
-	// Make the company table sortable
+    // Make the company table sortable
     $("#companies").tablesorter();
 
-	$.get("/info", function(data) {
-		infoJSON = data;
-		var securityToTicker = data["security_to_ticker"];
-		var tickerToSecurity = data["ticker_to_security"];
-		populateSearchSuggestions(securityToTicker);
-		addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
-	});
+    $.get("/info", function(data) {
+        infoJSON = data;
+        var securityToTicker = data["security_to_ticker"];
+        var tickerToSecurity = data["ticker_to_security"];
+        populateSearchSuggestions(securityToTicker);
+        addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+    });
 });
 
 //VISIBILITY SECTION
 function showHome() {
-	$( "#exploreButton" ).removeClass( "underline" );
-	$( "#searchButton" ).removeClass( "underline" );
-	$("#logoButton").toggle(false);
+    $( "#exploreButton" ).removeClass( "underline" );
+    $( "#searchButton" ).removeClass( "underline" );
+    $( "#preferencesButton" ).removeClass( "underline" );
+    $("#logoButton").toggle(false);
     $("#homeSection").toggle(true);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
+    $("#preferencesSection").toggle(false);
 }
 
 function showSearch() {
-	$( "#exploreButton" ).removeClass( "underline" );
-	$( "#searchButton" ).addClass( "underline" );
-	$("#logoButton").toggle(true);
+    $( "#exploreButton" ).removeClass( "underline" );
+    $( "#searchButton" ).addClass( "underline" );
+    $( "#preferencesButton" ).removeClass( "underline" );
+    $("#logoButton").toggle(true);
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
+    $("#preferencesSection").toggle(false);
 }
 
 function showExplore() {
-	// TODO
-	// Add loading icon after so that we wait until infoJSON is populated.
-	$( "#exploreButton" ).addClass( "underline" );
-	$( "#searchButton" ).removeClass( "underline" );
-	$("#logoButton").toggle(true);
+    // TODO
+    // Add loading icon after so that we wait until infoJSON is populated.
+    $( "#exploreButton" ).addClass( "underline" );
+    $( "#searchButton" ).removeClass( "underline" );
+    $( "#preferencesButton" ).removeClass( "underline" );
+    $("#logoButton").toggle(true);
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(true);
+    $("#preferencesSection").toggle(false);
 
-	renderSectors(infoJSON['sector_to_industries']);
+    renderSectors(infoJSON['sector_to_industries']);
+}
 
+function showPreferences() {
+    $( "#exploreButton" ).removeClass( "underline" );
+    $( "#searchButton" ).removeClass( "underline" );
+    $( "#preferencesButton" ).addClass( "underline" );
+    $("#logoButton").toggle(true);
+    $("#homeSection").toggle(false);
+    $("#searchSection").toggle(false);
+    $("#exploreSection").toggle(false);
+    $("#preferencesSection").toggle(true);
 }
 
 // **********************************************
@@ -71,41 +87,41 @@ function showExplore() {
 // **********************************************
 
 function populateSearchSuggestions(security_to_ticker) {
-	var companyNames = Object.keys(security_to_ticker);
-	var tickers = companyNames.map(function(v) {return security_to_ticker[v]; });
+    var companyNames = Object.keys(security_to_ticker);
+    var tickers = companyNames.map(function(v) {return security_to_ticker[v]; });
 
-	// Will give suggestions on both company name as well as ticker
-	autocompleteList = companyNames.concat(tickers);
-	var input = document.getElementById("searchBarInput");;
-	var awesomplete = new Awesomplete(input, {
-		minChars: 1,
-		maxItems: 10,
-		autoFirst: true
-	});
-	awesomplete.list = autocompleteList;
+    // Will give suggestions on both company name as well as ticker
+    autocompleteList = companyNames.concat(tickers);
+    var input = document.getElementById("searchBarInput");;
+    var awesomplete = new Awesomplete(input, {
+        minChars: 1,
+        maxItems: 10,
+        autoFirst: true
+    });
+    awesomplete.list = autocompleteList;
 }
 
 // User made a selection from dropdown. 
 // This is fired after the selection is applied
 function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
-	window.addEventListener("awesomplete-selectcomplete", function(e){
-		processUserSelection(e, securityToTicker, tickerToSecurity, data);
-	}, false);
+    window.addEventListener("awesomplete-selectcomplete", function(e){
+        processUserSelection(e, securityToTicker, tickerToSecurity, data);
+    }, false);
 }
 
 function processUserSelection(e, securityToTicker, tickerToSecurity, data) {
-	var userSelection = e.text.trim();
+    var userSelection = e.text.trim();
 
-	var dataForUserSelection;
-	if (securityToTicker.hasOwnProperty(userSelection)) {
-		dataForUserSelection = data["technical_map"][securityToTicker[userSelection]];
-	} else {
-		// User selected a ticker
-		dataForUserSelection = data["technical_map"][userSelection];
-	}
+    var dataForUserSelection;
+    if (securityToTicker.hasOwnProperty(userSelection)) {
+        dataForUserSelection = data["technical_map"][securityToTicker[userSelection]];
+    } else {
+        // User selected a ticker
+        dataForUserSelection = data["technical_map"][userSelection];
+    }
 
     //hand data off to rendering...
-	renderSearchResult(dataForUserSelection);
+    renderSearchResult(dataForUserSelection);
 }
 
 var hasHeader = false;
@@ -266,7 +282,7 @@ function determineColor(excursion) {
 // **********************************************
 
 function renderSectorsCaller() {
-	renderSectors(infoJSON['sector_to_industries']);
+    renderSectors(infoJSON['sector_to_industries']);
 }
 
 function renderSectors(sectorToIndustries) {
@@ -332,8 +348,8 @@ function clickSector(sector) {
 
 function renderIndustries(nameOfSector) {
 
-	var listOfUniqueIndustries = infoJSON["sector_to_industries"][nameOfSector];
-	var industryTable = $("#industries");
+    var listOfUniqueIndustries = infoJSON["sector_to_industries"][nameOfSector];
+    var industryTable = $("#industries");
     var numRows = Math.ceil(listOfUniqueIndustries.length / NUM_COLS);
     var index = 0;
 
@@ -372,11 +388,8 @@ function renderCompanies(nameOfIndustry) {
 
     var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
     for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
-        //companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]], index));
         var rowString = createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]]);
-        //console.log(rowString);
         companyTableBody.append(rowString);
-        //companyTableBody.append(createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]]));
         $("#companies").trigger("update");
     }
 
@@ -411,7 +424,6 @@ function renderCompanies(nameOfIndustry) {
     });
 }
 
-//function createRowString(companyInfo, index) {
 function createRowString(companyInfo) {
     var rowString = "<tr class='height:10px'>";
     var ticker = JSON.stringify(companyInfo['ticker']);
@@ -422,30 +434,18 @@ function createRowString(companyInfo) {
     var link = "http://finance.yahoo.com/quote/" + ticker + "?p=" + ticker ;
     rowString += "<th class='exploreHeatMapTH hoverlink'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></th>";
 
-    rowString += createTDString(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
-    rowString += createTDString(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
-    rowString += createTDString(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
-    rowString += createTDString(companyInfo["div_cur"], companyInfo["div_avg"], true);
+    rowString += renderSecurityCell(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
+    rowString += renderSecurityCell(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
+    rowString += renderSecurityCell(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
+    rowString += renderSecurityCell(companyInfo["div_cur"], companyInfo["div_avg"], true);
     rowString += "<td class='exploreTD2 black'>" + companyInfo['s_rank'] + "</td>";
 
     rowString += "</tr>";
     return rowString;
 }
 
-
-function createTDString(currValue, histValue, isDividend) {
-    var currValueNum = parseFloat(currValue);
-    var histValueNum = parseFloat(histValue);
-    var excursion = (currValueNum - histValueNum) / histValueNum;
-    if (isDividend) excursion = -dividendCoefficient * excursion; //adjust the range and flip sign
-    //if (isDividend) excursion = -0.50 * excursion; //compress the range and flip sign
-    var color = determineColor(excursion);
-    var tdString = "<td class = ' " + color + "'>" + currValue + "</td>";
-    return tdString;
-}
-
 function removeLeadingAndTrailingQuotes(s) {
-	return s.replace(/^"(.*)"$/, '$1');
+    return s.replace(/^"(.*)"$/, '$1');
 }
 
 function displayToolTip(event, popup) {
@@ -453,4 +453,13 @@ function displayToolTip(event, popup) {
         popup.toggleClass('show');
         event.stopPropagation();
     }
+}
+
+// **********************************************
+// PREFERENCES SECTION FUNCTIONS BEGIN HERE
+// **********************************************
+
+function colorSliderChange() {
+    colorBreakPoint4 = $("#brightgreenSlider").value();
+    console.log("bright green = " + colorBreakPoint4);
 }

@@ -354,3 +354,9 @@ body {
     cursor: pointer;
     cursor: hand;
 }
+
+#preferencesSection, #slidersDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
