@@ -29,7 +29,7 @@ $(document).ready(function() {
         var securityToTicker = data["security_to_ticker"];
         var tickerToSecurity = data["ticker_to_security"];
         populateSearchSuggestions(securityToTicker);
-        addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+        addEventListenersForSearch(securityToTicker, tickerToSecurity, data);
     });
 });
 
@@ -101,23 +101,34 @@ function populateSearchSuggestions(security_to_ticker) {
     awesomplete.list = autocompleteList;
 }
 
-// User made a selection from dropdown. 
-// This is fired after the selection is applied
-function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
+function addEventListenersForSearch(securityToTicker, tickerToSecurity, data) {
+
+    // Enable user selection from drop-down/pressing enter
     window.addEventListener("awesomplete-selectcomplete", function(e){
-        processUserSelection(e, securityToTicker, tickerToSecurity, data);
+        processUserSelection(e.text.trim(), securityToTicker, tickerToSecurity, data);
     }, false);
+
+    // Enable searching by clicking on search icon
+    var searchIcon = $("#searchBarDecorationWrapper");
+    // searchIcon.style.cursor = 'pointer';
+    searchIcon.click(function() {
+        processUserSelection($("#searchBarInput").val().trim(), securityToTicker, tickerToSecurity, data)
+    });
 }
 
-function processUserSelection(e, securityToTicker, tickerToSecurity, data) {
-    var userSelection = e.text.trim();
+function processUserSelection(userSelection, securityToTicker, tickerToSecurity, data) {
 
     var dataForUserSelection;
     if (securityToTicker.hasOwnProperty(userSelection)) {
         dataForUserSelection = data["technical_map"][securityToTicker[userSelection]];
     } else {
         // User selected a ticker
-        dataForUserSelection = data["technical_map"][userSelection];
+        if(tickerToSecurity.hasOwnProperty(userSelection)) {
+            dataForUserSelection = data["technical_map"][userSelection];
+        }
+        else {
+            alert("Not found");
+        }
     }
 
     //hand data off to rendering...
