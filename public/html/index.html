@@ -110,7 +110,22 @@
                 </div>
                 <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="searchTable"></table>
+                   <table id="searchTable" class="tablesorter">
+                       <thead>
+                           <tr class="securityTableHeader">
+                                <th class="securityCellCompanyName"></th>
+                                <th class="securityCell">P/E</th>
+                                <th class="securityCell">P/S</th>
+                                <th class="securityCell">P/B</th>
+                                <th class="securityCell">DIV</th>
+                                <th class="securityCell">RANK</th>
+                                <th class="securityCell"></th>
+                                <th class="securityCell"></th>
+                                <th class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></th>
+                            </tr>
+                       </thead>
+                       <tbody></tbody>
+                   </table>
                 </div>
             </div><!-- end: searchSection -->
             

@@ -21,8 +21,9 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
 $(document).ready(function() {
     showHome();
 
-    // Make the company table sortable
+    // Make the companies and search results table sortable
     $("#companies").tablesorter();
+    $("#searchTable").tablesorter();
 
     $.get("/info", function(data) {
         infoJSON = data;
@@ -54,6 +55,7 @@ function showSearch() {
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    $("#searchTable").hide();
 }
 
 function showExplore() {
@@ -139,26 +141,35 @@ function processUserSelection(userSelection, securityToTicker, tickerToSecurity,
 
 var hasHeader = false; // TODO - put this in a better place
 
-//appends the search result table with a row
-function appendTable(str) {
-    var searchTable = $("#searchTable");
+//appends the search result table with a row to thead
+function appendTableHeader(str) {
+    var searchTableHeader = $("#searchTable thead");
     var tr = str;
-    searchTable.append(str);
+    searchTableHeader.append(str);
 }
 
-//takes search bar result as input, and
-//renders it into the table.  also determines
-//if table needs header, and adds such accordingly.
+//appends the search result table with a row to tbody
+function appendTableBody(str) {
+    var searchTableBody = $("#searchTable tbody");
+    var tr = str;
+    searchTableBody.append(str);
+}
+
+//takes search bar result as input, and renders it into the table.  also determines if table needs header, and adds such accordingly.
 function renderSearchResult(data) {
-    //todo: clear the search bar
     s = new security(data);
-    if (hasHeader == false) {
-        tableHeader = renderSecurityTableHeader();
-        appendTable(tableHeader);
-        hasHeader = true;
-    } 
+
+    var searchTable = $("#searchTable");
+    searchTable.show();
     tableRow = renderSecurityRow(s);
-    appendTable(tableRow);
+    appendTableBody(tableRow);
+
+    // Tell sorter that new values were inserted into the table - experimental
+    searchTable.trigger("update")
+               .trigger("sorton", [searchTable.get(0).config.sortList])
+               .trigger("appendCache")
+               .trigger("applyWidgets");;
+
 }
 
 //takes the json data and makes an object out of
@@ -180,31 +191,26 @@ function security(data) {
 //renders the table header row for the search result table
 function renderSecurityTableHeader() {
     var str = '<tr class="securityTableHeader">';
-    str +=  '<td class="securityCellCompanyName"></td>';
-    str +=  '<td class="securityCell">P/E</td>';
-    str +=  '<td class="securityCell">P/S</td>';
-    str +=  '<td class="securityCell">P/B</td>';
-    str +=  '<td class="securityCell">DIV</td>';
-    str +=  '<td class="securityCell">RANK</td>';
-    str +=  '<td class="securityCell"></td>';
-    str +=  '<td class="securityCell"></td>';
-    str +=  '<td class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></td>';
+    str +=  '<th class="securityCellCompanyName"></th>';
+    str +=  '<th class="securityCell">P/E</th>';
+    str +=  '<th class="securityCell">P/S</th>';
+    str +=  '<th class="securityCell">P/B</th>';
+    str +=  '<th class="securityCell">DIV</th>';
+    str +=  '<th class="securityCell">RANK</th>';
+    str +=  '<th class="securityCell"></th>';
+    str +=  '<th class="securityCell"></th>';
+    str +=  '<th class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></th>';
     str += '</tr>';
     return str;
 }
 
-//clears the table contents, including the header
-//but does not remove the table itself from the DOM
+//clears the table contents, including the header but does not remove the table itself from the DOM
 function clearSearchTable() {
-    $("#searchTable tr").remove(); 
-    hasHeader = false;
-}
+    $("#searchTable").hide();
+    $("#searchTable tbody").empty(); 
 
-//deletes a row from the search results
-function deleteSearchResultRow(row) {
-    //citation: w3schools.com
-    var index = row.parentNode.parentNode.rowIndex;
-    document.getElementById("searchTable").deleteRow(index);
+    // Remove cleared rows from cache. Prevent redrawing deleted rows
+    $("#searchTable").trigger("update");
 }
 
 //moves search results up one row
@@ -243,15 +249,15 @@ function renderSecurityRow(security) {
     rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_01.png"></button></td>';
     rowString += '<td class="black"><button class="searchResultButton" onclick="deleteSearchResult(this)"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_01.png"></td>';
     rowString += "</tr>";
-    //console.log(rowString);
     return rowString;
 }
 
-//deletes a saearch result row 
+//deletes a search result row 
 function deleteSearchResult(row) {
-    //citation: concept derived from w3schools.com
-    var index = row.parentNode.parentNode.rowIndex;
-    document.getElementById("searchTable").deleteRow(index);
+    row.closest('tr').remove();
+
+    // Trigger update so table sorter removes this row from cache; prevent redrawing deleted rows.
+    $("#searchTable").trigger("update");
 }
 
 //renders a single cell for the search results table
@@ -265,11 +271,7 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     return tdString;
 }
 
-//returns which color to use for the
-//table cell based on the input value
-//note: excursion is how far away from zero
-//(do some research on audio speakers to see
-//usage of this word "speaker excursion")
+//returns which color to use for the table cell based on the input value note: excursion is how far away from zero (do some research on audio speakers to see usage of this word "speaker excursion")
 function determineColor(excursion) {
     var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
     var index;
@@ -512,7 +514,7 @@ function refreshSearchTableData() {
     clearSearchTable();
 
     tableHeader = renderSecurityTableHeader();
-    appendTable(tableHeader);
+    appendTableHeader(tableHeader);
     hasHeader = true;
-    appendTable(rowsToAdd);
+    appendTableBody(rowsToAdd);
 }
