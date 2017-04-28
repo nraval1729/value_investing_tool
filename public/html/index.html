@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Value Investment Tool - Home</title>
+    <title>Value Investing Tool - Home</title>
     <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
     <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
     <script type="text/javascript" src="../scripts/javascript/index.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/slider_range.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
@@ -25,6 +29,7 @@
             <span style="float:right">
                 <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
                 <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
+                <button id="preferencesButton" class="navButton" onclick="showPreferences()">Preferences</button>
             </span>
         </div>
 
@@ -98,7 +103,7 @@
                 <div class="horizontalCenter">
                     <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
                     <div id="searchBarDecorationWrapper">
-                        <span onclick="doSomething()">
+                        <span id="#searchEnterButton">
                             <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
                         </span>
                     </div>
@@ -109,6 +114,26 @@
                 </div>
             </div><!-- end: searchSection -->
             
+            <div id="preferencesSection"> 
+                <div class="spacer50"></div>
+                <div id="slidersDiv">
+                    <h1>Preferences</h1>
+
+                    <div class="spacer50"></div>
+
+                    <div class="slider-range" id="colorSlider">
+                        <div id="custom-handle1" class="ui-slider-handle"></div>
+                        <div id="custom-handle2" class="ui-slider-handle"></div>
+                        <div id="custom-handle3" class="ui-slider-handle"></div>
+                        <div id="custom-handle4" class="ui-slider-handle"></div>
+                    </div>
+
+                    <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+
+                </div>
+                <div class="spacer50"></div>
+            </div><!-- end: preferencesSection -->
+
 
             <div id="exploreSection">
                 <div class="spacer50"></div>
