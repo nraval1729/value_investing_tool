@@ -26,7 +26,7 @@ body {
 }
 
 .brightRed {
-    background-color: red;
+    background-color: #FF0000;
 }
 
 .darkGreen {
@@ -359,4 +359,17 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.ui-slider-range {
+
+}
+
+.ui-slider-handle, #custom-handle1, #custom-handle2, #custom-handle3, #custom-handle4 {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
 }

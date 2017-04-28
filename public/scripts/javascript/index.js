@@ -7,10 +7,10 @@ var infoJSON;
 // var colorBreakPoint3 = -0.05;
 // var colorBreakPoint4 = -0.20;
 // var dividend_compression = 0.50;
-var colorBreakPoint1 = 0.50;    //above or equal to this value: bright red
-var colorBreakPoint2 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
-var colorBreakPoint3 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
-var colorBreakPoint4 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
+var colorBreakPoint4 = 0.50;    //above or equal to this value: bright red
+var colorBreakPoint3 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
+var colorBreakPoint2 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
+var colorBreakPoint1 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
 var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, resulting in all black
@@ -261,13 +261,13 @@ function determineColor(excursion) {
     var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
     var index;
     //values chosen for illustration purposes
-    if (excursion >= colorBreakPoint1) {
+    if (excursion >= colorBreakPoint4) {
         index = 0;
-    } else if (excursion >= colorBreakPoint2) {
-        index = 1;
     } else if (excursion >= colorBreakPoint3) {
+        index = 1;
+    } else if (excursion >= colorBreakPoint2) {
         index = 2;
-    } else if (excursion >= colorBreakPoint4) {
+    } else if (excursion >= colorBreakPoint1) {
         index = 3;
     } else {
         index = 4;
@@ -459,7 +459,38 @@ function displayToolTip(event, popup) {
 // PREFERENCES SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
-function colorSliderChange() {
-    colorBreakPoint4 = $("#brightgreenSlider").value();
-    console.log("bright green = " + colorBreakPoint4);
+// Redraw the search table with latest JSON data and colors
+function refreshSearchTableData() {
+
+    // Don't refresh if there isn't a valid JSON file
+    if(!infoJSON) {
+        return;
+    }
+
+    var data = infoJSON;
+    var securityToTicker = data["security_to_ticker"];
+    var tickerToSecurity = data["ticker_to_security"];
+
+    var rowsToAdd = "";
+
+    $('#searchTable tr').each(function() {
+        var securityName = $(this).find("td:first").text(); 
+        console.log("securityName = " + securityName);
+
+        if(securityName) {
+            var thisSecurityData = data["technical_map"][securityToTicker[securityName]];
+
+            var s = new security(thisSecurityData);
+            var tableRow = renderSecurityRow(s);
+            rowsToAdd += tableRow;
+        }   
+    });
+
+    // Clear and redraw the table
+    clearSearchTable();
+
+    tableHeader = renderSecurityTableHeader();
+    appendTable(tableHeader);
+    hasHeader = true;
+    appendTable(rowsToAdd);
 }
