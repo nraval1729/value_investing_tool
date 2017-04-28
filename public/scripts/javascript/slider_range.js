@@ -53,7 +53,7 @@ function calcRangeColors() {
     }
 }
 
-
+// Stop a slide event if it breaks the ranges
 function mySlide(event, ui) {
 
     newVal1 = ui.values[0];
@@ -76,15 +76,13 @@ function mySlide(event, ui) {
     return true;
 }
 
-
+// Update the handles, color ranges, and real breakpoints when changed
 function myChange(event, ui) {
 
     $("#custom-handle1").text(ui.values[0]);
     $("#custom-handle2").text(ui.values[1]);
     $("#custom-handle3").text(ui.values[2]);
     $("#custom-handle4").text(ui.values[3]);
-
-    // TODO - refresh tables  
 
     calcRangeColors();
 
@@ -95,7 +93,6 @@ function myChange(event, ui) {
     colorBreakPoint1 = ui.values[0];
 
     refreshSearchTableData();
-
 }
 
 

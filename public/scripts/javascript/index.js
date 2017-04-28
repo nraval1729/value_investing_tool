@@ -92,7 +92,7 @@ function populateSearchSuggestions(security_to_ticker) {
 
     // Will give suggestions on both company name as well as ticker
     autocompleteList = companyNames.concat(tickers);
-    var input = document.getElementById("searchBarInput");;
+    var input = document.getElementById("searchBarInput");
     var awesomplete = new Awesomplete(input, {
         minChars: 1,
         maxItems: 10,
@@ -122,9 +122,11 @@ function processUserSelection(e, securityToTicker, tickerToSecurity, data) {
 
     //hand data off to rendering...
     renderSearchResult(dataForUserSelection);
+
+    $("#searchBarInput").val("");
 }
 
-var hasHeader = false;
+var hasHeader = false; // TODO - put this in a better place
 
 //appends the search result table with a row
 function appendTable(str) {
@@ -405,19 +407,27 @@ function renderCompanies(nameOfIndustry) {
     $('#divBox').mousedown(function(e){displayToolTip(e, divPopup)});
     $('#rankBox').mousedown(function(e){displayToolTip(e, rankPopup)});
 
-    $('#page').click(function(){
+    $('#peBox').mouseleave(function(e){
         if(pePopup.hasClass('show')) {
             pePopup.toggleClass('show');
         }
+    });
+    $('#psBox').mouseleave(function(e){
         if(psPopup.hasClass('show')) {
             psPopup.toggleClass('show');
         }
+    });
+    $('#pbBox').mouseleave(function(e){
         if(pbPopup.hasClass('show')) {
             pbPopup.toggleClass('show');
         }
+    });
+    $('#divBox').mouseleave(function(e){
         if(divPopup.hasClass('show')) {
             divPopup.toggleClass('show');
         }
+    });
+    $('#rankBox').mouseleave(function(e){
         if(rankPopup.hasClass('show')) {
             rankPopup.toggleClass('show');
         }
@@ -449,7 +459,8 @@ function removeLeadingAndTrailingQuotes(s) {
 }
 
 function displayToolTip(event, popup) {
-    if(event.which == 3) {
+
+    if(event.which == 3 && !popup.hasClass('show')) {
         popup.toggleClass('show');
         event.stopPropagation();
     }
