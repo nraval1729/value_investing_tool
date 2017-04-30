@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Value Investment Tool - Home</title>
+    <title>Value Investing Tool - Home</title>
     <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
     <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
     <script type="text/javascript" src="../scripts/javascript/index.js"></script>
 
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/slider_range.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
-    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">     
     <link rel="stylesheet" type="text/css" href="../css/static.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
@@ -67,22 +69,22 @@
                                 <p class="messageBoxCaption">SEARCH<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Search for stocks by company name or symbol.  Our tool will locate the stock
-                                and present its metrics and that of its industry competitors to you on the screen.
+                                Search for stocks by company name or symbol.  Our tool will locate the stock 
+                                and present its metrics and that of its industry competitors to you on the screen.    
                             </p>
                         </div>
 
-                        <div class="messageBox" onclick="showExplore()">
+                        <div class="messageBox" onclick="showExplore()"> 
                             <div class="horizontal">
                                 <!-- citation: image sourced from clipartfest.com -->
                                 <img class="messageBoxIcon"  alt="compass" src="../images/compass_01.png">
                                 <p class="messageBoxCaption">EXPLORE<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Wander from sectors to industries to individual companies.  Learn how the
+                                Wander from sectors to industries to individual companies.  Learn how the 
                                 overall market fits together, and discover how things are performing.
                             </p>
-                        </div>
+                        </div>    
 
                     <a href="/about" class="messageBoxLink">
                         <div class="messageBox">
@@ -92,7 +94,7 @@
                                 <p class="messageBoxCaption">ABOUT<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Are you new to value investing, or would like to know how our tool
+                                Are you new to value investing, or would like to know how our tool 
                                 works? This page is for you.
                             </p>
                         </div>
@@ -108,31 +110,55 @@
                         </ul>
                     </div>
                 </div>
-            </div><!-- end: homeSection -->
-
-            <div id="searchSection">
+            </div><!-- end: homeSection -->      
+    
+            <div id="searchSection"> 
                 <div class="spacer50"></div>
                 <div class="horizontalCenter">
                     <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
-                    <div id="searchBarDecorationWrapper">
-                        <span onclick="doSomething()">
+                    <div style="cursor: pointer;" id="searchBarDecorationWrapper">
+                        <span id="#searchEnterButton">
                             <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
                         </span>
                     </div>
                 </div>
                 <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="searchTable"></table>
+                   <table id="searchTable" class="tablesorter">
+                       <thead>
+                           <tr class="securityTableHeader">
+                                <th class="securityCellCompanyName"></th>
+                                <th class="securityCell">P/E</th>
+                                <th class="securityCell">P/S</th>
+                                <th class="securityCell">P/B</th>
+                                <th class="securityCell">DIV</th>
+                                <th class="securityCell">RANK</th>
+                                <th class="securityCell"></th>
+                                <th class="securityCell"></th>
+                                <th class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></th>
+                            </tr>
+                       </thead>
+                       <tbody></tbody>
+                   </table>
                 </div>
             </div><!-- end: searchSection -->
-
-            <div id="preferencesSection">
+            
+            <div id="preferencesSection"> 
                 <div class="spacer50"></div>
                 <div id="slidersDiv">
                     <h1>Preferences</h1>
 
-<!--                     <label for="brightgreenSlider">Color Slider:</label>
-                    <input id="brightgreenSlider" name="brightgreenSlider" type="range" onChange="colorSliderChange()" min="1.0" max="-1.0" step="0.01" defaultValue="-0.5"/> -->
+                    <div class="spacer50"></div>
+
+                    <div class="slider-range" id="colorSlider">
+                        <div id="custom-handle1" class="ui-slider-handle"></div>
+                        <div id="custom-handle2" class="ui-slider-handle"></div>
+                        <div id="custom-handle3" class="ui-slider-handle"></div>
+                        <div id="custom-handle4" class="ui-slider-handle"></div>
+                    </div>
+
+                    <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+
                 </div>
                 <div class="spacer50"></div>
             </div><!-- end: preferencesSection -->
