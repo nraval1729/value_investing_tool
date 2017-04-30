@@ -18,7 +18,23 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
                                 //sensitivity of the dividend to colors.  greater than 1 will produce
                                 //more colors, less than 1 will produce less colors.
 //PAGE INITIALIZATION
+
+//whether or not user is currently logged in
+var loggedIn = false;
+
 $(document).ready(function() {
+
+    $.post("/", function(data) {
+
+        if(data["loggedIn"] == true) {
+            loggedIn = true;
+            $("#loginButton").html("My Account");
+            $("#dropdownHi").html("Email: " + data["email"]);
+        } else {
+            loggedIn = false;
+        }
+    });
+
     showHome();
 
     // Make the company table sortable
@@ -43,6 +59,7 @@ function showHome() {
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    $("#dropDown2").toggle(false);
 }
 
 function showSearch() {
@@ -80,6 +97,61 @@ function showPreferences() {
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(true);
+
+
+}
+
+function showLogin() {
+    if(!loggedIn) {
+        $("#dropDown").toggle("show");
+    } else {
+        $("#dropDown2").toggle("show");
+    }
+}
+
+function tryLogin() {
+    let username = $("#dropdownUsername").val();
+    let password = $("#dropdownPassword").val();
+    let postParameters = {
+        username: username,
+        password: password,
+    }
+    if (username.length == 0 || password.length == 0) {
+
+        $("#incorrectPass").html("Please fill in both fields");
+    } else {
+        $.post("/validate", postParameters, function(response) {
+            if(response["message"] == "username") {
+                $("#incorrectPass").html("Username not found");
+            } else if(response["message"] == "password") {
+                $("#incorrectPass").html("Incorrect password");
+            } else {
+                //$("#loginButton").html("Logout of  "+ response["user"]);
+                $("#dropdownUsername").val("");
+                $("#loginButton").html("My Account");
+                $("#dropDown").toggle("show");
+                $("#incorrectPass").html("");
+                $("#dropdownHi").html("Email: " + response["user"]);
+                loggedIn = true;
+            }
+            $("#dropdownPassword").val("");
+        });
+    }
+}
+
+function logout() {
+
+    $.post("/logout", function(response) {
+
+
+        $("#dropDown2").toggle("show");
+        loggedIn = false;
+        $("#loginButton").html("Login");
+
+
+    });
+
+
 }
 
 // **********************************************
@@ -101,7 +173,7 @@ function populateSearchSuggestions(security_to_ticker) {
     awesomplete.list = autocompleteList;
 }
 
-// User made a selection from dropdown. 
+// User made a selection from dropdown.
 // This is fired after the selection is applied
 function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
     window.addEventListener("awesomplete-selectcomplete", function(e){
@@ -143,7 +215,7 @@ function renderSearchResult(data) {
         tableHeader = renderSecurityTableHeader();
         appendTable(tableHeader);
         hasHeader = true;
-    } 
+    }
     tableRow = renderSecurityRow(s);
     appendTable(tableRow);
 }
@@ -183,7 +255,7 @@ function renderSecurityTableHeader() {
 //clears the table contents, including the header
 //but does not remove the table itself from the DOM
 function clearSearchTable() {
-    $("#searchTable tr").remove(); 
+    $("#searchTable tr").remove();
     hasHeader = false;
 }
 
@@ -201,7 +273,7 @@ function moveSearchResultUp(row) {
     var index = row.parentNode.parentNode.rowIndex;
     if (index > 1) {
         var $element = row;
-        var row = $($element).parents("tr:first"); 
+        var row = $($element).parents("tr:first");
         row.insertBefore(row.prev());
     }
 }
@@ -210,7 +282,7 @@ function moveSearchResultUp(row) {
 function moveSearchResultDown(row) {
     //citation: http://jsfiddle.net/shemeemsha/4dnoyo77/
     var $element = row;
-    var row = $($element).parents("tr:first"); 
+    var row = $($element).parents("tr:first");
     row.insertAfter(row.next());
 }
 
@@ -234,7 +306,7 @@ function renderSecurityRow(security) {
     return rowString;
 }
 
-//deletes a saearch result row 
+//deletes a saearch result row
 function deleteSearchResult(row) {
     //citation: concept derived from w3schools.com
     var index = row.parentNode.parentNode.rowIndex;
@@ -289,7 +361,7 @@ function renderSectors(sectorToIndustries) {
     var listOfSectors = [];
 
     sectorTable = $('#sectors');
-    
+
     $('#sectors tr').remove();
     industryTable = $('#industries');
     companyTable = $('#companies');
@@ -301,7 +373,7 @@ function renderSectors(sectorToIndustries) {
 
     sectorTable.show();
     industryTable.hide();
-    companyTable.hide();  
+    companyTable.hide();
 
     listOfSectors = Object.keys(sectorToIndustries);
 
@@ -341,7 +413,7 @@ function clickSector(sector) {
 
     $('#industries tr').remove();
     industryTable.show();
-    companyTable.hide();  
+    companyTable.hide();
 
     renderIndustries(nameOfSector);
 }
@@ -360,7 +432,7 @@ function renderIndustries(nameOfSector) {
                 if (index < listOfUniqueIndustries.length) {
                     stringToAppend = stringToAppend + "<td class='exploreTD1'><a class='hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>"; //removed spalinks as a class for the a tag, as it is not in the css collection
                     index++;
-                }      
+                }
             }
         stringToAppend = stringToAppend + "</tr>";
     }
@@ -379,12 +451,12 @@ function clickIndustry(industry) {
     industryTable.hide();
 
     $('#companies tbody').empty();
-    companyTable.show();  
+    companyTable.show();
     renderCompanies(nameOfIndustry);
 }
 
 function renderCompanies(nameOfIndustry) {
-    var companyTableBody = $("#companies tbody"); 
+    var companyTableBody = $("#companies tbody");
 
     var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
     for (var index = 0; index < listOfTickersToCreateRows.length; index++) {

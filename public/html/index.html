@@ -8,8 +8,10 @@
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
     <script type="text/javascript" src="../scripts/javascript/index.js"></script>
 
+
+
     <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
-    <link rel="stylesheet" type="text/css" href="../css/base.css">     
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/static.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
@@ -26,6 +28,20 @@
                 <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
                 <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
                 <button id="preferencesButton" class="navButton" onclick="showPreferences()">Preferences</button>
+                <button id="loginButton" class="navButton" onclick="showLogin()">Login</button>
+                <div id="dropDown" class="dropdownContent">
+                    <input type="text" class="dropdownText" id="dropdownUsername" placeholder="Email" name="username"><br>
+                    <input type="password" class="dropdownText" id="dropdownPassword" placeholder="Password" name="password"><br>
+                    <input type="submit" class="dropdownText" id="dropdownButton" onclick="tryLogin()" value="Submit"> <br>
+                    <a class="dropdownText" id="dropdownForgot" href="forgot_pass"> Forgot your password? </a> <br>
+                    <a class="dropdownText" id="dropdownCreate" href="create_account"> Create an account </a> <br>
+                    <p class="dropdownText" id="incorrectPass"> </p>
+                </div>
+                <div id="dropDown2" class="dropdownContent">
+                    <p class="dropdownText2" id="dropdownHi" ></p> <br>
+                    <a class="dropdownText" id="dropdownSettings" href="/"> Account Settings </a> <br>
+                    <input type="submit" class="dropdownText" id="dropdown2Button" onclick="logout()" value="logout"><br>
+                </div>
             </span>
         </div>
 
@@ -51,22 +67,22 @@
                                 <p class="messageBoxCaption">SEARCH<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Search for stocks by company name or symbol.  Our tool will locate the stock 
-                                and present its metrics and that of its industry competitors to you on the screen.    
+                                Search for stocks by company name or symbol.  Our tool will locate the stock
+                                and present its metrics and that of its industry competitors to you on the screen.
                             </p>
                         </div>
 
-                        <div class="messageBox" onclick="showExplore()"> 
+                        <div class="messageBox" onclick="showExplore()">
                             <div class="horizontal">
                                 <!-- citation: image sourced from clipartfest.com -->
                                 <img class="messageBoxIcon"  alt="compass" src="../images/compass_01.png">
                                 <p class="messageBoxCaption">EXPLORE<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Wander from sectors to industries to individual companies.  Learn how the 
+                                Wander from sectors to industries to individual companies.  Learn how the
                                 overall market fits together, and discover how things are performing.
                             </p>
-                        </div>    
+                        </div>
 
                     <a href="/about" class="messageBoxLink">
                         <div class="messageBox">
@@ -76,7 +92,7 @@
                                 <p class="messageBoxCaption">ABOUT<p>
                             </div>
                             <p class="messageBoxParagraph">
-                                Are you new to value investing, or would like to know how our tool 
+                                Are you new to value investing, or would like to know how our tool
                                 works? This page is for you.
                             </p>
                         </div>
@@ -92,9 +108,9 @@
                         </ul>
                     </div>
                 </div>
-            </div><!-- end: homeSection -->      
-    
-            <div id="searchSection"> 
+            </div><!-- end: homeSection -->
+
+            <div id="searchSection">
                 <div class="spacer50"></div>
                 <div class="horizontalCenter">
                     <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
@@ -109,8 +125,8 @@
                    <table id="searchTable"></table>
                 </div>
             </div><!-- end: searchSection -->
-            
-            <div id="preferencesSection"> 
+
+            <div id="preferencesSection">
                 <div class="spacer50"></div>
                 <div id="slidersDiv">
                     <h1>Preferences</h1>
