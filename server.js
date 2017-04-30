@@ -18,17 +18,15 @@ db.serialize(function() {
 
 })
 
-
 //passport
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
 passport.use(new LocalStrategy({
   passReqToCallback : true
 },
   function(req, username, password, done) {
-      //done(err, username)
       db.get("SELECT password AS password FROM users WHERE email = ?", username, function(err, row) {
-
           if(row == undefined) {
               console.log("no user in database");
               return done(null, username, {message: "username"});
@@ -43,18 +41,11 @@ passport.use(new LocalStrategy({
             return done(null, username, {message: "password"});
         }
       });
-    //   return done(null, username, {message: "username"});
    }
 ));
+
 app.use(passport.initialize());
 app.use(passport.session());
-// passport.serializeUser(function(user, done) {
-//   done(null, 3);
-// });
-//
-// passport.deserializeUser(function(id, done) {
-//
-// });
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
@@ -63,9 +54,7 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-// app.use(require('session-middleware').middleware( "", "" ));
-// // app.use(session()); // session middleware
-// app.use(require('flash')());
+
 //sessions
 var session = require('express-session');
 app.use(session({secret: 'secret'}));
@@ -93,23 +82,18 @@ var spawn = require("child_process").spawn;
 
 app.get("/", function(req, res) {
     sess = req.session;
-
     res.render('index.html');
-
     console.log("sess email get" + sess.email);
-
 });
 
 app.post("/", function(req, res) {
-
         sess = req.session;
         if(sess.email) {
             res.json({loggedIn: true, email: sess.email});
         } else {
             res.json({loggedIn: false, email: sess.email});
         }
-
-})
+});
 
 app.get("/about", function(req, res) {
 	res.render('about.html');
@@ -137,7 +121,6 @@ app.post("/insert", function(req, res) {
     let email = req.body['email'];
     let number = req.body['number'];
     let password = req.body['password'];
-
     let message = "";
     db.get("SELECT * FROM users WHERE email = ?", email, function(err, row) {
         if(row != undefined) {
@@ -163,30 +146,14 @@ app.post("/validate", passport.authenticate('local', { failureRedirect: "/privac
 
   app.post("/logout", function(req, res) {
       req.session.destroy(function(err) {
-      if(err) {
-        console.log(err);
-      } else {
-        res.redirect('/');
-      }
-});
+          if(err) {
+            console.log(err);
+          } else {
+            res.redirect('/');
+          }
+        });
 
-  });
-
-// app.post('/validate', function(req, res, next) {
-//   passport.authenticate('local', function(err, user, info) {
-//
-//     if (!user) {
-//         return res.redirect('/login');
-//      }
-//     else {
-//         var message = info;
-//         var username = user;
-//         res.json({user: username, message: message});
-//
-//     }
-//   })(req, res, next);
-// });
-
+    });
 
 // Util functions
 function launchInfoJsonGenerator() {
