@@ -334,6 +334,9 @@ function renderSecurityRow(security) {
 //saves ticker to personal portfolio
 function saveResult(row) {
 
+    var $element = row;
+    var ele = $($element).parents("tr:first");
+
 
     if(loggedIn) {
         tick = row.value;
@@ -341,12 +344,12 @@ function saveResult(row) {
         //save
         if($("#" + tick + "Button").html() == "save") {
             $.post("/addFav", postParameters, function(res) {
-                $("#" + row.id).html("unsave");
+                ele['prevObject'].html("unsave");
             });
         //unsave
         } else {
             $.post("/removeFav", postParameters, function(res) {
-                $("#" + row.id).html("save");
+                ele['prevObject'].html("save");
             });
         }
     //must be logged in to save
