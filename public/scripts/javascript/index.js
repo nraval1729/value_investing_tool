@@ -38,8 +38,8 @@ $(document).ready(function() {
     showHome();
 
     // Make the companies and search results table sortable
-    $("#companies").tablesorter();
-    $("#searchTable").tablesorter();
+    //$("#companies").tablesorter();
+    //$("#searchTable").tablesorter();
 
     $.get("/info", function(data) {
         infoJSON = data;
@@ -150,9 +150,7 @@ function logout() {
         loggedIn = false;
         $("#loginButton").html("Login");
 
-
     });
-
 
 }
 
@@ -237,11 +235,14 @@ function renderSearchResult(data) {
     tableRow = renderSecurityRow(s);
     appendTableBody(tableRow);
 
+    //commented because there is an error
+    /*
     // Tell sorter that new values were inserted into the table - experimental
     searchTable.trigger("update")
                .trigger("sorton", [searchTable.get(0).config.sortList])
                .trigger("appendCache")
                .trigger("applyWidgets");;
+    */
 
 }
 
@@ -280,7 +281,7 @@ function renderSecurityTableHeader() {
 //clears the table contents, including the header but does not remove the table itself from the DOM
 function clearSearchTable() {
     $("#searchTable").hide();
-    $("#searchTable tbody").empty(); 
+    $("#searchTable tbody").empty();
 
     // Remove cleared rows from cache. Prevent redrawing deleted rows
     $("#searchTable").trigger("update");
@@ -293,7 +294,7 @@ function moveSearchResultUp(row) {
     var index = row.parentNode.parentNode.rowIndex;
     if (index > 1) {
         var $element = row;
-        var row = $($element).parents("tr:first"); 
+        var row = $($element).parents("tr:first");
         row.insertBefore(row.prev());
     }
 }
@@ -302,7 +303,7 @@ function moveSearchResultUp(row) {
 function moveSearchResultDown(row) {
     //citation: http://jsfiddle.net/shemeemsha/4dnoyo77/
     var $element = row;
-    var row = $($element).parents("tr:first"); 
+    var row = $($element).parents("tr:first");
     row.insertAfter(row.next());
 }
 
@@ -321,11 +322,55 @@ function renderSecurityRow(security) {
     rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_01.png"></button></td>';
     rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_01.png"></button></td>';
     rowString += '<td class="black"><button class="searchResultButton" onclick="deleteSearchResult(this)"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_01.png"></td>';
+
+    //TODO STEPHEN
+
+    rowString += '<td class="black"><button class="searchResultButton" value="' + security.ticker + '" id="' + security.ticker + 'Button" onclick="saveResult(this)">save</td>';
+
     rowString += "</tr>";
     return rowString;
 }
 
-//deletes a search result row 
+//saves ticker to personal portfolio
+function saveResult(row) {
+
+
+    if(loggedIn) {
+        tick = row.value;
+        var postParameters = {ticker: tick};
+        //save
+        if($("#" + tick + "Button").html() == "save") {
+            $.post("/addFav", postParameters, function(res) {
+                $("#" + row.id).html("unsave");
+            });
+        //unsave
+        } else {
+            $.post("/removeFav", postParameters, function(res) {
+                $("#" + row.id).html("save");
+            });
+        }
+    //must be logged in to save
+    } else {
+        alert("Must be logged in to save.")
+    }
+}
+function loadSaved() {
+    if(loggedIn) {
+        $.post("/loadSaved", function(res) {
+            var tickerList = res['list'];
+
+            for(var i = 0; i < tickerList.length; i++) {
+                var dataForUserSelection = infoJSON["technical_map"][tickerList[i]];
+                renderSearchResult(dataForUserSelection);
+            }
+        });
+    } else {
+        alert("Must be logged in to load all saved.")
+    }
+}
+
+
+//deletes a search result row
 function deleteSearchResult(row) {
     row.closest('tr').remove();
 
@@ -377,7 +422,7 @@ function renderSectors(sectorToIndustries) {
     var listOfSectors = [];
 
     sectorTable = $('#sectors');
-    
+
     $('#sectors tr').remove();
     industryTable = $('#industries');
     companyTable = $('#companies');
@@ -389,7 +434,7 @@ function renderSectors(sectorToIndustries) {
 
     sectorTable.show();
     industryTable.hide();
-    companyTable.hide();  
+    companyTable.hide();
 
     listOfSectors = Object.keys(sectorToIndustries);
 
@@ -429,7 +474,7 @@ function clickSector(sector) {
 
     $('#industries tr').remove();
     industryTable.show();
-    companyTable.hide();  
+    companyTable.hide();
 
     renderIndustries(nameOfSector);
 }
@@ -448,7 +493,7 @@ function renderIndustries(nameOfSector) {
                 if (index < listOfUniqueIndustries.length) {
                     stringToAppend = stringToAppend + "<td class='exploreTD1'><a class='hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>"; //removed spalinks as a class for the a tag, as it is not in the css collection
                     index++;
-                }      
+                }
             }
         stringToAppend = stringToAppend + "</tr>";
     }
@@ -467,12 +512,12 @@ function clickIndustry(industry) {
     industryTable.hide();
 
     $('#companies tbody').empty();
-    companyTable.show();  
+    companyTable.show();
     renderCompanies(nameOfIndustry);
 }
 
 function renderCompanies(nameOfIndustry) {
-    var companyTableBody = $("#companies tbody"); 
+    var companyTableBody = $("#companies tbody");
 
     var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
     for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
@@ -536,6 +581,7 @@ function createRowString(companyInfo) {
     rowString += renderSecurityCell(companyInfo["div_cur"], companyInfo["div_avg"], true);
     rowString += "<td class='exploreTD2 black'>" + companyInfo['s_rank'] + "</td>";
 
+
     rowString += "</tr>";
     return rowString;
 }
@@ -571,7 +617,7 @@ function refreshSearchTableData() {
     var rowsToAdd = "";
 
     $('#searchTable tr').each(function() {
-        var securityName = $(this).find("td:first").text(); 
+        var securityName = $(this).find("td:first").text();
         console.log("securityName = " + securityName);
 
         if(securityName) {
@@ -580,7 +626,7 @@ function refreshSearchTableData() {
             var s = new security(thisSecurityData);
             var tableRow = renderSecurityRow(s);
             rowsToAdd += tableRow;
-        }   
+        }
     });
 
     // Clear and redraw the table

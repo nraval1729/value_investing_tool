@@ -11,10 +11,11 @@ app.engine('html', engines.hogan);
 
 //sqlite3
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('temp.sqlite3');
+//can use :memory: for in memory database but this is easier to debug
+var db = new sqlite3.Database('userDatabase.sqlite3');
 db.serialize(function() {
     db.run("CREATE TABLE if not exists users (email varchar primary key, number varchar, password varchar)");
-    db.run("CREATE TABLE if not exists favorites (user_id integer, ticker varchar)");
+    db.run("CREATE TABLE if not exists favorites (email varchar, ticker varchar, PRIMARY KEY (email, ticker))");
 
 })
 
@@ -28,16 +29,12 @@ passport.use(new LocalStrategy({
   function(req, username, password, done) {
       db.get("SELECT password AS password FROM users WHERE email = ?", username, function(err, row) {
           if(row == undefined) {
-              console.log("no user in database");
               return done(null, username, {message: "username"});
           }
           var realpass = row.password;
           if(password == realpass) {
-            console.log("correct pass");
             return done(null, username, {message: "success"});
-
         } else {
-            console.log("incorrect pass");
             return done(null, username, {message: "password"});
         }
       });
@@ -83,7 +80,6 @@ var spawn = require("child_process").spawn;
 app.get("/", function(req, res) {
     sess = req.session;
     res.render('index.html');
-    console.log("sess email get" + sess.email);
 });
 
 app.post("/", function(req, res) {
@@ -139,21 +135,49 @@ app.post("/validate", passport.authenticate('local', { failureRedirect: "/privac
       if(message == "success") {
           sess = req.session;
           sess.email = username;
-          console.log("sess email" + sess.email);
+
       }
       res.json({user: username, message: message});
   });
 
-  app.post("/logout", function(req, res) {
-      req.session.destroy(function(err) {
-          if(err) {
-            console.log(err);
-          } else {
-            res.redirect('/');
-          }
-        });
-
+app.post("/logout", function(req, res) {
+  req.session.destroy(function(err) {
+      if(err) {
+        console.log(err);
+      } else {
+        res.redirect('/');
+      }
     });
+});
+
+app.post("/addFav", function(req, res) {
+    sess = req.session;
+    var email = sess.email;
+    var ticker = req.body['ticker'];
+    db.run("INSERT or IGNORE INTO favorites (email, ticker) VALUES (?, ?)", [email, ticker]);
+    res.json({ticker: ticker});
+});
+app.post("/removeFav", function(req, res) {
+    sess = req.session;
+    var email = sess.email;
+    var ticker = req.body['ticker'];
+    db.run("DELETE FROM favorites WHERE email = ? AND ticker = ?", [email, ticker]);
+    res.json({ticker: ticker});
+});
+app.post("/loadSaved", function(req, res) {
+
+    sess = req.session;
+    var email = sess.email;
+    var list = [];
+
+    db.each("SELECT ticker FROM favorites WHERE email = ?", [email], function(err, row) {
+        list.push(row.ticker);
+
+    }, function() {
+
+        res.json({list: list});
+    });
+});
 
 // Util functions
 function launchInfoJsonGenerator() {
