@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Value Investing Tool - Home</title>
+    <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/index.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../scripts/javascript/slider_range.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">      
+    <link rel="stylesheet" type="text/css" href="../css/base.css">     
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+<body>
+
+    <div id="page">
+
+        <div class="centerMe">
+            <div id="indexHeader">
+                <span style="float:left; margin-top:-7px">
+                    <button id="logoButton" onclick="showHome()">Value Investing Tool</button>
+                </span>
+                <span style="float:right">
+                    <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
+                    <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
+                    <button id="preferencesButton" class="navButton" onclick="togglePreferences()">Preferences</button>
+                </span>
+            </div>
+        </div>
+
+        <div id="interior">   
+
+            <div class="centerMe">    
+                <div id="preferencesSection"> 
+                    <div class="spacer50"></div>
+                    <div id="slidersDiv">
+                        <h1>Preferences</h1>
+                        <div class="spacer50"></div>
+
+                        <div class="slider-range" id="colorSlider">
+                            <div id="custom-handle1" class="ui-slider-handle"></div>
+                            <div id="custom-handle2" class="ui-slider-handle"></div>
+                            <div id="custom-handle3" class="ui-slider-handle"></div>
+                            <div id="custom-handle4" class="ui-slider-handle"></div>
+                        </div>
+
+                        <div class="spacer10"></div>
+                        <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+                    </div>
+
+                </div><!-- end: preferencesSection -->
+            </div>   
+
+            <div class="centerMe">
+                <div id="homeSection">
+                    <div class="spacer100"></div>
+                    <div class="centerMe">
+
+                        <!-- explore search about -->
+
+                        <div class="splashBox" onclick="showSearch()">
+                            <div class="horizontal">
+                                <!-- citation: image sourced from myiconfinder.com -->
+                                <img class="splashBoxIcon" alt="magnifying glass" src="../images/magnifying_glass_02.png">
+                                <p class="splashBoxCaption" id="splashBoxCaptionOne">SEARCH<p>
+                            </div>
+                            <p class="splashBoxParagraph">
+                                Search for stocks by company name or symbol.  Our tool will locate the stock 
+                                and present its metrics and that of its industry competitors to you on the screen.    
+                            </p>
+                        </div>
+
+                        <div class="splashBox" onclick="showExplore()"> 
+                            <div class="horizontal">
+                                <!-- citation: image sourced from clipartfest.com -->
+                                <img class="splashBoxIcon" alt="compass" src="../images/compass_02.png">
+                               
+                                <p class="splashBoxCaption" id="splashBoxCaptionTwo">EXPLORE<p>
+                               
+                            </div>
+                            <p class="splashBoxParagraph">
+                                Wander from sectors to industries to individual companies.  Learn how the 
+                                overall market fits together, and discover how things are performing.
+                            </p>
+                        </div>    
+
+                    <a href="/about" class="splashBoxLink">
+                        <div class="splashBox">
+                            <div class="horizontal">
+                                <!-- citation: image sourced from iconfinder.com -->
+                                <img class="splashBoxIcon" alt="information symbol" src="../images/information_icon_02.png">
+                                <p class="splashBoxCaption" id="splashBoxCaptionThree">ABOUT<p>
+                            </div>
+                            <p class="splashBoxParagraph">
+                                Are you new to value investing, or would like to know how our tool 
+                                works? This page is for you.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                       <!--table id="homeTable">leader board </table-->
+                    </div>
+                </div><!-- end: homeSection --> 
+            </div>  
+
+            <div id="searchSection"> 
+                <div class="spacer100"></div>
+                <div class="horizontalCenter">
+                    <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
+                    <div id="searchBarDecorationWrapper">
+                        <span id="#searchEnterButton">
+                            <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
+                        </span>
+                    </div>
+                </div>
+                <div class="spacer50"></div>
+                <div class="centerMe">
+                   <table id="searchTable"></table>
+                </div>
+            </div><!-- end: searchSection -->
+            
+
+            <div class="centerMe">
+                <div id="exploreSection">
+                    <div class="spacer25"></div>
+
+                    <div class="centerMe">
+                        <ul id="breadCrumbList"> 
+                        </ul>
+                    </div>
+
+                    <div id="exploreSectorSection" class="centerMe">
+                        <ul id="exploreSectorList" class="centerMe">
+                        </ul>
+                    </div>
+
+                    <div id="exploreIndustrySection" class="centerMe">
+                        <ul id="exploreIndustryList" class="centerMe">
+                        </ul>
+                    </div>
+
+                    <div id="exploreCompanySection" class="centerMe">
+                        <table id="exploreTable"></table>
+                    </div>
+                </div><!-- end: exploreSection -->
+            </div>
+
+        </div><!-- end: interior -->
+    </div>
+</body>
+</html>
