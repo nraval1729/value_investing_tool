@@ -1,20 +1,3 @@
-/* to style the placeholder text inside of the search bars
-citation: http://stackoverflow.com/questions/2610497/
-change-an-html5-inputs-placeholder-color-with-css */
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: rgb(150,150,150);
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: rgb(150,150,150);
-    opacity: 1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: rgb(150,150,150);
-    opacity: 1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgb(150,150,150);
-}
 
 
 * {
@@ -38,7 +21,7 @@ change-an-html5-inputs-placeholder-color-with-css */
 }
 
 body {
-    background-color: black;
+    background-color: white;
     width: 100%;
     display: flex;
     justify-content: center;

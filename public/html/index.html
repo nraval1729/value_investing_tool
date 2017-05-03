@@ -12,9 +12,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../scripts/javascript/slider_range.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">
+    <link rel="stylesheet" type="text/css" href="../css/awesomplete.css">      
     <link rel="stylesheet" type="text/css" href="../css/base.css">     
-    <link rel="stylesheet" type="text/css" href="../css/static.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 
 </head>
@@ -22,87 +21,100 @@
 
     <div id="page">
 
-        <div id="indexHeader">
-            <span style="float:left; margin-top:-5px">
-                <button id="logoButton" onclick="showHome()">Value Investing Tool</button>
-            </span>
-            <span style="float:right">
-                <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
-                <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
-                <button id="preferencesButton" class="navButton" onclick="showPreferences()">Preferences</button>
-            </span>
+        <div class="centerMe">
+            <div id="indexHeader">
+                <span style="float:left; margin-top:-7px">
+                    <button id="logoButton" onclick="showHome()">Value Investing Tool</button>
+                </span>
+                <span style="float:right">
+                    <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
+                    <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
+                    <button id="preferencesButton" class="navButton" onclick="togglePreferences()">Preferences</button>
+                </span>
+            </div>
         </div>
 
-        <!--/div-->
-        <div id="interior">
+        <div id="interior">   
 
-            <div id="homeSection">
-                <div id="bannerImageWrapper" class="centerMe">
-                    <!-- citation: image sourced from buzzerg.com -->
-                    <img id="bannerImage" alt="warren buffett" src="../images/buffett_01.png">
-                </div>
-                <div class="spacer25"></div>
-                <div id="largeCaption" class="centerMe">
-                    <p>Value Investing Tool</p>
-                </div>
+            <div class="centerMe">    
+                <div id="preferencesSection"> 
+                    <div class="spacer50"></div>
+                    <div id="slidersDiv">
+                        <h1>Preferences</h1>
+                        <div class="spacer50"></div>
 
-                <div class="horizontalCenter">
+                        <div class="slider-range" id="colorSlider">
+                            <div id="custom-handle1" class="ui-slider-handle"></div>
+                            <div id="custom-handle2" class="ui-slider-handle"></div>
+                            <div id="custom-handle3" class="ui-slider-handle"></div>
+                            <div id="custom-handle4" class="ui-slider-handle"></div>
+                        </div>
 
-                        <div class="messageBox" onclick="showSearch()">
+                        <div class="spacer10"></div>
+                        <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+                    </div>
+
+                </div><!-- end: preferencesSection -->
+            </div>   
+
+            <div class="centerMe">
+                <div id="homeSection">
+                    <div class="spacer100"></div>
+                    <div class="centerMe">
+
+                        <!-- explore search about -->
+
+                        <div class="splashBox" onclick="showSearch()">
                             <div class="horizontal">
                                 <!-- citation: image sourced from myiconfinder.com -->
-                                <img class="messageBoxIcon" alt="magnifying glass" src="../images/magnifying_glass_01.png">
-                                <p class="messageBoxCaption">SEARCH<p>
+                                <img class="splashBoxIcon" alt="magnifying glass" src="../images/magnifying_glass_02.png">
+                                <p class="splashBoxCaption" id="splashBoxCaptionOne">SEARCH<p>
                             </div>
-                            <p class="messageBoxParagraph">
+                            <p class="splashBoxParagraph">
                                 Search for stocks by company name or symbol.  Our tool will locate the stock 
                                 and present its metrics and that of its industry competitors to you on the screen.    
                             </p>
                         </div>
 
-                        <div class="messageBox" onclick="showExplore()"> 
+                        <div class="splashBox" onclick="showExplore()"> 
                             <div class="horizontal">
                                 <!-- citation: image sourced from clipartfest.com -->
-                                <img class="messageBoxIcon"  alt="compass" src="../images/compass_01.png">
-                                <p class="messageBoxCaption">EXPLORE<p>
+                                <img class="splashBoxIcon" alt="compass" src="../images/compass_02.png">
+                               
+                                <p class="splashBoxCaption" id="splashBoxCaptionTwo">EXPLORE<p>
+                               
                             </div>
-                            <p class="messageBoxParagraph">
+                            <p class="splashBoxParagraph">
                                 Wander from sectors to industries to individual companies.  Learn how the 
                                 overall market fits together, and discover how things are performing.
                             </p>
                         </div>    
 
-                    <a href="/about" class="messageBoxLink">
-                        <div class="messageBox">
+                    <a href="/about" class="splashBoxLink">
+                        <div class="splashBox">
                             <div class="horizontal">
                                 <!-- citation: image sourced from iconfinder.com -->
-                                <img class="messageBoxIcon" alt="information symbol" src="../images/information_icon_01.png">
-                                <p class="messageBoxCaption">ABOUT<p>
+                                <img class="splashBoxIcon" alt="information symbol" src="../images/information_icon_02.png">
+                                <p class="splashBoxCaption" id="splashBoxCaptionThree">ABOUT<p>
                             </div>
-                            <p class="messageBoxParagraph">
+                            <p class="splashBoxParagraph">
                                 Are you new to value investing, or would like to know how our tool 
                                 works? This page is for you.
                             </p>
                         </div>
                     </a>
-                </div><!-- end: horizontalCenter -->
-
-                <div class="centerMe">
-                    <div class="nonHoverBox">
-                        <ul id="footerHomePageLinks">
-                            <li>
-                                <a href="privacy_policy">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div><!-- end: homeSection -->      
-    
+
+                       <!--table id="homeTable">leader board </table-->
+                    </div>
+                </div><!-- end: homeSection --> 
+            </div>  
+
             <div id="searchSection"> 
-                <div class="spacer50"></div>
+                <div class="spacer100"></div>
                 <div class="horizontalCenter">
                     <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
-                    <div style="cursor: pointer;" id="searchBarDecorationWrapper">
+                    <div id="searchBarDecorationWrapper">
                         <span id="#searchEnterButton">
                             <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
                         </span>
@@ -110,116 +122,35 @@
                 </div>
                 <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="searchTable" class="tablesorter">
-                       <thead>
-                           <tr class="securityTableHeader">
-                                <th class="securityCellCompanyName"></th>
-                                <th class="securityCell">P/E</th>
-                                <th class="securityCell">P/S</th>
-                                <th class="securityCell">P/B</th>
-                                <th class="securityCell">DIV</th>
-                                <th class="securityCell">RANK</th>
-                                <th class="securityCell"></th>
-                                <th class="securityCell"></th>
-                                <th class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></th>
-                            </tr>
-                       </thead>
-                       <tbody></tbody>
-                   </table>
+                   <table id="searchTable"></table>
                 </div>
             </div><!-- end: searchSection -->
             
-            <div id="preferencesSection"> 
-                <div class="spacer50"></div>
-                <div id="slidersDiv">
-                    <h1>Preferences</h1>
 
-                    <div class="spacer50"></div>
+            <div class="centerMe">
+                <div id="exploreSection">
+                    <div class="spacer25"></div>
 
-                    <div class="slider-range" id="colorSlider">
-                        <div id="custom-handle1" class="ui-slider-handle"></div>
-                        <div id="custom-handle2" class="ui-slider-handle"></div>
-                        <div id="custom-handle3" class="ui-slider-handle"></div>
-                        <div id="custom-handle4" class="ui-slider-handle"></div>
+                    <div class="centerMe">
+                        <ul id="breadCrumbList"> 
+                        </ul>
                     </div>
 
-                    <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+                    <div id="exploreSectorSection" class="centerMe">
+                        <ul id="exploreSectorList" class="centerMe">
+                        </ul>
+                    </div>
 
-                </div>
-                <div class="spacer50"></div>
-            </div><!-- end: preferencesSection -->
+                    <div id="exploreIndustrySection" class="centerMe">
+                        <ul id="exploreIndustryList" class="centerMe">
+                        </ul>
+                    </div>
 
-
-            <div id="exploreSection">
-                <div class="spacer50"></div>
-                <!--p style="font-size: 400%" class="centerMe">EXPLORE</p-->
-            <span class='centerMe'>
-                <div id="breadCrumbs">
-                    <a id="marketCrumb" class="breadCrumb" onclick='renderSectorsCaller()'>Market Sectors</a>
-                    <a id="crumbSpace1"> >> </a>
-                    <a id="sectorCrumb" class="breadCrumb" onclick='clickSector(this)'>Sector</a>
-                    <a id="crumbSpace2"> >> </a>
-                    <a id="industryCrumb" class="breadCrumb" onclick='clickIndustry(this)'>Industry</a>
-                </div>
-            </span>
-                <span class="centerMe">
-                    <div id="heatmapContainer">
-
-                        <!--Sectors Table-->
-                        <table id="sectors" border="0">
-                        </table>
-
-                        <!--Industries Table-->
-                        <table id="industries" border="0">
-                        </table>
-
-                        <!--Company Table-->
-                        <table id="companies" class="tablesorter" border="0">
-                            <thead>
-                                <tr>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="nameBox" oncontextmenu="return false;">
-                                      Name
-                                    </th>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="peBox" oncontextmenu="return false;">
-                                        <span class="popuptext" id="pePopup">P/E: price-to-earnings ratio</span>
-                                        P/E
-                                    </th>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="psBox" oncontextmenu="return false;">
-                                        <span class="popuptext" id="psPopup">P/S: price-to-sales ratio</span>
-                                        P/S
-                                    </th>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="pbBox" oncontextmenu="return false;">
-                                        <span class="popuptext" id="pbPopup">P/B: price-to-book ratio</span>
-                                        P/B
-                                    </th>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="divBox" oncontextmenu="return false;">
-                                        <span class="popuptext" id="divPopup">DIV: dividend yield (as a percentage)</span>
-                                        DIV
-                                    </th>
-                                    <th class="exploreHeatMapTH hoverlink popup" id="rankBox" oncontextmenu="return false;">
-                                        <span class="popuptext" id="rankPopup">RANK: aggregate ratio performance (lower = better)</span>
-                                        RANK
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div><!-- END: heatmapContainer -->
-                </span>
-
-
-
-
-
-
-
-
-
-
-
-
-            </div><!-- end: exploreSection -->
+                    <div id="exploreCompanySection" class="centerMe">
+                        <table id="exploreTable"></table>
+                    </div>
+                </div><!-- end: exploreSection -->
+            </div>
 
         </div><!-- end: interior -->
     </div>

@@ -36,6 +36,7 @@ function resetColorSlider() {
 
 // Calculate the colored parts of the slider
 function calcRangeColors() {
+
     var leftOffsets = [0, $("#custom-handle1").position().left, $("#custom-handle2").position().left, $("#custom-handle3").position().left, $("#custom-handle4").position().left];
     var rightOffsets = [$("#custom-handle1").position().left, $("#custom-handle2").position().left, $("#custom-handle3").position().left, $("#custom-handle4").position().left, $("#colorSlider").width()];
     var colors = ["brightGreen", "darkGreen", "black", "darkRed", "brightRed"];   
@@ -92,7 +93,7 @@ function myChange(event, ui) {
     colorBreakPoint2 = ui.values[1]; 
     colorBreakPoint1 = ui.values[0];
 
-    refreshSearchTableData();
+    refreshTables();
 }
 
 
