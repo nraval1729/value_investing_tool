@@ -20,17 +20,22 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
 //PAGE INITIALIZATION
 $(document).ready(function() {
     showHome();
-    // Make the company table sortable
-    $("#companies").tablesorter();
+    
+    // Make the explore + search tables sortable
+    $("#exploreTable").tablesorter();
+    $("#searchTable").tablesorter();
 
     $.get("/info", function(data) {
+
         infoJSON = data;
+
         var securityToTicker = data["security_to_ticker"];
         var tickerToSecurity = data["ticker_to_security"];
         populateSearchSuggestions(securityToTicker);
         addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
         //renderLeaderboard();
     });
+
 });
 
 //VISIBILITY SECTION
@@ -196,7 +201,7 @@ function processUserSelection(e, securityToTicker, tickerToSecurity, json) {
 
     if (searchTableHasHeader == false) {
         var tableHeader = makeTableHeaderString("searchTable");
-        appendTable(tableHeader, "searchTable");
+        appendHeader(tableHeader, "searchTable");
         searchTableHasHeader = true;
     }
     //hand data off to rendering...
@@ -214,8 +219,40 @@ function processUserSelection(e, securityToTicker, tickerToSecurity, json) {
 function appendTable(str, tableName) {
     var tableId = "#" + tableName;
     var searchTable = $(tableId);
-    var tr = str;
     searchTable.append(str);
+
+}
+
+function appendHeader(str, tableName) {
+    var searchTable = $("#"+tableName);
+
+    var thead = searchTable.find("thead")
+
+    if(thead.length == 0) {
+        searchTable.append("<thead></thead>");
+    }
+
+    var tableId = "#" + tableName + " thead";
+    var searchTableHead = $(tableId);
+    searchTableHead.append(str);
+    // $("#"+tableName).trigger("destroy");
+    // $("#"+tableName).tablesorter().trigger("update").trigger("appendCache");
+}
+
+function appendBody(str, tableName) {
+    var searchTable = $("#"+tableName);
+
+    var tbody = searchTable.find("tbody");
+
+    if(tbody.length == 0) {
+        searchTable.append("<tbody></tbody>");
+    } 
+
+    var tableId = "#" + tableName + " tbody";
+    var searchTableBody = $(tableId);
+
+    searchTableBody.append(str);
+    $("#"+tableName).trigger("updateAll");
 }
 
 function makeTableRow(ticker, table) {
@@ -225,7 +262,7 @@ function makeTableRow(ticker, table) {
     var tickerList = getTickerList(table);
     var tableRow = makeTableRowString(s, table);
     addTicker(tickerList, ticker);
-    appendTable(tableRow, table);
+    appendBody(tableRow, table);
 }
 
 //takes the json data and makes an object out of
@@ -316,16 +353,16 @@ function makeTableRowString(security, tableName) {
 //renders the table header row for the search result table
 function makeTableHeaderString(tableName) {
     var str = '<tr class="securityTableHeader">';
-    str +=  '<td class="securityCellCompanyName"></td>';
-    str +=  '<td class="tableHeaderCell">P/E &nbsp;&nbsp;&nbsp;</td>';
-    str +=  '<td class="tableHeaderCell">P/S &nbsp;&nbsp;&nbsp;</td>';
-    str +=  '<td class="tableHeaderCell">P/B &nbsp;&nbsp;&nbsp;</td>';
-    str +=  '<td class="tableHeaderCell">DIV &nbsp;&nbsp;&nbsp;</td>';
-    str +=  '<td class="tableHeaderCell">RANK</td>';
-    str +=  '<td class="tableHeaderCell"></td>';
-    str +=  '<td class="tableHeaderCell"></td>';
+    str +=  '<th class="securityCellCompanyName"></th>';
+    str +=  '<th class="tableHeaderCell">P/E &nbsp;&nbsp;&nbsp;</th>';
+    str +=  '<th class="tableHeaderCell">P/S &nbsp;&nbsp;&nbsp;</th>';
+    str +=  '<th class="tableHeaderCell">P/B &nbsp;&nbsp;&nbsp;</th>';
+    str +=  '<th class="tableHeaderCell">DIV &nbsp;&nbsp;&nbsp;</th>';
+    str +=  '<th class="tableHeaderCell">RANK</th>';
+    str +=  '<th class="tableHeaderCell"></th>';
+    str +=  '<th class="tableHeaderCell"></th>';
     if (tableName == "searchTable") {
-        str +=  '<td class="tableHeaderCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></td>';
+        str +=  '<th class="tableHeaderCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></th>';
     }
     str += '</tr>';
     return str;
@@ -486,7 +523,7 @@ function renderSectorListItem(sectorName, color) {
 
 function renderTickerLevel(industryName) {
     var tableHeader = makeTableHeaderString("exploreTable");
-    appendTable(tableHeader, "exploreTable");
+    appendHeader(tableHeader, "exploreTable");
     exploreTableHasHeader = true;
     var tickers = infoJSON['industry_to_tickers'][industryName];
     var n = tickers.length;
@@ -597,7 +634,7 @@ function refreshTable(tableName, tableHeaderStatus) {
     clearTable(tableName);
 
     tableHeader = makeTableHeaderString(tableName);
-    appendTable(tableHeader, tableName);
+    appendHeader(tableHeader, tableName);
 
     // Header
     if (tableName == "searchTable") {
@@ -624,7 +661,7 @@ function renderLeaderboard() {
     var n = tickers.length;
     console.log(tickers);
     var tableHeader = makeTableHeaderString("homeTable");
-    appendTable(tableHeader, "homeTable");
+    appendHeader(tableHeader, "homeTable");
     for (var i = 0; i < n; i++) {
         var ticker = tickers[i];
         makeTableRow(ticker, "homeTable");  

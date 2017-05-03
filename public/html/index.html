@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Value Investing Tool - Home</title>
-    <script type="text/javascript" src="../scripts/javascript/jquery-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="../scripts/javascript/jquery.tablesorter.js"></script>
     <script type="text/javascript" src="../scripts/javascript/awesomplete.js"></script>
     <script type="text/javascript" src="../scripts/javascript/index.js"></script>
@@ -122,7 +122,10 @@
                 </div>
                 <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="searchTable"></table>
+                   <table id="searchTable">
+                       <thead></thead>
+                       <tbody></tbody>
+                   </table>
                 </div>
             </div><!-- end: searchSection -->
             
@@ -147,7 +150,10 @@
                     </div>
 
                     <div id="exploreCompanySection" class="centerMe">
-                        <table id="exploreTable"></table>
+                        <table id="exploreTable">
+                            <thead></thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
                 </div><!-- end: exploreSection -->
             </div>
