@@ -1,2 +1,4 @@
 current.json
 technical.json
+*.log
+reports/

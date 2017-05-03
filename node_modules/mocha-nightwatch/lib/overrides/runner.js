@@ -1,4 +1,8 @@
 var create = require('lodash.create');
+var utils = require('../utils');
+var filter = utils.filter;
+var indexOf = utils.indexOf;
+var some = utils.some;
 var NightwatchClient = require('../nightwatch/client');
 var MochaRunner = require('../runner');
 module.exports = Runner;
@@ -15,6 +19,10 @@ Runner.prototype.run = function(nightwatch, test_settings, fn) {
   var self = this;
   var rootSuite = this.suite;
   var client = new NightwatchClient(nightwatch, this, test_settings);
+
+  if (this.hasOnly) {
+    filterOnly(rootSuite);
+  }
 
   fn = fn || function() {};
 
@@ -81,3 +89,45 @@ Runner.prototype.failOnError = function(err) {
   // bail on hooks
   this.emit('end');
 };
+
+/**
+ * Filter suites based on `isOnly` logic.
+ *
+ * @param {Array} suite
+ * @returns {Boolean}
+ * @api private
+ */
+function filterOnly (suite) {
+  if (suite._onlyTests.length) {
+    // If the suite contains `only` tests, run those and ignore any nested suites.
+    suite.tests = suite._onlyTests;
+    suite.suites = [];
+  } else {
+    // Otherwise, do not run any of the tests in this suite.
+    suite.tests = [];
+    utils.forEach(suite._onlySuites, function (onlySuite) {
+      // If there are other `only` tests/suites nested in the current `only` suite, then filter that `only` suite.
+      // Otherwise, all of the tests on this `only` suite should be run, so don't filter it.
+      if (hasOnly(onlySuite)) {
+        filterOnly(onlySuite);
+      }
+    });
+    // Run the `only` suites, as well as any other suites that have `only` tests/suites as descendants.
+    suite.suites = filter(suite.suites, function (childSuite) {
+      return indexOf(suite._onlySuites, childSuite) !== -1 || filterOnly(childSuite);
+    });
+  }
+  // Keep the suite only if there is something to run
+  return suite.tests.length || suite.suites.length;
+}
+
+/**
+ * Determines whether a suite has an `only` test or suite as a descendant.
+ *
+ * @param {Array} suite
+ * @returns {Boolean}
+ * @api private
+ */
+function hasOnly (suite) {
+  return suite._onlyTests.length || suite._onlySuites.length || some(suite.suites, hasOnly);
+}
