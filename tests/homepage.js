@@ -1,0 +1,95 @@
+module.exports = {  
+  'Test VIT' : function (client) {
+    client
+      .url('https://valueinvestingtool.herokuapp.com')
+      .waitForElementVisible('body', 1000)
+      .assert.title('Value Investing Tool - Home')
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")      
+      .assert.elementPresent("#bannerImage")
+      .assert.elementPresent(".messageBox")
+      .assert.elementPresent(".messageBoxLink")
+
+      // Search page
+      .click("#searchButton")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")
+      .assert.elementPresent("#logoButton")
+      .setValue("#searchBarInput", "BlackRock")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("ul")
+      .setValue("#searchBarInput", "blk")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("ul")
+
+      // Now use home button from search page
+      .click("#logoButton")
+      .pause(500)
+      .assert.title('Value Investing Tool - Home')
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")      
+      .assert.elementPresent("#bannerImage")
+      .assert.elementPresent(".messageBox")
+      .assert.elementPresent(".messageBoxLink")
+
+      // Explore page
+      .click("#exploreButton")
+      .assert.elementPresent("#marketCrumb")
+      .assert.elementPresent("#sectors")
+      .click(".spaLinks.hoverlink")
+      .assert.elementPresent("#sectorCrumb")
+      .click(".hoverlink")
+      .assert.elementPresent("#industryCrumb")
+
+      // Now use search from explore
+      .click("#searchButton")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")
+      .assert.elementPresent("#logoButton")
+      .setValue("#searchBarInput", "BlackRock")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("ul")
+      .setValue("#searchBarInput", "blk")
+      .pause(500)
+      .assert.elementPresent("#searchBarInput")
+      .assert.elementPresent("#searchBarDecoration")
+      .assert.elementPresent("ul")
+
+      // Now use the home button from explore
+      .click("#logoButton")
+      .pause(500)
+      .assert.title('Value Investing Tool - Home')
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")      
+      .assert.elementPresent("#bannerImage")
+      .assert.elementPresent(".messageBox")
+      .assert.elementPresent(".messageBoxLink")
+
+      // Preferences
+      .click("#preferencesButton")
+      .assert.elementPresent("#slidersDiv")
+      .assert.title('Value Investing Tool - Home')
+      .assert.elementPresent("#searchButton")
+      .assert.elementPresent("#exploreButton")
+      .assert.elementPresent("#preferencesButton")
+
+      .end()
+  }
+}

@@ -14,6 +14,9 @@ function Runnable(title, fn) {
   this._enableTimeouts = true;
   this.timedOut = false;
   this._trace = new Error('done() called multiple times');
+  this._retries = -1;
+  this._currentRetry = 0;
+  this.pending = false;
 }
 
 Runnable.prototype = create(MochaRunnable.prototype, {

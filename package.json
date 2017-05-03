@@ -4,19 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test-e2e": "nightwatch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.3.0",
     "body-parser": "^1.17.1",
     "consolidate": "^0.14.5",
     "express": "^4.15.2",
     "hogan.js": "^3.0.2",
     "nightwatch": "^0.9.14",
-    "phantomjs": "^2.1.7",
-    "python-shell": "^0.4.0",
-    "scraperjs": "^1.2.0"
+    "python-shell": "^0.4.0"
   }
 }
