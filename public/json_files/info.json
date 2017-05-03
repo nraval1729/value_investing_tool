@@ -1,8 +1,4 @@
 {
-    "leaderboard": {
-        "best": ["AFL", "MET", "PFG", "PRU", "PNR", "CMI", "FLS", "IR", "LOW", "HD"],
-        "worst": ["PNR", "CMI", "FLS", "IR"]
-    },
 
     "sector_to_delta": {
         "Industrials": 0.2578357036065671, 
