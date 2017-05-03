@@ -200,22 +200,22 @@ def populate_big_list(big_list, big_dictionary):
     big_list = big_dictionary.values()
 
 def read_biographical_data():
-    with open('biographical.json') as infile:
+    with open(cwd+'/public/json_files/biographical.json') as infile:
         raw_data_biographical = json.load(infile)
     return raw_data_biographical
 
 def read_historical_data():
-    with open('historical.json') as infile:
+    with open(cwd+'/public/json_files/historical.json') as infile:
         raw_data_historical = json.load(infile)
     return raw_data_historical
 
 def read_current_data():
-    with open('current.json') as infile:
+    with open(cwd+'/public/json_files/current.json') as infile:
         raw_data_current = json.load(infile)
     return raw_data_current
 
 def read_valid_tickers():
-    with open('valid_tickers.json') as infile:
+    with open(cwd+'/public/json_files/valid_tickers.json') as infile:
         tickers_json = json.load(infile)
     return tickers_json
 
@@ -327,8 +327,7 @@ def create_technical_map(raw_data_historical, raw_data_current, valid_tickers, t
     return big_dictionary # new craig
 
 def write_outfile(info_dict):
-    #with open(cwd+'/public/json_files/info.json', 'w') as outfile:
-    with open('info.json', 'w') as outfile:
+    with open(cwd+'/public/json_files/info.json', 'w') as outfile:
         json.dump(info_dict, outfile, indent=4)
 
 
@@ -403,18 +402,19 @@ def compute_ratio_delta(industry, info_dict, technical_map, ratio):
 
 def main():
 
-    # put the while true stuff in
+    while True:
+        raw_data_biographical = read_biographical_data()
+        raw_data_historical = read_historical_data()
+        raw_data_current = read_current_data()
+        tickers_json = read_valid_tickers()
+        info_dict = create_info_dict(raw_data_biographical, tickers_json)
+        info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
+        info_dict['industry_to_delta'] = create_industry_delta_map(info_dict, info_dict['technical_map'])
+        info_dict['sector_to_delta'] = create_sector_delta_map(info_dict, info_dict['industry_to_delta'])
 
-    raw_data_biographical = read_biographical_data()
-    raw_data_historical = read_historical_data()
-    raw_data_current = read_current_data()
-    tickers_json = read_valid_tickers()
-    info_dict = create_info_dict(raw_data_biographical, tickers_json)
-    info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
-    info_dict['industry_to_delta'] = create_industry_delta_map(info_dict, info_dict['technical_map'])
-    info_dict['sector_to_delta'] = create_sector_delta_map(info_dict, info_dict['industry_to_delta'])
+        write_outfile(info_dict)
 
-    write_outfile(info_dict)
+        time.sleep(300)
 
 
 if __name__ == "__main__":
