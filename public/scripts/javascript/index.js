@@ -307,6 +307,9 @@ function deleteSearchResult(row, tableName) {
     if (document.getElementById(tableName).rows.length == 1) {
         document.getElementById(tableName).deleteRow(0);
     }
+    $("#searchTable").trigger("update")
+                     .trigger("sorton", [$("#searchTable")[0].config.sortList])
+                     .trigger("appendCache")
 }
 
 //moves search results up one row
