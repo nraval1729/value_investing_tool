@@ -1,0 +1,209 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+
+/* to style the placeholder text inside of the search bars
+citation: http://stackoverflow.com/questions/2610497/
+change-an-html5-inputs-placeholder-color-with-css */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgb(150,150,150);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(150,150,150);
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(150,150,150);
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(150,150,150);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*body {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}*/
+
+.black {
+    background-color: black;
+}
+
+.brightGreen {
+    background-color: #00FF00;
+}
+
+.brightRed {
+    background-color: #FF0000;
+}
+
+.centerMe {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.darkGreen {
+    background-color: #006400;
+}
+
+.darkRed {
+    background-color: #8B0000;
+}
+
+.headerNavigationLink {
+    font-size: 80%;
+    font-weight: normal;
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(200,200,200);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
+.headerNavigationLink:hover {
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+
+/* makes its interior elements
+go from left to right */
+.horizontal {
+    display: flex;
+    flex-direction: row; 
+}
+
+/* makes its interior elements
+go from left to right, and centers
+the interior elements from left to 
+right */
+.horizontalCenter {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+#interior {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+/*#logo {
+    font-size: 170%;
+    margin: 10px;
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}*/
+
+#logoButton {
+    background-color: white;
+    font-size: 170%;
+    margin: 10px;
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    border:none;
+    color: black;
+}
+
+#logoButton:hover {
+    cursor: pointer;
+}
+
+.navButton {
+    /*color: white; */
+    color: black;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-top: -5px;
+    font-size: 105%;
+    font-weight: bold;
+}
+
+.navButton:hover {
+    cursor: pointer;
+    color: rgb(20,20,20);
+    transition: color 0.10s ease;
+    -webkit-transition: color 0.10s ease;
+}
+
+
+.spacer10 {
+    display: block;
+    clear: both;
+    min-height: 10px;
+    height: 10px;  
+}
+
+.spacer25 {
+    display: block;
+    clear: both;
+    min-height: 25px;
+    height: 25px;
+}
+
+.spacer50 {
+    display: block;
+    clear: both;
+    min-height: 50px;
+    height: 50px;
+}
+
+.spacer100 {
+    display: block;
+    clear: both;
+    min-height: 100px;
+    height: 100px;
+}
+
+.spacer150 {
+    display: block;
+    clear: both;
+    min-height: 150px;
+    height: 150px;
+}
+
+.spacer200 {
+    display: block;
+    clear: both;
+    min-height: 200px;
+    height: 200px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* makes its interior elements
+go from top to bottom */
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.white {
+    background-color: white;
+}
+
+
