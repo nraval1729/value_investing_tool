@@ -1,12 +1,12 @@
 //PAGE-WIDE VARIABLES
-var NUM_COLS = 4;
 var infoJSON;
-// old values we used for demo purposes
-// var colorBreakPoint1 = 0.60;
-// var colorBreakPoint2 = 0.40;
-// var colorBreakPoint3 = -0.05;
-// var colorBreakPoint4 = -0.20;
-// var dividend_compression = 0.50;
+var searchTableHasHeader = false;
+var exploreTableHasHeader = false;
+var preferencesAreVisible = false;
+var breadCrumbChain = [];
+var searchTickers = [];
+var exploreTickers = [];
+
 var colorBreakPoint4 = 0.50;    //above or equal to this value: bright red
 var colorBreakPoint3 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
 var colorBreakPoint2 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
@@ -20,69 +20,141 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
 //PAGE INITIALIZATION
 $(document).ready(function() {
     showHome();
-
-    // Make the companies and search results table sortable
+    // Make the company table sortable
     $("#companies").tablesorter();
-    $("#searchTable").tablesorter();
 
     $.get("/info", function(data) {
         infoJSON = data;
         var securityToTicker = data["security_to_ticker"];
         var tickerToSecurity = data["ticker_to_security"];
         populateSearchSuggestions(securityToTicker);
-        addEventListenersForSearch(securityToTicker, tickerToSecurity, data);
+        addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+        //renderLeaderboard();
     });
 });
 
 //VISIBILITY SECTION
+function showExplore() {
+    // TODO
+    // Add loading icon after so that we wait until infoJSON is populated.
+    renderSectorLevel();
+    $("#exploreButton").addClass("underline");
+    $("#searchButton").removeClass("underline");
+    $("#preferencesButton").removeClass("underline");
+    $("#logoButton").toggle(true);
+    $("#homeSection").toggle(false);
+    $("#searchSection").toggle(false);
+    $("#exploreSection").toggle(true);
+    $("#preferencesSection").toggle(false);
+}
+
 function showHome() {
-    $( "#exploreButton" ).removeClass( "underline" );
-    $( "#searchButton" ).removeClass( "underline" );
-    $( "#preferencesButton" ).removeClass( "underline" );
-    $("#logoButton").toggle(false);
+    $("#exploreButton").removeClass("underline");
+    $("#searchButton").removeClass("underline");
+    $("#preferencesButton").removeClass("underline");
     $("#homeSection").toggle(true);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
 }
 
+function togglePreferences() {
+    if (preferencesAreVisible) {
+        hidePreferences();
+    } else {
+        showPreferences();
+    }
+}
+
+function showPreferences() {
+    preferencesAreVisible = true;
+    $("#preferencesSection").slideDown(500);
+}
+
+function hidePreferences() {
+    preferencesAreVisible = false;
+    $("#preferencesSection").slideUp(500);  
+}
+
 function showSearch() {
-    $( "#exploreButton" ).removeClass( "underline" );
-    $( "#searchButton" ).addClass( "underline" );
-    $( "#preferencesButton" ).removeClass( "underline" );
-    $("#logoButton").toggle(true);
+    $("#exploreButton").removeClass("underline");
+    $("#searchButton").addClass("underline");
+    $("#preferencesButton").removeClass("underline");
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
-    $("#searchTable").hide();
 }
 
-function showExplore() {
-    // TODO
-    // Add loading icon after so that we wait until infoJSON is populated.
-    $( "#exploreButton" ).addClass( "underline" );
-    $( "#searchButton" ).removeClass( "underline" );
-    $( "#preferencesButton" ).removeClass( "underline" );
-    $("#logoButton").toggle(true);
-    $("#homeSection").toggle(false);
-    $("#searchSection").toggle(false);
-    $("#exploreSection").toggle(true);
-    $("#preferencesSection").toggle(false);
+// **********************************************
+// TICKER MANAGEMENT FUNCTIONS BEGIN HERE
+// **********************************************
 
-    renderSectors(infoJSON['sector_to_industries']);
+function displayTickers(listName) {
+    console.log("inside displayTickers");
+    if (listName == null) {
+        console.log("list is empty");
+    } else {
+        var n = listName.length;
+        for (var i = 0; i < n; i++) {
+            console.log(listName[i]);
+        }
+    }
 }
 
-function showPreferences() {
-    $( "#exploreButton" ).removeClass( "underline" );
-    $( "#searchButton" ).removeClass( "underline" );
-    $( "#preferencesButton" ).addClass( "underline" );
-    $("#logoButton").toggle(true);
-    $("#homeSection").toggle(false);
-    $("#searchSection").toggle(false);
-    $("#exploreSection").toggle(false);
-    $("#preferencesSection").toggle(true);
+function hasTicker(listName, ticker) {
+    var n = listName.length;
+    for (var i = 0; i < n; i++) {
+        if (listName[i] == ticker) {
+            return true;
+        }
+    }
+    return false;
 }
+
+function addTicker(listName, ticker) {
+    if (!hasTicker(listName, ticker)) {
+        listName.push(ticker);
+    }
+}
+
+function deleteTicker(listName, ticker) {
+    var n = listName.length;
+    var splicePoint = 0;
+    for (var i = 0; i < n; i++) {
+        if (listName[i] == ticker) {
+            splicePoint = i;
+            break;
+        }
+    }
+    listName.splice(splicePoint, 1);
+}
+
+function clearTickers(listName) {
+    for (var i = listName.length; i > 0; i--) {
+        listName.pop();
+    }
+}
+
+function getTickerList(tableName) {
+    var tickerList = "";
+    if (tableName == "exploreTable") {
+        tickerList = exploreTickers;
+    } else if (tableName == "searchTable") {
+        tickerList = searchTickers;
+    }
+    return tickerList;
+}
+
+function hardCopyList(tableName) {
+    var alias = getTickerList(tableName);
+    var tickerListCopy = [];
+    for (var i = 0; i < alias.length; i++) {
+        tickerListCopy.push(alias[i]);
+    }
+    return tickerListCopy;
+}
+
 
 // **********************************************
 // SEARCH SECTION FUNCTIONS BEGIN HERE
@@ -103,73 +175,57 @@ function populateSearchSuggestions(security_to_ticker) {
     awesomplete.list = autocompleteList;
 }
 
-function addEventListenersForSearch(securityToTicker, tickerToSecurity, data) {
-
-    // Enable user selection from drop-down/pressing enter
+// User made a selection from dropdown. 
+// This is fired after the selection is applied
+function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
     window.addEventListener("awesomplete-selectcomplete", function(e){
-        processUserSelection(e.text.trim(), securityToTicker, tickerToSecurity, data);
+        processUserSelection(e, securityToTicker, tickerToSecurity, data);
     }, false);
-
-    // Enable searching by clicking on search icon
-    var searchIcon = $("#searchBarDecorationWrapper");
-    // searchIcon.style.cursor = 'pointer';
-    searchIcon.click(function() {
-        processUserSelection($("#searchBarInput").val().trim(), securityToTicker, tickerToSecurity, data)
-    });
 }
 
-function processUserSelection(userSelection, securityToTicker, tickerToSecurity, data) {
 
+function processUserSelection(e, securityToTicker, tickerToSecurity, json) {
+    var userSelection = e.text.trim();
     var dataForUserSelection;
+    var ticker;
     if (securityToTicker.hasOwnProperty(userSelection)) {
-        dataForUserSelection = data["technical_map"][securityToTicker[userSelection]];
+        ticker = json["security_to_ticker"][userSelection];
     } else {
-        // User selected a ticker
-        if(tickerToSecurity.hasOwnProperty(userSelection)) {
-            dataForUserSelection = data["technical_map"][userSelection];
-        }
-        else {
-            alert("Not found");
-        }
+        ticker = userSelection; // User selected a ticker
     }
 
+    if (searchTableHasHeader == false) {
+        var tableHeader = makeTableHeaderString("searchTable");
+        appendTable(tableHeader, "searchTable");
+        searchTableHasHeader = true;
+    }
     //hand data off to rendering...
-    renderSearchResult(dataForUserSelection);
-
+    if (!hasTicker(searchTickers, ticker)) {
+        makeTableRow(ticker, "searchTable");
+    }
     $("#searchBarInput").val("");
 }
 
-var hasHeader = false; // TODO - put this in a better place
+// **********************************************
+// TABLE MANAGEMENT FUNCTIONS BEGIN HERE
+// **********************************************
 
-//appends the search result table with a row to thead
-function appendTableHeader(str) {
-    var searchTableHeader = $("#searchTable thead");
+//appends the search result table with a row
+function appendTable(str, tableName) {
+    var tableId = "#" + tableName;
+    var searchTable = $(tableId);
     var tr = str;
-    searchTableHeader.append(str);
+    searchTable.append(str);
 }
 
-//appends the search result table with a row to tbody
-function appendTableBody(str) {
-    var searchTableBody = $("#searchTable tbody");
-    var tr = str;
-    searchTableBody.append(str);
-}
-
-//takes search bar result as input, and renders it into the table.  also determines if table needs header, and adds such accordingly.
-function renderSearchResult(data) {
+function makeTableRow(ticker, table) {
+    //data consists of a single stock's technical information
+    var data = infoJSON['technical_map'][ticker];
     s = new security(data);
-
-    var searchTable = $("#searchTable");
-    searchTable.show();
-    tableRow = renderSecurityRow(s);
-    appendTableBody(tableRow);
-
-    // Tell sorter that new values were inserted into the table - experimental
-    searchTable.trigger("update")
-               .trigger("sorton", [searchTable.get(0).config.sortList])
-               .trigger("appendCache")
-               .trigger("applyWidgets");;
-
+    var tickerList = getTickerList(table);
+    var tableRow = makeTableRowString(s, table);
+    addTicker(tickerList, ticker);
+    appendTable(tableRow, table);
 }
 
 //takes the json data and makes an object out of
@@ -188,29 +244,32 @@ function security(data) {
     this.ticker = data['ticker'];
 }
 
-//renders the table header row for the search result table
-function renderSecurityTableHeader() {
-    var str = '<tr class="securityTableHeader">';
-    str +=  '<th class="securityCellCompanyName"></th>';
-    str +=  '<th class="securityCell">P/E</th>';
-    str +=  '<th class="securityCell">P/S</th>';
-    str +=  '<th class="securityCell">P/B</th>';
-    str +=  '<th class="securityCell">DIV</th>';
-    str +=  '<th class="securityCell">RANK</th>';
-    str +=  '<th class="securityCell"></th>';
-    str +=  '<th class="securityCell"></th>';
-    str +=  '<th class="securityCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearSearchTable()">clear</button></th>';
-    str += '</tr>';
-    return str;
+//clears the table contents, including the header
+//but does not remove the table itself from the DOM
+function clearTable(tableName) {
+    var str = "#" + tableName + " tr"; 
+    $(str).remove();
+    if (tableName == "searchTable") {
+        searchTableHasHeader = false;
+    } else {
+        exploreTableHasHeader = false;
+    }
+    clearTickers(getTickerList(tableName));
 }
 
-//clears the table contents, including the header but does not remove the table itself from the DOM
-function clearSearchTable() {
-    $("#searchTable").hide();
-    $("#searchTable tbody").empty(); 
-
-    // Remove cleared rows from cache. Prevent redrawing deleted rows
-    $("#searchTable").trigger("update");
+//deletes a search result row 
+function deleteSearchResult(row, tableName) {
+    //citation: concept derived from w3schools.com
+    var index = row.parentNode.parentNode.rowIndex;
+    var security = document.getElementById(tableName).rows[index].cells[0].innerText;
+    var ticker = infoJSON['security_to_ticker'][security];
+    var tickerList = getTickerList(tableName);
+    
+    deleteTicker(tickerList, ticker);
+    document.getElementById(tableName).deleteRow(index);
+    if (document.getElementById(tableName).rows.length == 1) {
+        document.getElementById(tableName).deleteRow(0);
+    }
 }
 
 //moves search results up one row
@@ -234,30 +293,42 @@ function moveSearchResultDown(row) {
 }
 
 //renders a table row for a single security
-function renderSecurityRow(security) {
+function makeTableRowString(security, tableName) {
     //citation: arrow buttons image source: http://www.freeiconspng.com
     //citation: x-button image source: http://www.iconsdb.com
     var rowString = '<tr>';
     var link = "http://finance.yahoo.com/quote/" + security.ticker + "?p=" + security.ticker;
-    rowString += "<td class='securityCellCompanyName black'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
+    rowString += "<td class='securityCellCompanyName white'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
     rowString += renderSecurityCell(security.pe_cur, security.pe_avg, false);
     rowString += renderSecurityCell(security.ps_cur, security.ps_avg, false);
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
-    rowString += "<td class='black'>" + security.s_rank + "</td>";
-    rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_01.png"></button></td>';
-    rowString +=  '<td class="black"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_01.png"></button></td>';
-    rowString += '<td class="black"><button class="searchResultButton" onclick="deleteSearchResult(this)"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_01.png"></td>';
+    rowString += "<td class='white'>" + security.s_rank + "</td>";
+    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_02.png"></button></td>';
+    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_02.png"></button></td>';
+    if (tableName == "searchTable") {
+        rowString += '<td class="white"><button class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_02.png"></td>';                                                           
+    }
     rowString += "</tr>";
     return rowString;
 }
 
-//deletes a search result row 
-function deleteSearchResult(row) {
-    row.closest('tr').remove();
-
-    // Trigger update so table sorter removes this row from cache; prevent redrawing deleted rows.
-    $("#searchTable").trigger("update");
+//renders the table header row for the search result table
+function makeTableHeaderString(tableName) {
+    var str = '<tr class="securityTableHeader">';
+    str +=  '<td class="securityCellCompanyName"></td>';
+    str +=  '<td class="tableHeaderCell">P/E &nbsp;&nbsp;&nbsp;</td>';
+    str +=  '<td class="tableHeaderCell">P/S &nbsp;&nbsp;&nbsp;</td>';
+    str +=  '<td class="tableHeaderCell">P/B &nbsp;&nbsp;&nbsp;</td>';
+    str +=  '<td class="tableHeaderCell">DIV &nbsp;&nbsp;&nbsp;</td>';
+    str +=  '<td class="tableHeaderCell">RANK</td>';
+    str +=  '<td class="tableHeaderCell"></td>';
+    str +=  '<td class="tableHeaderCell"></td>';
+    if (tableName == "searchTable") {
+        str +=  '<td class="tableHeaderCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></td>';
+    }
+    str += '</tr>';
+    return str;
 }
 
 //renders a single cell for the search results table
@@ -267,15 +338,15 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     var excursion = (currValueNum - histValueNum) / histValueNum;
     if (isDividend) excursion  = - dividendCoefficient * excursion; //adjust the range and flip sign
     var color = determineColor(excursion);
-    var tdString = '<td class = "securityCell ' + color + '">' + currValue + '</td>';
+    var tdString = '<td class = "securityCell"><div class="securityCellContent ' + color + '">' + currValue + '</div></td>';
     return tdString;
 }
 
-//returns which color to use for the table cell based on the input value note: excursion is how far away from zero (do some research on audio speakers to see usage of this word "speaker excursion")
+//returns which color to use for the
+//table cell based on the input value
 function determineColor(excursion) {
     var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
     var index;
-    //values chosen for illustration purposes
     if (excursion >= colorBreakPoint4) {
         index = 0;
     } else if (excursion >= colorBreakPoint3) {
@@ -296,108 +367,142 @@ function determineColor(excursion) {
 // EXPLORE SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
-function renderSectorsCaller() {
-    renderSectors(infoJSON['sector_to_industries']);
+function doBreadCrumbArrows() {
+    var breadCrumbList = $("#breadCrumbList");
+    var arrows = '<li> >> </li>';
+    breadCrumbList.append(arrows);
 }
 
-function renderSectors(sectorToIndustries) {
-    var listOfSectors = [];
+function doCompanyBreadCrumb(companyName) {
+    var list = $("#breadCrumbList");
+    doBreadCrumbArrows();
 
-    sectorTable = $('#sectors');
-    
-    $('#sectors tr').remove();
-    industryTable = $('#industries');
-    companyTable = $('#companies');
+    var listItem =
+        '<li>'
+        + companyName 
+        + '</li>';
+    list.append(listItem);
+    $("#exploreSectorSection").toggle(false);
+    $("#exploreIndustrySection").toggle(false);
+    $("#exploreCompanySection").toggle(true);
+    breadCrumbChain.push(companyName);
+}
 
-    $('#crumbSpace1').hide();
-    $('#sectorCrumb').hide();
-    $('#crumbSpace2').hide();
-    $('#industryCrumb').hide();
+function doIndustryBreadCrumb(industryName) {
+    var list = $("#breadCrumbList");
+    doSectorBreadCrumb();
+    doBreadCrumbArrows();
 
-    sectorTable.show();
-    industryTable.hide();
-    companyTable.hide();  
+    var listItem =
+        '<li onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
+        + industryName 
+        + '</li>';
+    list.append(listItem);
+    $("#exploreSectorSection").toggle(false);
+    $("#exploreIndustrySection").toggle(true);
+    $("#exploreCompanySection").toggle(false);
+    breadCrumbChain.push(industryName);
+}
 
-    listOfSectors = Object.keys(sectorToIndustries);
+function doSectorBreadCrumb() {
+    var breadCrumbList = $("#breadCrumbList");
+    breadCrumbList.empty();
+    $("#exploreTable").empty();
+    clearTickers(breadCrumbChain);
+    var listItem = 
+    '<li onclick="doSectorBreadCrumb()">Sectors</li>';
+    breadCrumbList.append(listItem);
+    $("#exploreSectorSection").toggle(true);
+    $("#exploreIndustrySection").toggle(false);
+    $("#exploreCompanySection").toggle(false);
 
-    var numRows = Math.ceil(listOfSectors.length / NUM_COLS);
-    var index = 0;
+    breadCrumbChain.push("Sectors");
+}
 
-    for (i = 0; i < numRows; i++) {
-        var rowString = "<tr>";
-        for (j = 0; j < NUM_COLS; j++) {
-            if (index < listOfSectors.length) {
-                rowString += createSectorTD(listOfSectors, index);
-                index++;
-            }
-        }
-        rowString += "</tr>";
-        sectorTable.append(rowString);
+function renderIndustryLevel(sectorName) {
+    var list = $("#exploreIndustryList");
+    list.empty();
+    var names = infoJSON['sector_to_industries'][sectorName];
+    names.sort();
+    var deltas = infoJSON['industry_to_delta'];
+    var n = names.length;
+    for (var i = 0; i < n; i++) {
+        var name = names[i];
+        var delta = deltas[name];
+        var color = determineColor(delta);
+        var listItem = renderIndustryListItem(name, color);
+        list.append(listItem);
     }
+    doIndustryBreadCrumb(sectorName);
 }
 
-function createSectorTD(sectorNames, index) {
-    var tdString = "<td class='exploreTD1 '>";
-    tdString += "<a class='spaLinks hoverlink' onclick='clickSector(this)'>" + sectorNames[index] + "</a></td>";
-    return tdString;
+function renderIndustryListItem(industryName, color) {
+    var str = 
+        '<li onclick="renderTickerLevel(\'' + industryName + '\')" class="exploreListItem">'
+         +   '<div class="exploreListItemTextSection">'
+         +       '<p class="exploreListItemText">'
+         +           industryName
+         +      '</p>'
+         +   '</div>'
+         +   '<div class="exploreListItemColorSection ' + color + '">'
+         +   '</div>'
+         + '</li>';
+
+     return str;
 }
 
-function clickSector(sector) {
-    $('#crumbSpace2').hide();
-    $('#industryCrumb').hide();
+function renderSectorLevel() {
+    var list = $("#exploreSectorList");
+    list.empty();
 
-    var nameOfSector = sector.text;
-
-    $('#crumbSpace1').show();
-    $('#sectorCrumb').show();
-    $('#sectorCrumb').html(nameOfSector);
-
-    sectorTable.hide();
-
-    $('#industries tr').remove();
-    industryTable.show();
-    companyTable.hide();  
-
-    renderIndustries(nameOfSector);
-}
-
-function renderIndustries(nameOfSector) {
-
-    var listOfUniqueIndustries = infoJSON["sector_to_industries"][nameOfSector];
-    var industryTable = $("#industries");
-    var numRows = Math.ceil(listOfUniqueIndustries.length / NUM_COLS);
-    var index = 0;
-
-    var stringToAppend = "";
-        for (var i = 0; i < numRows; i++) {
-            stringToAppend = stringToAppend + "<tr>";
-            for (var j = 0; j < NUM_COLS; j++) {
-                if (index < listOfUniqueIndustries.length) {
-                    stringToAppend = stringToAppend + "<td class='exploreTD1'><a class='hoverlink' onclick='clickIndustry(this)'>" + listOfUniqueIndustries[index] + "</a></td>"; //removed spalinks as a class for the a tag, as it is not in the css collection
-                    index++;
-                }      
-            }
-        stringToAppend = stringToAppend + "</tr>";
+    var names = Object.keys(infoJSON['sector_to_industries']);
+    var deltas = infoJSON['sector_to_delta'];
+    names.sort();
+    var n = names.length;
+    for (var i = 0; i < n; i++) {
+        var name = names[i];
+        var delta = deltas[name];
+        var color = determineColor(delta);
+        var listItem = renderSectorListItem(name, color);
+        list.append(listItem);
     }
-
-    industryTable.append(stringToAppend);
+    doSectorBreadCrumb();
 }
 
-function clickIndustry(industry) {
-    var nameOfIndustry = industry.text;
+function renderSectorListItem(sectorName, color) {
+    var str = 
+    '<li onclick="renderIndustryLevel(\'' + sectorName + '\')" class="exploreListItem">'
+     +   '<div class="exploreListItemTextSection">'
+     +       '<p class="exploreListItemText">'
+     +           sectorName
+     +      '</p>'
+     +   '</div>'
+     +   '<div class="exploreListItemColorSection ' + color + '">'
+     +   '</div>'
+     + '</li>';
 
-    $('#crumbSpace2').show();
-    $('#industryCrumb').show();
-    $('#industryCrumb').html(nameOfIndustry);
-
-    sectorTable.hide();
-    industryTable.hide();
-
-    $('#companies tbody').empty();
-    companyTable.show();  
-    renderCompanies(nameOfIndustry);
+     return str;
 }
 
+function renderTickerLevel(industryName) {
+    var tableHeader = makeTableHeaderString("exploreTable");
+    appendTable(tableHeader, "exploreTable");
+    exploreTableHasHeader = true;
+    var tickers = infoJSON['industry_to_tickers'][industryName];
+    var n = tickers.length;
+    for (var i = 0; i < n; i++) {
+        var ticker = tickers[i];
+        makeTableRow(ticker, "exploreTable");  
+    }
+    doCompanyBreadCrumb(industryName);
+}
+
+
+// **********************************************
+// OLD POP-UP FUNCTIONS BEGIN HERE
+// **********************************************
+// To Vivian: most of this code is from before restructuring and won't be used.
+// However, you may be able to use some of this as you re-implement pop-ups.
 function renderCompanies(nameOfIndustry) {
     var companyTableBody = $("#companies tbody"); 
 
@@ -447,29 +552,6 @@ function renderCompanies(nameOfIndustry) {
     });
 }
 
-function createRowString(companyInfo) {
-    var rowString = "<tr class='height:10px'>";
-    var ticker = JSON.stringify(companyInfo['ticker']);
-    var security = JSON.stringify(companyInfo['security']);
-    ticker = removeLeadingAndTrailingQuotes(ticker);
-    security = removeLeadingAndTrailingQuotes(security);
-
-    var link = "http://finance.yahoo.com/quote/" + ticker + "?p=" + ticker ;
-    rowString += "<th class='exploreHeatMapTH hoverlink'><a href='" + link + "' target='_blank' class='hoverlink'>" +security  + "</a></th>";
-
-    rowString += renderSecurityCell(companyInfo["pe_cur"], companyInfo["pe_avg"], false);
-    rowString += renderSecurityCell(companyInfo["ps_cur"], companyInfo["ps_avg"], false);
-    rowString += renderSecurityCell(companyInfo["pb_cur"], companyInfo["pb_avg"], false);
-    rowString += renderSecurityCell(companyInfo["div_cur"], companyInfo["div_avg"], true);
-    rowString += "<td class='exploreTD2 black'>" + companyInfo['s_rank'] + "</td>";
-
-    rowString += "</tr>";
-    return rowString;
-}
-
-function removeLeadingAndTrailingQuotes(s) {
-    return s.replace(/^"(.*)"$/, '$1');
-}
 
 function displayToolTip(event, popup) {
 
@@ -483,38 +565,68 @@ function displayToolTip(event, popup) {
 // PREFERENCES SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
-// Redraw the search table with latest JSON data and colors
-function refreshSearchTableData() {
 
+function refreshTables() {
+    refreshTable("searchTable", searchTableHasHeader);
+
+    if (breadCrumbChain.length == 1) {
+        renderSectorLevel();
+    } else if (breadCrumbChain.length == 2) {
+        renderIndustryLevel(breadCrumbChain[1]);
+    } else {
+        refreshTable("exploreTable", exploreTableHasHeader);
+    }
+}
+
+// Redraw the search table with latest JSON data and colors
+function refreshTable(tableName, tableHeaderStatus) {
     // Don't refresh if there isn't a valid JSON file
     if(!infoJSON) {
         return;
     }
 
-    var data = infoJSON;
-    var securityToTicker = data["security_to_ticker"];
-    var tickerToSecurity = data["ticker_to_security"];
-
-    var rowsToAdd = "";
-
-    $('#searchTable tr').each(function() {
-        var securityName = $(this).find("td:first").text(); 
-        console.log("securityName = " + securityName);
-
-        if(securityName) {
-            var thisSecurityData = data["technical_map"][securityToTicker[securityName]];
-
-            var s = new security(thisSecurityData);
-            var tableRow = renderSecurityRow(s);
-            rowsToAdd += tableRow;
-        }   
-    });
+    //don't re-populate an empty table.  you will end
+    //up with an orphan table header (i.e. a table header
+    //with no data associated with it)
+    if (tableHeaderStatus == false) {
+        return;
+    }
 
     // Clear and redraw the table
-    clearSearchTable();
+    var copiedList = hardCopyList(tableName);
+    clearTable(tableName);
 
-    tableHeader = renderSecurityTableHeader();
-    appendTableHeader(tableHeader);
-    hasHeader = true;
-    appendTableBody(rowsToAdd);
+    tableHeader = makeTableHeaderString(tableName);
+    appendTable(tableHeader, tableName);
+
+    // Header
+    if (tableName == "searchTable") {
+        searchTableHasHeader = true;       
+    } else if (tableName == "exploreTable") {
+        exploreTableHasHeader = true;
+    }
+
+    // Body
+    for (var i = 0; i < copiedList.length; i++) {
+        var ticker = copiedList[i];
+        makeTableRow(ticker, tableName);
+    }
+}
+
+
+// **********************************************
+// FUNCTIONS NOT BEING USED BEGIN HERE
+// **********************************************
+
+// Need to decide if we want to implement this. Displays a table of top 10 ranked securities.
+function renderLeaderboard() {
+    var tickers = infoJSON['leaderboard']['best'];
+    var n = tickers.length;
+    console.log(tickers);
+    var tableHeader = makeTableHeaderString("homeTable");
+    appendTable(tableHeader, "homeTable");
+    for (var i = 0; i < n; i++) {
+        var ticker = tickers[i];
+        makeTableRow(ticker, "homeTable");  
+    }
 }

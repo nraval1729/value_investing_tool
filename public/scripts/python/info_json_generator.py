@@ -200,26 +200,27 @@ def populate_big_list(big_list, big_dictionary):
     big_list = big_dictionary.values()
 
 def read_biographical_data():
-    with open(cwd+'/public/json_files/biographical.json') as infile:
+    with open('biographical.json') as infile:
         raw_data_biographical = json.load(infile)
     return raw_data_biographical
 
 def read_historical_data():
-    with open(cwd+'/public/json_files/historical.json') as infile:
+    with open('historical.json') as infile:
         raw_data_historical = json.load(infile)
     return raw_data_historical
 
 def read_current_data():
-    with open(cwd+'/public/json_files/current.json') as infile:
+    with open('current.json') as infile:
         raw_data_current = json.load(infile)
     return raw_data_current
 
 def read_valid_tickers():
-    with open(cwd+'/public/json_files/valid_tickers.json') as infile:
+    with open('valid_tickers.json') as infile:
         tickers_json = json.load(infile)
     return tickers_json
 
-def generate_all_json_maps(raw_data_biographical, tickers_json, info_dict):
+def create_info_dict(raw_data_biographical, tickers_json):
+    info_dict = {}
     tickers = set(tickers_json['valid_tickers'])
     biographical_json_pruned = prune_json(raw_data_biographical, tickers)
 
@@ -229,7 +230,6 @@ def generate_all_json_maps(raw_data_biographical, tickers_json, info_dict):
     # Industry to tickers
     industry_to_tickers_map = condition_dictionary(industry_to_tickers_dictionary)
     info_dict['industry_to_tickers'] = industry_to_tickers_map
-
 
     # Sector to industries
     sector_to_industries_dictionary = create_dictionary(biographical_json_pruned, "sector")
@@ -265,7 +265,10 @@ def generate_all_json_maps(raw_data_biographical, tickers_json, info_dict):
     security_to_sector_map = create_simple_map(biographical_json_pruned, "security", "sector")
     info_dict['security_to_sector'] = security_to_sector_map
 
-def generate_technical_map(raw_data_historical, raw_data_current, valid_tickers, ticker_to_security_map, info_dict):
+    return info_dict
+
+
+def create_technical_map(raw_data_historical, raw_data_current, valid_tickers, ticker_to_security_map):
     
     global NUM_VALID_TICKERS
     # collections and variables used throughout program
@@ -319,36 +322,99 @@ def generate_technical_map(raw_data_historical, raw_data_current, valid_tickers,
 
     # big_list = big_dictionary.values()
 
-    info_dict['technical_map'] = big_dictionary
+    #info_dict['technical_map'] = big_dictionary
 
-def write_info_json(info_dict):
-    with open(cwd+'/public/json_files/info.json', 'w') as outfile:
+    return big_dictionary # new craig
+
+def write_outfile(info_dict):
+    #with open(cwd+'/public/json_files/info.json', 'w') as outfile:
+    with open('info.json', 'w') as outfile:
         json.dump(info_dict, outfile, indent=4)
 
 
-def main():
-    i = 1
-    while True:
-        print "Starting iteration: ", i
-        i+= 1
+# def main():
+#     i = 1
+#     while True:
+#         print "Starting iteration: ", i
+#         i+= 1
 
-        info_dict = {}
+#         global info_dict = {} # new keyword craig: global
 
-        raw_data_biographical = read_biographical_data()
+#         raw_data_biographical = read_biographical_data()
 
-        raw_data_historical = read_historical_data()
+#         raw_data_historical = read_historical_data()
 
-        raw_data_current = read_current_data()
+#         raw_data_current = read_current_data()
 
-        tickers_json = read_valid_tickers()
+#         tickers_json = read_valid_tickers()
 
-        generate_all_json_maps(raw_data_biographical, tickers_json, info_dict)
+#         generate_all_json_maps(raw_data_biographical, tickers_json, info_dict)
 
-        generate_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'], info_dict)
+#         generate_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'], info_dict)
 
-        write_info_json(info_dict)
+#         write_info_json(info_dict)
     
-        time.sleep(300)
+#         time.sleep(300)
+
+
+def create_sector_delta_map(info_dict, industry_delta_map):
+    sector_delta_map = {}
+    for sector in info_dict['sector_to_industries']:
+        sector_delta_map[sector] = compute_sector_delta(sector, info_dict, industry_delta_map)
+    return sector_delta_map
+
+
+def compute_sector_delta(sector, info_dict, industry_delta_map):
+    total = 0;
+    n = len(info_dict['sector_to_industries'][sector])
+
+    for industry in info_dict['sector_to_industries'][sector]:
+        total = total + industry_delta_map[industry]
+
+    sector_delta = total / n
+    return sector_delta
+
+def create_industry_delta_map(info_dict, technical_map):
+    industry_delta_map = {}
+    for industry in info_dict['industry_to_tickers']:
+        industry_delta_map[industry] = compute_industry_delta(industry, info_dict, technical_map)
+    return industry_delta_map
+
+def compute_industry_delta(industry, info_dict, technical_map):
+    pb = compute_ratio_delta(industry, info_dict, technical_map, 'pb')
+    pe = compute_ratio_delta(industry, info_dict, technical_map, 'pe')
+    ps = compute_ratio_delta(industry, info_dict, technical_map, 'ps')
+    return (pb + pe + ps) / 3
+
+def compute_ratio_delta(industry, info_dict, technical_map, ratio):
+    avg = ratio + '_avg'
+    cur = ratio + '_cur'
+    #print avg, cur
+    delta_sum = 0
+    tickers = info_dict['industry_to_tickers'][industry]
+    n = len(tickers)
+    for i in range(n):
+        ticker = tickers[i]
+        delta_sum = delta_sum + (float(technical_map[ticker][cur]) - float(technical_map[ticker][avg])) / float(technical_map[ticker][avg])
+   
+    delta = delta_sum / n
+    return delta
+
+
+def main():
+
+    # put the while true stuff in
+
+    raw_data_biographical = read_biographical_data()
+    raw_data_historical = read_historical_data()
+    raw_data_current = read_current_data()
+    tickers_json = read_valid_tickers()
+    info_dict = create_info_dict(raw_data_biographical, tickers_json)
+    info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
+    info_dict['industry_to_delta'] = create_industry_delta_map(info_dict, info_dict['technical_map'])
+    info_dict['sector_to_delta'] = create_sector_delta_map(info_dict, info_dict['industry_to_delta'])
+
+    write_outfile(info_dict)
 
 
 if __name__ == "__main__":
