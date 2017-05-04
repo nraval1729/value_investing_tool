@@ -17,6 +17,9 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
                                 //colors for the dividend.  this coefficient allows you to adjust the
                                 //sensitivity of the dividend to colors.  greater than 1 will produce
                                 //more colors, less than 1 will produce less colors.
+var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
+var monochromeColors = ["black", "blackGrey", "grey", "whiteGrey", "whiteWithBorder"];
+
 //PAGE INITIALIZATION
 $(document).ready(function() {
     showHome();
@@ -74,6 +77,7 @@ function togglePreferences() {
 function showPreferences() {
     preferencesAreVisible = true;
     $("#preferencesSection").slideDown(500);
+    $("#colorSlider").slider( "option", "values", [colorBreakPoint1Default, colorBreakPoint2Default, colorBreakPoint3Default, colorBreakPoint4Default]);
 }
 
 function hidePreferences() {
@@ -357,17 +361,29 @@ function makeTableRowString(security, tableName) {
 function makeTableHeaderString(tableName) {
     var str = '<tr class="securityTableHeader">';
     str +=  '<th class="securityCellCompanyName"></th>';
-    str +=  '<th class="tableHeaderCell">P/E &nbsp;&nbsp;&nbsp;</th>';
-    str +=  '<th class="tableHeaderCell">P/S &nbsp;&nbsp;&nbsp;</th>';
-    str +=  '<th class="tableHeaderCell">P/B &nbsp;&nbsp;&nbsp;</th>';
-    str +=  '<th class="tableHeaderCell">DIV &nbsp;&nbsp;&nbsp;</th>';
-    str +=  '<th class="tableHeaderCell">RANK</th>';
+    // str +=  '<th class="tableHeaderCell popup" id="peBox" oncontextmenu="return false;">P/E &nbsp;&nbsp;&nbsp;</th>';
+    // str +=  '<th class="tableHeaderCell popup" id="psBox" oncontextmenu="return false;">P/S &nbsp;&nbsp;&nbsp;</th>';
+    // str +=  '<th class="tableHeaderCell popup" id="pbBox" oncontextmenu="return false;">P/B &nbsp;&nbsp;&nbsp;</th>';
+    // str +=  '<th class="tableHeaderCell popup" id="divBox" oncontextmenu="return false;">DIV &nbsp;&nbsp;&nbsp;</th>';
+    // str +=  '<th class="tableHeaderCell popup" id="rankBox" oncontextmenu="return false;">RANK</th>';
+    str += makePopupHeader("peBox", "pePopup", "P/E", "P/E: price-to-earnings ratio");
+    str += makePopupHeader("psBox", "psPopup", "P/S", "P/S: price-to-sales ratio");
+    str += makePopupHeader("pbBox", "pbPopup", "P/B", "P/B: price-to-book ratio");
+    str += makePopupHeader("divBox", "divPopup", "DIV", "DIV: dividend yield (as a percentage)");
+    str += makePopupHeader("rankBox", "rankPopup", "RANK", "RANK: aggregate ratio performance (lower = better)");
     str +=  '<th class="tableHeaderCell"></th>';
     str +=  '<th class="tableHeaderCell"></th>';
     if (tableName == "searchTable") {
         str +=  '<th class="tableHeaderCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></th>';
     }
     str += '</tr>';
+    return str;
+}
+
+function makePopupHeader(boxName, popupName, headerText, popupText) {
+    var str = '<th class="tableHeaderCell popup" id="' + boxName + '" oncontextmenu="return false;">';
+    //str += '<span class="popuptext" id="' + popupName + '">'+ popupText +'</span>';  // TODO - uncomment this to have popups display
+    str += headerText + '</th>';
     return str;
 }
 
@@ -385,7 +401,7 @@ function renderSecurityCell(currValue, histValue, isDividend) {
 //returns which color to use for the
 //table cell based on the input value
 function determineColor(excursion) {
-    var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
+
     var index;
     if (excursion >= colorBreakPoint4) {
         index = 0;
@@ -398,7 +414,13 @@ function determineColor(excursion) {
     } else {
         index = 4;
     }
-    return colors[index];
+
+    if(!$('#monochromeCheckbox').is(':checked')) {
+        return colors[index];
+    }
+    else {
+        return monochromeColors[index];
+    }
 }
 
 
@@ -535,65 +557,43 @@ function renderTickerLevel(industryName) {
         makeTableRow(ticker, "exploreTable");  
     }
     doCompanyBreadCrumb(industryName);
-}
 
-
-// **********************************************
-// OLD POP-UP FUNCTIONS BEGIN HERE
-// **********************************************
-// To Vivian: most of this code is from before restructuring and won't be used.
-// However, you may be able to use some of this as you re-implement pop-ups.
-function renderCompanies(nameOfIndustry) {
-    var companyTableBody = $("#companies tbody"); 
-
-    var listOfTickersToCreateRows = infoJSON["industry_to_tickers"][nameOfIndustry];
-    for (var index = 0; index < listOfTickersToCreateRows.length; index++) {
-        var rowString = createRowString(infoJSON["technical_map"][listOfTickersToCreateRows[index]]);
-        companyTableBody.append(rowString);
-        $("#companies").trigger("update");
-    }
-
-    // Tooltip displays
-    var pePopup = $('#pePopup');
-    var psPopup = $('#psPopup');
-    var pbPopup = $('#pbPopup');
-    var divPopup = $('#divPopup');
-    var rankPopup = $('#rankPopup');
-    $('#peBox').mousedown(function(e){displayToolTip(e, pePopup)});
-    $('#psBox').mousedown(function(e){displayToolTip(e, psPopup)});
-    $('#pbBox').mousedown(function(e){displayToolTip(e, pbPopup)});
-    $('#divBox').mousedown(function(e){displayToolTip(e, divPopup)});
-    $('#rankBox').mousedown(function(e){displayToolTip(e, rankPopup)});
+    $('#peBox').mousedown(function(e){displayToolTip(e, $('#pePopup'))});
+    $('#psBox').mousedown(function(e){displayToolTip(e, $('#psPopup'))});
+    $('#pbBox').mousedown(function(e){displayToolTip(e, $('#pbPopup'))});
+    $('#divBox').mousedown(function(e){displayToolTip(e, $('#divPopup'))});
+    $('#rankBox').mousedown(function(e){displayToolTip(e, $('#rankPopup'))});
 
     $('#peBox').mouseleave(function(e){
-        if(pePopup.hasClass('show')) {
-            pePopup.toggleClass('show');
+        if($('#pePopup').hasClass('show')) {
+            $('#pePopup').toggleClass('show');
         }
     });
     $('#psBox').mouseleave(function(e){
-        if(psPopup.hasClass('show')) {
-            psPopup.toggleClass('show');
+        if($('#psPopup').hasClass('show')) {
+            $('#psPopup').toggleClass('show');
         }
     });
     $('#pbBox').mouseleave(function(e){
-        if(pbPopup.hasClass('show')) {
-            pbPopup.toggleClass('show');
+        if($('#pbPopup').hasClass('show')) {
+            $('#pbPopup').toggleClass('show');
         }
     });
     $('#divBox').mouseleave(function(e){
-        if(divPopup.hasClass('show')) {
-            divPopup.toggleClass('show');
+        if($('#divPopup').hasClass('show')) {
+            $('#divPopup').toggleClass('show');
         }
     });
     $('#rankBox').mouseleave(function(e){
-        if(rankPopup.hasClass('show')) {
-            rankPopup.toggleClass('show');
+        if($('#rankPopup').hasClass('show')) {
+            $('#rankPopup').toggleClass('show');
         }
     });
 }
 
 
 function displayToolTip(event, popup) {
+    console.log("got DisplayToolTip");
 
     if(event.which == 3 && !popup.hasClass('show')) {
         popup.toggleClass('show');
@@ -651,6 +651,11 @@ function refreshTable(tableName, tableHeaderStatus) {
         var ticker = copiedList[i];
         makeTableRow(ticker, tableName);
     }
+}
+
+function changeMonochrome() {
+    refreshTables();
+    $("#colorSlider").slider( "option", "values", [colorBreakPoint1Default, colorBreakPoint2Default, colorBreakPoint3Default, colorBreakPoint4Default]);
 }
 
 

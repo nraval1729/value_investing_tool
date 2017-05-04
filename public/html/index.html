@@ -50,8 +50,22 @@
                             <div id="custom-handle4" class="ui-slider-handle"></div>
                         </div>
 
-                        <div class="spacer10"></div>
-                        <button id="resetColorSliderButton" class="navButton" onclick="resetColorSlider()">Restore Defaults</button>
+                        <div class="spacer25"></div>
+
+                        <button id="resetColorSliderButton" class="sliderButton" onclick="resetColorSlider()">Restore Slider Defaults</button>
+
+                        <div class="spacer25"></div>
+                    </div>
+
+                    <div id="miscPref">
+                        <div class="verticalCenter">
+                            <label for="monochromeSetting">Monochrome</label>
+                            <input id="monochromeCheckbox" class="checkbox" type="checkbox" name="monochromeSetting" onchange="changeMonochrome()">
+                        </div>
+                        <div class="verticalCenter">
+                            <label for="refreshSetting">Continuous Updates</label>
+                            <input id="refreshCheckbox" class="checkbox" type="checkbox" name="refreshSetting" checked>
+                        </div>
                     </div>
 
                 </div><!-- end: preferencesSection -->

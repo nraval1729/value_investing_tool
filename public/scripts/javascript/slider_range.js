@@ -38,8 +38,7 @@ function resetColorSlider() {
 function calcRangeColors() {
 
     var leftOffsets = [0, $("#custom-handle1").position().left, $("#custom-handle2").position().left, $("#custom-handle3").position().left, $("#custom-handle4").position().left];
-    var rightOffsets = [$("#custom-handle1").position().left, $("#custom-handle2").position().left, $("#custom-handle3").position().left, $("#custom-handle4").position().left, $("#colorSlider").width()];
-    var colors = ["brightGreen", "darkGreen", "black", "darkRed", "brightRed"];   
+    var rightOffsets = [$("#custom-handle1").position().left, $("#custom-handle2").position().left, $("#custom-handle3").position().left, $("#custom-handle4").position().left, $("#colorSlider").width()];  
 
     $('.ui-slider-range', $("#colorSlider")).remove();
 
@@ -47,7 +46,14 @@ function calcRangeColors() {
 
         sliderRange = $('<div></div>').addClass('ui-slider-range');
         sliderRange.css('width', rightOffsets[index] - leftOffsets[index]);
-        sliderRange.addClass(colors[index]);
+
+        if(!$('#monochromeCheckbox').is(':checked')) {
+            sliderRange.addClass(colors[index]);
+        }
+        else {
+            sliderRange.addClass(monochromeColors[index]);
+        }
+
         sliderRange.css('left', leftOffsets[index]);
 
         $("#colorSlider").prepend(sliderRange);
@@ -110,4 +116,3 @@ $( function() {
 
     resetColorSlider();
 } );
-

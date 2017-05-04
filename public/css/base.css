@@ -37,14 +37,17 @@ a {
 
 .black {
     background-color: black;
+    color: white;
 }
 
 .brightGreen {
     background-color: #00FF00;
+    color: white;
 }
 
 .brightRed {
     background-color: #FF0000;
+    color: white;
 }
 
 .centerMe {
@@ -55,10 +58,39 @@ a {
 
 .darkGreen {
     background-color: #006400;
+    color: white;
 }
 
 .darkRed {
     background-color: #8B0000;
+    color: white;
+}
+
+.whiteWithBorder {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-style: solid;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.whiteGrey {
+    background-color: #bfbfbf;
+    color: black;
+}
+
+.grey {
+    background-color: #808080;
+    color: white;
+}
+
+.blackGrey {
+    background-color: #404040;
+    color: white;
 }
 
 .headerNavigationLink {
@@ -92,6 +124,12 @@ right */
     display: flex;
     flex-direction: row; 
     justify-content: center;
+}
+
+.verticalCenter {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
 }
 
 #interior {
@@ -201,9 +239,5 @@ go from top to bottom */
     flex-direction: column;
 }
 
-
-.white {
-    background-color: white;
-}
 
 
