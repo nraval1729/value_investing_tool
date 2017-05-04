@@ -404,15 +404,15 @@ function determineColor(excursion) {
 
     var index;
     if (excursion >= colorBreakPoint4) {
-        index = 0;
+        index = 4;
     } else if (excursion >= colorBreakPoint3) {
-        index = 1;
+        index = 3;
     } else if (excursion >= colorBreakPoint2) {
         index = 2;
     } else if (excursion >= colorBreakPoint1) {
-        index = 3;
+        index = 1;
     } else {
-        index = 4;
+        index = 0;
     }
 
     if(!$('#monochromeCheckbox').is(':checked')) {
