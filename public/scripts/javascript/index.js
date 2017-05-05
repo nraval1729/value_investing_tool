@@ -239,6 +239,8 @@ function appendHeader(str, tableName) {
     var tableId = "#" + tableName + " thead";
     var searchTableHead = $(tableId);
     searchTableHead.append(str);
+
+    activatePopups();
     // $("#"+tableName).trigger("destroy");
     // $("#"+tableName).tablesorter().trigger("update").trigger("appendCache");
 }
@@ -361,16 +363,11 @@ function makeTableRowString(security, tableName) {
 function makeTableHeaderString(tableName) {
     var str = '<tr class="securityTableHeader">';
     str +=  '<th class="securityCellCompanyName"></th>';
-    // str +=  '<th class="tableHeaderCell popup" id="peBox" oncontextmenu="return false;">P/E &nbsp;&nbsp;&nbsp;</th>';
-    // str +=  '<th class="tableHeaderCell popup" id="psBox" oncontextmenu="return false;">P/S &nbsp;&nbsp;&nbsp;</th>';
-    // str +=  '<th class="tableHeaderCell popup" id="pbBox" oncontextmenu="return false;">P/B &nbsp;&nbsp;&nbsp;</th>';
-    // str +=  '<th class="tableHeaderCell popup" id="divBox" oncontextmenu="return false;">DIV &nbsp;&nbsp;&nbsp;</th>';
-    // str +=  '<th class="tableHeaderCell popup" id="rankBox" oncontextmenu="return false;">RANK</th>';
     str += makePopupHeader("peBox", "pePopup", "P/E", "P/E: price-to-earnings ratio");
     str += makePopupHeader("psBox", "psPopup", "P/S", "P/S: price-to-sales ratio");
     str += makePopupHeader("pbBox", "pbPopup", "P/B", "P/B: price-to-book ratio");
-    str += makePopupHeader("divBox", "divPopup", "DIV", "DIV: dividend yield (as a percentage)");
-    str += makePopupHeader("rankBox", "rankPopup", "RANK", "RANK: aggregate ratio performance (lower = better)");
+    str += makePopupHeader("divBox", "divPopup", "DIV", "<p>DIV: dividend yield</p> <p>(as a percentage)</p>");
+    str += makePopupHeader("rankBox", "rankPopup", "RANK", "<p>RANK: aggregate ratio performance</p> <p>(lower = better)</p>");
     str +=  '<th class="tableHeaderCell"></th>';
     str +=  '<th class="tableHeaderCell"></th>';
     if (tableName == "searchTable") {
@@ -382,7 +379,7 @@ function makeTableHeaderString(tableName) {
 
 function makePopupHeader(boxName, popupName, headerText, popupText) {
     var str = '<th class="tableHeaderCell popup" id="' + boxName + '" oncontextmenu="return false;">';
-    //str += '<span class="popuptext" id="' + popupName + '">'+ popupText +'</span>';  // TODO - uncomment this to have popups display
+    str += '<span class="popuptext" id="' + popupName + '">'+ popupText +'</span>';
     str += headerText + '</th>';
     return str;
 }
@@ -557,7 +554,10 @@ function renderTickerLevel(industryName) {
         makeTableRow(ticker, "exploreTable");  
     }
     doCompanyBreadCrumb(industryName);
+    activatePopups();
+}
 
+function activatePopups() {
     $('#peBox').mousedown(function(e){displayToolTip(e, $('#pePopup'))});
     $('#psBox').mousedown(function(e){displayToolTip(e, $('#psPopup'))});
     $('#pbBox').mousedown(function(e){displayToolTip(e, $('#pbPopup'))});
@@ -591,10 +591,7 @@ function renderTickerLevel(industryName) {
     });
 }
 
-
 function displayToolTip(event, popup) {
-    console.log("got DisplayToolTip");
-
     if(event.which == 3 && !popup.hasClass('show')) {
         popup.toggleClass('show');
         event.stopPropagation();
@@ -655,7 +652,7 @@ function refreshTable(tableName, tableHeaderStatus) {
 
 function changeMonochrome() {
     refreshTables();
-    $("#colorSlider").slider( "option", "values", [colorBreakPoint1Default, colorBreakPoint2Default, colorBreakPoint3Default, colorBreakPoint4Default]);
+    $("#colorSlider").slider( "option", "values", [colorBreakPoint1, colorBreakPoint2, colorBreakPoint3, colorBreakPoint4]);
 }
 
 

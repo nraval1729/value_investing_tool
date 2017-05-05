@@ -200,18 +200,17 @@
     font-weight: normal;
     width: 80px;
     height: 80px;
-/*    color: white;*/
-/*    border-radius: 50%;*/
 }
 
 .securityCellContent {
     font-weight: normal;
     width: 60px;
     height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-/*    color: white;*/
     border-radius: 50%;
 }
 
@@ -245,12 +244,6 @@
 .securityTableHeader td {
     color: black; 
 }
-
-/*td {
-    border-color: black; /*todo*/
-    border-style: solid;
-    text-align: center;
-}*/
 
 .splashBox {
     min-width: 270px;
@@ -326,16 +319,14 @@
     text-align: left;
 }
 
-/*
+
 .tableHeaderCell {
-    font-weight: normal;
+    font-weight: bold;
     width: 80px;
     height: 80px;
     color: black;
-}*/
+}
    
-
-/** Tooltip code - taken from https://www.w3schools.com/howto/howto_js_popup.asp **/
 /* Popup container */
 .popup {
 /*    position: relative;
@@ -353,15 +344,15 @@
     text-align: center;
     border-color: #4286f4;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-radius: 6px;
     padding: 8px 0;
     position: relative;
     z-index: 10;
     bottom: 10%;
     left: 40%;
-    margin-left: -125px;
-    margin-top: -45px;
+    margin-left: -80px; /* should be the size of the table header cell */
+    margin-top: -40px;
 }
 
 /* Popup arrow */
