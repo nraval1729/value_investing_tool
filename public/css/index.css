@@ -96,7 +96,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    word-wrap: wrap;
+    overflow-wrap: break-word;
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -256,11 +256,6 @@
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.horizontal p.splashBoxCaption {
-    /*margin-left: 35px;*/
-    /*text-align: center;*/
 }
 
 .splashBox {

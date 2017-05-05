@@ -7,6 +7,9 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import urllib
 import sys
 import os
+ 
+sorted_biographical_list_of_dicts = None
+dumped_sorted_biographical_list_of_dicts = None
 
 cwd = os.getcwd()
 
@@ -17,7 +20,7 @@ def get_and_write_biographical_data():
 
     soup = BeautifulSoup(page.content, "lxml")
 
-    biographical_list_of_dicts = []
+    biographical_list_of_dicts = [{}]
 
     for index, row in enumerate(soup.findAll("table")[0].findAll('tr')):
         if index != 0:
@@ -38,21 +41,30 @@ def get_and_write_biographical_data():
 
     sorted_biographical_list_of_dicts = sorted(biographical_list_of_dicts, key=lambda k:k['ticker'])
 
-
-    with open(cwd+'/public/json_files/biographical.json', 'w') as b:
-        json.dump(sorted_biographical_list_of_dicts, b, indent = 4)
+    try:
+        with open(cwd+'/public/json_files/biographical.json', 'w') as b:
+            json.dump(sorted_biographical_list_of_dicts, b, indent = 4)
+    except IOError:
+        print "Unable to write file"
 
     return sorted_biographical_list_of_dicts
 
 def dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts):
-    with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'w') as c:
-            json.dump(sorted_biographical_list_of_dicts, c, indent = 4)
+
+    try:
+        with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'w') as c:
+                json.dump(sorted_biographical_list_of_dicts, c, indent = 4)
+    except IOError:
+        print "Unable to write file"
 
 def main():
 
+    global sorted_biographical_list_of_dicts
+    global dumped_sorted_biographical_list_of_dicts
+
     sorted_biographical_list_of_dicts = get_and_write_biographical_data()
 
-    dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts)
+    dumped_sorted_biographical_list_of_dicts = dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts)
 
 if __name__ == "__main__":
     main()

@@ -8,6 +8,7 @@ import time
 from random import randint
 from selenium import webdriver
 
+global_curr_dict = {}
 
 def start_browser():
 	fp = webdriver.FirefoxProfile()
@@ -17,8 +18,11 @@ def start_browser():
 	return browser
 
 def load_tickers():
-	with open("../../json_files/sorted_biographical_list_of_dicts.json", "r") as s:
-		sorted_biographical_list_of_dicts = json.load(s)
+	try:
+		with open("../../json_files/sorted_biographical_list_of_dicts.json", "r") as s:
+			sorted_biographical_list_of_dicts = json.load(s)
+	except IOError:
+		print "Unable to open file"
 		return sorted_biographical_list_of_dicts
 
 
@@ -33,7 +37,15 @@ def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list
 
 		my_dict = OrderedDict()
 
-		curr_ticker = curr_dict["ticker"]
+		global global_curr_dict
+
+		global_curr_dict = curr_dict
+
+		try:
+			curr_ticker = curr_dict["ticker"]
+		except KeyError:
+			print "Key does not exist"
+
 		my_dict['ticker'] = curr_ticker
 
 		curr_url = base_url + curr_ticker +'&region=usa&culture=en-US'
@@ -75,10 +87,14 @@ def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list
 			pass
 
 def write_sorted_historical_list_of_dicts(sorted_historical_list_of_dicts):
-	with open("../../json_files/historical.json", 'w') as c:
-		json.dump(sorted_historical_list_of_dicts, c, indent = 4)
+	try:
+		with open("../../json_files/historical.json", 'w') as c:
+			json.dump(sorted_historical_list_of_dicts, c, indent = 4)
+	except IOError:
+		print "Unable to write file"
 
 def main():
+
 	browser = start_browser()
 
 	base_url = 'http://financials.morningstar.com/valuation/price-ratio.html?t='
@@ -87,7 +103,7 @@ def main():
 
 	sorted_biographical_list_of_dicts = load_tickers()
 
-	scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list_of_dicts, base_url, browser)
+	scraped_morningstar = scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list_of_dicts, base_url, browser)
 
 	write_sorted_historical_list_of_dicts(sorted_historical_list_of_dicts)
 

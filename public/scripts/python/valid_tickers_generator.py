@@ -2,6 +2,15 @@ import json
 import os
 import time
 
+valid_tickers_biographical = set([])
+valid_tickers_current = set([])
+valid_tickers_historical = set([])
+tickers_intersection = set([])
+valid_tickers_dictionary = {'valid_tickers': []}
+
+raw_data_biographical = ""
+raw_data_current = ""
+raw_data_historical = ""
 
 cwd = os.getcwd()
 
@@ -44,16 +53,36 @@ def make_dictionary_from_set(my_key, my_set):
 
 def main():
 
+	# global variables needed for access in test_valid_tickers_generator.py
+	global valid_tickers_biographical
+	global valid_tickers_current
+	global valid_tickers_historical
+	global tickers_intersection
+	global valid_tickers_dictionary
+
+	global raw_data_biographical
+	global raw_data_current
+	global raw_data_historical
+
 	while True:
 	# get handles on the json files
-		with open(cwd+'/public/json_files/biographical.json') as infile:
-			raw_data_biographical = json.load(infile)
+		try: 
+			with open(cwd+'/public/json_files/biographical.json') as infile:
+				raw_data_biographical = json.load(infile)
+		except IOError:
+			print "Unable to open file"
 
-		with open(cwd+'/public/json_files/current.json') as infile:
-			raw_data_current = json.load(infile)
+		try:
+			with open(cwd+'/public/json_files/current.json') as infile:
+				raw_data_current = json.load(infile)
+		except IOError:
+			print "Unable to open file"
 
-		with open(cwd+'/public/json_files/historical.json') as infile:
-			raw_data_historical = json.load(infile)
+		try:
+			with open(cwd+'/public/json_files/historical.json') as infile:
+				raw_data_historical = json.load(infile)
+		except IOError:
+			print "Unable to open file"
 
 		valid_tickers_biographical = get_biographical_tickers(raw_data_biographical, len(raw_data_biographical))
 		valid_tickers_current = get_valid_tickers(raw_data_current, len(raw_data_current), None)
@@ -61,11 +90,13 @@ def main():
 		tickers_intersection = valid_tickers_biographical.intersection(valid_tickers_current).intersection(valid_tickers_historical)
 		valid_tickers_dictionary = make_dictionary_from_set("valid_tickers", tickers_intersection)
 
-		with open(cwd+'/public/json_files/valid_tickers.json', 'w') as outfile:
-			json.dump(valid_tickers_dictionary, outfile, indent=4)
+		try: 
+			with open(cwd+'/public/json_files/valid_tickers.json', 'w') as outfile:
+				json.dump(valid_tickers_dictionary, outfile, indent=4)
+		except IOError:
+			print "Unable to write file"
 
 		time.sleep(300)
-
 
 
 if __name__ == "__main__":
