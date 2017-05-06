@@ -1,11 +1,34 @@
 import json
 import math
+import sys
+
+# global variables needed for testing
+raw_data_biographical = []
+biographical_json_pruned = []
+tickers = []
+industry_to_tickers_dictionary = {}
+industry_to_tickers_map = {}
+sector_to_industries_dictionary = {}
+sector_to_industries_map = {}
+industry_to_sector_map = {}
+ticker_to_security_map = {}
+ticker_to_industry_map = {}
+ticker_to_security_list = []
+security_to_ticker_list = []
+ticker_to_sector_map = {}
+security_to_ticker_map = {}
+security_to_industry_map = {}
+security_to_sector_map = {}
+
 
 # for testing purposes
 def display_json_array(json_array):
 	n = len(json_array)
 	for index in range(0, n):
-		curr = json_array[index]
+		try:
+			curr = json_array[index]
+		except KeyError:
+			print "Key does not exist"
 		for key in curr:
 			print key + ": ", json_array[index][key]
 		print
@@ -18,7 +41,10 @@ def display_json_array(json_array):
 def condition_dictionary(dictionary):
 	my_dictionary = {}
 	for key in dictionary:
-		my_dictionary[key] = list(dictionary[key])
+		try: 
+			my_dictionary[key] = list(dictionary[key])
+		except KeyError:
+			print "Key does not exist"
 	return my_dictionary
 
 
@@ -104,16 +130,44 @@ def prune_json(json_array, valid_tickers):
 	return my_array
 
 
-
 def main():
+	
+	# allow variable access for test_biographical_maps_generator.py tests
+	global raw_data_biographical
+	global tickers
+	global biographical_json_pruned
+	global industry_to_tickers_dictionary
+	global industry_to_tickers_map
+	global sector_to_industries_dictionary
+	global sector_to_industries_map
+	global industry_to_sector_map
+	global ticker_to_security_map
+	global ticker_to_industry_map
+	global ticker_to_security_list
+	global security_to_ticker_list
+	global ticker_to_sector_map
+	global security_to_ticker_map
+	global security_to_industry_map
+	global security_to_sector_map
+
 	# get handles on the json files
-	with open('biographical.json') as infile:
-		raw_data_biographical = json.load(infile)
+	try: 
+		with open('biographical.json') as infile:
+			raw_data_biographical = json.load(infile)
+	except IOError:
+		print "Unable to open file"
 
-	with open('valid_tickers.json') as infile:
-		tickers_json = json.load(infile)
+	try:
+		with open('valid_tickers.json') as infile:
+			tickers_json = json.load(infile)
+	except IOError:
+		print "Unable to open file"
 
-	tickers = set(tickers_json['valid_tickers'])
+	try:
+		tickers = set(tickers_json['valid_tickers'])
+	except KeyError:
+		print "Key does not exist"
+
 	biographical_json_pruned = prune_json(raw_data_biographical, tickers)
 
 	industry_to_tickers_dictionary = create_dictionary(biographical_json_pruned, "industry")
@@ -172,49 +226,81 @@ def main():
 	
 
 	# industry_to_sector_map
- 	with open('industry_to_sector_map.json', 'w') as outfile:
- 		json.dump(industry_to_sector_map, outfile, indent=4)
+	try:
+	 	with open('industry_to_sector_map.json', 'w') as outfile:
+	 		json.dump(industry_to_sector_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# industry_to_tickers_map
- 	with open('industry_to_tickers_map.json', 'w') as outfile:
- 		json.dump(industry_to_tickers_map, outfile, indent=4)
+	try:
+	 	with open('industry_to_tickers_map.json', 'w') as outfile:
+	 		json.dump(industry_to_tickers_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# sector_to_industries_map
- 	with open('sector_to_industries_map.json', 'w') as outfile:
- 		json.dump(sector_to_industries_map, outfile, indent=4)
+	try:
+	 	with open('sector_to_industries_map.json', 'w') as outfile:
+	 		json.dump(sector_to_industries_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# security_to_industry_map
- 	with open('security_to_industry_map.json', 'w') as outfile:
- 		json.dump(security_to_industry_map, outfile, indent=4)
+	try: 
+	 	with open('security_to_industry_map.json', 'w') as outfile:
+	 		json.dump(security_to_industry_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# security_to_sector_map
- 	with open('security_to_sector_map.json', 'w') as outfile:
- 		json.dump(security_to_sector_map, outfile, indent=4)
+	try: 
+	 	with open('security_to_sector_map.json', 'w') as outfile:
+	 		json.dump(security_to_sector_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
  	# security_to_ticker_list
- 	with open('security_to_ticker_list.json', 'w') as outfile:
- 		json.dump(security_to_ticker_list, outfile, indent=4)		
+ 	try: 
+	 	with open('security_to_ticker_list.json', 'w') as outfile:
+	 		json.dump(security_to_ticker_list, outfile, indent=4)		
+	except IOError:
+		print "Unable to write file"
 
 	# security_to_ticker_map
- 	with open('security_to_ticker_map.json', 'w') as outfile:
- 		json.dump(security_to_ticker_map, outfile, indent=4)
-
+	try: 
+	 	with open('security_to_ticker_map.json', 'w') as outfile:
+	 		json.dump(security_to_ticker_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# ticker_to_industry_map
- 	with open('ticker_to_industry_map.json', 'w') as outfile:
- 		json.dump(ticker_to_industry_map, outfile, indent=4)
+	try: 
+	 	with open('ticker_to_industry_map.json', 'w') as outfile:
+	 		json.dump(ticker_to_industry_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# ticker_to_sector_map
- 	with open('ticker_to_sector_map.json', 'w') as outfile:
- 		json.dump(ticker_to_sector_map, outfile, indent=4)
+	try:
+	 	with open('ticker_to_sector_map.json', 'w') as outfile:
+	 		json.dump(ticker_to_sector_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 	# ticker_to_security_list
- 	with open('ticker_to_security_list.json', 'w') as outfile:
- 		json.dump(ticker_to_security_list, outfile, indent=4)
+	try: 
+	 	with open('ticker_to_security_list.json', 'w') as outfile:
+	 		json.dump(ticker_to_security_list, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
  	# ticker_to_security_map
- 	with open('ticker_to_security_map.json', 'w') as outfile:
- 		json.dump(ticker_to_security_map, outfile, indent=4)
+ 	try:
+	 	with open('ticker_to_security_map.json', 'w') as outfile:
+	 		json.dump(ticker_to_security_map, outfile, indent=4)
+	except IOError:
+		print "Unable to write file"
 
 
 if __name__ == "__main__":

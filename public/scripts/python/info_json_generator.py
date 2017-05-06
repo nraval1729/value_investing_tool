@@ -3,6 +3,13 @@ import math
 import os
 import time
 
+raw_data_biographical = {}
+raw_data_historical = {}
+raw_data_current = {}
+tickers_json = {}
+
+info_dict = {}
+
 cwd = os.getcwd()
 
 
@@ -200,23 +207,35 @@ def populate_big_list(big_list, big_dictionary):
     big_list = big_dictionary.values()
 
 def read_biographical_data():
-    with open(cwd+'/public/json_files/biographical.json') as infile:
-        raw_data_biographical = json.load(infile)
+    try:
+        with open(cwd+'/public/json_files/biographical.json') as infile:
+            raw_data_biographical = json.load(infile)
+    except IOError:
+        print "Unable to open file"
     return raw_data_biographical
 
 def read_historical_data():
-    with open(cwd+'/public/json_files/historical.json') as infile:
-        raw_data_historical = json.load(infile)
+    try:
+        with open(cwd+'/public/json_files/historical.json') as infile:
+            raw_data_historical = json.load(infile)
+    except IOError:
+        print "Unable to open file"
     return raw_data_historical
 
 def read_current_data():
-    with open(cwd+'/public/json_files/current.json') as infile:
-        raw_data_current = json.load(infile)
+    try:
+        with open(cwd+'/public/json_files/current.json') as infile:
+            raw_data_current = json.load(infile)
+    except IOError:
+        print "Unable to open file"
     return raw_data_current
 
 def read_valid_tickers():
-    with open(cwd+'/public/json_files/valid_tickers.json') as infile:
-        tickers_json = json.load(infile)
+    try:
+        with open(cwd+'/public/json_files/valid_tickers.json') as infile:
+            tickers_json = json.load(infile)
+    except IOError:
+        print "Unable to open file"
     return tickers_json
 
 def create_info_dict(raw_data_biographical, tickers_json):
@@ -327,9 +346,11 @@ def create_technical_map(raw_data_historical, raw_data_current, valid_tickers, t
     return big_dictionary # new craig
 
 def write_outfile(info_dict):
-    with open(cwd+'/public/json_files/info.json', 'w') as outfile:
-        json.dump(info_dict, outfile, indent=4)
-
+    try:
+        with open(cwd+'/public/json_files/info.json', 'w') as outfile:
+            json.dump(info_dict, outfile, indent=4)
+    except IOError:
+        print "Unable to write file"
 
 # def main():
 #     i = 1
@@ -401,6 +422,13 @@ def compute_ratio_delta(industry, info_dict, technical_map, ratio):
 
 
 def main():
+
+    global raw_data_biographical
+    global raw_data_historical
+    global raw_data_current
+    global tickers_json
+
+    global info_dict
 
     while True:
         raw_data_biographical = read_biographical_data()

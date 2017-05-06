@@ -1,6 +1,39 @@
 import json
 import math
 
+big_dictionary = {} # this is what we are targeting throughout.  the data gets cleaned, sifted, and placed in here.
+
+raw_data_historical = ""
+raw_data_current = ""
+ticker_to_security_map = ""
+
+valid_tickers = set()
+
+populated_big_dictionary = {}
+populated_ratio_lists = {}
+sorted_ratio_lists = {}
+
+populated_s_score_dictionary_s_score_list = []
+sorted_s_score_list = []
+
+populated_s_rank_dictionary = {}
+appended_s_rank_to_big_dictionary = {}
+appended_company_name_to_big_dictionary = {}
+
+big_list = [] # this is what gets dumped to json as the output file.  very important data target.
+pb_list = [] # holds the pb numerical values.  gets sorted. used to produce rankings.
+pe_list = [] # holds the pe numerical values.  gets sorted. used to produce rankings.
+ps_list = [] # holds the ps numerical values.  gets sorted. used to produce rankings.
+div_list = [] # holds the div numerical values.  gets sorted. used to produce rankings.
+s_score_list = [] # holds the s_score numerical values.  gets sorted. used to produce rankings.
+pb_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
+pe_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
+ps_decile_dictionary = {} # key=ticker, value=decile.  used to proudce rankings.
+div_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
+s_score_dictionary = {} # key=ticker, value=s_score.  used to produce rankings.
+s_rank_dictionary = {} # key=ticker, value=s_rank.  used to produce rankings.
+
+
 def populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_current, valid_tickers):
     # loop over historical raw data. add stocks 
     # to big_dictionary only they have clean data
@@ -9,7 +42,10 @@ def populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_curren
         for key in raw_data_historical[index]:
             ticker = raw_data_historical[index][key]
             if ticker in valid_tickers:
-                big_dictionary[ticker] = raw_data_historical[index]
+                try:
+                    big_dictionary[ticker] = raw_data_historical[index]
+                except KeyError:
+                    print "Key does not exist"
 
     # loop over current raw data. APPEND data to
     # big_dictionary entries only if it is clean data.
@@ -22,7 +58,7 @@ def populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_curren
                 big_dictionary[ticker]['pe_cur'] = raw_data_current[index]['pe_cur']
                 big_dictionary[ticker]['ps_cur'] = raw_data_current[index]['ps_cur']
                 big_dictionary[ticker]['div_cur'] = raw_data_current[index]['div_cur']
-
+    return big_dictionary
 
 # populate the pb, pe, ps, div lists
 def populate_ratio_lists(pb_list, pe_list, ps_list, div_list, big_dictionary):
@@ -31,6 +67,7 @@ def populate_ratio_lists(pb_list, pe_list, ps_list, div_list, big_dictionary):
         pe_list.append(big_dictionary[key]['pe_cur'])
         ps_list.append(big_dictionary[key]['ps_cur'])
         div_list.append(big_dictionary[key]['div_cur'])
+    return big_dictionary
 
 
 # sort the pb, pe, ps, div lists
@@ -39,6 +76,7 @@ def sort_ratio_lists(pb_list, pe_list, ps_list, div_list):
     pe_list.sort()
     ps_list.sort()
     div_list.sort()
+    return big_dictionary
 
 
 # called from main from a for-in block
@@ -67,9 +105,12 @@ def populate_s_score_dictionary_s_score_list( s_score_dictionary, s_score_list, 
         s_score_dictionary[key] = aggregate_score
         s_score_list.append(aggregate_score)
 
+    return s_score_list
+
  
 def sort_s_score_list(s_score_list):
     s_score_list.sort()
+    return s_score_list
 
 
 def populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list, s_rank_dictionary):
@@ -77,16 +118,19 @@ def populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list,
         val = s_score_dictionary[key]
         location = s_score_list.index(val)
         s_rank_dictionary[key] = location + 1
+    return s_rank_dictionary
 
 
 def append_s_rank_to_big_dictionary(big_dictionary, s_rank_dictionary):
     for key in big_dictionary:
         big_dictionary[key]['s_rank'] = s_rank_dictionary[key]
+    return big_dictionary
 
 
 def append_company_name_to_big_dictionary(big_dictionary, ticker_to_security_map):
     for key in big_dictionary:
         big_dictionary[key]['security'] = ticker_to_security_map[key]
+    return big_dictionary
 
 
 def populate_big_list(big_list, big_dictionary):
@@ -95,45 +139,60 @@ def populate_big_list(big_list, big_dictionary):
 
 
 def main():
-
+    
     # collections and variables used throughout program
     global NUM_VALID_TICKERS
-    valid_tickers = set()
-    big_dictionary = {} # this is what we are targeting throughout.  the data gets cleaned, sifted, and placed in here.
-    big_list = [] # this is what gets dumped to json as the output file.  very important data target.
-    pb_list = [] # holds the pb numerical values.  gets sorted. used to produce rankings.
-    pe_list = [] # holds the pe numerical values.  gets sorted. used to produce rankings.
-    ps_list = [] # holds the ps numerical values.  gets sorted. used to produce rankings.
-    div_list = [] # holds the div numerical values.  gets sorted. used to produce rankings.
-    s_score_list = [] # holds the s_score numerical values.  gets sorted. used to produce rankings.
-    pb_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
-    pe_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
-    ps_decile_dictionary = {} # key=ticker, value=decile.  used to proudce rankings.
-    div_decile_dictionary = {} # key=ticker, value=decile.  used to produce rankings.
-    s_score_dictionary = {} # key=ticker, value=s_score.  used to produce rankings.
-    s_rank_dictionary = {} # key=ticker, value=s_rank.  used to produce rankings.
+
+    # global variables to allow access to test_technical_dot_json_file_generator.py
+    global big_dictionary
+    global raw_data_historical
+    global raw_data_current
+    global valid_tickers
+
+    global populated_big_dictionary
+    global populated_ratio_lists
+    global sorted_ratio_lists
+
+    global populated_s_score_dictionary_s_score_list
+    global sorted_s_score_list
+
+    global populated_s_rank_dictionary
+    global appended_s_rank_to_big_dictionary
+    global appended_company_name_to_big_dictionary
 
     # get handles on the json files
-    with open('historical.json') as infile:
-        raw_data_historical = json.load(infile)
+    try:
+        with open('historical.json') as infile:
+            raw_data_historical = json.load(infile)
+    except IOError:
+        print "Unable to open file"
 
-    with open('current.json') as infile:
-        raw_data_current = json.load(infile)
+    try:
+        with open('current.json') as infile:
+            raw_data_current = json.load(infile)
+    except IOError:
+        print "Unable to open file"
 
-    with open('valid_tickers.json') as infile:
-        valid_tickers = json.load(infile)
+    try:
+        with open('valid_tickers.json') as infile:
+            valid_tickers = json.load(infile)
+    except IOError:
+        print "Unable to open file"
 
-    with open('ticker_to_security_map.json') as infile:
-        ticker_to_security_map = json.load(infile)
+    try:
+        with open('ticker_to_security_map.json') as infile:
+            ticker_to_security_map = json.load(infile)
+    except IOError:
+        print "Unable to open file"
 
     valid_tickers = set(valid_tickers['valid_tickers'])
     NUM_VALID_TICKERS = len(valid_tickers)
 
-    populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_current, valid_tickers)
+    populated_big_dictionary = populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_current, valid_tickers)
 
-    populate_ratio_lists(pb_list, pe_list, ps_list, div_list, big_dictionary)
+    populated_ratio_lists = populate_ratio_lists(pb_list, pe_list, ps_list, div_list, big_dictionary)
 
-    sort_ratio_lists(pb_list, pe_list, ps_list, div_list)
+    sorted_ratio_lists = sort_ratio_lists(pb_list, pe_list, ps_list, div_list)
 
     # # keep this in main since you would have to pass 17 params otherwise
     # # populate pbDictionary, peDictionary, psDictionary, divDictionary
@@ -143,7 +202,7 @@ def main():
         populate_decile_dictionary(key, 'ps_cur', ps_list, ps_decile_dictionary, big_dictionary, False)
         populate_decile_dictionary(key, 'div_cur', div_list, div_decile_dictionary, big_dictionary, True)
 
-    populate_s_score_dictionary_s_score_list(   s_score_dictionary, 
+    populated_s_score_dictionary_s_score_list = populate_s_score_dictionary_s_score_list(   s_score_dictionary, 
                                                 s_score_list, 
                                                 big_dictionary,
                                                 pb_decile_dictionary, 
@@ -151,22 +210,28 @@ def main():
                                                 ps_decile_dictionary, 
                                                 div_decile_dictionary)
     
-    sort_s_score_list(s_score_list)
+    sorted_s_score_list = sort_s_score_list(s_score_list)
 
-    populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list, s_rank_dictionary)
+    populated_s_rank_dictionary = populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list, s_rank_dictionary)
 
-    append_s_rank_to_big_dictionary(big_dictionary, s_rank_dictionary)
+    appended_s_rank_to_big_dictionary = append_s_rank_to_big_dictionary(big_dictionary, s_rank_dictionary)
 
-    append_company_name_to_big_dictionary(big_dictionary, ticker_to_security_map)
+    appended_company_name_to_big_dictionary = append_company_name_to_big_dictionary(big_dictionary, ticker_to_security_map)
 
     big_list = big_dictionary.values()
 
     # write the json files
-    with open('technical_map.json', 'w') as outfile:
-        json.dump(big_dictionary, outfile, indent=4)
+    try:
+        with open('technical_map.json', 'w') as outfile:
+            json.dump(big_dictionary, outfile, indent=4)
+    except IOError:
+        print "Unable to write file"
 
-    with open('technical.json', 'w') as outfile:
-        json.dump(big_list, outfile, indent=4)
+    try:
+        with open('technical.json', 'w') as outfile:
+            json.dump(big_list, outfile, indent=4)
+    except IOError:
+        print "Unable to write file"
 
 if __name__ == "__main__":
     main()

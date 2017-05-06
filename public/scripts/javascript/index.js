@@ -350,8 +350,8 @@ function makeTableRowString(security, tableName) {
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='white'>" + security.s_rank + "</td>";
-    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="Move item up arrow." src="../images/up_arrow_02.png"></button></td>';
-    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="Move item down arrow" src="../images/down_arrow_02.png"></button></td>';
+    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="Move item up arrow." src="../images/up_arrow_03.png"></button></td>';
+    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="Move item down arrow" src="../images/down_arrow_03.png"></button></td>';
     if (tableName == "searchTable") {
         rowString += '<td class="white"><button role="button" class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="Delete item X" src="../images/x_icon_02.png"></td>';                                                           
     }

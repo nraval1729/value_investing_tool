@@ -8,6 +8,9 @@ import urllib
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import time
 
+sorted_biographical_list_of_dicts = []
+current_data = []
+
 cwd = os.getcwd()
 
 def write_current_data(sorted_biographical_list_of_dicts):
@@ -35,11 +38,31 @@ def write_current_data(sorted_biographical_list_of_dicts):
 	for q in quote['query']['results']['quote']:
 		if q['symbol']:
 			curr_dict = OrderedDict()
-			curr_dict['ticker'] = q['symbol']
-			curr_dict['pe_cur'] = q['PERatio']
-			curr_dict['ps_cur'] = q['PriceSales']
-			curr_dict['pb_cur'] = q['PriceBook']
-			curr_dict['div_cur'] = q['DividendYield']
+			try:
+				curr_dict['ticker'] = q['symbol']
+			except KeyError:
+				print "Key does not exist"
+
+			try:
+				curr_dict['pe_cur'] = q['PERatio']
+			except KeyError:
+				print "Key does not exist"
+
+			try:
+				curr_dict['ps_cur'] = q['PriceSales']
+			except KeyError:
+				print "Key does not exist"
+
+			try:
+				curr_dict['pb_cur'] = q['PriceBook']
+			except KeyError:
+				print "Key does not exist"
+
+			try:
+				curr_dict['div_cur'] = q['DividendYield']
+			except KeyError:
+				print "Key does not exist"
+
 		else:
 			print "Symbol is this: ", q['symbol']
 
@@ -47,17 +70,26 @@ def write_current_data(sorted_biographical_list_of_dicts):
 
 		sorted_current_list_of_dicts = sorted(current_list_of_dicts, key=lambda k:k['ticker'])
 
-		with open(cwd +'/public/json_files/current.json', 'w') as c:
-			json.dump(sorted_current_list_of_dicts, c, indent = 4)
+		try:
+			with open(cwd +'/public/json_files/current.json', 'w') as c:
+				json.dump(sorted_current_list_of_dicts, c, indent = 4)
+		except IOError:
+			print "Unable to write file"
 
 def main():
-	sorted_biographical_list_of_dicts = []
-	with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'r') as s:
-		sorted_biographical_list_of_dicts = json.load(s)
+
+	global sorted_biographical_list_of_dicts
+	global current_data
+
+	try:
+		with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'r') as s:
+			sorted_biographical_list_of_dicts = json.load(s)
+	except IOError:
+		print "Unable to open file"
 
 	# Make sure to hit the yql api every 5 mins aka 300 secs, and update the current.json
 	while True:
-		write_current_data(sorted_biographical_list_of_dicts)
+		current_data = write_current_data(sorted_biographical_list_of_dicts)
 		time.sleep(300)
 
 if __name__ == "__main__":
