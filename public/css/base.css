@@ -5,6 +5,10 @@
     color: black;
 }
 
+/* Make sure the ARIA elements continue working on older browsers */
+header, nav, main, footer, article, section, aside {
+   display:block;
+}
 
 /* to style the placeholder text inside of the search bars
 citation: http://stackoverflow.com/questions/2610497/

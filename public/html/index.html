@@ -22,66 +22,68 @@
     <div id="page">
 
         <div class="centerMe">
-            <div id="indexHeader">
-                <span style="float:left; margin-top:-7px">
-                    <button id="logoButton" onclick="showHome()">Value Investing Tool</button>
-                </span>
-                <span style="float:right">
-                    <button id="searchButton" class="navButton" onclick="showSearch()">Search</button>
-                    <button id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
-                    <button id="preferencesButton" class="navButton" onclick="togglePreferences()">Preferences</button>
-                </span>
-            </div>
+            <header id="indexHeader" role="banner">
+                <nav role="navigation" style="float:left; margin-top:-7px">
+                    <button role="button" id="logoButton" onclick="showHome()">Value Investing Tool</button>
+                </nav>
+                <nav role="navigation" style="float:right">
+                    <button role="button" id="searchButton" class="navButton" onclick="showSearch()">Search</button>
+                    <button role="button" id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
+                    <button role="button" id="preferencesButton" class="navButton" onclick="togglePreferences()">Preferences</button>
+                </nav>
+            </header>
         </div>
 
-        <div id="interior">   
+        <main role="main" id="interior">   
 
             <div class="centerMe">    
-                <div id="preferencesSection"> 
+                <section role="region" aria-labelledby="prefsTitle" id="preferencesSection"> 
                     <div class="spacer50"></div>
                     <div id="slidersDiv">
-                        <h1>Preferences</h1>
+                        <h1 id="prefsTitle">Preferences</h1>
                         <div class="spacer50"></div>
 
                         <div class="slider-range" id="colorSlider">
-                            <div id="custom-handle1" class="ui-slider-handle"></div>
-                            <div id="custom-handle2" class="ui-slider-handle"></div>
-                            <div id="custom-handle3" class="ui-slider-handle"></div>
-                            <div id="custom-handle4" class="ui-slider-handle"></div>
+                            <div role="slider" id="custom-handle1" class="ui-slider-handle"></div>
+                            <div role="slider" id="custom-handle2" class="ui-slider-handle"></div>
+                            <div role="slider" id="custom-handle3" class="ui-slider-handle"></div>
+                            <div role="slider" id="custom-handle4" class="ui-slider-handle"></div>
                         </div>
 
                         <div class="spacer25"></div>
 
-                        <button id="resetColorSliderButton" class="sliderButton" onclick="resetColorSlider()">Restore Slider Defaults</button>
+                        <button role="button" id="resetColorSliderButton" class="sliderButton" onclick="resetColorSlider()">Restore Slider Defaults</button>
 
                         <div class="spacer25"></div>
                     </div>
 
                     <div id="miscPref">
                         <div class="verticalCenter">
-                            <label for="monochromeSetting">Monochrome</label>
-                            <input id="monochromeCheckbox" class="checkbox" type="checkbox" name="monochromeSetting" onchange="changeMonochrome()">
+                            <label for="monochromeCheckbox">Monochrome</label>
+                            <input role="checkbox" id="monochromeCheckbox" class="checkbox" type="checkbox" onchange="changeMonochrome()">
                         </div>
                         <div class="verticalCenter">
-                            <label for="refreshSetting">Continuous Updates</label>
-                            <input id="refreshCheckbox" class="checkbox" type="checkbox" name="refreshSetting" checked>
+                            <label for="refreshCheckbox">Continuous Updates</label>
+                            <input role="checkbox" id="refreshCheckbox" class="checkbox" type="checkbox" checked>
                         </div>
                     </div>
 
-                </div><!-- end: preferencesSection -->
+                </section><!-- end: preferencesSection -->
             </div>   
 
             <div class="centerMe">
-                <div id="homeSection">
+                <section role="region" aria-labelledby="homeTitle" id="homeSection">
+                    <h1 id="homeTitle">Home</h1>
                     <div class="spacer100"></div>
                     <div class="centerMe">
 
                         <!-- explore search about -->
 
-                        <div class="splashBox" onclick="showSearch()">
+
+                        <div role="link" class="splashBox" onclick="showSearch()" name="Show Search page.">
                             <div class="horizontal">
                                 <!-- citation: image sourced from myiconfinder.com -->
-                                <img class="splashBoxIcon" alt="magnifying glass" src="../images/magnifying_glass_02.png">
+                                <img class="splashBoxIcon" alt="Magnifying glass representing Search page." src="../images/magnifying_glass_02.png">
                                 <p class="splashBoxCaption" id="splashBoxCaptionOne">SEARCH<p>
                             </div>
                             <p class="splashBoxParagraph">
@@ -90,10 +92,10 @@
                             </p>
                         </div>
 
-                        <div class="splashBox" onclick="showExplore()"> 
+                        <div role="link" class="splashBox" onclick="showExplore()" name="Show Explore page."> 
                             <div class="horizontal">
                                 <!-- citation: image sourced from clipartfest.com -->
-                                <img class="splashBoxIcon" alt="compass" src="../images/compass_02.png">
+                                <img class="splashBoxIcon" alt="Compass representing Explore page" src="../images/compass_02.png">
                                
                                 <p class="splashBoxCaption" id="splashBoxCaptionTwo">EXPLORE<p>
                                
@@ -104,11 +106,11 @@
                             </p>
                         </div>    
 
-                    <a href="/about" class="splashBoxLink">
+                    <a role="link" href="/about" class="splashBoxLink" name="Link to About page.">
                         <div class="splashBox">
                             <div class="horizontal">
                                 <!-- citation: image sourced from iconfinder.com -->
-                                <img class="splashBoxIcon" alt="information symbol" src="../images/information_icon_02.png">
+                                <img class="splashBoxIcon" alt="Information symbol representing About page." src="../images/information_icon_02.png">
                                 <p class="splashBoxCaption" id="splashBoxCaptionThree">ABOUT<p>
                             </div>
                             <p class="splashBoxParagraph">
@@ -121,31 +123,34 @@
 
                        <!--table id="homeTable">leader board </table-->
                     </div>
-                </div><!-- end: homeSection --> 
+                </section><!-- end: homeSection --> 
             </div>  
 
-            <div id="searchSection"> 
+            <section role="region" aria-labelledby="searchTitle" id="searchSection"> 
+                <h1 id="searchTitle" class="centerMe">Search</h1>
                 <div class="spacer100"></div>
                 <div class="horizontalCenter">
-                    <input id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
+                    <label class="hiddenForSR" for="searchBarInput">Search Input</label>
+                    <input role="search" id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
                     <div id="searchBarDecorationWrapper">
                         <span id="#searchEnterButton">
-                            <img id="searchBarDecoration" src="../images/magnifying_glass_02.png">
+                            <img id="searchBarDecoration" alt="Magnifying glass icon." src="../images/magnifying_glass_02.png">
                         </span>
                     </div>
                 </div>
                 <div class="spacer50"></div>
                 <div class="centerMe">
-                   <table id="searchTable">
+                   <table id="searchTable" caption="Search Results" summary="Data table containing search results. Each row has: the security name, it's p/e, p/s, p/b, div, and rank, and the ability to move a that row up, down, or delete it.">
                        <thead></thead>
                        <tbody></tbody>
                    </table>
                 </div>
-            </div><!-- end: searchSection -->
+            </section><!-- end: searchSection -->
             
 
             <div class="centerMe">
-                <div id="exploreSection">
+                <section role="region" aria-labelledby="exploreTitle" id="exploreSection">
+                    <h1 id="exploreTitle">Explore</h1>
                     <div class="spacer25"></div>
 
                     <div class="centerMe">
@@ -164,15 +169,15 @@
                     </div>
 
                     <div id="exploreCompanySection" class="centerMe">
-                        <table id="exploreTable">
+                        <table id="exploreTable" caption="Explore Table" summary="Data table containing information for all securities in this industry. Each row has: the company name, it's p/e, p/s, p/b, div, and rank, and the ability to move a that row up or down.">
                             <thead></thead>
                             <tbody></tbody>
                         </table>
                     </div>
-                </div><!-- end: exploreSection -->
+                </section><!-- end: exploreSection -->
             </div>
 
-        </div><!-- end: interior -->
+        </main><!-- end: interior -->
     </div>
 </body>
 </html>

@@ -17,8 +17,8 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
                                 //colors for the dividend.  this coefficient allows you to adjust the
                                 //sensitivity of the dividend to colors.  greater than 1 will produce
                                 //more colors, less than 1 will produce less colors.
-var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
-var monochromeColors = ["black", "blackGrey", "grey", "whiteGrey", "whiteWithBorder"];
+var colors = ["brightGreen", "darkGreen", "black", "darkRed", "brightRed"];
+var monochromeColors = ["whiteWithBorder", "whiteGrey", "grey", "blackGrey", "black"];
 
 //PAGE INITIALIZATION
 $(document).ready(function() {
@@ -344,16 +344,16 @@ function makeTableRowString(security, tableName) {
     //citation: x-button image source: http://www.iconsdb.com
     var rowString = '<tr>';
     var link = "http://finance.yahoo.com/quote/" + security.ticker + "?p=" + security.ticker;
-    rowString += "<td class='securityCellCompanyName white'><a href='" + link + "' target='_blank' class='hoverlink'>" + security.security + "</a></td>";
+    rowString += "<td class='securityCellCompanyName white'><a href='" + link + "' target='_blank' class='hoverlink' name='Link to Yahoo Finance Page for " + security.security +".'>" + security.security + "</a></td>";
     rowString += renderSecurityCell(security.pe_cur, security.pe_avg, false);
     rowString += renderSecurityCell(security.ps_cur, security.ps_avg, false);
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='white'>" + security.s_rank + "</td>";
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_02.png"></button></td>';
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_02.png"></button></td>';
+    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="Move item up arrow." src="../images/up_arrow_02.png"></button></td>';
+    rowString +=  '<td class="white"><button role="button" class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="Move item down arrow" src="../images/down_arrow_02.png"></button></td>';
     if (tableName == "searchTable") {
-        rowString += '<td class="white"><button class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_02.png"></td>';                                                           
+        rowString += '<td class="white"><button role="button" class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="Delete item X" src="../images/x_icon_02.png"></td>';                                                           
     }
     rowString += "</tr>";
     return rowString;
@@ -371,14 +371,14 @@ function makeTableHeaderString(tableName) {
     str +=  '<th class="tableHeaderCell"></th>';
     str +=  '<th class="tableHeaderCell"></th>';
     if (tableName == "searchTable") {
-        str +=  '<th class="tableHeaderCell"><button class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></th>';
+        str +=  '<th class="tableHeaderCell"><button role="button" class="searchResultButton" id="clearSearchTableButton" onclick="clearTable(\'' + tableName + '\')" >clear</button></th>';
     }
     str += '</tr>';
     return str;
 }
 
 function makePopupHeader(boxName, popupName, headerText, popupText) {
-    var str = '<th class="tableHeaderCell popup" id="' + boxName + '" oncontextmenu="return false;">';
+    var str = '<th role="button" class="tableHeaderCell popup" id="' + boxName + '" oncontextmenu="return false;">';
     str += '<span class="popuptext" id="' + popupName + '">'+ popupText +'</span>';
     str += headerText + '</th>';
     return str;
