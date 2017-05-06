@@ -17,8 +17,8 @@ var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, res
                                 //colors for the dividend.  this coefficient allows you to adjust the
                                 //sensitivity of the dividend to colors.  greater than 1 will produce
                                 //more colors, less than 1 will produce less colors.
-var colors = ["brightRed", "darkRed", "black", "darkGreen", "brightGreen"];
-var monochromeColors = ["black", "blackGrey", "grey", "whiteGrey", "whiteWithBorder"];
+var colors = ["brightGreen", "darkGreen", "black", "darkRed", "brightRed"];
+var monochromeColors = ["whiteWithBorder", "whiteGrey", "grey", "blackGrey", "black"];
 
 //PAGE INITIALIZATION
 $(document).ready(function() {
@@ -350,8 +350,8 @@ function makeTableRowString(security, tableName) {
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='white'>" + security.s_rank + "</td>";
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_02.png"></button></td>';
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_02.png"></button></td>';
+    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_03.png"></button></td>';
+    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_03.png"></button></td>';
     if (tableName == "searchTable") {
         rowString += '<td class="white"><button class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_02.png"></td>';                                                           
     }
@@ -435,9 +435,10 @@ function doBreadCrumbArrows() {
 function doCompanyBreadCrumb(companyName) {
     var list = $("#breadCrumbList");
     doBreadCrumbArrows();
+    $('#industryBreadCrumb').addClass('cursorHand');
 
     var listItem =
-        '<li>'
+        '<li id="companyBreadCrumb">'
         + companyName 
         + '</li>';
     list.append(listItem);
@@ -450,10 +451,11 @@ function doCompanyBreadCrumb(companyName) {
 function doIndustryBreadCrumb(industryName) {
     var list = $("#breadCrumbList");
     doSectorBreadCrumb();
+    $('#sectorBreadCrumb').addClass('cursorHand');
     doBreadCrumbArrows();
 
     var listItem =
-        '<li onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
+        '<li id="industryBreadCrumb" onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
         + industryName 
         + '</li>';
     list.append(listItem);
@@ -469,7 +471,7 @@ function doSectorBreadCrumb() {
     $("#exploreTable").empty();
     clearTickers(breadCrumbChain);
     var listItem = 
-    '<li onclick="doSectorBreadCrumb()">Sectors</li>';
+    '<li id="sectorBreadCrumb" onclick="doSectorBreadCrumb()">Sectors</li>';
     breadCrumbList.append(listItem);
     $("#exploreSectorSection").toggle(true);
     $("#exploreIndustrySection").toggle(false);

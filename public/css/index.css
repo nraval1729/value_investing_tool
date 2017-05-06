@@ -1,3 +1,20 @@
+.cursorArrow {
+
+}
+
+.cursorArrow:hover {
+    cursor: default;
+}
+
+.cursorHand {
+
+}
+
+.cursorHand:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
 #footerHomePageLinks {
     margin: 15px;
     list-style-type: none;
@@ -13,6 +30,15 @@
     color: rgb(240,240,240);
     transition: color 0.10s ease;
     -webkit-transition: color 0.10s ease;
+}
+
+.hiddenForSR {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 #interior {
@@ -70,7 +96,7 @@
 }
 
 #breadCrumbList:hover {
-    cursor: pointer;
+    cursor: default;
 }
 
 #breadCrumbList li {

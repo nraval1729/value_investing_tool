@@ -182,6 +182,10 @@ right */
 }
 
 
+#page {
+    margin: auto;
+}
+
 .spacer10 {
     display: block;
     clear: both;
