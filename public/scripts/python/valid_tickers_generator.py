@@ -15,8 +15,11 @@ def get_valid_tickers(raw_data, raw_data_length, bad_data_indicator):
 	for index in range(0, raw_data_length):
 		is_good_data = True
 		for key in raw_data[index]:
-			if raw_data[index][key] == bad_data_indicator:
-				is_good_data = False
+			if key == "div_avg" or key == "div_cur":
+				pass
+			else:
+				if raw_data[index][key] == bad_data_indicator:
+					is_good_data = False
 		if is_good_data == True:
 			valid_tickers.add(raw_data[index]['ticker'])
 	return valid_tickers
@@ -45,7 +48,7 @@ def make_dictionary_from_set(my_key, my_set):
 def main():
 
 	while True:
-	# get handles on the json files
+		# get handles on the json files
 		with open(cwd+'/public/json_files/biographical.json') as infile:
 			raw_data_biographical = json.load(infile)
 

@@ -401,19 +401,28 @@ function renderSecurityCell(currValue, histValue, isDividend) {
 //returns which color to use for the
 //table cell based on the input value
 function determineColor(excursion) {
-
     var index;
-    if (excursion >= colorBreakPoint4) {
-        index = 4;
-    } else if (excursion >= colorBreakPoint3) {
-        index = 3;
-    } else if (excursion >= colorBreakPoint2) {
+    if (isNaN(excursion)) {
         index = 2;
-    } else if (excursion >= colorBreakPoint1) {
-        index = 1;
-    } else {
-        index = 0;
     }
+    else {
+        if (excursion >= colorBreakPoint4) {
+            index = 4;
+        }   
+        else if (excursion >= colorBreakPoint3) {
+            index = 3;
+        }   
+        else if (excursion >= colorBreakPoint2) {
+            index = 2;
+        }   
+        else if (excursion >= colorBreakPoint1) {
+            index = 1;
+        }   
+        else {
+            index = 0;
+        } 
+    }
+
 
     if(!$('#monochromeCheckbox').is(':checked')) {
         return colors[index];

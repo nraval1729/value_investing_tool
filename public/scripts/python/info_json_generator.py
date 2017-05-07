@@ -399,13 +399,33 @@ def compute_ratio_delta(industry, info_dict, technical_map, ratio):
     delta = delta_sum / n
     return delta
 
+def clean_raw_data(raw_data, data_type):
+    bad_indicator = ""
+    if data_type == "historical":
+        bad_indicator = u'\u2014'
+    if data_type == "current":
+        bad_indicator = None
+
+    for data in raw_data:
+        for key in data:
+            if key == "div_cur" and data[key] == bad_indicator:
+                data[key] = 0.0
+            if key == "div_avg" and data[key] == bad_indicator:
+                data[key] = 0.0
+
+    return raw_data
+
 
 def main():
 
     while True:
         raw_data_biographical = read_biographical_data()
         raw_data_historical = read_historical_data()
+        raw_data_historical = clean_raw_data(raw_data_historical, "historical")
+
         raw_data_current = read_current_data()
+        raw_data_current = clean_raw_data(raw_data_current, "current")
+
         tickers_json = read_valid_tickers()
         info_dict = create_info_dict(raw_data_biographical, tickers_json)
         info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
