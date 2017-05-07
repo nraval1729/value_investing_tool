@@ -423,7 +423,6 @@ function determineColor(excursion) {
         } 
     }
 
-
     if(!$('#monochromeCheckbox').is(':checked')) {
         return colors[index];
     }

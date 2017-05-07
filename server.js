@@ -39,6 +39,10 @@ app.get("/privacy_policy", function(req, res) {
 	res.render('privacy_policy.html');
 });
 
+app.get("/disclaimer", function(req, res) {
+    res.render('disclaimer.html');
+});
+
 app.get("/info", function(req, res) {
 	var infoFilePath = __dirname + '/public/json_files/info.json';
 	console.log("Inside /info, sending current json at path: " +infoFilePath);
