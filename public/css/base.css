@@ -58,6 +58,8 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100vw;
+    background-color: white;
 }
 
 .darkGreen {

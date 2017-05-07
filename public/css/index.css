@@ -82,7 +82,9 @@
 
 
 #exploreSectorSection, #exploreIndustrySection {
-    width: 860px;
+    /*width: 860px;*/
+    margin-left: 15vw;
+    width: 70vw;
 }
 
 
@@ -90,6 +92,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .exploreListItem {
@@ -100,9 +103,12 @@
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    width: 170px;
+    /*width: 170px;
     min-height: 160px;
     height: 160px;
+    */
+    height: 20vh;
+    width: 12vw;
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: white;
@@ -131,9 +137,11 @@
 }
 
 .exploreListItemColorSection {
-    margin-left: 35px;
-    width:100px;
-    min-height:60px;
+    margin-left: 2.5vw;
+    margin-bottom: 2vh;
+    width: 7vw;
+    height: 8vh;
+    /*min-height:60px;*/
 }
 
 #indexHeader {
@@ -198,16 +206,17 @@
 
 .securityCell {
     font-weight: normal;
-    width: 80px;
-    height: 80px;
 }
 
 .securityCellContent {
     font-weight: normal;
-    width: 60px;
-    height: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 6vw;
+    height: 11vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,8 +231,11 @@
 }
 
 .securityCellCompanyName {
-    width: 100px;
-    height: 80px;
+    /*width: 100px;
+    height: 80px;*/
+
+    width: 10vw;
+    height: 10vh;
     padding-right: 10px;
     border: 0px;
     border-left: 10px;
@@ -264,7 +276,7 @@
     min-height: 270px;
     width: 270px;
     height: 270px;*/
-    width: 40vh;
+    width: 25vw;
     height: 40vh;
     background-color: white;
     border: 2px solid black;
@@ -321,8 +333,8 @@
 .tableHeaderCell {
     font-weight: bold;
 
-    width: 80px;
-    height: 80px;
+    width: 3vw;
+    height: 5vh;
     color: black;
 }
 
