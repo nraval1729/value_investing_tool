@@ -15,22 +15,7 @@
     cursor: hand;
 }
 
-#footerHomePageLinks {
-    margin: 15px;
-    list-style-type: none;
-}
 
-#footerHomePageLinks a {
-    color: rgb(200,200,200);
-    text-decoration: none;
-}
-
-#footerHomePageLinks a:hover {
-    cursor: pointer;
-    color: rgb(240,240,240);
-    transition: color 0.10s ease;
-    -webkit-transition: color 0.10s ease;
-}
 
 .hiddenForSR {
     position: absolute;

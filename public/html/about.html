@@ -9,36 +9,177 @@
 <body>
     <div id="page">
 
-        <div id="header2" class="horizontal">
+        <div class="centerMe">
+            <header id="pageHeader" role="banner">
+                <nav role="navigation" style="float:left; margin-top:-7px; font-size: 120%;">
+                    <a id="logo" href="/">Value Investing Tool</a>
+                </nav>
+            </header>
+        </div>
+
+<!--         <div id="header2" class="horizontal">
             <div>
-                <!--a id="logo" href="index.html">Value Investing Tool</a-->
                 <a id="logo" href="/">Value Investing Tool</a>
             </div>
-            <!--div>
-                <a class="headerNavigationLink" href="search.html">Search</a>
-                <a class="headerNavigationLink" href="explore.html">Explore</a>
-            </div-->
-        </div>
+        </div> -->
 
         <div id="interior" class="centerMe">
             <div class="centerMe">
                 <div>
-                    <h1>About</h1>
-                    <h2>To be completed</h2>
+                    <h1 id="aboutPageTitle">About</h1>
                 </div>
             </div>
 
             <div class="centerMe">
                 <div class="nonHoverBox">
-                    <p class="longText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, nulla quis mattis finibus, enim libero vestibulum augue, quis dapibus tortor lectus et neque. Quisque quis ex eu mauris pulvinar lobortis a sed mauris. Nullam molestie libero augue, sit amet aliquam urna porta vitae. Aliquam ultricies massa eu neque vulputate, sed auctor dolor consequat. Suspendisse eget enim et sem mollis ornare id non ante. Curabitur aliquam varius ipsum ac sollicitudin. Phasellus vitae ipsum finibus, vestibulum lacus in, egestas eros. Pellentesque viverra posuere massa at sodales. Nunc odio massa, pretium at tempor vel, cursus quis metus. Nulla quis libero rhoncus, pellentesque enim vel, pulvinar nisl. Donec sit amet enim a diam rutrum commodo. Integer sollicitudin eget nunc vel fermentum. Phasellus laoreet ligula in semper feugiat. Donec orci augue, venenatis ut elementum sit amet, aliquam et lorem. In ultricies consectetur maximus.</p>
+                    <h2 class="sectionTitle1">What is value investing?</h2>
+                        <p class="longText">
+                            Suppose a stock costs $100 per share. How would you know this is a good price? Value investing looks at how much financial performance your $100 is buying you to determine if it is a good value. A simple example would help explain this. 
+                            <br> <br>
+                            Let's say you were going to buy 20 eggs for $2. This means every 10 cents buys you 1 egg. So it has a price-to-egg ratio of 10 cents. This is a better deal than 20 eggs for $4, which would have a price-to-egg ratio of 20 cents. The key factor is how many eggs your money is buying you. If the price of the eggs went up, but you didn't get any more eggs, then the deal got worse. Similarly, if the price went down, and you got the same amount of eggs, the deal got better.
+                            <br> <br>
+                            Just like we just looked at the price-to-eggs ratio, value investing looks at financial performance ratios to determine whether you are getting a good deal or not. Our tool provides near real time data on four of these financial performance ratios. We will describe these for you here:
+                        </p>
 
-                    <p class="longText">Sed scelerisque elit non leo condimentum, et tempor nulla efficitur. Pellentesque tempor augue vitae eros sollicitudin, in mattis ipsum cursus. Nulla a sodales nisi. Ut tortor velit, cursus a justo sit amet, accumsan cursus nunc. Vivamus vulputate odio rhoncus ligula laoreet semper. Integer id lectus dapibus, congue arcu id, porta sapien. Pellentesque laoreet lorem sed massa vulputate vulputate. Quisque leo tortor, venenatis ultricies nulla quis, congue tempor justo. Etiam scelerisque lorem enim, eget ornare velit eleifend vel. Quisque varius malesuada libero quis condimentum. Curabitur accumsan accumsan magna sit amet cursus. Quisque commodo est aliquam sagittis blandit. Nam tristique erat ac mattis semper. Donec purus metus, posuere sit amet iaculis ut, malesuada vitae est. Nam lobortis porta dolor quis eleifend.</p>
+                    <h2 class="sectionTitle2">P/E Ratio</h2>
+                        <p class="longText">
+                            The P/E Ratio is the price-to-earnings ratio. It is a very popular ratio to examine. The P/E ratio is calculated by dividing the share price by how many dollar amount of earnings per share. For example, if a stock costs $100 and per share, and the company earns $5 per share, the P/E would be $100 / $5 = 20. Just like you wanted the price-to-eggs ratio to be low (i.e. 10 cents rather than 20 cents), you want the P/E ratio to be low. Many stocks have a P/E of around 15. Any P/E higher than 25 should be avoided unless it is a growth stock. It's useful to see how a company's P/E is doing currently, compared to how it normally does. Our color coding feature helps you see this (which we will show you in the next section).
+                        </p>
 
-                    <p class="longText">Nam nibh libero, facilisis vel consequat a, varius a lorem. Nullam viverra lectus id leo pretium, quis blandit turpis imperdiet. Nullam velit urna, convallis a lorem semper, sollicitudin ultricies lectus. Aenean sed diam odio. Phasellus finibus erat sit amet augue suscipit mattis. Morbi nisi mauris, condimentum id imperdiet pharetra, porta vel mi. In suscipit porta nisi.</p>
+                    <h2 class="sectionTitle2">P/S Ratio</h2>
+                        <p class="longText">
+                            The P/S Ratio is the price-to-sales ratio. The P/S ratio measures the price of a company's stock against its annual sales, instead of earnings. Like the P/E ratio, the P/S reflects how many times investors are paying for every dollar of a company's sales. For example, if a stock costs $100 per share, and has $50 in sales per share, the P/S ratio would be $100 / $50 = 2. Sometimes a company can be generating sales but not have any earnings because their expenses are very high and the expenses are erasing all their profits. Startup companies often don't have positive earnings, so it is good to look at the P/S ratio to track the company's progress. 
+                        </p>
 
-                    <p class="longText">Vestibulum dui felis, venenatis in dapibus vitae, tincidunt in est. Morbi id purus diam. Integer magna lectus, imperdiet nec cursus non, mollis a sapien. Pellentesque tempor leo nulla, lobortis eleifend purus venenatis eu. In vitae ligula sed dolor imperdiet lacinia eget eu magna. Nulla facilisi. In rhoncus gravida sem, ut tristique augue interdum vel. Sed bibendum, dui vitae finibus eleifend, tellus justo consequat nibh, non varius massa libero et sapien. Etiam ut mattis est, gravida vulputate justo. Suspendisse fermentum ligula id nunc consequat, eleifend vestibulum justo condimentum. Donec venenatis finibus lacinia. Mauris eget libero nec libero faucibus pellentesque. Sed lobortis est id justo semper, eu efficitur lacus facilisis. Vestibulum non ex nibh. Vivamus tempor nisl tortor, eu venenatis velit vehicula sit amet.</p>
+                    <h2 class="sectionTitle2">P/B Ratio</h2>
+                        <p class="longText">
+                            The P/B Ratio is the price-to-book ratio. Book refers to book value, which is the total value of all of the assets of the company. For example, suppose a company has issued a million shares to the public and each share costs $100. This makes the market capitalization of the company 1 million x $100 = $100 million. Further suppose that the book value of the company is $20 million. To calculate the price-to-book ratio, we divide the company's market capitalization by the book value. Therefore, in this example, the price-to-book ratio will be $100 million / $20 million = 5. 
+                        </p>
 
-                    <p class="longText">Quisque laoreet nibh vel iaculis gravida. Suspendisse dui elit, suscipit et condimentum ac, ornare vitae sem. Nullam volutpat sagittis erat vel maximus. Proin maximus sed erat in semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eleifend lorem quis ligula ultrices pharetra. Nulla cursus risus eget ligula blandit venenatis. Aenean sed tortor vitae lacus ornare consectetur sit amet vitae sem. Morbi ut venenatis quam. Nullam lacus neque, dapibus in ex sit amet, feugiat efficitur magna. Pellentesque tincidunt eros quis velit fringilla elementum. Donec at hendrerit nunc. Curabitur sed neque consectetur, malesuada dui sit amet, maximus augue. Donec ac hendrerit odio. Sed urna nisi, blandit in ligula id, viverra convallis diam. Etiam imperdiet nibh vitae dui commodo congue.</p>
+                    <h2 class="sectionTitle2">DIV</h2>
+                        <p class="longText">
+                            Some companies pay you money four times a year for owning their shares. This payment is called a dividend. Growth companies often do not pay dividend, while long-established companies often do. A typical dividend is around 2.5%. For example, if the stock price costs $100, and you get paid $3 over the course of the year, the dividend is $3 / $100 = 3% (dividends are usually expressed in percentages). Unlike the other three ratios, you want a high dividend. 
+                        </p>
+
+                    <h2 class="sectionTitle1">How to use this site</h2>
+                        <p class="longText">
+                            <div class="aboutContentDiv">This tutorial will walk you through how to use the features of this site.
+                            First, click on Value Investing Tool. This will take you to the homepage:</div>
+
+                            <br><br>
+                            <div class="centerMe">
+                            <img src="../images/homepage_01.png" alt="homepage screenshot" width="650px"> 
+                            </div>
+                            <br><br>
+
+                            <h2 class="sectionTitle2">Search Feature</h2>
+
+                            <div class="aboutContentDiv">Next, click on either "Search" section, or the link at the top right corner of the page. This will bring you to the search feature:</div>
+
+                            <br><br>
+                            <img src="../images/search_01.png" alt="search screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">The search bar allows you to search by a company's name or its trading symbol. Let's try to find Boeing Airlines by typing "BA" into the search bar:</div>
+
+                            <br><br>
+                            <img src="../images/search_02.png" alt="search screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">When you hit enter, you will see the financial performance information for Boeing:</div>
+
+                            <br><br>
+                            <img src="../images/search_03.png" alt="search screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">You will see that the financial performance ratios have colored circles associated with them. We will explain this in a few paragraphs. But for now, let's look at the rank. We calculate the rank by seeing how well the company's financial ratios are performing in relation to the other companies in our stock collection. If a company is performing in the best 10% for a particular ratio, it will receive a score for that ratio of 1. If it is in the bottom 10%, it will receive a score of 10. These scores are then summed, and like a golf score, you want the lowest sum. A rank of 1 is the best. Much financial research has shown that evaluating a company's performance as a collection of ratios rather than just one can be very helpful for selecting stocks in which to invest or not invest. Boeing has a rank of 20, which means it is doing well.</div>
+
+                            <br><br>
+
+                            <div class="aboutContentDiv">Now, as you enter more stocks, they will get added to your workspace. In this example, we added Agilent and Citigroup:</div>
+
+                            <br><br>
+                            <img src="../images/search_04.png" alt="search screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">You can use the arrows on the right to move a stock up and down in the workspace. The "x" button will remove that stock from the workspace. The "clear" button will remove everything from the workspace. Clicking on any column header will sort the stocks based on that column. You can also click on the company's name to see detailed information on the stock in Yahoo Finance:</div>
+
+                            <br><br>
+                            <img src="../images/search_05.png" alt="search screenshot" width="650px"> 
+                            <br><br>
+
+                        </p>
+
+                        <p class="longText">
+                            Now we will describe the color coding scheme to you. If a ratio is currently a much better deal than normal, the circle will be colored bright green. If it is better than normal, dark green. If the ratio is currently at or near its average, it will be black. If the ratio is currently performing worse than usual, it will be colored dark red. And if it is currently performing much worse than usual, it will be colored bright red. You can see that most of the stocks we've chosen are either red or black. From a value investor's standpoint, these stocks look expensive. You are getting less financial performance per dollar spent than you typically do with these companies. 
+                            
+                            <br><br>
+                            
+                            You can adjust the breakpoints between the colors. For example, you might want black to be +/- 10% instead of +/- 25%. This is accomplished in the "Preferences" section, which we will explain next.
+
+                            <br><br>
+
+                            <h2 class="sectionTitle2">Preferences Section</h2>
+
+                            <div class="aboutContentDiv">To access the "Preferences" section, click on the preferences link on the top right corner:</div>
+
+                            <br><br>
+                            <img src="../images/preferences_01.png" alt="slider screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">You will see the "Preferences" section slide down:</div>
+
+                            <br><br>
+                            <img src="../images/preferences_02.png" alt="slider screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">You can drag the breakpoints on the slider to places you see fit. Remember: you want lower ratios. That's why green is to the negative, and red is to the positive. On the other hand, you want a high dividend, so we automatically reversed this color for you when viewing the stock selections. The colors on the screen in your workbench will get updated in real time.</div>
+
+                            <br><br>
+                            <img src="../images/preferences_03.png" alt="slider screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">We also have a monochrome feature to assist people who have challenges distinguishing colors. Black is substituted for bright red (performing very poorly), dark gray for dark red (performing poorly), gray for black (performing at or close to normal), light gray for dark green (performing better than normal), and white for light green (performing much better than normal).</div>
+
+                            <br><br>
+                            <img src="../images/preferences_04.png" alt="slider screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">The stock data will update for you every 5 minutes during normal trading hours. You can choose to turn this feature on or off with "Continuous Updates" checkbox. If you click on "Restore Defaults" button, it will restore the color breakpoints back to their original positions.</div>
+                        </p>
+
+                        <p class="longText">
+                            <h2 class="sectionTitle2">Explore Feature</h2>
+
+                            <div class="aboutContentDiv">The market, at its broadest level, consists of sectors such as Consumer Staples and Financials. The next level of detail is industries such as Tobacco and Consumer Finance. At the most detailed level, we have individual companies such as American Express, Microsoft, and Coca Cola. The Explore feature allows you to wander through these different levels. You can see how entire sectors are doing, how industries are doing, and how individual companies are doing. Let's go through an Explore journey together.
+
+                            Start by going to the homepage and then clicking on the Explore box or the explore link at the top of the page:</div>
+
+                            <br><br>
+                            <img src="../images/homepage_01.png" alt="homepage screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">You will then see the Sectors level:</div>
+
+                            <br><br>
+                            <img src="../images/explore_01.png" alt="explore screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">Here we can see Consumer Staples are performing at or near average (black), while Energy is performing much worse (bright red). These colors are calculated by taking the average performance of the underlying industries that make up each sector. Let's try clicking on Consumer Staples to see how that industry is doing:</div>
+
+                            <br><br>
+                            <img src="../images/explore_02.png" alt="explore screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">Here we can see that Drug Retail is performing at or near average (black), while Soft Drinks is performing worse than average (dark red). Let's try clicking on Packaged Foods & Meats to see how individual companies in that industry are doing:</div>
+
+                            <br><br>
+                            <img src="../images/explore_03.png" alt="explore screenshot" width="650px"> 
+                            <br><br>
+
+                            <div class="aboutContentDiv">Like the Search feature, you can move companies up and down in the list, click on an individual company name to see detailed information on Yahoo Finance and sort on any column by clicking on its column header. Try moving the sliders around in the Preferences section, and see how the colors will change in real time.</div>
+
+                        </p>
                 </div>
             </div>
         </div>

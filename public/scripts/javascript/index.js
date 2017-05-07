@@ -54,6 +54,7 @@ function showExplore() {
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(true);
     $("#preferencesSection").toggle(false);
+    $("#footer").toggle(false);
 }
 
 function showHome() {
@@ -64,6 +65,7 @@ function showHome() {
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    $("#footer").toggle(true);
 }
 
 function togglePreferences() {
@@ -93,6 +95,7 @@ function showSearch() {
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    $("#footer").toggle(false);
 }
 
 // **********************************************

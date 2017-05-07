@@ -4,7 +4,12 @@
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
-    color: white;
+    color: black;
+}
+
+#aboutPageTitle {
+    color: black;
+    font-size: 170%;
 }
 
 #alignLeft {
@@ -48,6 +53,10 @@ body {
     color: rgb(240,240,240);
     transition: color 0.10s ease;
     -webkit-transition: color 0.10s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
 }
 
 #header1 {   
@@ -99,12 +108,18 @@ right */
     letter-spacing: 2px;
 }
 
+#logo {
+    color: black;
+    font-size: 120%;
+}
+
 .longText {
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
     text-align: left;
+    color: black;
 }
 
 .messageBox {
@@ -156,8 +171,8 @@ right */
     margin-top: 70px;
     width: 850px;
     min-height: 200px;
-    background-color: rgb(40,40,40);
-    color: white;
+    background-color: white;
+    color: black;
     margin-bottom: 50px;
 }
 
@@ -192,6 +207,25 @@ right */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sectionTitle1 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 150%;
+}
+
+.sectionTitle2 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 110%;
+}
+
+.aboutContentDiv {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 100%;
+    font-weight: normal;
 }
 
 #selectedLink {
