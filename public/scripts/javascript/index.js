@@ -9,10 +9,10 @@ var searchTickers = [];
 var exploreTickers = [];
 var leaderboardTickers = [];
 
-var colorBreakPoint4 = 0.50;    //above or equal to this value: bright red
-var colorBreakPoint3 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
-var colorBreakPoint2 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
-var colorBreakPoint1 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
+var colorBreakPoint4 = 0.40;    //above or equal to this value: bright red
+var colorBreakPoint3 = 0.20;    //above or equal to this value and below colorBreakPoint1: dark red
+var colorBreakPoint2 = -0.20;   //above or equal to this value and below colorBreakPoint2: black
+var colorBreakPoint1 = -0.40;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
 var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, resulting in all black

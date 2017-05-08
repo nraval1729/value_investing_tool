@@ -7,10 +7,10 @@
 // http://stackoverflow.com/questions/17629524/jquery-ui-slider-limit-the-range
 // http://jsfiddle.net/alnitak/zFYjW/4/
 
-var colorBreakPoint4Default = 0.50;    //above or equal to this value: bright red
-var colorBreakPoint3Default = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
-var colorBreakPoint2Default = -0.25;   //above or equal to this value and below colorBreakPoint2: black
-var colorBreakPoint1Default = -0.50;   //above or equal to this value and below colorBreakPoint3: green
+var colorBreakPoint4Default = 0.40;    //above or equal to this value: bright red
+var colorBreakPoint3Default = 0.20;    //above or equal to this value and below colorBreakPoint1: dark red
+var colorBreakPoint2Default = -0.20;   //above or equal to this value and below colorBreakPoint2: black
+var colorBreakPoint1Default = -0.40;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
 var sliderMin = -1;
