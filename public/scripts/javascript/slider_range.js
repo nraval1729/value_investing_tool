@@ -91,6 +91,11 @@ function myChange(event, ui) {
     $("#custom-handle3").text(ui.values[2]);
     $("#custom-handle4").text(ui.values[3]);
 
+    $("#custom-handle1").attr("aria-valuenow", ui.values[0]);
+    $("#custom-handle2").attr("aria-valuenow", ui.values[1]);
+    $("#custom-handle3").attr("aria-valuenow", ui.values[2]);
+    $("#custom-handle4").attr("aria-valuenow", ui.values[3]);
+
     calcRangeColors();
 
     // Change the real breakpoints used in our application

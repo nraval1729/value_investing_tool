@@ -43,10 +43,14 @@
                         <div class="spacer50"></div>
 
                         <div class="slider-range" id="colorSlider">
-                            <div role="slider" id="custom-handle1" class="ui-slider-handle"></div>
-                            <div role="slider" id="custom-handle2" class="ui-slider-handle"></div>
-                            <div role="slider" id="custom-handle3" class="ui-slider-handle"></div>
-                            <div role="slider" id="custom-handle4" class="ui-slider-handle"></div>
+                            <label class="hiddenForSR" for="custom-handle1">Lowest Color Breakpoint</label>
+                            <div role="slider" id="custom-handle1" class="ui-slider-handle" aria-valuenow="-0.5" aria-valuemin="-1" aria-valuemax="1"></div>
+                            <label class="hiddenForSR" for="custom-handle2">Low-mid Color Breakpoint</label>
+                            <div role="slider" id="custom-handle2" class="ui-slider-handle" aria-valuenow="-0.25" aria-valuemin="-1" aria-valuemax="1"></div>
+                            <label class="hiddenForSR" for="custom-handle3">High-mid Color Breakpoint</label>
+                            <div role="slider" id="custom-handle3" class="ui-slider-handle" aria-valuenow="0.25" aria-valuemin="-1" aria-valuemax="1"></div>
+                            <label class="hiddenForSR" for="custom-handle4">Highest Color Breakpoint</label>
+                            <div role="slider" id="custom-handle4" class="ui-slider-handle" aria-valuenow="0.5" aria-valuemin="-1" aria-valuemax="1"></div>
                         </div>
 
                         <div class="spacer25"></div>
@@ -59,11 +63,11 @@
                     <div id="miscPref">
                         <div class="verticalCenter">
                             <label for="monochromeCheckbox">Monochrome</label>
-                            <input role="checkbox" id="monochromeCheckbox" class="checkbox" type="checkbox" onchange="changeMonochrome()">
+                            <input role="checkbox" aria-checked="false" id="monochromeCheckbox" class="checkbox" type="checkbox" onchange="changeMonochrome()">
                         </div>
                         <div class="verticalCenter">
                             <label for="refreshCheckbox">Continuous Updates</label>
-                            <input role="checkbox" id="refreshCheckbox" class="checkbox" type="checkbox" checked>
+                            <input role="checkbox" aria-checked="true" id="refreshCheckbox" class="checkbox" type="checkbox" onchange="changeRefresh()" checked>
                         </div>
                     </div>
 
