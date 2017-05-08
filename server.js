@@ -49,6 +49,10 @@ app.get("/info", function(req, res) {
 	res.sendFile(infoFilePath);
 });
 
+app.get("*", function(req, res) {
+	res.redirect("/")
+});
+
 
 // Util functions
 function launchInfoJsonGenerator() {
