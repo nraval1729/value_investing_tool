@@ -394,7 +394,8 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     var excursion = (currValueNum - histValueNum) / histValueNum;
     if (isDividend) excursion  = - dividendCoefficient * excursion; //adjust the range and flip sign
     var color = determineColor(excursion);
-    var tdString = '<td class = "securityCell"><div class="securityCellContent ' + color + '">' + currValue + '</div></td>';
+    var shortDec = parseFloat(currValue).toFixed(2);
+    var tdString = '<td class = "securityCell"><div class="securityCellContent ' + color + '">' + shortDec + '</div></td>';
     return tdString;
 }
 
