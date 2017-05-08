@@ -18,5 +18,6 @@ You would need to install it before running the script (should you
 require to run it). Also, all python scripts are written for 2.7, 
 don't run it using python3 please.
 
+Hello
 
 Try our application out on the web here: https://valueinvestingtool.herokuapp.com/
