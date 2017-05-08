@@ -308,22 +308,6 @@
         "PRU", 
         "PSA", 
         "PVH", 
-        "PWR", 
-        "PX", 
-        "QCOM", 
-        "R", 
-        "RAI", 
-        "RCL", 
-        "REG", 
-        "REGN", 
-        "RF", 
-        "RHI", 
-        "RHT", 
-        "RIG", 
-        "RJF", 
-        "RL", 
-        "ROK", 
-        "ROP", 
-        "ROST"
+        "PWR"
     ]
 }

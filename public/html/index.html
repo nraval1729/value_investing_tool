@@ -66,8 +66,10 @@
                             <input role="checkbox" aria-checked="false" id="monochromeCheckbox" class="checkbox" type="checkbox" onchange="changeMonochrome()">
                         </div>
                         <div class="verticalCenter">
-                            <label for="refreshCheckbox">Continuous Updates</label>
-                            <input role="checkbox" aria-checked="true" id="refreshCheckbox" class="checkbox" type="checkbox" onchange="changeRefresh()" checked>
+                            <!-- <label for="refreshCheckbox">Continuous Updates</label>
+                            <input role="checkbox" aria-checked="true" id="refreshCheckbox" class="checkbox" type="checkbox" onchange="changeRefresh()" checked> -->
+                            <button role="button" id="refreshButton" class="sliderButton" onclick="requestInfoJson()">Refresh data</button>
+
                         </div>
                     </div>
 
@@ -143,7 +145,7 @@
                     <input role="search" id="searchBarInput" placeholder="Search for stocks..." maxlength="40"/>
                     <div id="searchBarDecorationWrapper">
                         <span id="#searchEnterButton">
-                            <img id="searchBarDecoration" alt="Magnifying glass icon." src="../images/magnifying_glass_02.png">
+                            <!-- <img id="searchBarDecoration" alt="Magnifying glass icon." src="../images/magnifying_glass_02.png"> -->
                         </span>
                     </div>
                 </div>
