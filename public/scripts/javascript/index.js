@@ -30,23 +30,9 @@ $(document).ready(function() {
     $("#exploreTable").tablesorter();
     $("#searchTable").tablesorter();
 
+    $("#leaderboard").toggle(false);
+
     requestInfoJson();
-
-    // $.get("/info", function(data) {
-
-    //     handleSearchAndLeaderboardData(data);
-
-    //     // infoJSON = data;
-
-    //     // var securityToTicker = data["security_to_ticker"];
-    //     // var tickerToSecurity = data["ticker_to_security"];
-    //     // populateSearchSuggestions(securityToTicker);
-    //     // addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
-
-    //     // // Leaderboard stuff
-    //     // renderLeaderboard();
-    //     // $("#leaderboard").toggle(false);
-    // });
 
 });
 
@@ -55,17 +41,6 @@ function requestInfoJson() {
     $.get("/info", function(data) {
 
         handleSearchAndLeaderboardData(data);
-
-        // infoJSON = data;
-
-        // var securityToTicker = data["security_to_ticker"];
-        // var tickerToSecurity = data["ticker_to_security"];
-        // populateSearchSuggestions(securityToTicker);
-        // addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
-
-        // // Leaderboard stuff
-        // renderLeaderboard();
-        // $("#leaderboard").toggle(false);
     });
 }
 
@@ -80,7 +55,6 @@ function handleSearchAndLeaderboardData(data) {
 
         // Leaderboard stuff
         renderLeaderboard();
-        $("#leaderboard").toggle(false);
 
         // Should refresh the existing tables with the new data from info json
         refreshTables();
@@ -679,6 +653,7 @@ function refreshTables() {
         renderIndustryLevel(breadCrumbChain[1]);
     } else {
         refreshTable("exploreTable", exploreTableHasHeader);
+        refreshTable("leaderboard", true);
     }
 }
 
