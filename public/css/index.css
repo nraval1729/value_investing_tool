@@ -281,20 +281,25 @@
 }*/
 
 .splashBox {
+    overflow: scroll;
     width: 25vw;
     height: 40vh;
     background-color: white;
     border: 2px solid #4286f4;
     color: rgb(220,220,220);
-    margin: 10px;
+    position: relative;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
+    margin: 1.5vw;
 }
 
 #splashBoxCaptionOne {
+
     margin-left: 1vw;
 }
+
+
 
 #splashBoxCaptionTwo {
     margin-left: 1vw;
@@ -314,12 +319,29 @@
     color: black;
 }
 
+#splashBoxIcon1 {
+  margin-top: 1vh;
+  width: 13vw;
+  height: 5vh;
+}
+#splashBoxIcon2 {
+  margin-top: 1vh;
+  width: 14vw;
+  height: 5vh;
+}
+#splashBoxIcon3 {
+  margin-top: 1vh;
+  width: 12vw;
+  height: 6vh;
+}
+
 .splashBoxIcon {
     width: 25px;
     height: 25px;
-    margin-left: 1vw;
-    margin-right: 5vw;
-    margin-top: 7px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+
 }
 
 .splashBoxLink {
