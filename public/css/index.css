@@ -448,6 +448,7 @@
 
 .sliderButton:hover {
     cursor: pointer;
+    background-color: #555;
 }
 
 #miscPref {
