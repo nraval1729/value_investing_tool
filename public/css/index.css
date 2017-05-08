@@ -156,6 +156,7 @@
     background-color: #4286f4;
     color: white;
     height: 7vh;
+    min-height: 40px;
 }
 
 #page {

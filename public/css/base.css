@@ -186,8 +186,9 @@ right */
     text-decoration: none;
     border:none;
     color: white;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 1.5vw;
+    margin-top: 1vh;
+    height: 5.5vh;
 }
 
 #logoButton:hover {
