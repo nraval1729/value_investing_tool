@@ -22,10 +22,10 @@
 
         <div class="centerMe">
             <header id="indexHeader" role="banner">
-                <nav role="navigation" style="float:left; margin-top:-7px">
+                <nav role="navigation" aria-label="Home Navigation" style="float:left; margin-top:-7px">
                     <button role="button" id="logoButton" onclick="showHome()">Value Investing Tool</button>
                 </nav>
-                <nav role="navigation" style="float:right">
+                <nav role="navigation" aria-label="Other Navigation" style="float:right">
                     <button role="button" id="searchButton" class="navButton" onclick="showSearch()">Search</button>
                     <button role="button" id="exploreButton" class="navButton" onclick="showExplore()">Explore</button>
                     <button role="button" id="preferencesButton" class="navButton" onclick="togglePreferences()">Preferences</button>
@@ -177,18 +177,18 @@
             </div>
 
         <div class="centerMe">
-            <div id="footer">
+            <footer role="contentInfo" id="footer">
                 <div class="centerMe">
                     <div id="footerLinks">
-                        <a href="/privacy_policy">
+                        <a role="link" href="/privacy_policy" name="Link to Privacy Policy page.">
                             Privacy Policy
                         </a>
-                        <a href="/disclaimer">
+                        <a role="link" href="/disclaimer" name="Link to Disclaimer page.">
                             Disclaimer
                         </a>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
 
         </main><!-- end: interior -->
