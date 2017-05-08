@@ -30,7 +30,46 @@ $(document).ready(function() {
     $("#exploreTable").tablesorter();
     $("#searchTable").tablesorter();
 
+    requestInfoJson();
+
+    // $.get("/info", function(data) {
+
+    //     handleSearchAndLeaderboardData(data);
+
+    //     // infoJSON = data;
+
+    //     // var securityToTicker = data["security_to_ticker"];
+    //     // var tickerToSecurity = data["ticker_to_security"];
+    //     // populateSearchSuggestions(securityToTicker);
+    //     // addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+
+    //     // // Leaderboard stuff
+    //     // renderLeaderboard();
+    //     // $("#leaderboard").toggle(false);
+    // });
+
+});
+
+function requestInfoJson() {
+
     $.get("/info", function(data) {
+
+        handleSearchAndLeaderboardData(data);
+
+        // infoJSON = data;
+
+        // var securityToTicker = data["security_to_ticker"];
+        // var tickerToSecurity = data["ticker_to_security"];
+        // populateSearchSuggestions(securityToTicker);
+        // addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+
+        // // Leaderboard stuff
+        // renderLeaderboard();
+        // $("#leaderboard").toggle(false);
+    });
+}
+
+function handleSearchAndLeaderboardData(data) {
 
         infoJSON = data;
 
@@ -42,9 +81,10 @@ $(document).ready(function() {
         // Leaderboard stuff
         renderLeaderboard();
         $("#leaderboard").toggle(false);
-    });
 
-});
+        // Should refresh the existing tables with the new data from info json
+        refreshTables();
+}
 
 //VISIBILITY SECTION
 function showExplore() {
@@ -690,6 +730,10 @@ function changeRefresh() {
 // **********************************************
 
 function renderLeaderboard() {
+
+    $("#leaderboard thead").empty();
+    $("#leaderboard tbody").empty();
+
     var tickers = infoJSON['leaderboard']['best'];
     var n = tickers.length;
     console.log(tickers);
