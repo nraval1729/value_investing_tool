@@ -6,6 +6,7 @@ var preferencesAreVisible = false;
 var breadCrumbChain = [];
 var searchTickers = [];
 var exploreTickers = [];
+var leaderboardTickers = [];
 
 var colorBreakPoint4 = 0.50;    //above or equal to this value: bright red
 var colorBreakPoint3 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
@@ -38,7 +39,7 @@ $(document).ready(function() {
         var tickerToSecurity = data["ticker_to_security"];
         populateSearchSuggestions(securityToTicker);
         addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
-        //renderLeaderboard();
+        renderLeaderboard();
     });
 
 });
@@ -156,6 +157,8 @@ function getTickerList(tableName) {
         tickerList = exploreTickers;
     } else if (tableName == "searchTable") {
         tickerList = searchTickers;
+    } else if (tableName == "homeTable") {
+        tickerList = leaderboardTickers;
     }
     return tickerList;
 }
@@ -355,8 +358,12 @@ function makeTableRowString(security, tableName) {
     rowString += renderSecurityCell(security.pb_cur, security.pb_avg, false);
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='white'>" + security.s_rank + "</td>";
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_03.png"></button></td>';
-    rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_03.png"></button></td>';
+
+    if (tableName != "homeTable") {
+        rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_03.png"></button></td>';
+        rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_03.png"></button></td>';
+    }
+    
     if (tableName == "searchTable") {
         rowString += '<td class="white"><button class="searchResultButton" onclick="deleteSearchResult(this, \'' + tableName + '\')"><img style="height:22px; width:22px" class="searchResultButtonImage" alt="delete button" src="../images/x_icon_02.png"></td>';                                                           
     }
