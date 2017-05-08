@@ -429,9 +429,6 @@ def create_leaderboard_tickers(technical_map):
 
     top_tickers['best'] = top_tickers_list
 
-    print "TOP TICKERS LIST: ", top_tickers_list
-    print "TOP TICKERS MAP: ", top_tickers
-
     return top_tickers
 
 def main():
@@ -448,7 +445,6 @@ def main():
         info_dict = create_info_dict(raw_data_biographical, tickers_json)
         info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
         info_dict['leaderboard'] = create_leaderboard_tickers(info_dict['technical_map'])
-        print "INFO DICT: ", info_dict
         info_dict['industry_to_delta'] = create_industry_delta_map(info_dict, info_dict['technical_map'])
         info_dict['sector_to_delta'] = create_sector_delta_map(info_dict, info_dict['industry_to_delta'])
 
