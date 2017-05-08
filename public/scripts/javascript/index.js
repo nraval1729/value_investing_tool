@@ -9,10 +9,10 @@ var searchTickers = [];
 var exploreTickers = [];
 var leaderboardTickers = [];
 
-var colorBreakPoint4 = 0.50;    //above or equal to this value: bright red
-var colorBreakPoint3 = 0.25;    //above or equal to this value and below colorBreakPoint1: dark red
-var colorBreakPoint2 = -0.25;   //above or equal to this value and below colorBreakPoint2: black
-var colorBreakPoint1 = -0.50;   //above or equal to this value and below colorBreakPoint3: green
+var colorBreakPoint4 = 0.40;    //above or equal to this value: bright red
+var colorBreakPoint3 = 0.20;    //above or equal to this value and below colorBreakPoint1: dark red
+var colorBreakPoint2 = -0.20;   //above or equal to this value and below colorBreakPoint2: black
+var colorBreakPoint1 = -0.40;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
 var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, resulting in all black
@@ -290,7 +290,7 @@ function appendHeader(str, tableName) {
     var searchTableHead = $(tableId);
     searchTableHead.append(str);
 
-    activatePopups();
+    activatePopups(tableName);
     // $("#"+tableName).trigger("destroy");
     // $("#"+tableName).tablesorter().trigger("update").trigger("appendCache");
 }
@@ -416,12 +416,14 @@ function makeTableRowString(security, tableName) {
 //renders the table header row for the search result table
 function makeTableHeaderString(tableName) {
     var str = '<tr class="securityTableHeader">';
-    str +=  '<th class="tableHeaderCell popup">Name</th>';
-    str += makePopupHeader("peBox", "pePopup", "P/E", "P/E: price-to-earnings ratio");
-    str += makePopupHeader("psBox", "psPopup", "P/S", "P/S: price-to-sales ratio");
-    str += makePopupHeader("pbBox", "pbPopup", "P/B", "P/B: price-to-book ratio");
-    str += makePopupHeader("divBox", "divPopup", "DIV", "<p>DIV: dividend yield</p> <p>(as a percentage)</p>");
-    str += makePopupHeader("rankBox", "rankPopup", "RANK", "<p>RANK: aggregate ratio performance</p> <p>(lower = better)</p>");
+    str +=  '<th class="tableHeaderCell">Name</th>';
+    
+    str += makePopupHeader("peBox", "pePopup", "P/E", "P/E: price-to-earnings ratio", tableName);
+    str += makePopupHeader("psBox", "psPopup", "P/S", "P/S: price-to-sales ratio", tableName);
+    str += makePopupHeader("pbBox", "pbPopup", "P/B", "P/B: price-to-book ratio", tableName);
+    str += makePopupHeader("divBox", "divPopup", "DIV", "<p>DIV: dividend yield</p> <p>(as a percentage)</p>", tableName);
+    str += makePopupHeader("rankBox", "rankPopup", "RANK", "<p>RANK: aggregate ratio performance</p> <p>(lower = better)</p>", tableName);
+
     str +=  '<th class="tableHeaderCell"></th>';
     str +=  '<th class="tableHeaderCell"></th>';
     if (tableName == "searchTable") {
@@ -431,9 +433,9 @@ function makeTableHeaderString(tableName) {
     return str;
 }
 
-function makePopupHeader(boxName, popupName, headerText, popupText) {
-    var str = '<th class="tableHeaderCell popup" id="' + boxName + '" oncontextmenu="return false;">';
-    str += '<span class="popuptext" id="' + popupName + '">'+ popupText +'</span>';
+function makePopupHeader(boxName, popupName, headerText, popupText, tableName) {
+    var str = '<th class="tableHeaderCell popup" id="' + boxName + tableName + '" oncontextmenu="return false;">';
+    str += '<span class="popuptext" id="' + popupName + tableName + '">'+ popupText +'</span>';
     str += headerText + '</th>';
     return str;
 }
@@ -619,39 +621,40 @@ function renderTickerLevel(industryName) {
         makeTableRow(ticker, "exploreTable");  
     }
     doCompanyBreadCrumb(industryName);
-    activatePopups();
+    activatePopups("exploreTable");
 }
 
-function activatePopups() {
-    $('#peBox').mousedown(function(e){displayToolTip(e, $('#pePopup'))});
-    $('#psBox').mousedown(function(e){displayToolTip(e, $('#psPopup'))});
-    $('#pbBox').mousedown(function(e){displayToolTip(e, $('#pbPopup'))});
-    $('#divBox').mousedown(function(e){displayToolTip(e, $('#divPopup'))});
-    $('#rankBox').mousedown(function(e){displayToolTip(e, $('#rankPopup'))});
+function activatePopups(tablename) {
 
-    $('#peBox').mouseleave(function(e){
-        if($('#pePopup').hasClass('show')) {
-            $('#pePopup').toggleClass('show');
+    $('#peBox'+tablename).mousedown(function(e){displayToolTip(e, $('#pePopup'+tablename))});
+    $('#psBox'+tablename).mousedown(function(e){displayToolTip(e, $('#psPopup'+tablename))});
+    $('#pbBox'+tablename).mousedown(function(e){displayToolTip(e, $('#pbPopup'+tablename))});
+    $('#divBox'+tablename).mousedown(function(e){displayToolTip(e, $('#divPopup'+tablename))});
+    $('#rankBox'+tablename).mousedown(function(e){displayToolTip(e, $('#rankPopup'+tablename))});
+
+    $('#peBox'+tablename).mouseleave(function(e){
+        if($('#pePopup'+tablename).hasClass('show')) {
+            $('#pePopup'+tablename).toggleClass('show');
         }
     });
-    $('#psBox').mouseleave(function(e){
-        if($('#psPopup').hasClass('show')) {
-            $('#psPopup').toggleClass('show');
+    $('#psBox'+tablename).mouseleave(function(e){
+        if($('#psPopup'+tablename).hasClass('show')) {
+            $('#psPopup'+tablename).toggleClass('show');
         }
     });
-    $('#pbBox').mouseleave(function(e){
-        if($('#pbPopup').hasClass('show')) {
-            $('#pbPopup').toggleClass('show');
+    $('#pbBox'+tablename).mouseleave(function(e){
+        if($('#pbPopup'+tablename).hasClass('show')) {
+            $('#pbPopup'+tablename).toggleClass('show');
         }
     });
-    $('#divBox').mouseleave(function(e){
-        if($('#divPopup').hasClass('show')) {
-            $('#divPopup').toggleClass('show');
+    $('#divBox'+tablename).mouseleave(function(e){
+        if($('#divPopup'+tablename).hasClass('show')) {
+            $('#divPopup'+tablename).toggleClass('show');
         }
     });
-    $('#rankBox').mouseleave(function(e){
-        if($('#rankPopup').hasClass('show')) {
-            $('#rankPopup').toggleClass('show');
+    $('#rankBox'+tablename).mouseleave(function(e){
+        if($('#rankPopup'+tablename).hasClass('show')) {
+            $('#rankPopup'+tablename).toggleClass('show');
         }
     });
 }
@@ -659,7 +662,6 @@ function activatePopups() {
 function displayToolTip(event, popup) {
     if(event.which == 3 && !popup.hasClass('show')) {
         popup.toggleClass('show');
-        event.stopPropagation();
     }
 }
 
@@ -736,7 +738,6 @@ function renderLeaderboard() {
 
     var tickers = infoJSON['leaderboard']['best'];
     var n = tickers.length;
-    console.log(tickers);
     var tableHeader = makeTableHeaderString("leaderboard");
     appendHeader(tableHeader, "leaderboard");
     for (var i = 0; i < n; i++) {

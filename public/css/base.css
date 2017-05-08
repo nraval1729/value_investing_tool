@@ -179,13 +179,14 @@ right */
 }*/
 
 #logoButton {
-    background-color: white;
+    background-color: #4286f4;
     font-size: 170%;
-    margin: 10px;
     font-family: Tahoma, sans-serif;
     text-decoration: none;
     border:none;
-    color: black;
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
 #logoButton:hover {
@@ -193,20 +194,19 @@ right */
 }
 
 .navButton {
-    /*color: white; */
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #4286f4;
     width: 10vw;
     height: 7vh;
     border: none;
-    margin-top: -5px;
+    margin-top: 0px;
     font-size: 105%;
     font-weight: bold;
 }
 
 .navButton:hover {
     cursor: pointer;
-    color: rgb(20,20,20);
+    color: rgb(200,200,200);
     transition: color 0.10s ease;
     -webkit-transition: color 0.10s ease;
 }

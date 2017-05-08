@@ -9,19 +9,40 @@
 <body>
     <div id="page">
 
+        <!--Source: W3Schools tutorial on back to top button-->
+        <button role="button" onclick="topFunction()" id="backToTop" title="Go to top">Back to top</button>
+
+        <script>
+            // Source: W3Schools tutorial on back to top button
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("backToTop").style.display = "block";
+                } else {
+                    document.getElementById("backToTop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+                document.documentElement.scrollTop = 0; // For IE and Firefox
+            }
+        </script>
+
+        <div class="spacer10"></div>
+
         <div class="centerMe">
-            <header id="pageHeader" role="banner">
-                <nav role="navigation" style="float:left; margin-top:-7px; font-size: 120%;">
-                    <a id="logo" href="/">Value Investing Tool</a>
+            <header id="indexHeader" style="width: 900px; background-color: #4286f4;" role="banner">
+                <nav role="navigation" aria-label="Home Navigation" style="height: 50px; text-align: left; float:left; margin-top: 15px; width: 800px;">
+                    <a id="logoButton" href="/">Value Investing Tool</a>
                 </nav>
             </header>
         </div>
 
-<!--         <div id="header2" class="horizontal">
-            <div>
-                <a id="logo" href="/">Value Investing Tool</a>
-            </div>
-        </div> -->
+
 
         <main role="main" id="interior" class="centerMe">
             <div class="centerMe">

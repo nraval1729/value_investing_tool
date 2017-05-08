@@ -153,6 +153,9 @@
     margin-left: 8vw;
     margin-right: 8vw;
     margin-top: 3vh;
+    background-color: #4286f4;
+    color: white;
+    height: 7vh;
 }
 
 #page {
@@ -264,7 +267,7 @@
     color: black;
 }
 
-.splashBox {
+/*.splashBox {
     min-width: 210px;
     min-height: 210px;
 
@@ -274,19 +277,13 @@
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.horizontal p.splashBoxCaption {
-
-    /*margin-left: 35px;*/
-    /*text-align: center;*/
-}
+}*/
 
 .splashBox {
     width: 25vw;
     height: 40vh;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid #4286f4;
     color: rgb(220,220,220);
     margin: 10px;
     padding-top: 10px;
@@ -447,6 +444,10 @@
     margin-top: -5px;
     font-size: 105%;
     font-weight: bold;
+}
+
+.sliderButton:hover {
+    cursor: pointer;
 }
 
 #miscPref {
