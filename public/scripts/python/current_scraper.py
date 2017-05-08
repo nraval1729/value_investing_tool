@@ -32,6 +32,7 @@ def write_current_data(sorted_biographical_list_of_dicts):
 	data = response.read()
 	quote = json.loads(data)
 
+	count = 1
 	for q in quote['query']['results']['quote']:
 		if q['symbol']:
 			curr_dict = OrderedDict()
@@ -51,6 +52,7 @@ def write_current_data(sorted_biographical_list_of_dicts):
 			json.dump(sorted_current_list_of_dicts, c, indent = 4)
 
 def main():
+	print "Running the scraper now!"
 	sorted_biographical_list_of_dicts = []
 	with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'r') as s:
 		sorted_biographical_list_of_dicts = json.load(s)
