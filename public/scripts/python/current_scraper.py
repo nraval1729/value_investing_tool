@@ -58,6 +58,8 @@ def main():
 
 	# Make sure to hit the yql api every 5 mins aka 300 secs, and update the current.json
 	while True:
+		print "INSIDE CURRENT SCRAPER: Starting new iteration"
+		sys.stdout.flush()
 		write_current_data(sorted_biographical_list_of_dicts)
 		time.sleep(300)
 
