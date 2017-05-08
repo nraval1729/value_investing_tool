@@ -552,6 +552,7 @@
             "M", 
             "ADM", 
             "PRU", 
+            "AFL", 
             "CTL", 
             "R", 
             "AIZ", 
@@ -1365,7 +1366,7 @@
             "ps_avg": "1.0"
         }, 
         "HBI": {
-            "pe_cur": "15.65", 
+            "pe_cur": "15.63", 
             "div_avg": 0.0, 
             "pb_avg": "6.9", 
             "s_rank": 90, 
@@ -1391,33 +1392,33 @@
             "ps_avg": "1.0"
         }, 
         "AAPL": {
-            "pe_cur": "17.97", 
+            "pe_cur": "17.971", 
             "div_avg": "1.7", 
             "pb_avg": "4.6", 
             "s_rank": 227, 
-            "div_cur": "1.69", 
-            "pb_cur": "5.78", 
+            "div_cur": "1.690", 
+            "pb_cur": "5.784", 
             "pe_avg": "13.5", 
-            "ps_cur": "3.52", 
+            "ps_cur": "3.523", 
             "security": "Apple Inc.", 
             "ticker": "AAPL", 
             "ps_avg": "3.1"
         }, 
         "CBOE": {
-            "pe_cur": "36.22", 
+            "pe_cur": "36.231", 
             "div_avg": "1.4", 
             "pb_avg": "16.4", 
-            "s_rank": 193, 
-            "div_cur": "1.19", 
-            "pb_cur": "21.42", 
+            "s_rank": 192, 
+            "div_cur": "1.190", 
+            "pb_cur": "21.417", 
             "pe_avg": "24.3", 
-            "ps_cur": "10.36", 
+            "ps_cur": "10.364", 
             "security": "CBOE Holdings", 
             "ticker": "CBOE", 
             "ps_avg": "7.4"
         }, 
         "EIX": {
-            "pe_cur": "18.87", 
+            "pe_cur": "18.84", 
             "div_avg": "2.8", 
             "pb_avg": "1.7", 
             "s_rank": 61, 
@@ -1443,7 +1444,7 @@
             "ps_avg": "2.6"
         }, 
         "DRI": {
-            "pe_cur": "22.27", 
+            "pe_cur": "22.26", 
             "div_avg": "3.6", 
             "pb_avg": "3.6", 
             "s_rank": 136, 
@@ -1456,14 +1457,14 @@
             "ps_avg": "1.0"
         }, 
         "CCL": {
-            "pe_cur": "15.452", 
+            "pe_cur": "15.46", 
             "div_avg": "2.4", 
             "pb_avg": "1.3", 
             "s_rank": 46, 
-            "div_cur": "2.540", 
-            "pb_cur": "2.019", 
+            "div_cur": "2.54", 
+            "pb_cur": "2.02", 
             "pe_avg": "22.4", 
-            "ps_cur": "2.768", 
+            "ps_cur": "2.77", 
             "security": "Carnival Corp.", 
             "ticker": "CCL", 
             "ps_avg": "2.0"
@@ -1482,33 +1483,33 @@
             "ps_avg": "4.2"
         }, 
         "MDT": {
-            "pe_cur": "29.3964", 
+            "pe_cur": "29.39", 
             "div_avg": "2.1", 
             "pb_avg": "2.8", 
-            "s_rank": 193, 
-            "div_cur": "2.0500", 
-            "pb_cur": "2.3283", 
+            "s_rank": 192, 
+            "div_cur": "2.05", 
+            "pb_cur": "2.33", 
             "pe_avg": "23.9", 
-            "ps_cur": "3.9163", 
+            "ps_cur": "3.92", 
             "security": "Medtronic plc", 
             "ticker": "MDT", 
             "ps_avg": "3.5"
         }, 
         "CCI": {
-            "pe_cur": "81.72", 
+            "pe_cur": "81.656", 
             "div_avg": 0.0, 
             "pb_avg": "5.3", 
             "s_rank": 261, 
-            "div_cur": "3.96", 
-            "pb_cur": "4.71", 
+            "div_cur": "3.960", 
+            "pb_cur": "4.707", 
             "pe_avg": "123.9", 
-            "ps_cur": "8.77", 
+            "ps_cur": "8.773", 
             "security": "Crown Castle International Corp.", 
             "ticker": "CCI", 
             "ps_avg": "7.8"
         }, 
         "JWN": {
-            "pe_cur": "24.16", 
+            "pe_cur": "24.18", 
             "div_avg": "2.3", 
             "pb_avg": "6.5", 
             "s_rank": 110, 
@@ -1521,7 +1522,7 @@
             "ps_avg": "0.9"
         }, 
         "JBHT": {
-            "pe_cur": "22.79", 
+            "pe_cur": "22.83", 
             "div_avg": "0.9", 
             "pb_avg": "8.5", 
             "s_rank": 209, 
@@ -1534,14 +1535,14 @@
             "ps_avg": "1.5"
         }, 
         "GM": {
-            "pe_cur": "5.27", 
+            "pe_cur": "5.268", 
             "div_avg": 0.0, 
             "pb_avg": "1.4", 
             "s_rank": 28, 
-            "div_cur": "4.50", 
-            "pb_cur": "1.10", 
+            "div_cur": "4.500", 
+            "pb_cur": "1.102", 
             "pe_avg": "12.2", 
-            "ps_cur": "0.30", 
+            "ps_cur": "0.299", 
             "security": "General Motors", 
             "ticker": "GM", 
             "ps_avg": "0.3"
@@ -1560,7 +1561,7 @@
             "ps_avg": "4.6"
         }, 
         "EXC": {
-            "pe_cur": "16.32", 
+            "pe_cur": "16.31", 
             "div_avg": "4.4", 
             "pb_avg": "1.3", 
             "s_rank": 3, 
@@ -1586,7 +1587,7 @@
             "ps_avg": "1.3"
         }, 
         "MPC": {
-            "pe_cur": "22.661", 
+            "pe_cur": "22.617", 
             "div_avg": "2.1", 
             "pb_avg": "2.0", 
             "s_rank": 19, 
@@ -1599,7 +1600,7 @@
             "ps_avg": "0.3"
         }, 
         "PFE": {
-            "pe_cur": "28.152", 
+            "pe_cur": "28.186", 
             "div_avg": "3.4", 
             "pb_avg": "2.6", 
             "s_rank": 161, 
@@ -1625,14 +1626,14 @@
             "ps_avg": "0.3"
         }, 
         "KSS": {
-            "pe_cur": "12.654", 
+            "pe_cur": "12.65", 
             "div_avg": "3.2", 
             "pb_avg": "1.8", 
             "s_rank": 1, 
-            "div_cur": "5.110", 
-            "pb_cur": "1.348", 
+            "div_cur": "5.11", 
+            "pb_cur": "1.35", 
             "pe_avg": "13.2", 
-            "ps_cur": "0.370", 
+            "ps_cur": "0.37", 
             "security": "Kohl's Corp.", 
             "ticker": "KSS", 
             "ps_avg": "0.6"
@@ -1664,20 +1665,20 @@
             "ps_avg": "5.9"
         }, 
         "FLIR": {
-            "pe_cur": "24.62", 
+            "pe_cur": "24.607", 
             "div_avg": "1.3", 
             "pb_avg": "2.5", 
-            "s_rank": 193, 
-            "div_cur": "1.62", 
-            "pb_cur": "2.93", 
+            "s_rank": 192, 
+            "div_cur": "1.620", 
+            "pb_cur": "2.932", 
             "pe_avg": "21.1", 
-            "ps_cur": "2.98", 
+            "ps_cur": "2.984", 
             "security": "FLIR Systems", 
             "ticker": "FLIR", 
             "ps_avg": "2.8"
         }, 
         "PRU": {
-            "pe_cur": "10.97", 
+            "pe_cur": "10.98", 
             "div_avg": "2.6", 
             "pb_avg": "0.8", 
             "s_rank": 5, 
@@ -1690,14 +1691,14 @@
             "ps_avg": "0.6"
         }, 
         "BWA": {
-            "pe_cur": "61.95", 
+            "pe_cur": "61.9829", 
             "div_avg": 0.0, 
             "pb_avg": "3.0", 
-            "s_rank": 193, 
-            "div_cur": "1.34", 
-            "pb_cur": "2.60", 
+            "s_rank": 192, 
+            "div_cur": "1.3400", 
+            "pb_cur": "2.6021", 
             "pe_avg": "17.8", 
-            "ps_cur": "0.96", 
+            "ps_cur": "0.9616", 
             "security": "BorgWarner", 
             "ticker": "BWA", 
             "ps_avg": "1.4"
@@ -1729,27 +1730,27 @@
             "ps_avg": "3.0"
         }, 
         "LVLT": {
-            "pe_cur": "33.60", 
+            "pe_cur": "33.594", 
             "div_avg": 0.0, 
             "pb_avg": "4.3", 
             "s_rank": 227, 
             "div_cur": 0.0, 
-            "pb_cur": "1.88", 
+            "pb_cur": "1.877", 
             "pe_avg": "50.4", 
-            "ps_cur": "2.55", 
+            "ps_cur": "2.550", 
             "security": "Level 3 Communications", 
             "ticker": "LVLT", 
             "ps_avg": "1.5"
         }, 
         "HST": {
-            "pe_cur": "18.00", 
+            "pe_cur": "17.955", 
             "div_avg": "3.4", 
             "pb_avg": "1.9", 
             "s_rank": 28, 
-            "div_cur": "4.41", 
-            "pb_cur": "1.91", 
+            "div_cur": "4.410", 
+            "pb_cur": "1.906", 
             "pe_avg": "323.3", 
-            "ps_cur": "2.45", 
+            "ps_cur": "2.454", 
             "security": "Host Hotels & Resorts", 
             "ticker": "HST", 
             "ps_avg": "2.5"
@@ -1781,7 +1782,7 @@
             "ps_avg": "1.3"
         }, 
         "HSY": {
-            "pe_cur": "37.43", 
+            "pe_cur": "37.39", 
             "div_avg": "2.2", 
             "pb_avg": "18.0", 
             "s_rank": 209, 
@@ -1794,10 +1795,10 @@
             "ps_avg": "2.9"
         }, 
         "DLPH": {
-            "pe_cur": "20.36", 
+            "pe_cur": "20.35", 
             "div_avg": 0.0, 
             "pb_avg": "7.1", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "1.32", 
             "pb_cur": "9.08", 
             "pe_avg": "15.1", 
@@ -1807,7 +1808,7 @@
             "ps_avg": "1.1"
         }, 
         "CPB": {
-            "pe_cur": "35.97", 
+            "pe_cur": "35.98", 
             "div_avg": "2.4", 
             "pb_avg": "10.3", 
             "s_rank": 125, 
@@ -1820,7 +1821,7 @@
             "ps_avg": "1.8"
         }, 
         "FBHS": {
-            "pe_cur": "23.16", 
+            "pe_cur": "23.14", 
             "div_avg": 0.0, 
             "pb_avg": "2.8", 
             "s_rank": 209, 
@@ -1833,59 +1834,59 @@
             "ps_avg": "1.7"
         }, 
         "CTSH": {
-            "pe_cur": "23.2849", 
+            "pe_cur": "23.28", 
             "div_avg": 0.0, 
             "pb_avg": "4.4", 
             "s_rank": 261, 
             "div_cur": 0.0, 
-            "pb_cur": "3.7300", 
+            "pb_cur": "3.73", 
             "pe_avg": "22.8", 
-            "ps_cur": "2.6922", 
+            "ps_cur": "2.69", 
             "security": "Cognizant Technology Solutions", 
             "ticker": "CTSH", 
             "ps_avg": "3.1"
         }, 
         "FIS": {
-            "pe_cur": "42.509", 
+            "pe_cur": "42.49", 
             "div_avg": "1.7", 
             "pb_avg": "2.3", 
             "s_rank": 253, 
-            "div_cur": "1.400", 
-            "pb_cur": "2.766", 
+            "div_cur": "1.40", 
+            "pb_cur": "2.77", 
             "pe_avg": "28.2", 
-            "ps_cur": "2.947", 
+            "ps_cur": "2.95", 
             "security": "Fidelity National Information Services", 
             "ticker": "FIS", 
             "ps_avg": "2.5"
         }, 
         "GPN": {
-            "pe_cur": "68.171", 
+            "pe_cur": "68.09", 
             "div_avg": "0.1", 
             "pb_avg": "5.7", 
             "s_rank": 304, 
-            "div_cur": "0.050", 
-            "pb_cur": "4.807", 
+            "div_cur": "0.05", 
+            "pb_cur": "4.81", 
             "pe_avg": "24.0", 
-            "ps_cur": "3.225", 
+            "ps_cur": "3.22", 
             "security": "Global Payments Inc", 
             "ticker": "GPN", 
             "ps_avg": "2.3"
         }, 
         "GT": {
-            "pe_cur": "7.425", 
+            "pe_cur": "7.43", 
             "div_avg": 0.0, 
             "pb_avg": "11.2", 
             "s_rank": 136, 
-            "div_cur": "1.130", 
-            "pb_cur": "1.880", 
+            "div_cur": "1.13", 
+            "pb_cur": "1.88", 
             "pe_avg": "14.5", 
-            "ps_cur": "0.587", 
+            "ps_cur": "0.59", 
             "security": "Goodyear Tire & Rubber", 
             "ticker": "GT", 
             "ps_avg": "0.3"
         }, 
         "CHD": {
-            "pe_cur": "27.65", 
+            "pe_cur": "27.67", 
             "div_avg": "1.6", 
             "pb_avg": "4.7", 
             "s_rank": 288, 
@@ -1911,7 +1912,7 @@
             "ps_avg": "3.0"
         }, 
         "FITB": {
-            "pe_cur": "13.03", 
+            "pe_cur": "13.04", 
             "div_avg": "2.3", 
             "pb_avg": "1.1", 
             "s_rank": 41, 
@@ -1924,7 +1925,7 @@
             "ps_avg": "2.5"
         }, 
         "EQR": {
-            "pe_cur": "28.25", 
+            "pe_cur": "28.22", 
             "div_avg": "3.1", 
             "pb_avg": "2.5", 
             "s_rank": 173, 
@@ -1937,33 +1938,33 @@
             "ps_avg": "9.4"
         }, 
         "OMC": {
-            "pe_cur": "17.10", 
+            "pe_cur": "17.0969", 
             "div_avg": "2.4", 
             "pb_avg": "5.8", 
             "s_rank": 110, 
-            "div_cur": "2.63", 
-            "pb_cur": "9.08", 
+            "div_cur": "2.6300", 
+            "pb_cur": "9.0849", 
             "pe_avg": "17.1", 
-            "ps_cur": "1.27", 
+            "ps_cur": "1.2659", 
             "security": "Omnicom Group", 
             "ticker": "OMC", 
             "ps_avg": "1.2"
         }, 
         "L": {
-            "pe_cur": "18.686", 
+            "pe_cur": "18.70", 
             "div_avg": "0.6", 
             "pb_avg": "0.8", 
             "s_rank": 46, 
-            "div_cur": "0.530", 
-            "pb_cur": "0.856", 
+            "div_cur": "0.53", 
+            "pb_cur": "0.86", 
             "pe_avg": "53.4", 
-            "ps_cur": "1.196", 
+            "ps_cur": "1.20", 
             "security": "Loews Corp.", 
             "ticker": "L", 
             "ps_avg": "1.1"
         }, 
         "ESRX": {
-            "pe_cur": "11.19", 
+            "pe_cur": "11.18", 
             "div_avg": 0.0, 
             "pb_avg": "3.7", 
             "s_rank": 46, 
@@ -1976,7 +1977,7 @@
             "ps_avg": "0.5"
         }, 
         "AMGN": {
-            "pe_cur": "15.47", 
+            "pe_cur": "15.49", 
             "div_avg": "1.9", 
             "pb_avg": "3.9", 
             "s_rank": 136, 
@@ -1989,7 +1990,7 @@
             "ps_avg": "5.0"
         }, 
         "HRL": {
-            "pe_cur": "20.85", 
+            "pe_cur": "20.82", 
             "div_avg": "1.6", 
             "pb_avg": "3.8", 
             "s_rank": 136, 
@@ -2002,7 +2003,7 @@
             "ps_avg": "1.5"
         }, 
         "GE": {
-            "pe_cur": "29.55", 
+            "pe_cur": "29.59", 
             "div_avg": "3.1", 
             "pb_avg": "2.2", 
             "s_rank": 136, 
@@ -2015,10 +2016,10 @@
             "ps_avg": "1.9"
         }, 
         "DPS": {
-            "pe_cur": "20.03", 
+            "pe_cur": "20.06", 
             "div_avg": "2.6", 
             "pb_avg": "5.5", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "2.54", 
             "pb_cur": "7.64", 
             "pe_avg": "18.4", 
@@ -2028,20 +2029,20 @@
             "ps_avg": "2.1"
         }, 
         "FOX": {
-            "pe_cur": "17.048", 
+            "pe_cur": "17.09", 
             "div_avg": "0.9", 
             "pb_avg": "3.3", 
             "s_rank": 136, 
-            "div_cur": "1.260", 
-            "pb_cur": "3.689", 
+            "div_cur": "1.26", 
+            "pb_cur": "3.69", 
             "pe_avg": "17.1", 
-            "ps_cur": "1.885", 
+            "ps_cur": "1.88", 
             "security": "Twenty-First Century Fox Class B", 
             "ticker": "FOX", 
             "ps_avg": "2.1"
         }, 
         "MRK": {
-            "pe_cur": "40.81", 
+            "pe_cur": "40.72", 
             "div_avg": "3.5", 
             "pb_avg": "3.1", 
             "s_rank": 253, 
@@ -2054,7 +2055,7 @@
             "ps_avg": "3.5"
         }, 
         "AMZN": {
-            "pe_cur": "177.88", 
+            "pe_cur": "177.84", 
             "div_avg": 0.0, 
             "pb_avg": "17.1", 
             "s_rank": 209, 
@@ -2067,10 +2068,10 @@
             "ps_avg": "2.2"
         }, 
         "HAS": {
-            "pe_cur": "22.18", 
+            "pe_cur": "22.17", 
             "div_avg": "3.0", 
             "pb_avg": "4.8", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "2.28", 
             "pb_cur": "6.77", 
             "pe_avg": "19.6", 
@@ -2080,20 +2081,20 @@
             "ps_avg": "1.7"
         }, 
         "PH": {
-            "pe_cur": "27.062", 
+            "pe_cur": "27.06", 
             "div_avg": "1.9", 
             "pb_avg": "2.8", 
             "s_rank": 209, 
-            "div_cur": "1.660", 
-            "pb_cur": "4.644", 
+            "div_cur": "1.66", 
+            "pb_cur": "4.64", 
             "pe_avg": "16.2", 
-            "ps_cur": "1.848", 
+            "ps_cur": "1.85", 
             "security": "Parker-Hannifin", 
             "ticker": "PH", 
             "ps_avg": "1.2"
         }, 
         "LMT": {
-            "pe_cur": "15.77", 
+            "pe_cur": "15.75", 
             "div_avg": "3.2", 
             "pb_avg": "72.9", 
             "s_rank": 70, 
@@ -2106,20 +2107,20 @@
             "ps_avg": "1.1"
         }, 
         "GPS": {
-            "pe_cur": "15.53", 
+            "pe_cur": "15.530", 
             "div_avg": "2.6", 
             "pb_avg": "5.1", 
-            "s_rank": 12, 
-            "div_cur": "3.49", 
-            "pb_cur": "3.62", 
+            "s_rank": 13, 
+            "div_cur": "3.490", 
+            "pb_cur": "3.618", 
             "pe_avg": "14.5", 
-            "ps_cur": "0.68", 
+            "ps_cur": "0.679", 
             "security": "Gap (The)", 
             "ticker": "GPS", 
             "ps_avg": "1.0"
         }, 
         "MAR": {
-            "pe_cur": "36.50", 
+            "pe_cur": "36.36", 
             "div_avg": "1.3", 
             "pb_avg": "6.0", 
             "s_rank": 261, 
@@ -2132,7 +2133,7 @@
             "ps_avg": "1.3"
         }, 
         "IPG": {
-            "pe_cur": "15.68", 
+            "pe_cur": "15.70", 
             "div_avg": "2.1", 
             "pb_avg": "3.6", 
             "s_rank": 61, 
@@ -2145,7 +2146,7 @@
             "ps_avg": "1.1"
         }, 
         "PHM": {
-            "pe_cur": "12.31", 
+            "pe_cur": "12.29", 
             "div_avg": 0.0, 
             "pb_avg": "1.9", 
             "s_rank": 15, 
@@ -2158,7 +2159,7 @@
             "ps_avg": "1.2"
         }, 
         "CINF": {
-            "pe_cur": "19.27", 
+            "pe_cur": "19.28", 
             "div_avg": "3.3", 
             "pb_avg": "1.4", 
             "s_rank": 41, 
@@ -2184,7 +2185,7 @@
             "ps_avg": "2.6"
         }, 
         "EFX": {
-            "pe_cur": "30.82", 
+            "pe_cur": "30.88", 
             "div_avg": "1.2", 
             "pb_avg": "4.3", 
             "s_rank": 304, 
@@ -2200,7 +2201,7 @@
             "pe_cur": "63.40", 
             "div_avg": 0.0, 
             "pb_avg": "8.2", 
-            "s_rank": 301, 
+            "s_rank": 300, 
             "div_cur": 0.0, 
             "pb_cur": "12.57", 
             "pe_avg": "68.0", 
@@ -2210,10 +2211,10 @@
             "ps_avg": "7.5"
         }, 
         "NTRS": {
-            "pe_cur": "20.69", 
+            "pe_cur": "20.70", 
             "div_avg": "2.0", 
             "pb_avg": "1.8", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "1.68", 
             "pb_cur": "2.29", 
             "pe_avg": "19.1", 
@@ -2223,7 +2224,7 @@
             "ps_avg": "3.5"
         }, 
         "DG": {
-            "pe_cur": "16.60", 
+            "pe_cur": "16.59", 
             "div_avg": 0.0, 
             "pb_avg": "3.7", 
             "s_rank": 90, 
@@ -2236,14 +2237,14 @@
             "ps_avg": "1.1"
         }, 
         "FOXA": {
-            "pe_cur": "17.29", 
+            "pe_cur": "17.340", 
             "div_avg": "0.8", 
             "pb_avg": "3.4", 
             "s_rank": 136, 
-            "div_cur": "1.24", 
-            "pb_cur": "3.76", 
+            "div_cur": "1.240", 
+            "pb_cur": "3.761", 
             "pe_avg": "17.1", 
-            "ps_cur": "1.92", 
+            "ps_cur": "1.922", 
             "security": "Twenty-First Century Fox Class A", 
             "ticker": "FOXA", 
             "ps_avg": "2.1"
@@ -2275,14 +2276,14 @@
             "ps_avg": "1.5"
         }, 
         "KIM": {
-            "pe_cur": "30.625", 
+            "pe_cur": "30.68", 
             "div_avg": "4.0", 
             "pb_avg": "2.0", 
             "s_rank": 136, 
-            "div_cur": "5.420", 
-            "pb_cur": "1.629", 
+            "div_cur": "5.42", 
+            "pb_cur": "1.63", 
             "pe_avg": "44.0", 
-            "ps_cur": "7.262", 
+            "ps_cur": "7.26", 
             "security": "Kimco Realty", 
             "ticker": "KIM", 
             "ps_avg": "9.4"
@@ -2301,10 +2302,10 @@
             "ps_avg": "1.7"
         }, 
         "EXR": {
-            "pe_cur": "25.38", 
+            "pe_cur": "25.35", 
             "div_avg": "3.0", 
             "pb_avg": "3.8", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "4.25", 
             "pb_cur": "4.12", 
             "pe_avg": "39.9", 
@@ -2314,7 +2315,7 @@
             "ps_avg": "11.2"
         }, 
         "HRS": {
-            "pe_cur": "23.29", 
+            "pe_cur": "23.26", 
             "div_avg": "2.4", 
             "pb_avg": "3.5", 
             "s_rank": 173, 
@@ -2353,7 +2354,7 @@
             "ps_avg": "2.5"
         }, 
         "CXO": {
-            "pe_cur": "87.90", 
+            "pe_cur": "87.91", 
             "div_avg": 0.0, 
             "pb_avg": "2.8", 
             "s_rank": 304, 
@@ -2366,20 +2367,20 @@
             "ps_avg": "5.9"
         }, 
         "KSU": {
-            "pe_cur": "19.08", 
+            "pe_cur": "19.076", 
             "div_avg": "1.2", 
             "pb_avg": "3.1", 
-            "s_rank": 173, 
-            "div_cur": "1.47", 
-            "pb_cur": "2.34", 
+            "s_rank": 192, 
+            "div_cur": "1.470", 
+            "pb_cur": "2.343", 
             "pe_avg": "25.8", 
-            "ps_cur": "4.08", 
+            "ps_cur": "4.082", 
             "security": "Kansas City Southern", 
             "ticker": "KSU", 
             "ps_avg": "4.5"
         }, 
         "AEP": {
-            "pe_cur": "47.53", 
+            "pe_cur": "47.52", 
             "div_avg": "3.8", 
             "pb_avg": "1.5", 
             "s_rank": 90, 
@@ -2392,20 +2393,20 @@
             "ps_avg": "1.6"
         }, 
         "BEN": {
-            "pe_cur": "13.855", 
+            "pe_cur": "13.85", 
             "div_avg": "1.2", 
             "pb_avg": "2.7", 
             "s_rank": 70, 
-            "div_cur": "1.870", 
-            "pb_cur": "1.972", 
+            "div_cur": "1.87", 
+            "pb_cur": "1.97", 
             "pe_avg": "14.0", 
-            "ps_cur": "3.747", 
+            "ps_cur": "3.75", 
             "security": "Franklin Resources", 
             "ticker": "BEN", 
             "ps_avg": "3.7"
         }, 
         "AET": {
-            "pe_cur": "43.19", 
+            "pe_cur": "43.20", 
             "div_avg": "1.1", 
             "pb_avg": "2.0", 
             "s_rank": 173, 
@@ -2418,46 +2419,46 @@
             "ps_avg": "0.6"
         }, 
         "CMI": {
-            "pe_cur": "17.85", 
+            "pe_cur": "17.8489", 
             "div_avg": "2.4", 
             "pb_avg": "3.2", 
             "s_rank": 46, 
-            "div_cur": "2.64", 
-            "pb_cur": "3.63", 
+            "div_cur": "2.6400", 
+            "pb_cur": "3.6304", 
             "pe_avg": "14.5", 
-            "ps_cur": "1.46", 
+            "ps_cur": "1.4608", 
             "security": "Cummins Inc.", 
             "ticker": "CMI", 
             "ps_avg": "1.2"
         }, 
         "EL": {
-            "pe_cur": "31.04", 
+            "pe_cur": "31.0518", 
             "div_avg": "1.2", 
             "pb_avg": "8.2", 
             "s_rank": 292, 
-            "div_cur": "1.46", 
-            "pb_cur": "8.29", 
+            "div_cur": "1.4600", 
+            "pb_cur": "8.2896", 
             "pe_avg": "27.8", 
-            "ps_cur": "2.95", 
+            "ps_cur": "2.9506", 
             "security": "Estee Lauder Cos.", 
             "ticker": "EL", 
             "ps_avg": "2.8"
         }, 
         "CMG": {
-            "pe_cur": "145.430", 
+            "pe_cur": "145.42", 
             "div_avg": 0.0, 
             "pb_avg": "9.3", 
             "s_rank": 261, 
             "div_cur": 0.0, 
-            "pb_cur": "9.683", 
+            "pb_cur": "9.68", 
             "pe_avg": "50.1", 
-            "ps_cur": "3.292", 
+            "ps_cur": "3.29", 
             "security": "Chipotle Mexican Grill", 
             "ticker": "CMG", 
             "ps_avg": "4.5"
         }, 
         "KO": {
-            "pe_cur": "30.87", 
+            "pe_cur": "30.86", 
             "div_avg": "3.0", 
             "pb_avg": "5.9", 
             "s_rank": 261, 
@@ -2470,7 +2471,7 @@
             "ps_avg": "3.9"
         }, 
         "CME": {
-            "pe_cur": "25.31", 
+            "pe_cur": "25.30", 
             "div_avg": "2.4", 
             "pb_avg": "1.2", 
             "s_rank": 110, 
@@ -2483,33 +2484,33 @@
             "ps_avg": "8.4"
         }, 
         "EMN": {
-            "pe_cur": "13.37", 
+            "pe_cur": "13.398", 
             "div_avg": "2.0", 
             "pb_avg": "3.1", 
             "s_rank": 19, 
-            "div_cur": "2.56", 
-            "pb_cur": "2.57", 
+            "div_cur": "2.560", 
+            "pb_cur": "2.573", 
             "pe_avg": "14.6", 
-            "ps_cur": "1.28", 
+            "ps_cur": "1.279", 
             "security": "Eastman Chemical", 
             "ticker": "EMN", 
             "ps_avg": "1.2"
         }, 
         "GRMN": {
-            "pe_cur": "14.847", 
+            "pe_cur": "14.81", 
             "div_avg": "4.3", 
             "pb_avg": "2.5", 
             "s_rank": 46, 
-            "div_cur": "3.890", 
-            "pb_cur": "2.668", 
+            "div_cur": "3.89", 
+            "pb_cur": "2.67", 
             "pe_avg": "18.3", 
-            "ps_cur": "3.256", 
+            "ps_cur": "3.26", 
             "security": "Garmin Ltd.", 
             "ticker": "GRMN", 
             "ps_avg": "3.1"
         }, 
         "CMA": {
-            "pe_cur": "20.82", 
+            "pe_cur": "20.80", 
             "div_avg": "1.6", 
             "pb_avg": "1.0", 
             "s_rank": 173, 
@@ -2535,20 +2536,20 @@
             "ps_avg": "16.1"
         }, 
         "AMAT": {
-            "pe_cur": "21.371", 
+            "pe_cur": "21.37", 
             "div_avg": "2.1", 
             "pb_avg": "2.9", 
             "s_rank": 277, 
-            "div_cur": "0.960", 
-            "pb_cur": "5.876", 
+            "div_cur": "0.96", 
+            "pb_cur": "5.88", 
             "pe_avg": "56.6", 
-            "ps_cur": "3.813", 
+            "ps_cur": "3.81", 
             "security": "Applied Materials Inc", 
             "ticker": "AMAT", 
             "ps_avg": "2.5"
         }, 
         "IFF": {
-            "pe_cur": "27.30", 
+            "pe_cur": "27.27", 
             "div_avg": "1.8", 
             "pb_avg": "5.2", 
             "s_rank": 277, 
@@ -2561,7 +2562,7 @@
             "ps_avg": "2.6"
         }, 
         "CHTR": {
-            "pe_cur": "21.88", 
+            "pe_cur": "21.94", 
             "div_avg": 0.0, 
             "pb_avg": "123.9", 
             "s_rank": 209, 
@@ -2574,20 +2575,20 @@
             "ps_avg": "1.7"
         }, 
         "AEE": {
-            "pe_cur": "20.500", 
+            "pe_cur": "20.50", 
             "div_avg": "4.0", 
             "pb_avg": "1.4", 
             "s_rank": 28, 
-            "div_cur": "3.210", 
-            "pb_cur": "1.881", 
+            "div_cur": "3.21", 
+            "pb_cur": "1.88", 
             "pe_avg": "31.9", 
-            "ps_cur": "2.234", 
+            "ps_cur": "2.23", 
             "security": "Ameren Corp", 
             "ticker": "AEE", 
             "ps_avg": "1.5"
         }, 
         "CTAS": {
-            "pe_cur": "25.06", 
+            "pe_cur": "25.05", 
             "div_avg": "1.2", 
             "pb_avg": "3.7", 
             "s_rank": 261, 
@@ -2600,7 +2601,7 @@
             "ps_avg": "1.8"
         }, 
         "EMR": {
-            "pe_cur": "24.979", 
+            "pe_cur": "25.009", 
             "div_avg": "3.1", 
             "pb_avg": "4.0", 
             "s_rank": 161, 
@@ -2613,20 +2614,20 @@
             "ps_avg": "1.7"
         }, 
         "PEG": {
-            "pe_cur": "41.88", 
+            "pe_cur": "41.851", 
             "div_avg": "4.1", 
             "pb_avg": "1.6", 
             "s_rank": 90, 
-            "div_cur": "3.93", 
-            "pb_cur": "1.70", 
+            "div_cur": "3.930", 
+            "pb_cur": "1.701", 
             "pe_avg": "13.6", 
-            "ps_cur": "2.45", 
+            "ps_cur": "2.452", 
             "security": "Public Serv. Enterprise Inc.", 
             "ticker": "PEG", 
             "ps_avg": "1.8"
         }, 
         "FDX": {
-            "pe_cur": "27.18", 
+            "pe_cur": "27.15", 
             "div_avg": "0.6", 
             "pb_avg": "2.5", 
             "s_rank": 173, 
@@ -2652,20 +2653,20 @@
             "ps_avg": "2.7"
         }, 
         "CMS": {
-            "pe_cur": "21.659", 
+            "pe_cur": "21.67", 
             "div_avg": "3.4", 
             "pb_avg": "2.4", 
             "s_rank": 70, 
-            "div_cur": "2.930", 
-            "pb_cur": "2.912", 
+            "div_cur": "2.93", 
+            "pb_cur": "2.91", 
             "pe_avg": "18.7", 
-            "ps_cur": "1.980", 
+            "ps_cur": "1.98", 
             "security": "CMS Energy", 
             "ticker": "CMS", 
             "ps_avg": "1.3"
         }, 
         "PCG": {
-            "pe_cur": "18.18", 
+            "pe_cur": "18.17", 
             "div_avg": "3.8", 
             "pb_avg": "1.5", 
             "s_rank": 19, 
@@ -2678,20 +2679,20 @@
             "ps_avg": "1.4"
         }, 
         "HD": {
-            "pe_cur": "24.3296", 
+            "pe_cur": "24.30", 
             "div_avg": "1.9", 
             "pb_avg": "12.4", 
             "s_rank": 161, 
-            "div_cur": "2.2800", 
-            "pb_cur": "43.2343", 
+            "div_cur": "2.28", 
+            "pb_cur": "43.23", 
             "pe_avg": "22.4", 
-            "ps_cur": "1.9803", 
+            "ps_cur": "1.98", 
             "security": "Home Depot", 
             "ticker": "HD", 
             "ps_avg": "1.6"
         }, 
         "CRM": {
-            "pe_cur": "334.12", 
+            "pe_cur": "333.96", 
             "div_avg": 0.0, 
             "pb_avg": "10.7", 
             "s_rank": 321, 
@@ -2704,7 +2705,7 @@
             "ps_avg": "7.8"
         }, 
         "MAA": {
-            "pe_cur": "42.21", 
+            "pe_cur": "42.20", 
             "div_avg": "3.9", 
             "pb_avg": "2.7", 
             "s_rank": 173, 
@@ -2717,7 +2718,7 @@
             "ps_avg": "5.9"
         }, 
         "LLY": {
-            "pe_cur": "39.016", 
+            "pe_cur": "38.992", 
             "div_avg": "3.2", 
             "pb_avg": "4.5", 
             "s_rank": 277, 
@@ -2730,33 +2731,33 @@
             "ps_avg": "3.2"
         }, 
         "CBG": {
-            "pe_cur": "19.9039", 
+            "pe_cur": "19.866", 
             "div_avg": 0.0, 
             "pb_avg": "4.6", 
             "s_rank": 173, 
             "div_cur": 0.0, 
-            "pb_cur": "3.8567", 
+            "pb_cur": "3.857", 
             "pe_avg": "23.9", 
-            "ps_cur": "0.9381", 
+            "ps_cur": "0.938", 
             "security": "CBRE Group", 
             "ticker": "CBG", 
             "ps_avg": "1.1"
         }, 
         "DHI": {
-            "pe_cur": "12.72", 
+            "pe_cur": "12.728", 
             "div_avg": "0.8", 
             "pb_avg": "1.8", 
             "s_rank": 19, 
-            "div_cur": "1.23", 
-            "pb_cur": "1.70", 
+            "div_cur": "1.230", 
+            "pb_cur": "1.696", 
             "pe_avg": "16.0", 
-            "ps_cur": "0.93", 
+            "ps_cur": "0.933", 
             "security": "D. R. Horton", 
             "ticker": "DHI", 
             "ps_avg": "1.2"
         }, 
         "ETN": {
-            "pe_cur": "17.87", 
+            "pe_cur": "17.86", 
             "div_avg": "3.1", 
             "pb_avg": "2.0", 
             "s_rank": 28, 
@@ -2769,7 +2770,7 @@
             "ps_avg": "1.3"
         }, 
         "LOW": {
-            "pe_cur": "24.73", 
+            "pe_cur": "24.75", 
             "div_avg": "1.5", 
             "pb_avg": "5.2", 
             "s_rank": 70, 
@@ -2782,20 +2783,20 @@
             "ps_avg": "1.0"
         }, 
         "AME": {
-            "pe_cur": "26.97", 
+            "pe_cur": "26.987", 
             "div_avg": "0.6", 
             "pb_avg": "3.8", 
             "s_rank": 277, 
-            "div_cur": "0.60", 
-            "pb_cur": "4.06", 
+            "div_cur": "0.600", 
+            "pb_cur": "4.059", 
             "pe_avg": "21.7", 
-            "ps_cur": "3.54", 
+            "ps_cur": "3.540", 
             "security": "AMETEK Inc", 
             "ticker": "AME", 
             "ps_avg": "3.1"
         }, 
         "MAC": {
-            "pe_cur": "52.82", 
+            "pe_cur": "52.78", 
             "div_avg": "3.6", 
             "pb_avg": "2.7", 
             "s_rank": 209, 
@@ -2808,20 +2809,20 @@
             "ps_avg": "9.4"
         }, 
         "AMG": {
-            "pe_cur": "17.44", 
+            "pe_cur": "17.4281", 
             "div_avg": 0.0, 
             "pb_avg": "3.8", 
-            "s_rank": 193, 
-            "div_cur": "0.52", 
-            "pb_cur": "2.45", 
+            "s_rank": 192, 
+            "div_cur": "0.5200", 
+            "pb_cur": "2.4469", 
             "pe_avg": "30.6", 
-            "ps_cur": "4.00", 
+            "ps_cur": "3.9991", 
             "security": "Affiliated Managers Group Inc", 
             "ticker": "AMG", 
             "ps_avg": "4.3"
         }, 
         "DOW": {
-            "pe_cur": "15.33", 
+            "pe_cur": "15.36", 
             "div_avg": "3.3", 
             "pb_avg": "2.5", 
             "s_rank": 28, 
@@ -2834,20 +2835,20 @@
             "ps_avg": "1.0"
         }, 
         "PWR": {
-            "pe_cur": "23.770", 
+            "pe_cur": "23.77", 
             "div_avg": 0.0, 
             "pb_avg": "1.4", 
             "s_rank": 110, 
             "div_cur": 0.0, 
-            "pb_cur": "1.577", 
+            "pb_cur": "1.58", 
             "pe_avg": "25.2", 
-            "ps_cur": "0.660", 
+            "ps_cur": "0.66", 
             "security": "Quanta Services Inc.", 
             "ticker": "PWR", 
             "ps_avg": "0.9"
         }, 
         "COO": {
-            "pe_cur": "34.02", 
+            "pe_cur": "34.00", 
             "div_avg": 0.0, 
             "pb_avg": "2.6", 
             "s_rank": 292, 
@@ -2860,7 +2861,7 @@
             "ps_avg": "4.0"
         }, 
         "LLL": {
-            "pe_cur": "20.29", 
+            "pe_cur": "20.28", 
             "div_avg": "2.1", 
             "pb_avg": "1.7", 
             "s_rank": 90, 
@@ -2873,7 +2874,7 @@
             "ps_avg": "0.8"
         }, 
         "NWL": {
-            "pe_cur": "41.51", 
+            "pe_cur": "41.39", 
             "div_avg": "1.8", 
             "pb_avg": "4.6", 
             "s_rank": 136, 
@@ -2912,7 +2913,7 @@
             "ps_avg": "4.4"
         }, 
         "BMY": {
-            "pe_cur": "19.11", 
+            "pe_cur": "19.09", 
             "div_avg": "2.8", 
             "pb_avg": "5.7", 
             "s_rank": 209, 
@@ -2925,7 +2926,7 @@
             "ps_avg": "5.1"
         }, 
         "AMT": {
-            "pe_cur": "62.16", 
+            "pe_cur": "62.14", 
             "div_avg": "1.6", 
             "pb_avg": "7.8", 
             "s_rank": 312, 
@@ -2938,14 +2939,14 @@
             "ps_avg": "9.8"
         }, 
         "LRCX": {
-            "pe_cur": "18.975", 
+            "pe_cur": "18.95", 
             "div_avg": 0.0, 
             "pb_avg": "2.1", 
-            "s_rank": 193, 
-            "div_cur": "1.240", 
-            "pb_cur": "3.653", 
+            "s_rank": 192, 
+            "div_cur": "1.24", 
+            "pb_cur": "3.65", 
             "pe_avg": "37.9", 
-            "ps_cur": "3.361", 
+            "ps_cur": "3.36", 
             "security": "Lam Research", 
             "ticker": "LRCX", 
             "ps_avg": "2.4"
@@ -2954,7 +2955,7 @@
             "pe_cur": "12.07", 
             "div_avg": "2.4", 
             "pb_avg": "1.6", 
-            "s_rank": 12, 
+            "s_rank": 7, 
             "div_cur": "2.31", 
             "pb_cur": "1.45", 
             "pe_avg": "9.7", 
@@ -2977,7 +2978,7 @@
             "ps_avg": "7.2"
         }, 
         "C": {
-            "pe_cur": "12.20", 
+            "pe_cur": "12.19", 
             "div_avg": "0.3", 
             "pb_avg": "0.7", 
             "s_rank": 61, 
@@ -2990,27 +2991,27 @@
             "ps_avg": "1.9"
         }, 
         "FLR": {
-            "pe_cur": "28.305", 
+            "pe_cur": "28.25", 
             "div_avg": "1.3", 
             "pb_avg": "2.7", 
             "s_rank": 70, 
-            "div_cur": "1.740", 
-            "pb_cur": "2.091", 
+            "div_cur": "1.74", 
+            "pb_cur": "2.09", 
             "pe_avg": "18.5", 
-            "ps_cur": "0.346", 
+            "ps_cur": "0.35", 
             "security": "Fluor Corp.", 
             "ticker": "FLR", 
             "ps_avg": "0.4"
         }, 
         "KEY": {
-            "pe_cur": "21.764", 
+            "pe_cur": "21.76", 
             "div_avg": "1.9", 
             "pb_avg": "1.0", 
             "s_rank": 136, 
-            "div_cur": "1.820", 
-            "pb_cur": "1.473", 
+            "div_cur": "1.82", 
+            "pb_cur": "1.47", 
             "pe_avg": "12.4", 
-            "ps_cur": "3.943", 
+            "ps_cur": "3.94", 
             "security": "KeyCorp", 
             "ticker": "KEY", 
             "ps_avg": "2.6"
@@ -3029,20 +3030,20 @@
             "ps_avg": "1.5"
         }, 
         "K": {
-            "pe_cur": "32.86", 
+            "pe_cur": "32.839", 
             "div_avg": "2.9", 
             "pb_avg": "9.1", 
             "s_rank": 90, 
-            "div_cur": "2.94", 
-            "pb_cur": "12.33", 
+            "div_cur": "2.940", 
+            "pb_cur": "12.335", 
             "pe_avg": "30.0", 
-            "ps_cur": "1.92", 
+            "ps_cur": "1.922", 
             "security": "Kellogg Co.", 
             "ticker": "K", 
             "ps_avg": "1.6"
         }, 
         "DISCK": {
-            "pe_cur": "13.46", 
+            "pe_cur": "13.47", 
             "div_avg": 0.0, 
             "pb_avg": "2.3", 
             "s_rank": 136, 
@@ -3068,7 +3069,7 @@
             "ps_avg": "3.2"
         }, 
         "FFIV": {
-            "pe_cur": "22.08", 
+            "pe_cur": "22.12", 
             "div_avg": 0.0, 
             "pb_avg": "6.0", 
             "s_rank": 292, 
@@ -3081,7 +3082,7 @@
             "ps_avg": "5.2"
         }, 
         "O": {
-            "pe_cur": "48.55", 
+            "pe_cur": "48.48", 
             "div_avg": "4.7", 
             "pb_avg": "2.4", 
             "s_rank": 110, 
@@ -3094,7 +3095,7 @@
             "ps_avg": "11.8"
         }, 
         "KMX": {
-            "pe_cur": "18.47", 
+            "pe_cur": "18.48", 
             "div_avg": 0.0, 
             "pb_avg": "3.3", 
             "s_rank": 125, 
@@ -3107,14 +3108,14 @@
             "ps_avg": "0.8"
         }, 
         "BLL": {
-            "pe_cur": "29.600", 
+            "pe_cur": "29.58", 
             "div_avg": "0.8", 
             "pb_avg": "7.0", 
             "s_rank": 243, 
-            "div_cur": "0.500", 
-            "pb_cur": "3.763", 
+            "div_cur": "0.50", 
+            "pb_cur": "3.76", 
             "pe_avg": "25.6", 
-            "ps_cur": "1.433", 
+            "ps_cur": "1.43", 
             "security": "Ball Corp", 
             "ticker": "BLL", 
             "ps_avg": "1.0"
@@ -3133,20 +3134,20 @@
             "ps_avg": "4.8"
         }, 
         "CSX": {
-            "pe_cur": "28.322", 
+            "pe_cur": "28.31", 
             "div_avg": "2.2", 
             "pb_avg": "2.6", 
             "s_rank": 277, 
-            "div_cur": "1.520", 
-            "pb_cur": "4.156", 
+            "div_cur": "1.52", 
+            "pb_cur": "4.16", 
             "pe_avg": "14.8", 
-            "ps_cur": "4.279", 
+            "ps_cur": "4.28", 
             "security": "CSX Corp.", 
             "ticker": "CSX", 
             "ps_avg": "2.3"
         }, 
         "BLK": {
-            "pe_cur": "18.79", 
+            "pe_cur": "18.78", 
             "div_avg": "2.4", 
             "pb_avg": "1.8", 
             "s_rank": 110, 
@@ -3159,33 +3160,33 @@
             "ps_avg": "4.9"
         }, 
         "JNJ": {
-            "pe_cur": "20.70", 
+            "pe_cur": "20.7043", 
             "div_avg": "2.9", 
             "pb_avg": "3.7", 
             "s_rank": 209, 
-            "div_cur": "2.72", 
-            "pb_cur": "4.75", 
+            "div_cur": "2.7200", 
+            "pb_cur": "4.7471", 
             "pe_avg": "19.8", 
-            "ps_cur": "4.64", 
+            "ps_cur": "4.6433", 
             "security": "Johnson & Johnson", 
             "ticker": "JNJ", 
             "ps_avg": "3.8"
         }, 
         "PAYX": {
-            "pe_cur": "27.74", 
+            "pe_cur": "27.778", 
             "div_avg": "3.0", 
             "pb_avg": "8.9", 
             "s_rank": 161, 
-            "div_cur": "3.13", 
-            "pb_cur": "11.10", 
+            "div_cur": "3.130", 
+            "pb_cur": "11.099", 
             "pe_avg": "24.9", 
-            "ps_cur": "6.83", 
+            "ps_cur": "6.832", 
             "security": "Paychex Inc.", 
             "ticker": "PAYX", 
             "ps_avg": "6.2"
         }, 
         "EW": {
-            "pe_cur": "36.48", 
+            "pe_cur": "36.52", 
             "div_avg": 0.0, 
             "pb_avg": "6.8", 
             "s_rank": 322, 
@@ -3198,7 +3199,7 @@
             "ps_avg": "6.0"
         }, 
         "MLM": {
-            "pe_cur": "35.30", 
+            "pe_cur": "35.31", 
             "div_avg": "1.3", 
             "pb_avg": "3.0", 
             "s_rank": 292, 
@@ -3211,14 +3212,14 @@
             "ps_avg": "2.6"
         }, 
         "ETFC": {
-            "pe_cur": "18.51", 
+            "pe_cur": "18.489", 
             "div_avg": 0.0, 
             "pb_avg": "1.1", 
             "s_rank": 173, 
-            "div_cur": "0.00", 
-            "pb_cur": "1.63", 
+            "div_cur": "0.000", 
+            "pb_cur": "1.627", 
             "pe_avg": "28.8", 
-            "ps_cur": "4.58", 
+            "ps_cur": "4.581", 
             "security": "E*Trade", 
             "ticker": "ETFC", 
             "ps_avg": "3.5"
@@ -3237,27 +3238,27 @@
             "ps_avg": "2.7"
         }, 
         "ES": {
-            "pe_cur": "19.8377", 
+            "pe_cur": "19.86", 
             "div_avg": "3.3", 
             "pb_avg": "1.6", 
             "s_rank": 41, 
-            "div_cur": "3.1900", 
-            "pb_cur": "1.7472", 
+            "div_cur": "3.19", 
+            "pb_cur": "1.75", 
             "pe_avg": "19.1", 
-            "ps_cur": "2.4552", 
+            "ps_cur": "2.46", 
             "security": "Eversource Energy", 
             "ticker": "ES", 
             "ps_avg": "1.9"
         }, 
         "MAT": {
-            "pe_cur": "27.886", 
+            "pe_cur": "27.88", 
             "div_avg": "4.5", 
             "pb_avg": "4.1", 
             "s_rank": 70, 
-            "div_cur": "6.870", 
-            "pb_cur": "3.420", 
+            "div_cur": "6.87", 
+            "pb_cur": "3.42", 
             "pe_avg": "20.0", 
-            "ps_cur": "1.424", 
+            "ps_cur": "1.42", 
             "security": "Mattel Inc.", 
             "ticker": "MAT", 
             "ps_avg": "1.9"
@@ -3302,20 +3303,20 @@
             "ps_avg": "0.8"
         }, 
         "DLR": {
-            "pe_cur": "48.87", 
+            "pe_cur": "48.839", 
             "div_avg": "4.7", 
             "pb_avg": "3.4", 
             "s_rank": 261, 
-            "div_cur": "3.27", 
-            "pb_cur": "4.52", 
+            "div_cur": "3.270", 
+            "pb_cur": "4.518", 
             "pe_avg": "55.8", 
-            "ps_cur": "8.23", 
+            "ps_cur": "8.227", 
             "security": "Digital Realty Trust", 
             "ticker": "DLR", 
             "ps_avg": "5.9"
         }, 
         "MOS": {
-            "pe_cur": "204.130", 
+            "pe_cur": "204.304", 
             "div_avg": "2.6", 
             "pb_avg": "1.5", 
             "s_rank": 19, 
@@ -3328,7 +3329,7 @@
             "ps_avg": "1.9"
         }, 
         "MKC": {
-            "pe_cur": "27.10", 
+            "pe_cur": "27.11", 
             "div_avg": "2.0", 
             "pb_avg": "5.5", 
             "s_rank": 253, 
@@ -3344,7 +3345,7 @@
             "pe_cur": "29.58", 
             "div_avg": "3.1", 
             "pb_avg": "6.1", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "3.84", 
             "pb_cur": "7.23", 
             "pe_avg": "38.3", 
@@ -3357,7 +3358,7 @@
             "pe_cur": "40.549", 
             "div_avg": 0.0, 
             "pb_avg": "3.9", 
-            "s_rank": 193, 
+            "s_rank": 192, 
             "div_cur": "0.000", 
             "pb_cur": "1.825", 
             "pe_avg": "26.2", 
@@ -3393,14 +3394,14 @@
             "ps_avg": "1.5"
         }, 
         "CBS": {
-            "pe_cur": "51.538", 
+            "pe_cur": "51.76", 
             "div_avg": "1.0", 
             "pb_avg": "3.5", 
-            "s_rank": 301, 
-            "div_cur": "1.100", 
-            "pb_cur": "9.199", 
+            "s_rank": 300, 
+            "div_cur": "1.10", 
+            "pb_cur": "9.20", 
             "pe_avg": "18.5", 
-            "ps_cur": "2.048", 
+            "ps_cur": "2.05", 
             "security": "CBS Corp.", 
             "ticker": "CBS", 
             "ps_avg": "2.0"
@@ -3432,33 +3433,33 @@
             "ps_avg": "2.1"
         }, 
         "MS": {
-            "pe_cur": "12.76", 
+            "pe_cur": "12.740", 
             "div_avg": "1.2", 
             "pb_avg": "0.8", 
             "s_rank": 28, 
-            "div_cur": "1.86", 
-            "pb_cur": "1.15", 
+            "div_cur": "1.860", 
+            "pb_cur": "1.150", 
             "pe_avg": "99.0", 
-            "ps_cur": "2.18", 
+            "ps_cur": "2.178", 
             "security": "Morgan Stanley", 
             "ticker": "MS", 
             "ps_avg": "1.7"
         }, 
         "LNT": {
-            "pe_cur": "24.077", 
+            "pe_cur": "24.09", 
             "div_avg": "3.5", 
             "pb_avg": "1.9", 
             "s_rank": 90, 
-            "div_cur": "3.150", 
-            "pb_cur": "2.342", 
+            "div_cur": "3.15", 
+            "pb_cur": "2.34", 
             "pe_avg": "17.8", 
-            "ps_cur": "2.741", 
+            "ps_cur": "2.74", 
             "security": "Alliant Energy Corp", 
             "ticker": "LNT", 
             "ps_avg": "1.9"
         }, 
         "MCHP": {
-            "pe_cur": "183.70", 
+            "pe_cur": "183.45", 
             "div_avg": "3.2", 
             "pb_avg": "4.2", 
             "s_rank": 243, 
@@ -3471,14 +3472,14 @@
             "ps_avg": "5.0"
         }, 
         "INTC": {
-            "pe_cur": "15.8005", 
+            "pe_cur": "15.83", 
             "div_avg": "3.2", 
             "pb_avg": "2.5", 
             "s_rank": 70, 
-            "div_cur": "2.9600", 
-            "pb_cur": "2.5939", 
+            "div_cur": "2.96", 
+            "pb_cur": "2.59", 
             "pe_avg": "13.4", 
-            "ps_cur": "2.8668", 
+            "ps_cur": "2.87", 
             "security": "Intel Corp.", 
             "ticker": "INTC", 
             "ps_avg": "2.7"
@@ -3510,33 +3511,33 @@
             "ps_avg": "0.3"
         }, 
         "GS": {
-            "pe_cur": "11.99", 
+            "pe_cur": "11.9790", 
             "div_avg": "1.2", 
             "pb_avg": "1.0", 
             "s_rank": 70, 
-            "div_cur": "1.15", 
-            "pb_cur": "1.23", 
+            "div_cur": "1.1500", 
+            "pb_cur": "1.2264", 
             "pe_avg": "12.9", 
-            "ps_cur": "2.88", 
+            "ps_cur": "2.8752", 
             "security": "Goldman Sachs Group", 
             "ticker": "GS", 
             "ps_avg": "2.4"
         }, 
         "DVN": {
-            "pe_cur": "64.84", 
+            "pe_cur": "64.762", 
             "div_avg": "1.7", 
             "pb_avg": "1.6", 
             "s_rank": 243, 
-            "div_cur": "0.63", 
-            "pb_cur": "3.09", 
+            "div_cur": "0.630", 
+            "pb_cur": "3.093", 
             "pe_avg": "16.3", 
-            "ps_cur": "1.73", 
+            "ps_cur": "1.727", 
             "security": "Devon Energy Corp.", 
             "ticker": "DVN", 
             "ps_avg": "1.9"
         }, 
         "KMB": {
-            "pe_cur": "21.18", 
+            "pe_cur": "21.17", 
             "div_avg": "3.1", 
             "pb_avg": "115.6", 
             "s_rank": 125, 
@@ -3575,27 +3576,27 @@
             "ps_avg": "2.1"
         }, 
         "ACN": {
-            "pe_cur": "20.17", 
+            "pe_cur": "20.1583", 
             "div_avg": "2.1", 
             "pb_avg": "10.3", 
-            "s_rank": 193, 
-            "div_cur": "1.99", 
-            "pb_cur": "9.46", 
+            "s_rank": 192, 
+            "div_cur": "1.9900", 
+            "pb_cur": "9.4612", 
             "pe_avg": "18.3", 
-            "ps_cur": "2.23", 
+            "ps_cur": "2.2322", 
             "security": "Accenture plc", 
             "ticker": "ACN", 
             "ps_avg": "1.9"
         }, 
         "KMI": {
-            "pe_cur": "66.52", 
+            "pe_cur": "66.573", 
             "div_avg": "5.5", 
             "pb_avg": "3.3", 
             "s_rank": 173, 
-            "div_cur": "2.48", 
-            "pb_cur": "1.30", 
+            "div_cur": "2.480", 
+            "pb_cur": "1.300", 
             "pe_avg": "166.1", 
-            "ps_cur": "3.39", 
+            "ps_cur": "3.392", 
             "security": "Kinder Morgan", 
             "ticker": "KMI", 
             "ps_avg": "3.8"
@@ -3614,7 +3615,7 @@
             "ps_avg": "1.7"
         }, 
         "COST": {
-            "pe_cur": "31.77", 
+            "pe_cur": "31.76", 
             "div_avg": "1.0", 
             "pb_avg": "4.8", 
             "s_rank": 227, 
@@ -3640,7 +3641,7 @@
             "ps_avg": "3.4"
         }, 
         "COF": {
-            "pe_cur": "12.45", 
+            "pe_cur": "12.43", 
             "div_avg": "1.4", 
             "pb_avg": "0.9", 
             "s_rank": 19, 
@@ -3653,7 +3654,7 @@
             "ps_avg": "1.8"
         }, 
         "CTL": {
-            "pe_cur": "24.26", 
+            "pe_cur": "24.24", 
             "div_avg": "7.5", 
             "pb_avg": "1.2", 
             "s_rank": 7, 
@@ -3666,7 +3667,7 @@
             "ps_avg": "1.1"
         }, 
         "COH": {
-            "pe_cur": "24.18", 
+            "pe_cur": "24.30", 
             "div_avg": "3.2", 
             "pb_avg": "5.7", 
             "s_rank": 136, 
@@ -3679,7 +3680,7 @@
             "ps_avg": "2.8"
         }, 
         "LUK": {
-            "pe_cur": "15.387", 
+            "pe_cur": "15.393", 
             "div_avg": "1.1", 
             "pb_avg": "0.9", 
             "s_rank": 28, 
@@ -3692,7 +3693,7 @@
             "ps_avg": "1.0"
         }, 
         "DOV": {
-            "pe_cur": "21.31", 
+            "pe_cur": "21.32", 
             "div_avg": "2.1", 
             "pb_avg": "2.8", 
             "s_rank": 125, 
@@ -3705,27 +3706,27 @@
             "ps_avg": "1.6"
         }, 
         "COL": {
-            "pe_cur": "18.6881", 
+            "pe_cur": "18.68", 
             "div_avg": "1.6", 
             "pb_avg": "6.3", 
             "s_rank": 227, 
-            "div_cur": "1.2700", 
-            "pb_cur": "5.6938", 
+            "div_cur": "1.27", 
+            "pb_cur": "5.69", 
             "pe_avg": "16.3", 
-            "ps_cur": "3.1798", 
+            "ps_cur": "3.18", 
             "security": "Rockwell Collins", 
             "ticker": "COL", 
             "ps_avg": "2.1"
         }, 
         "BCR": {
-            "pe_cur": "39.04", 
+            "pe_cur": "39.0311", 
             "div_avg": "0.6", 
             "pb_avg": "6.7", 
             "s_rank": 277, 
-            "div_cur": "0.34", 
-            "pb_cur": "13.34", 
+            "div_cur": "0.3400", 
+            "pb_cur": "13.3436", 
             "pe_avg": "45.6", 
-            "ps_cur": "5.90", 
+            "ps_cur": "5.9027", 
             "security": "Bard (C.R.) Inc.", 
             "ticker": "BCR", 
             "ps_avg": "3.7"
@@ -3770,7 +3771,7 @@
             "ps_avg": "1.6"
         }, 
         "BSX": {
-            "pe_cur": "84.55", 
+            "pe_cur": "84.52", 
             "div_avg": 0.0, 
             "pb_avg": "2.7", 
             "s_rank": 318, 
@@ -3783,33 +3784,33 @@
             "ps_avg": "2.4"
         }, 
         "GGP": {
-            "pe_cur": "17.676", 
+            "pe_cur": "17.69", 
             "div_avg": "2.5", 
             "pb_avg": "2.7", 
             "s_rank": 90, 
-            "div_cur": "3.950", 
-            "pb_cur": "2.381", 
+            "div_cur": "3.95", 
+            "pb_cur": "2.38", 
             "pe_avg": "59.4", 
-            "ps_cur": "7.767", 
+            "ps_cur": "7.77", 
             "security": "General Growth Properties Inc.", 
             "ticker": "GGP", 
             "ps_avg": "8.8"
         }, 
         "FCX": {
-            "pe_cur": "62.30", 
+            "pe_cur": "62.380", 
             "div_avg": 0.0, 
             "pb_avg": "1.9", 
             "s_rank": 227, 
-            "div_cur": "0.00", 
-            "pb_cur": "2.70", 
+            "div_cur": "0.000", 
+            "pb_cur": "2.701", 
             "pe_avg": "11.3", 
-            "ps_cur": "1.14", 
+            "ps_cur": "1.143", 
             "security": "Freeport-McMoRan Inc.", 
             "ticker": "FCX", 
             "ps_avg": "1.4"
         }, 
         "HCN": {
-            "pe_cur": "21.42", 
+            "pe_cur": "21.46", 
             "div_avg": "4.9", 
             "pb_avg": "1.8", 
             "s_rank": 90, 
@@ -3822,59 +3823,59 @@
             "ps_avg": "6.6"
         }, 
         "DLTR": {
-            "pe_cur": "21.78", 
+            "pe_cur": "21.702", 
             "div_avg": 0.0, 
             "pb_avg": "7.1", 
             "s_rank": 173, 
             "div_cur": 0.0, 
-            "pb_cur": "3.59", 
+            "pb_cur": "3.593", 
             "pe_avg": "28.8", 
-            "ps_cur": "0.94", 
+            "ps_cur": "0.935", 
             "security": "Dollar Tree", 
             "ticker": "DLTR", 
             "ps_avg": "1.5"
         }, 
         "ECL": {
-            "pe_cur": "29.73", 
+            "pe_cur": "29.753", 
             "div_avg": "1.1", 
             "pb_avg": "4.4", 
             "s_rank": 261, 
-            "div_cur": "1.17", 
-            "pb_cur": "5.39", 
+            "div_cur": "1.170", 
+            "pb_cur": "5.387", 
             "pe_avg": "33.0", 
-            "ps_cur": "2.78", 
+            "ps_cur": "2.775", 
             "security": "Ecolab Inc.", 
             "ticker": "ECL", 
             "ps_avg": "2.3"
         }, 
         "PG": {
-            "pe_cur": "15.8882", 
+            "pe_cur": "15.89", 
             "div_avg": "3.1", 
             "pb_avg": "3.3", 
             "s_rank": 110, 
-            "div_cur": "3.1900", 
-            "pb_cur": "4.1876", 
+            "div_cur": "3.19", 
+            "pb_cur": "4.19", 
             "pe_avg": "22.1", 
-            "ps_cur": "3.3994", 
+            "ps_cur": "3.40", 
             "security": "Procter & Gamble", 
             "ticker": "PG", 
             "ps_avg": "2.9"
         }, 
         "FAST": {
-            "pe_cur": "26.146", 
+            "pe_cur": "26.15", 
             "div_avg": "2.1", 
             "pb_avg": "7.7", 
             "s_rank": 227, 
-            "div_cur": "2.800", 
-            "pb_cur": "6.668", 
+            "div_cur": "2.80", 
+            "pb_cur": "6.67", 
             "pe_avg": "29.5", 
-            "ps_cur": "3.284", 
+            "ps_cur": "3.28", 
             "security": "Fastenal Co", 
             "ticker": "FAST", 
             "ps_avg": "3.9"
         }, 
         "ISRG": {
-            "pe_cur": "42.3534", 
+            "pe_cur": "42.3352", 
             "div_avg": 0.0, 
             "pb_avg": "5.4", 
             "s_rank": 304, 
@@ -3887,14 +3888,14 @@
             "ps_avg": "9.1"
         }, 
         "LKQ": {
-            "pe_cur": "20.03", 
+            "pe_cur": "20.022", 
             "div_avg": 0.0, 
             "pb_avg": "3.3", 
             "s_rank": 136, 
             "div_cur": 0.0, 
-            "pb_cur": "2.69", 
+            "pb_cur": "2.694", 
             "pe_avg": "24.4", 
-            "ps_cur": "1.08", 
+            "ps_cur": "1.079", 
             "security": "LKQ Corporation", 
             "ticker": "LKQ", 
             "ps_avg": "1.5"
@@ -3913,7 +3914,7 @@
             "ps_avg": "0.4"
         }, 
         "PVH": {
-            "pe_cur": "15.09", 
+            "pe_cur": "15.07", 
             "div_avg": "0.1", 
             "pb_avg": "2.2", 
             "s_rank": 46, 
@@ -3926,33 +3927,33 @@
             "ps_avg": "1.2"
         }, 
         "DGX": {
-            "pe_cur": "21.601", 
+            "pe_cur": "21.61", 
             "div_avg": "1.8", 
             "pb_avg": "2.3", 
             "s_rank": 136, 
-            "div_cur": "1.680", 
-            "pb_cur": "3.169", 
+            "div_cur": "1.68", 
+            "pb_cur": "3.17", 
             "pe_avg": "15.4", 
-            "ps_cur": "1.940", 
+            "ps_cur": "1.94", 
             "security": "Quest Diagnostics", 
             "ticker": "DGX", 
             "ps_avg": "1.3"
         }, 
         "MDLZ": {
-            "pe_cur": "40.2210", 
+            "pe_cur": "40.20", 
             "div_avg": "2.0", 
             "pb_avg": "2.0", 
             "s_rank": 227, 
-            "div_cur": "1.7000", 
-            "pb_cur": "2.6574", 
+            "div_cur": "1.70", 
+            "pb_cur": "2.66", 
             "pe_avg": "25.6", 
-            "ps_cur": "2.6281", 
+            "ps_cur": "2.63", 
             "security": "Mondelez International", 
             "ticker": "MDLZ", 
             "ps_avg": "1.8"
         }, 
         "KORS": {
-            "pe_cur": "8.75", 
+            "pe_cur": "8.76", 
             "div_avg": 0.0, 
             "pb_avg": "9.9", 
             "s_rank": 261, 
@@ -3965,7 +3966,7 @@
             "ps_avg": "4.4"
         }, 
         "FLS": {
-            "pe_cur": "53.42", 
+            "pe_cur": "53.37", 
             "div_avg": "1.2", 
             "pb_avg": "4.0", 
             "s_rank": 243, 
@@ -3978,7 +3979,7 @@
             "ps_avg": "1.6"
         }, 
         "EXPE": {
-            "pe_cur": "70.71", 
+            "pe_cur": "70.74", 
             "div_avg": "0.8", 
             "pb_avg": "4.5", 
             "s_rank": 288, 
@@ -3991,20 +3992,20 @@
             "ps_avg": "2.1"
         }, 
         "EXPD": {
-            "pe_cur": "22.925", 
+            "pe_cur": "22.93", 
             "div_avg": "1.5", 
             "pb_avg": "4.4", 
-            "s_rank": 193, 
-            "div_cur": "1.540", 
-            "pb_cur": "5.021", 
+            "s_rank": 192, 
+            "div_cur": "1.54", 
+            "pb_cur": "5.02", 
             "pe_avg": "23.4", 
-            "ps_cur": "1.572", 
+            "ps_cur": "1.57", 
             "security": "Expeditors International", 
             "ticker": "EXPD", 
             "ps_avg": "1.4"
         }, 
         "ORLY": {
-            "pe_cur": "23.16", 
+            "pe_cur": "23.15", 
             "div_avg": 0.0, 
             "pb_avg": "8.6", 
             "s_rank": 209, 
@@ -4030,7 +4031,7 @@
             "ps_avg": "4.3"
         }, 
         "CI": {
-            "pe_cur": "21.61", 
+            "pe_cur": "21.56", 
             "div_avg": 0.0, 
             "pb_avg": "2.3", 
             "s_rank": 136, 
@@ -4043,7 +4044,7 @@
             "ps_avg": "0.8"
         }, 
         "DE": {
-            "pe_cur": "24.37", 
+            "pe_cur": "24.38", 
             "div_avg": "2.5", 
             "pb_avg": "3.8", 
             "s_rank": 161, 
@@ -4056,7 +4057,7 @@
             "ps_avg": "0.9"
         }, 
         "ADS": {
-            "pe_cur": "34.12", 
+            "pe_cur": "34.13", 
             "div_avg": 0.0, 
             "pb_avg": "14.3", 
             "s_rank": 173, 
@@ -4069,7 +4070,7 @@
             "ps_avg": "2.9"
         }, 
         "ADP": {
-            "pe_cur": "25.05", 
+            "pe_cur": "25.02", 
             "div_avg": "2.4", 
             "pb_avg": "6.5", 
             "s_rank": 136, 
@@ -4082,33 +4083,33 @@
             "ps_avg": "3.2"
         }, 
         "F": {
-            "pe_cur": "11.8663", 
+            "pe_cur": "11.85", 
             "div_avg": "3.3", 
             "pb_avg": "2.5", 
             "s_rank": 1, 
-            "div_cur": "5.3900", 
-            "pb_cur": "1.4488", 
+            "div_cur": "5.39", 
+            "pb_cur": "1.45", 
             "pe_avg": "9.1", 
-            "ps_cur": "0.2895", 
+            "ps_cur": "0.29", 
             "security": "Ford Motor", 
             "ticker": "F", 
             "ps_avg": "0.4"
         }, 
         "GILD": {
-            "pe_cur": "7.1053", 
+            "pe_cur": "7.11", 
             "div_avg": 0.0, 
             "pb_avg": "8.2", 
             "s_rank": 227, 
-            "div_cur": "3.0700", 
-            "pb_cur": "4.2364", 
+            "div_cur": "3.07", 
+            "pb_cur": "4.24", 
             "pe_avg": "20.0", 
-            "ps_cur": "3.0451", 
+            "ps_cur": "3.05", 
             "security": "Gilead Sciences", 
             "ticker": "GILD", 
             "ps_avg": "6.9"
         }, 
         "CB": {
-            "pe_cur": "13.52", 
+            "pe_cur": "13.53", 
             "div_avg": "2.2", 
             "pb_avg": "1.2", 
             "s_rank": 19, 
@@ -4121,14 +4122,14 @@
             "ps_avg": "1.8"
         }, 
         "CA": {
-            "pe_cur": "17.171", 
+            "pe_cur": "17.17", 
             "div_avg": "3.5", 
             "pb_avg": "2.3", 
             "s_rank": 61, 
-            "div_cur": "3.120", 
-            "pb_cur": "2.423", 
+            "div_cur": "3.12", 
+            "pb_cur": "2.42", 
             "pe_avg": "15.2", 
-            "ps_cur": "3.388", 
+            "ps_cur": "3.39", 
             "security": "CA, Inc.", 
             "ticker": "CA", 
             "ps_avg": "2.9"
@@ -4147,7 +4148,7 @@
             "ps_avg": "1.2"
         }, 
         "DFS": {
-            "pe_cur": "10.30", 
+            "pe_cur": "10.29", 
             "div_avg": "1.5", 
             "pb_avg": "2.3", 
             "s_rank": 70, 
@@ -4160,7 +4161,7 @@
             "ps_avg": "3.0"
         }, 
         "NVDA": {
-            "pe_cur": "39.88", 
+            "pe_cur": "39.95", 
             "div_avg": "1.2", 
             "pb_avg": "3.1", 
             "s_rank": 288, 
@@ -4173,20 +4174,20 @@
             "ps_avg": "3.1"
         }, 
         "JEC": {
-            "pe_cur": "29.565", 
+            "pe_cur": "29.59", 
             "div_avg": 0.0, 
             "pb_avg": "1.5", 
             "s_rank": 110, 
-            "div_cur": "1.100", 
-            "pb_cur": "1.627", 
+            "div_cur": "1.10", 
+            "pb_cur": "1.63", 
             "pe_avg": "18.6", 
-            "ps_cur": "0.620", 
+            "ps_cur": "0.62", 
             "security": "Jacobs Engineering Group", 
             "ticker": "JEC", 
             "ps_avg": "0.5"
         }, 
         "ILMN": {
-            "pe_cur": "37.01", 
+            "pe_cur": "37.06", 
             "div_avg": 0.0, 
             "pb_avg": "11.4", 
             "s_rank": 243, 
@@ -4212,20 +4213,20 @@
             "ps_avg": "0.6"
         }, 
         "CLX": {
-            "pe_cur": "26.05", 
+            "pe_cur": "26.0411", 
             "div_avg": "2.8", 
             "pb_avg": "101.9", 
             "s_rank": 227, 
-            "div_cur": "2.41", 
-            "pb_cur": "42.36", 
+            "div_cur": "2.4100", 
+            "pb_cur": "42.3621", 
             "pe_avg": "21.9", 
-            "ps_cur": "2.89", 
+            "ps_cur": "2.8883", 
             "security": "The Clorox Company", 
             "ticker": "CLX", 
             "ps_avg": "2.3"
         }, 
         "DTE": {
-            "pe_cur": "18.39", 
+            "pe_cur": "18.38", 
             "div_avg": "3.5", 
             "pb_avg": "1.6", 
             "s_rank": 15, 
@@ -4238,7 +4239,7 @@
             "ps_avg": "1.3"
         }, 
         "BBY": {
-            "pe_cur": "13.625", 
+            "pe_cur": "13.623", 
             "div_avg": "3.0", 
             "pb_avg": "2.5", 
             "s_rank": 19, 
@@ -4251,7 +4252,7 @@
             "ps_avg": "0.2"
         }, 
         "FRT": {
-            "pe_cur": "40.94", 
+            "pe_cur": "41.02", 
             "div_avg": "2.7", 
             "pb_avg": "5.6", 
             "s_rank": 209, 
@@ -4290,20 +4291,20 @@
             "ps_avg": "2.7"
         }, 
         "FMC": {
-            "pe_cur": "272.640", 
+            "pe_cur": "272.58", 
             "div_avg": "1.1", 
             "pb_avg": "4.9", 
             "s_rank": 277, 
-            "div_cur": "0.900", 
-            "pb_cur": "5.231", 
+            "div_cur": "0.90", 
+            "pb_cur": "5.23", 
             "pe_avg": "31.8", 
-            "ps_cur": "3.002", 
+            "ps_cur": "3.00", 
             "security": "FMC Corporation", 
             "ticker": "FMC", 
             "ps_avg": "2.0"
         }, 
         "ADI": {
-            "pe_cur": "26.093", 
+            "pe_cur": "26.090", 
             "div_avg": "2.7", 
             "pb_avg": "3.4", 
             "s_rank": 261, 
@@ -4316,33 +4317,33 @@
             "ps_avg": "5.5"
         }, 
         "CHRW": {
-            "pe_cur": "19.72", 
+            "pe_cur": "19.731", 
             "div_avg": "2.3", 
             "pb_avg": "8.3", 
             "s_rank": 110, 
-            "div_cur": "2.45", 
-            "pb_cur": "7.89", 
+            "div_cur": "2.450", 
+            "pb_cur": "7.886", 
             "pe_avg": "20.6", 
-            "ps_cur": "0.77", 
+            "ps_cur": "0.770", 
             "security": "C. H. Robinson Worldwide", 
             "ticker": "CHRW", 
             "ps_avg": "0.8"
         }, 
         "ALL": {
-            "pe_cur": "14.36", 
+            "pe_cur": "14.3629", 
             "div_avg": "1.9", 
             "pb_avg": "1.2", 
             "s_rank": 15, 
-            "div_cur": "1.59", 
-            "pb_cur": "1.61", 
+            "div_cur": "1.5900", 
+            "pb_cur": "1.6067", 
             "pe_avg": "12.6", 
-            "ps_cur": "0.84", 
+            "ps_cur": "0.8396", 
             "security": "Allstate Corp", 
             "ticker": "ALL", 
             "ps_avg": "0.7"
         }, 
         "NUE": {
-            "pe_cur": "18.012", 
+            "pe_cur": "18.024", 
             "div_avg": "3.1", 
             "pb_avg": "1.9", 
             "s_rank": 28, 
@@ -4355,7 +4356,7 @@
             "ps_avg": "0.8"
         }, 
         "ALK": {
-            "pe_cur": "14.22", 
+            "pe_cur": "14.23", 
             "div_avg": 0.0, 
             "pb_avg": "3.1", 
             "s_rank": 70, 
@@ -4368,7 +4369,7 @@
             "ps_avg": "1.2"
         }, 
         "LEG": {
-            "pe_cur": "19.48", 
+            "pe_cur": "19.47", 
             "div_avg": "3.3", 
             "pb_avg": "4.1", 
             "s_rank": 136, 
@@ -4381,14 +4382,14 @@
             "ps_avg": "1.4"
         }, 
         "IRM": {
-            "pe_cur": "91.87", 
+            "pe_cur": "91.882", 
             "div_avg": "4.8", 
             "pb_avg": "7.6", 
             "s_rank": 209, 
-            "div_cur": "6.24", 
-            "pb_cur": "4.89", 
+            "div_cur": "6.240", 
+            "pb_cur": "4.895", 
             "pe_avg": "45.3", 
-            "ps_cur": "2.52", 
+            "ps_cur": "2.517", 
             "security": "Iron Mountain Incorporated", 
             "ticker": "IRM", 
             "ps_avg": "2.1"
@@ -4420,20 +4421,20 @@
             "ps_avg": "1.5"
         }, 
         "EBAY": {
-            "pe_cur": "4.787", 
+            "pe_cur": "4.79", 
             "div_avg": 0.0, 
             "pb_avg": "3.5", 
-            "s_rank": 301, 
+            "s_rank": 300, 
             "div_cur": 0.0, 
-            "pb_cur": "3.115", 
+            "pb_cur": "3.11", 
             "pe_avg": "89.1", 
-            "ps_cur": "4.002", 
+            "ps_cur": "4.00", 
             "security": "eBay Inc.", 
             "ticker": "EBAY", 
             "ps_avg": "4.0"
         }, 
         "MMM": {
-            "pe_cur": "24.01", 
+            "pe_cur": "23.98", 
             "div_avg": "2.3", 
             "pb_avg": "5.9", 
             "s_rank": 136, 
@@ -4459,7 +4460,7 @@
             "ps_avg": "0.2"
         }, 
         "PLD": {
-            "pe_cur": "24.35", 
+            "pe_cur": "24.33", 
             "div_avg": "3.2", 
             "pb_avg": "1.5", 
             "s_rank": 46, 
@@ -4472,10 +4473,10 @@
             "ps_avg": "10.2"
         }, 
         "LNC": {
-            "pe_cur": "11.23", 
+            "pe_cur": "11.21", 
             "div_avg": "1.3", 
             "pb_avg": "0.7", 
-            "s_rank": 12, 
+            "s_rank": 13, 
             "div_cur": "1.72", 
             "pb_cur": "1.02", 
             "pe_avg": "12.4", 
@@ -4485,20 +4486,20 @@
             "ps_avg": "0.9"
         }, 
         "JNPR": {
-            "pe_cur": "19.295", 
+            "pe_cur": "19.30", 
             "div_avg": 0.0, 
             "pb_avg": "1.7", 
             "s_rank": 125, 
-            "div_cur": "1.310", 
-            "pb_cur": "2.319", 
+            "div_cur": "1.31", 
+            "pb_cur": "2.32", 
             "pe_avg": "30.1", 
-            "ps_cur": "2.276", 
+            "ps_cur": "2.28", 
             "security": "Juniper Networks", 
             "ticker": "JNPR", 
             "ps_avg": "2.3"
         }, 
         "ITW": {
-            "pe_cur": "23.41", 
+            "pe_cur": "23.43", 
             "div_avg": "2.1", 
             "pb_avg": "4.6", 
             "s_rank": 161, 
@@ -4511,40 +4512,40 @@
             "ps_avg": "2.3"
         }, 
         "HSIC": {
-            "pe_cur": "28.201", 
+            "pe_cur": "28.21", 
             "div_avg": 0.0, 
             "pb_avg": "3.7", 
             "s_rank": 253, 
             "div_cur": 0.0, 
-            "pb_cur": "5.070", 
+            "pb_cur": "5.07", 
             "pe_avg": "23.7", 
-            "ps_cur": "1.221", 
+            "ps_cur": "1.22", 
             "security": "Henry Schein", 
             "ticker": "HSIC", 
             "ps_avg": "1.1"
         }, 
         "MO": {
-            "pe_cur": "9.57", 
+            "pe_cur": "9.566", 
             "div_avg": "4.3", 
             "pb_avg": "27.2", 
             "s_rank": 209, 
-            "div_cur": "3.44", 
-            "pb_cur": "11.22", 
+            "div_cur": "3.440", 
+            "pb_cur": "11.216", 
             "pe_avg": "19.5", 
-            "ps_cur": "7.09", 
+            "ps_cur": "7.090", 
             "security": "Altria Group Inc", 
             "ticker": "MO", 
             "ps_avg": "5.0"
         }, 
         "CMCSA": {
-            "pe_cur": "20.7731", 
+            "pe_cur": "20.745", 
             "div_avg": "1.6", 
             "pb_avg": "2.3", 
             "s_rank": 161, 
-            "div_cur": "1.6100", 
-            "pb_cur": "3.3670", 
+            "div_cur": "1.610", 
+            "pb_cur": "3.367", 
             "pe_avg": "18.6", 
-            "ps_cur": "2.2588", 
+            "ps_cur": "2.259", 
             "security": "Comcast Corp.", 
             "ticker": "CMCSA", 
             "ps_avg": "1.9"
@@ -4563,7 +4564,7 @@
             "ps_avg": "1.8"
         }, 
         "GIS": {
-            "pe_cur": "21.25", 
+            "pe_cur": "21.26", 
             "div_avg": "3.0", 
             "pb_avg": "5.5", 
             "s_rank": 161, 
@@ -4576,7 +4577,7 @@
             "ps_avg": "1.9"
         }, 
         "PCLN": {
-            "pe_cur": "44.73", 
+            "pe_cur": "44.69", 
             "div_avg": 0.0, 
             "pb_avg": "8.7", 
             "s_rank": 322, 
@@ -4589,7 +4590,7 @@
             "ps_avg": "7.7"
         }, 
         "ADBE": {
-            "pe_cur": "51.54", 
+            "pe_cur": "51.53", 
             "div_avg": 0.0, 
             "pb_avg": "4.8", 
             "s_rank": 304, 
@@ -4602,7 +4603,7 @@
             "ps_avg": "7.4"
         }, 
         "IBM": {
-            "pe_cur": "12.58", 
+            "pe_cur": "12.57", 
             "div_avg": "2.7", 
             "pb_avg": "11.0", 
             "s_rank": 61, 
@@ -4615,20 +4616,20 @@
             "ps_avg": "2.0"
         }, 
         "CVX": {
-            "pe_cur": "69.16", 
+            "pe_cur": "69.1174", 
             "div_avg": "3.7", 
             "pb_avg": "1.5", 
             "s_rank": 61, 
-            "div_cur": "4.08", 
-            "pb_cur": "1.37", 
+            "div_cur": "4.0800", 
+            "pb_cur": "1.3672", 
             "pe_avg": "19.3", 
-            "ps_cur": "1.79", 
+            "ps_cur": "1.7937", 
             "security": "Chevron Corp.", 
             "ticker": "CVX", 
             "ps_avg": "1.1"
         }, 
         "AIZ": {
-            "pe_cur": "12.85", 
+            "pe_cur": "12.84", 
             "div_avg": "1.8", 
             "pb_avg": "0.9", 
             "s_rank": 7, 
@@ -4641,7 +4642,7 @@
             "ps_avg": "0.5"
         }, 
         "BXP": {
-            "pe_cur": "45.54", 
+            "pe_cur": "45.65", 
             "div_avg": "2.2", 
             "pb_avg": "3.3", 
             "s_rank": 261, 
@@ -4654,7 +4655,7 @@
             "ps_avg": "8.2"
         }, 
         "DD": {
-            "pe_cur": "29.38", 
+            "pe_cur": "29.41", 
             "div_avg": "2.7", 
             "pb_avg": "4.7", 
             "s_rank": 243, 
@@ -4680,14 +4681,14 @@
             "ps_avg": "4.8"
         }, 
         "CVS": {
-            "pe_cur": "16.89", 
+            "pe_cur": "16.894", 
             "div_avg": "1.5", 
             "pb_avg": "2.3", 
             "s_rank": 19, 
-            "div_cur": "2.47", 
-            "pb_cur": "2.46", 
+            "div_cur": "2.470", 
+            "pb_cur": "2.460", 
             "pe_avg": "20.0", 
-            "ps_cur": "0.46", 
+            "ps_cur": "0.462", 
             "security": "CVS Health", 
             "ticker": "CVS", 
             "ps_avg": "0.7"
@@ -4732,7 +4733,7 @@
             "ps_avg": "10.1"
         }, 
         "CAH": {
-            "pe_cur": "17.18", 
+            "pe_cur": "17.16", 
             "div_avg": "2.0", 
             "pb_avg": "3.4", 
             "s_rank": 41, 
@@ -4745,40 +4746,40 @@
             "ps_avg": "0.2"
         }, 
         "AAP": {
-            "pe_cur": "23.6964", 
+            "pe_cur": "23.70", 
             "div_avg": "0.2", 
             "pb_avg": "5.2", 
-            "s_rank": 193, 
-            "div_cur": "0.1700", 
-            "pb_cur": "3.6559", 
+            "s_rank": 192, 
+            "div_cur": "0.17", 
+            "pb_cur": "3.66", 
             "pe_avg": "20.4", 
-            "ps_cur": "1.1143", 
+            "ps_cur": "1.11", 
             "security": "Advance Auto Parts", 
             "ticker": "AAP", 
             "ps_avg": "1.1"
         }, 
         "PDCO": {
-            "pe_cur": "24.47", 
+            "pe_cur": "24.465", 
             "div_avg": "1.8", 
             "pb_avg": "3.0", 
             "s_rank": 70, 
-            "div_cur": "2.29", 
-            "pb_cur": "3.10", 
+            "div_cur": "2.290", 
+            "pb_cur": "3.101", 
             "pe_avg": "20.3", 
-            "ps_cur": "0.77", 
+            "ps_cur": "0.767", 
             "security": "Patterson Companies", 
             "ticker": "PDCO", 
             "ps_avg": "1.0"
         }, 
         "DISH": {
-            "pe_cur": "20.67", 
+            "pe_cur": "20.674", 
             "div_avg": 0.0, 
             "pb_avg": "67.2", 
             "s_rank": 227, 
-            "div_cur": "0.00", 
-            "pb_cur": "5.56", 
+            "div_cur": "0.000", 
+            "pb_cur": "5.559", 
             "pe_avg": "29.9", 
-            "ps_cur": "1.92", 
+            "ps_cur": "1.920", 
             "security": "Dish Network", 
             "ticker": "DISH", 
             "ps_avg": "1.6"
@@ -4797,7 +4798,7 @@
             "ps_avg": "2.4"
         }, 
         "AIG": {
-            "pe_cur": "125.53", 
+            "pe_cur": "125.57", 
             "div_avg": 0.0, 
             "pb_avg": "0.7", 
             "s_rank": 7, 
@@ -4810,7 +4811,7 @@
             "ps_avg": "1.1"
         }, 
         "CAG": {
-            "pe_cur": "27.34", 
+            "pe_cur": "27.35", 
             "div_avg": "2.8", 
             "pb_avg": "3.4", 
             "s_rank": 161, 
@@ -4849,33 +4850,33 @@
             "ps_avg": "2.9"
         }, 
         "PPG": {
-            "pe_cur": "33.14", 
+            "pe_cur": "33.171", 
             "div_avg": "1.4", 
             "pb_avg": "5.0", 
             "s_rank": 253, 
-            "div_cur": "1.45", 
-            "pb_cur": "5.44", 
+            "div_cur": "1.450", 
+            "pb_cur": "5.436", 
             "pe_avg": "22.3", 
-            "ps_cur": "1.91", 
+            "ps_cur": "1.910", 
             "security": "PPG Industries", 
             "ticker": "PPG", 
             "ps_avg": "1.6"
         }, 
         "HBAN": {
-            "pe_cur": "19.35", 
+            "pe_cur": "19.325", 
             "div_avg": "2.2", 
             "pb_avg": "1.3", 
             "s_rank": 90, 
-            "div_cur": "2.46", 
-            "pb_cur": "1.51", 
+            "div_cur": "2.460", 
+            "pb_cur": "1.508", 
             "pe_avg": "12.5", 
-            "ps_cur": "3.96", 
+            "ps_cur": "3.960", 
             "security": "Huntington Bancshares", 
             "ticker": "HBAN", 
             "ps_avg": "2.7"
         }, 
         "DAL": {
-            "pe_cur": "8.9569", 
+            "pe_cur": "8.9553", 
             "div_avg": 0.0, 
             "pb_avg": "22.0", 
             "s_rank": 173, 
@@ -4888,7 +4889,7 @@
             "ps_avg": "0.7"
         }, 
         "BIIB": {
-            "pe_cur": "16.33", 
+            "pe_cur": "16.31", 
             "div_avg": 0.0, 
             "pb_avg": "6.6", 
             "s_rank": 261, 
@@ -4914,14 +4915,14 @@
             "ps_avg": "2.4"
         }, 
         "LH": {
-            "pe_cur": "19.55", 
+            "pe_cur": "19.542", 
             "div_avg": 0.0, 
             "pb_avg": "3.1", 
             "s_rank": 136, 
-            "div_cur": "0.00", 
-            "pb_cur": "2.59", 
+            "div_cur": "0.000", 
+            "pb_cur": "2.585", 
             "pe_avg": "19.1", 
-            "ps_cur": "1.53", 
+            "ps_cur": "1.525", 
             "security": "Laboratory Corp. of America Holding", 
             "ticker": "LH", 
             "ps_avg": "1.6"
@@ -4940,14 +4941,14 @@
             "ps_avg": "2.0"
         }, 
         "ORCL": {
-            "pe_cur": "21.52", 
+            "pe_cur": "21.535", 
             "div_avg": "1.3", 
             "pb_avg": "3.6", 
             "s_rank": 253, 
-            "div_cur": "1.40", 
-            "pb_cur": "3.71", 
+            "div_cur": "1.400", 
+            "pb_cur": "3.706", 
             "pe_avg": "16.9", 
-            "ps_cur": "5.01", 
+            "ps_cur": "5.011", 
             "security": "Oracle Corp.", 
             "ticker": "ORCL", 
             "ps_avg": "4.5"
@@ -4966,7 +4967,7 @@
             "ps_avg": "4.1"
         }, 
         "HIG": {
-            "pe_cur": "20.07", 
+            "pe_cur": "20.05", 
             "div_avg": "1.7", 
             "pb_avg": "0.8", 
             "s_rank": 28, 
@@ -4979,20 +4980,20 @@
             "ps_avg": "0.7"
         }, 
         "OKE": {
-            "pe_cur": "30.4637", 
+            "pe_cur": "30.44", 
             "div_avg": "4.8", 
             "pb_avg": "14.5", 
             "s_rank": 110, 
-            "div_cur": "4.8600", 
-            "pb_cur": "44.8142", 
+            "div_cur": "4.86", 
+            "pb_cur": "44.81", 
             "pe_avg": "32.6", 
-            "ps_cur": "1.0793", 
+            "ps_cur": "1.08", 
             "security": "ONEOK", 
             "ticker": "OKE", 
             "ps_avg": "0.8"
         }, 
         "DUK": {
-            "pe_cur": "26.56", 
+            "pe_cur": "26.57", 
             "div_avg": "4.4", 
             "pb_avg": "1.3", 
             "s_rank": 46, 
@@ -5005,7 +5006,7 @@
             "ps_avg": "2.1"
         }, 
         "CELG": {
-            "pe_cur": "44.23", 
+            "pe_cur": "44.32", 
             "div_avg": 0.0, 
             "pb_avg": "11.8", 
             "s_rank": 292, 
@@ -5018,7 +5019,7 @@
             "ps_avg": "9.7"
         }, 
         "MON": {
-            "pe_cur": "26.66", 
+            "pe_cur": "26.68", 
             "div_avg": "1.7", 
             "pb_avg": "5.9", 
             "s_rank": 288, 
@@ -5031,40 +5032,40 @@
             "ps_avg": "3.6"
         }, 
         "A": {
-            "pe_cur": "35.99", 
+            "pe_cur": "35.975", 
             "div_avg": "1.0", 
             "pb_avg": "3.1", 
             "s_rank": 292, 
-            "div_cur": "0.93", 
-            "pb_cur": "4.24", 
+            "div_cur": "0.930", 
+            "pb_cur": "4.244", 
             "pe_avg": "22.4", 
-            "ps_cur": "4.30", 
+            "ps_cur": "4.304", 
             "security": "Agilent Technologies Inc", 
             "ticker": "A", 
             "ps_avg": "2.5"
         }, 
         "HOG": {
-            "pe_cur": "15.810", 
+            "pe_cur": "15.77", 
             "div_avg": "1.9", 
             "pb_avg": "4.4", 
             "s_rank": 70, 
-            "div_cur": "2.600", 
-            "pb_cur": "4.961", 
+            "div_cur": "2.60", 
+            "pb_cur": "4.96", 
             "pe_avg": "16.8", 
-            "ps_cur": "1.720", 
+            "ps_cur": "1.72", 
             "security": "Harley-Davidson", 
             "ticker": "HOG", 
             "ps_avg": "2.1"
         }, 
         "AKAM": {
-            "pe_cur": "27.445", 
+            "pe_cur": "27.46", 
             "div_avg": 0.0, 
             "pb_avg": "3.4", 
             "s_rank": 277, 
             "div_cur": 0.0, 
-            "pb_cur": "2.768", 
+            "pb_cur": "2.77", 
             "pe_avg": "34.2", 
-            "ps_cur": "3.787", 
+            "ps_cur": "3.79", 
             "security": "Akamai Technologies Inc", 
             "ticker": "AKAM", 
             "ps_avg": "5.5"
@@ -5083,7 +5084,7 @@
             "ps_avg": "0.2"
         }, 
         "ESS": {
-            "pe_cur": "32.00", 
+            "pe_cur": "31.95", 
             "div_avg": "2.8", 
             "pb_avg": "3.1", 
             "s_rank": 136, 
@@ -5096,7 +5097,7 @@
             "ps_avg": "11.1"
         }, 
         "PKI": {
-            "pe_cur": "30.22", 
+            "pe_cur": "30.23", 
             "div_avg": "0.7", 
             "pb_avg": "2.3", 
             "s_rank": 261, 
@@ -5109,20 +5110,20 @@
             "ps_avg": "2.2"
         }, 
         "CNP": {
-            "pe_cur": "27.895", 
+            "pe_cur": "27.90", 
             "div_avg": "4.3", 
             "pb_avg": "2.3", 
             "s_rank": 70, 
-            "div_cur": "3.810", 
-            "pb_cur": "3.491", 
+            "div_cur": "3.81", 
+            "pb_cur": "3.49", 
             "pe_avg": "22.3", 
-            "ps_cur": "1.605", 
+            "ps_cur": "1.60", 
             "security": "CenterPoint Energy", 
             "ticker": "CNP", 
             "ps_avg": "1.2"
         }, 
         "HOLX": {
-            "pe_cur": "38.645", 
+            "pe_cur": "38.654", 
             "div_avg": 0.0, 
             "pb_avg": "3.3", 
             "s_rank": 318, 
@@ -5135,33 +5136,33 @@
             "ps_avg": "3.1"
         }, 
         "HON": {
-            "pe_cur": "20.6624", 
+            "pe_cur": "20.661", 
             "div_avg": "2.1", 
             "pb_avg": "4.3", 
             "s_rank": 173, 
-            "div_cur": "2.0200", 
-            "pb_cur": "4.9293", 
+            "div_cur": "2.020", 
+            "pb_cur": "4.929", 
             "pe_avg": "19.7", 
-            "ps_cur": "2.5509", 
+            "ps_cur": "2.551", 
             "security": "Honeywell Int'l Inc.", 
             "ticker": "HON", 
             "ps_avg": "1.8"
         }, 
         "IP": {
-            "pe_cur": "28.2843", 
+            "pe_cur": "28.31", 
             "div_avg": "3.1", 
             "pb_avg": "3.3", 
             "s_rank": 110, 
-            "div_cur": "3.4600", 
-            "pb_cur": "4.7868", 
+            "div_cur": "3.46", 
+            "pb_cur": "4.79", 
             "pe_avg": "21.0", 
-            "ps_cur": "1.0195", 
+            "ps_cur": "1.02", 
             "security": "International Paper", 
             "ticker": "IP", 
             "ps_avg": "0.7"
         }, 
         "IR": {
-            "pe_cur": "16.21", 
+            "pe_cur": "16.24", 
             "div_avg": "1.6", 
             "pb_avg": "2.4", 
             "s_rank": 70, 
@@ -5174,20 +5175,20 @@
             "ps_avg": "1.2"
         }, 
         "M": {
-            "pe_cur": "14.4204", 
+            "pe_cur": "14.389", 
             "div_avg": "2.8", 
             "pb_avg": "3.2", 
             "s_rank": 3, 
-            "div_cur": "5.2100", 
-            "pb_cur": "2.0377", 
+            "div_cur": "5.210", 
+            "pb_cur": "2.038", 
             "pe_avg": "13.8", 
-            "ps_cur": "0.3419", 
+            "ps_cur": "0.342", 
             "security": "Macy's Inc.", 
             "ticker": "M", 
             "ps_avg": "0.7"
         }, 
         "IT": {
-            "pe_cur": "51.43", 
+            "pe_cur": "51.52", 
             "div_avg": 0.0, 
             "pb_avg": "24.3", 
             "s_rank": 318, 
@@ -5200,20 +5201,20 @@
             "ps_avg": "3.4"
         }, 
         "ICE": {
-            "pe_cur": "22.75", 
+            "pe_cur": "22.790", 
             "div_avg": 0.0, 
             "pb_avg": "2.6", 
             "s_rank": 110, 
-            "div_cur": "1.32", 
-            "pb_cur": "2.28", 
+            "div_cur": "1.320", 
+            "pb_cur": "2.276", 
             "pe_avg": "29.8", 
-            "ps_cur": "1.54", 
+            "ps_cur": "1.543", 
             "security": "Intercontinental Exchange", 
             "ticker": "ICE", 
             "ps_avg": "7.2"
         }, 
         "AN": {
-            "pe_cur": "9.61", 
+            "pe_cur": "9.62", 
             "div_avg": 0.0, 
             "pb_avg": "2.9", 
             "s_rank": 173, 
@@ -5226,7 +5227,7 @@
             "ps_avg": "0.3"
         }, 
         "ANTM": {
-            "pe_cur": "17.41", 
+            "pe_cur": "17.42", 
             "div_avg": "1.7", 
             "pb_avg": "1.2", 
             "s_rank": 28, 
@@ -5265,7 +5266,7 @@
             "ps_avg": "2.6"
         }, 
         "ALXN": {
-            "pe_cur": "59.16", 
+            "pe_cur": "59.29", 
             "div_avg": 0.0, 
             "pb_avg": "9.2", 
             "s_rank": 315, 
@@ -5291,7 +5292,7 @@
             "ps_avg": "3.4"
         }, 
         "GPC": {
-            "pe_cur": "20.08", 
+            "pe_cur": "20.05", 
             "div_avg": "2.7", 
             "pb_avg": "4.0", 
             "s_rank": 61, 
@@ -5304,14 +5305,14 @@
             "ps_avg": "0.9"
         }, 
         "DHR": {
-            "pe_cur": "25.45", 
+            "pe_cur": "25.457", 
             "div_avg": "0.4", 
             "pb_avg": "2.4", 
             "s_rank": 227, 
-            "div_cur": "0.67", 
-            "pb_cur": "2.45", 
+            "div_cur": "0.670", 
+            "pb_cur": "2.447", 
             "pe_avg": "20.9", 
-            "ps_cur": "3.39", 
+            "ps_cur": "3.391", 
             "security": "Danaher Corp.", 
             "ticker": "DHR", 
             "ps_avg": "2.7"
@@ -5330,66 +5331,66 @@
             "ps_avg": "3.3"
         }, 
         "AJG": {
-            "pe_cur": "23.45", 
+            "pe_cur": "23.4499", 
             "div_avg": "3.3", 
             "pb_avg": "2.7", 
             "s_rank": 90, 
-            "div_cur": "2.80", 
-            "pb_cur": "2.73", 
+            "div_cur": "2.8000", 
+            "pb_cur": "2.7306", 
             "pe_avg": "23.5", 
-            "ps_cur": "1.77", 
+            "ps_cur": "1.7701", 
             "security": "Arthur J. Gallagher & Co.", 
             "ticker": "AJG", 
             "ps_avg": "1.7"
         }, 
         "MSFT": {
-            "pe_cur": "30.351", 
+            "pe_cur": "30.33", 
             "div_avg": "2.6", 
             "pb_avg": "4.3", 
-            "s_rank": 292, 
-            "div_cur": "2.260", 
-            "pb_cur": "7.642", 
+            "s_rank": 300, 
+            "div_cur": "2.26", 
+            "pb_cur": "7.64", 
             "pe_avg": "20.5", 
-            "ps_cur": "6.106", 
+            "ps_cur": "6.11", 
             "security": "Microsoft Corp.", 
             "ticker": "MSFT", 
             "ps_avg": "4.1"
         }, 
         "JPM": {
-            "pe_cur": "13.3862", 
+            "pe_cur": "13.39", 
             "div_avg": "2.4", 
             "pb_avg": "1.0", 
             "s_rank": 28, 
-            "div_cur": "2.3000", 
-            "pb_cur": "1.3449", 
+            "div_cur": "2.30", 
+            "pb_cur": "1.34", 
             "pe_avg": "10.9", 
-            "ps_cur": "3.3501", 
+            "ps_cur": "3.35", 
             "security": "JPMorgan Chase & Co.", 
             "ticker": "JPM", 
             "ps_avg": "2.2"
         }, 
         "EQIX": {
-            "pe_cur": "153.464", 
+            "pe_cur": "153.61", 
             "div_avg": 0.0, 
             "pb_avg": "5.3", 
             "s_rank": 209, 
-            "div_cur": "1.880", 
-            "pb_cur": "4.759", 
+            "div_cur": "1.88", 
+            "pb_cur": "4.76", 
             "pe_avg": "133.9", 
-            "ps_cur": "8.344", 
+            "ps_cur": "8.34", 
             "security": "Equinix", 
             "ticker": "EQIX", 
             "ps_avg": "5.4"
         }, 
         "PFG": {
-            "pe_cur": "14.41", 
+            "pe_cur": "14.419", 
             "div_avg": "2.7", 
             "pb_avg": "1.3", 
             "s_rank": 7, 
-            "div_cur": "2.76", 
-            "pb_cur": "1.75", 
+            "div_cur": "2.760", 
+            "pb_cur": "1.746", 
             "pe_avg": "13.2", 
-            "ps_cur": "1.49", 
+            "ps_cur": "1.495", 
             "security": "Principal Financial Group", 
             "ticker": "PFG", 
             "ps_avg": "1.3"
@@ -5408,20 +5409,20 @@
             "ps_avg": "2.0"
         }, 
         "CERN": {
-            "pe_cur": "33.34", 
+            "pe_cur": "33.353", 
             "div_avg": 0.0, 
             "pb_avg": "5.6", 
             "s_rank": 312, 
             "div_cur": 0.0, 
-            "pb_cur": "5.21", 
+            "pb_cur": "5.212", 
             "pe_avg": "41.4", 
-            "ps_cur": "4.44", 
+            "ps_cur": "4.442", 
             "security": "Cerner", 
             "ticker": "CERN", 
             "ps_avg": "5.8"
         }, 
         "PNR": {
-            "pe_cur": "24.14", 
+            "pe_cur": "24.15", 
             "div_avg": "1.9", 
             "pb_avg": "2.2", 
             "s_rank": 161, 
@@ -5434,7 +5435,7 @@
             "ps_avg": "1.7"
         }, 
         "CSCO": {
-            "pe_cur": "17.63", 
+            "pe_cur": "17.64", 
             "div_avg": "2.8", 
             "pb_avg": "2.2", 
             "s_rank": 90, 
@@ -5447,7 +5448,7 @@
             "ps_avg": "2.7"
         }, 
         "PNW": {
-            "pe_cur": "20.64", 
+            "pe_cur": "20.63", 
             "div_avg": "3.7", 
             "pb_avg": "1.6", 
             "s_rank": 46, 
@@ -5460,7 +5461,7 @@
             "ps_avg": "1.9"
         }, 
         "PBCT": {
-            "pe_cur": "18.99", 
+            "pe_cur": "19.00", 
             "div_avg": "4.3", 
             "pb_avg": "1.0", 
             "s_rank": 46, 
@@ -5473,7 +5474,7 @@
             "ps_avg": "3.6"
         }, 
         "MNST": {
-            "pe_cur": "39.04", 
+            "pe_cur": "39.11", 
             "div_avg": 0.0, 
             "pb_avg": "10.7", 
             "s_rank": 322, 
@@ -5486,7 +5487,7 @@
             "ps_avg": "7.3"
         }, 
         "GD": {
-            "pe_cur": "19.67", 
+            "pe_cur": "19.69", 
             "div_avg": "2.1", 
             "pb_avg": "3.0", 
             "s_rank": 173, 
@@ -5499,20 +5500,20 @@
             "ps_avg": "1.2"
         }, 
         "IVZ": {
-            "pe_cur": "14.693", 
+            "pe_cur": "14.6878", 
             "div_avg": "2.8", 
             "pb_avg": "1.7", 
             "s_rank": 15, 
-            "div_cur": "3.580", 
-            "pb_cur": "1.719", 
+            "div_cur": "3.5800", 
+            "pb_cur": "1.7191", 
             "pe_avg": "16.7", 
-            "ps_cur": "2.757", 
+            "ps_cur": "2.7570", 
             "security": "Invesco Ltd.", 
             "ticker": "IVZ", 
             "ps_avg": "3.0"
         }, 
         "HUM": {
-            "pe_cur": "23.39", 
+            "pe_cur": "23.33", 
             "div_avg": "0.9", 
             "pb_avg": "2.0", 
             "s_rank": 136, 
@@ -5525,7 +5526,7 @@
             "ps_avg": "0.4"
         }, 
         "PNC": {
-            "pe_cur": "16.31", 
+            "pe_cur": "16.32", 
             "div_avg": "2.2", 
             "pb_avg": "1.0", 
             "s_rank": 70, 
@@ -6012,115 +6013,115 @@
         ]
     }, 
     "industry_to_delta": {
-        "Industrial Machinery": 0.3107001024366367, 
-        "Home Improvement Retail": 0.704473474079165, 
+        "Industrial Machinery": 0.3107663766338757, 
+        "Home Improvement Retail": 0.7043072518014543, 
         "Food Retail": -0.06800938857852258, 
-        "Health Care Services": 0.18134836621972952, 
-        "Oil & Gas Exploration & Production": 0.8920512109545583, 
-        "Life & Health Insurance": 0.10033439338160234, 
-        "Health Care Technology": -0.16627053536723693, 
-        "Personal Products": 0.05686557856032537, 
-        "Oil & Gas Refining & Marketing": 0.5807000000000001, 
+        "Health Care Services": 0.18065877401969047, 
+        "Oil & Gas Exploration & Production": 0.8913423152236524, 
+        "Life & Health Insurance": 0.10054982158483544, 
+        "Health Care Technology": -0.16593187533217515, 
+        "Personal Products": 0.05713317571048098, 
+        "Oil & Gas Refining & Marketing": 0.5792333333333334, 
         "Electronic Components": 0.048563421828908576, 
-        "Computer & Electronics Retail": 0.49300000000000005, 
-        "Investment Banking & Brokerage": 0.10052074738104567, 
-        "Multi-Utilities": 0.1729367991565601, 
-        "Office REITs": -0.018757224645801946, 
-        "Aerospace & Defense": 3.793417279692625, 
-        "Thrifts & Mortgage Finance": 0.08178398293581533, 
-        "Construction Materials": 0.18266230223677027, 
+        "Computer & Electronics Retail": 0.49294666666666664, 
+        "Investment Banking & Brokerage": 0.09960391995798107, 
+        "Multi-Utilities": 0.17277958925213543, 
+        "Office REITs": -0.017961852266915473, 
+        "Aerospace & Defense": 3.7933388697311177, 
+        "Thrifts & Mortgage Finance": 0.08195850300562339, 
+        "Construction Materials": 0.1827332242225859, 
         "Oil & Gas Drilling": -0.3433728084213521, 
-        "Restaurants": 0.4176125675124613, 
-        "Copper": 1.5828708940492824, 
-        "Hypermarkets & Super Centers": 0.2365277777777778, 
-        "Automotive Retail": -0.040784690799396665, 
-        "Distributors": -0.21464894850140745, 
-        "Automobile Manufacturers": -0.19584324836365818, 
-        "Semiconductors": 0.6480156168263235, 
-        "Health Care Equipment": 0.24402494515443193, 
-        "Department Stores": -0.06459550351475273, 
-        "Drug Retail": -0.14293064182194612, 
-        "Tires & Rubber": -0.12113574165298306, 
-        "Technology Hardware, Storage & Peripherals": 0.24103890706976264, 
-        "Research & Consulting Services": 0.07425306748269284, 
-        "Regional Banks": 0.33215108183068454, 
+        "Restaurants": 0.4173951568914868, 
+        "Copper": 1.5861205003659589, 
+        "Hypermarkets & Super Centers": 0.2364043209876544, 
+        "Automotive Retail": -0.041766077060194695, 
+        "Distributors": -0.21457641993707566, 
+        "Automobile Manufacturers": -0.19619823255069155, 
+        "Semiconductors": 0.6479716477112977, 
+        "Health Care Equipment": 0.24415246333004062, 
+        "Department Stores": -0.0647480301264803, 
+        "Drug Retail": -0.14191159420289853, 
+        "Tires & Rubber": -0.11768746579091412, 
+        "Technology Hardware, Storage & Peripherals": 0.2416760341454124, 
+        "Research & Consulting Services": 0.07461277971290865, 
+        "Regional Banks": 0.3318536986959197, 
         "Agricultural Products": 0.14932954603613285, 
-        "Housewares & Specialties": -0.08331344998232593, 
-        "IT Consulting & Other Services": 0.24375901619928744, 
-        "Diversified Support Services": 0.38498222993635833, 
+        "Housewares & Specialties": -0.08453296217744787, 
+        "IT Consulting & Other Services": 0.24387038673665318, 
+        "Diversified Support Services": 0.3848293247375816, 
         "Water Utilities": 0.34272384370015957, 
-        "Multi-line Insurance": 0.14464863235452413, 
-        "Integrated Telecommunication Services": -0.21343814488975776, 
-        "Specialized REITs": 0.0543071077868569, 
-        "Data Processing & Outsourced Services": 0.27824693975357223, 
+        "Multi-line Insurance": 0.14537584257168645, 
+        "Integrated Telecommunication Services": -0.21367709351580322, 
+        "Specialized REITs": 0.05414416981857242, 
+        "Data Processing & Outsourced Services": 0.2774669178368088, 
         "Construction Machinery & Heavy Trucks": 0.09343434343434338, 
-        "Home Furnishings": 0.2694014876318977, 
-        "Residential REITs": -0.16506544128732756, 
-        "Insurance Brokers": 0.24377657490309101, 
-        "Packaged Foods & Meats": 0.2409133930195959, 
-        "Hotel & Resort REITs": -0.3196869997449547, 
-        "Life Sciences Tools & Services": 0.40747107044990066, 
-        "Asset Management & Custody Banks": 0.023002086020541778, 
-        "Railroads": 0.2986866036313833, 
-        "Hotels, Resorts & Cruise Lines": 0.9692486321264013, 
-        "Internet & Direct Marketing Retail": 0.21421926505869296, 
-        "Metal & Glass Containers": 0.042273809523809526, 
-        "Apparel Retail": -0.029549808429118737, 
-        "Cable & Satellite": -0.10711706446226739, 
-        "Fertilizers & Agricultural Chemicals": 2.6294492862799905, 
-        "Specialty Chemicals": 0.2618570144885222, 
-        "Diversified Banks": 0.2711523636060391, 
-        "Apparel, Accessories & Luxury Goods": -0.16532322100482855, 
-        "Pharmaceuticals": 0.12930386338627897, 
-        "Building Products": -0.048072464795540844, 
-        "Real Estate Services": -0.15865653717454697, 
-        "Industrial Conglomerates": 0.27166899811422457, 
-        "Homebuilding": -0.20550179536941673, 
-        "Consumer Electronics": -0.023721981315000917, 
-        "Household Products": 0.26624659344445406, 
+        "Home Furnishings": 0.2692596436602664, 
+        "Residential REITs": -0.1651392391631015, 
+        "Insurance Brokers": 0.24380732939558933, 
+        "Packaged Foods & Meats": 0.24097954398820512, 
+        "Hotel & Resort REITs": -0.31990181733331163, 
+        "Life Sciences Tools & Services": 0.4075743335643162, 
+        "Asset Management & Custody Banks": 0.02290677766085943, 
+        "Railroads": 0.2989554459598927, 
+        "Hotels, Resorts & Cruise Lines": 0.9689814798252686, 
+        "Internet & Direct Marketing Retail": 0.21415066269682811, 
+        "Metal & Glass Containers": 0.04087053571428564, 
+        "Apparel Retail": -0.029781834572909602, 
+        "Cable & Satellite": -0.10695955283387164, 
+        "Fertilizers & Agricultural Chemicals": 2.6307798011519785, 
+        "Specialty Chemicals": 0.2616619416176871, 
+        "Diversified Banks": 0.27060138102653514, 
+        "Apparel, Accessories & Luxury Goods": -0.16503846686806983, 
+        "Pharmaceuticals": 0.129101869157805, 
+        "Building Products": -0.04825613240533577, 
+        "Real Estate Services": -0.15919369242727438, 
+        "Industrial Conglomerates": 0.27161132285732975, 
+        "Homebuilding": -0.20555340184131307, 
+        "Consumer Electronics": -0.02369915976261829, 
+        "Household Products": 0.2661684166544561, 
         "Human Resource & Employment Services": -0.14283505134760957, 
-        "Retail REITs": -0.14857538111948007, 
-        "Electronic Equipment & Instruments": 0.1343701196118258, 
-        "Agricultural & Farm Machinery": 0.6486174586793783, 
-        "Alternative Carriers": -0.065374677002584, 
-        "Steel": 0.09389936817568391, 
-        "Electrical Components & Equipment": 0.2065705607351022, 
-        "Tobacco": 0.06820673323092676, 
-        "Semiconductor Equipment": 0.2364136335935277, 
-        "Auto Parts & Equipment": 0.4872620008277581, 
-        "Broadcasting": 1.1460411840411842, 
-        "Internet Software & Services": 0.19389551176345857, 
-        "Industrial REITs": -0.15680908753603331, 
-        "Multi-Sector Holdings": -0.3179548611111111, 
-        "Specialty Stores": -0.1285818886523559, 
-        "Managed Health Care": 0.3909335373539256, 
-        "Paper Packaging": 0.45512627554442614, 
-        "Publishing": 0.007289346360553728, 
-        "General Merchandise Stores": -0.2308085371671508, 
-        "Airlines": 0.065122723178371, 
-        "Oil & Gas Storage & Transportation": 0.17679251709616897, 
-        "Air Freight & Logistics": 0.061659439450594024, 
-        "Soft Drinks": 0.22431344835835987, 
-        "Construction & Engineering": 0.09851590146213803, 
-        "Communications Equipment": 0.08140601674857383, 
-        "Property & Casualty Insurance": 0.2551365877994659, 
-        "Health Care REITs": -0.21525249576128877, 
-        "Integrated Oil & Gas": 1.0413419165750772, 
-        "Advertising": 0.1572414550300607, 
-        "Systems Software": 0.27048731033954465, 
-        "Biotechnology": -0.321098820347838, 
-        "Health Care Supplies": 0.14744658818793568, 
-        "Trucking": -0.09495997861510196, 
+        "Retail REITs": -0.14852784518776796, 
+        "Electronic Equipment & Instruments": 0.13490760550665762, 
+        "Agricultural & Farm Machinery": 0.6488975707241961, 
+        "Alternative Carriers": -0.06564691768180142, 
+        "Steel": 0.09403922831554407, 
+        "Electrical Components & Equipment": 0.20667016452832207, 
+        "Tobacco": 0.06814803539281716, 
+        "Semiconductor Equipment": 0.23615327512666176, 
+        "Auto Parts & Equipment": 0.48776682084341966, 
+        "Broadcasting": 1.1504697554697552, 
+        "Internet Software & Services": 0.19394885110215232, 
+        "Industrial REITs": -0.15685760767188975, 
+        "Multi-Sector Holdings": -0.31792013888888887, 
+        "Specialty Stores": -0.12864076115766512, 
+        "Managed Health Care": 0.3905643217602183, 
+        "Paper Packaging": 0.45561090757905803, 
+        "Publishing": 0.008047461940650757, 
+        "General Merchandise Stores": -0.23140066887407795, 
+        "Airlines": 0.06520037646190666, 
+        "Oil & Gas Storage & Transportation": 0.17690980903627748, 
+        "Air Freight & Logistics": 0.061370573507278155, 
+        "Soft Drinks": 0.22455880603445647, 
+        "Construction & Engineering": 0.09986519033114011, 
+        "Communications Equipment": 0.08170039179412804, 
+        "Property & Casualty Insurance": 0.2550307900634967, 
+        "Health Care REITs": -0.2151989482378617, 
+        "Integrated Oil & Gas": 1.0411051551787305, 
+        "Advertising": 0.156963760178656, 
+        "Systems Software": 0.2703546015735189, 
+        "Biotechnology": -0.3208251761553733, 
+        "Health Care Supplies": 0.14683809161035905, 
+        "Trucking": -0.09469116141080088, 
         "Home Entertainment Software": 0.5577935700755813, 
         "Industrial Gases": 0.02147062099693675, 
-        "Application Software": 0.23627328411073958, 
-        "Consumer Finance": 0.016038974863694568, 
-        "Health Care Distributors": -0.19539601054137742, 
-        "Motorcycle Manufacturers": -0.03746031746031749, 
-        "Diversified Chemicals": 0.19303574903406032, 
-        "Leisure Products": 0.16411253795912892, 
-        "Financial Exchanges & Data": 0.4392046316571468, 
-        "Electric Utilities": 0.3748389180987614
+        "Application Software": 0.23625035832633823, 
+        "Consumer Finance": 0.01570968616962599, 
+        "Health Care Distributors": -0.1955136705515512, 
+        "Motorcycle Manufacturers": -0.0383297258297259, 
+        "Diversified Chemicals": 0.19360852411381257, 
+        "Leisure Products": 0.16362662675254103, 
+        "Financial Exchanges & Data": 0.4392544545890545, 
+        "Electric Utilities": 0.37470768576719315
     }, 
     "ticker_to_industry": {
         "AGN": "Pharmaceuticals", 
@@ -6450,17 +6451,17 @@
         "PX": "Industrial Gases"
     }, 
     "sector_to_delta": {
-        "Industrials": 0.4014507475650397, 
-        "Telecommunication Services": -0.13940641094617087, 
-        "Consumer Discretionary": 0.13526063015809295, 
-        "Utilities": 0.29683318698516037, 
-        "Consumer Staples": 0.11460700444745599, 
-        "Health Care": 0.09086255605508334, 
-        "Materials": 0.6069605911477204, 
-        "Financials": 0.14081626630187835, 
-        "Real Estate": -0.14106200743532207, 
-        "Energy": 0.46950256724089046, 
-        "Information Technology": 0.2641886123267588
+        "Industrials": 0.4015846662304097, 
+        "Telecommunication Services": -0.13966200559880232, 
+        "Consumer Discretionary": 0.13540010109375752, 
+        "Utilities": 0.2967370395731627, 
+        "Consumer Staples": 0.11475565133586467, 
+        "Health Care": 0.09073545904481445, 
+        "Materials": 0.6074328093419831, 
+        "Financials": 0.14072767215269322, 
+        "Real Estate": -0.14107960405869377, 
+        "Energy": 0.46904356087012833, 
+        "Information Technology": 0.2642214218136766
     }, 
     "security_to_sector": {
         "Ford Motor": "Consumer Discretionary", 
