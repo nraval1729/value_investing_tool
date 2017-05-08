@@ -2,6 +2,7 @@
 var infoJSON;
 var searchTableHasHeader = false;
 var exploreTableHasHeader = false;
+var leaderboardHasHeader = false;
 var preferencesAreVisible = false;
 var leaderboardIsVisible = false;
 var breadCrumbChain = [];
@@ -318,8 +319,10 @@ function clearTable(tableName) {
     $(str).remove();
     if (tableName == "searchTable") {
         searchTableHasHeader = false;
-    } else {
+    } else if (tableName == "exploreTable"){
         exploreTableHasHeader = false;
+    } else {
+
     }
     clearTickers(getTickerList(tableName));
 }
@@ -683,6 +686,8 @@ function refreshTable(tableName, tableHeaderStatus) {
         searchTableHasHeader = true;       
     } else if (tableName == "exploreTable") {
         exploreTableHasHeader = true;
+    } else {
+        leaderboardHasHeader = true;
     }
 
     // Body
