@@ -3,6 +3,7 @@ var infoJSON;
 var searchTableHasHeader = false;
 var exploreTableHasHeader = false;
 var preferencesAreVisible = false;
+var leaderboardIsVisible = false;
 var breadCrumbChain = [];
 var searchTickers = [];
 var exploreTickers = [];
@@ -32,14 +33,15 @@ $(document).ready(function() {
     $.get("/info", function(data) {
 
         infoJSON = data;
-        console.log("DATA!")
-        console.log(JSON.stringify(infoJSON, null, 4))
 
         var securityToTicker = data["security_to_ticker"];
         var tickerToSecurity = data["ticker_to_security"];
         populateSearchSuggestions(securityToTicker);
         addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+
+        // Leaderboard stuff
         renderLeaderboard();
+        $("#leaderboard").toggle(false);
     });
 
 });
@@ -157,7 +159,7 @@ function getTickerList(tableName) {
         tickerList = exploreTickers;
     } else if (tableName == "searchTable") {
         tickerList = searchTickers;
-    } else if (tableName == "homeTable") {
+    } else if (tableName == "leaderboard") {
         tickerList = leaderboardTickers;
     }
     return tickerList;
@@ -359,7 +361,7 @@ function makeTableRowString(security, tableName) {
     rowString += renderSecurityCell(security.div_cur, security.div_avg, false);
     rowString += "<td class='white'>" + security.s_rank + "</td>";
 
-    if (tableName != "homeTable") {
+    if (tableName != "leaderboard") {
         rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultUp(this)"><img class="searchResultButtonImage" alt="up-arrow button" src="../images/up_arrow_03.png"></button></td>';
         rowString +=  '<td class="white"><button class="searchResultButton" onclick="moveSearchResultDown(this)"><img class="searchResultButtonImage" alt="down-arrow button" src="../images/down_arrow_03.png"></button></td>';
     }
@@ -683,18 +685,31 @@ function changeRefresh() {
 }
 
 // **********************************************
-// FUNCTIONS NOT BEING USED BEGIN HERE
+// LEADERBOARD FUNCTIONS START HERE
 // **********************************************
 
-// Need to decide if we want to implement this. Displays a table of top 10 ranked securities.
 function renderLeaderboard() {
     var tickers = infoJSON['leaderboard']['best'];
     var n = tickers.length;
     console.log(tickers);
-    var tableHeader = makeTableHeaderString("homeTable");
-    appendHeader(tableHeader, "homeTable");
+    var tableHeader = makeTableHeaderString("leaderboard");
+    appendHeader(tableHeader, "leaderboard");
     for (var i = 0; i < n; i++) {
         var ticker = tickers[i];
-        makeTableRow(ticker, "homeTable");  
+        makeTableRow(ticker, "leaderboard");  
+    }
+}
+
+function toggleLeaderboard() {
+    if(leaderboardIsVisible) {
+        $("#leaderboard").toggle(false);
+        leaderboardIsVisible = false;
+        $("#toggleLeaderboard").html("Show top 10 stocks");
+
+    }else {
+        $("#leaderboard").toggle(true);
+        leaderboardIsVisible = true;
+        $("#toggleLeaderboard").html("Hide top 10 stocks");
+
     }
 }

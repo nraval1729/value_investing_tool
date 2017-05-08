@@ -76,7 +76,7 @@
 
             <div class="centerMe">
                 <section role="region" aria-labelledby="homeTitle" id="homeSection">
-                    <h1 id="homeTitle">Home</h1>
+                    <h1 class ="hiddenForSR" id="homeTitle">Home</h1>
                     <div class="spacer100"></div>
                     <div class="centerMe">
 
@@ -123,9 +123,11 @@
                         </div>
                     </a>
                 </div>
-                    <div class="spacer50"></div>
+                    <div class="spacer25"></div>
+                    <button role="button" id="toggleLeaderboard" class="sliderButton" onclick="toggleLeaderboard()">Show top 10 stocks</button>
+                    <div class="spacer25"></div>
                     <div class="centerMe">
-                       <table id="homeTable">
+                       <table id="leaderboard" >
                            <thead></thead>
                            <tbody></tbody>
                        </table>
@@ -134,7 +136,7 @@
             </div>  
 
             <section role="region" aria-labelledby="searchTitle" id="searchSection"> 
-                <h1 id="searchTitle" class="centerMe">Search</h1>
+                <h1 id="searchTitle" class="centerMe hiddenForSR">Search</h1>
                 <div class="spacer100"></div>
                 <div class="horizontalCenter">
                     <label class="hiddenForSR" for="searchBarInput">Search Input</label>
@@ -157,7 +159,7 @@
 
             <div class="centerMe">
                 <section role="region" aria-labelledby="exploreTitle" id="exploreSection">
-                    <h1 id="exploreTitle">Explore</h1>
+                    <h1 class = "hiddenForSR" id="exploreTitle">Explore</h1>
                     <div class="spacer25"></div>
 
                     <div class="centerMe">
