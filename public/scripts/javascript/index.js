@@ -668,8 +668,12 @@ function refreshTable(tableName, tableHeaderStatus) {
 function changeMonochrome() {
     refreshTables();
     $("#colorSlider").slider( "option", "values", [colorBreakPoint1, colorBreakPoint2, colorBreakPoint3, colorBreakPoint4]);
+    $("#monochromeCheckbox").attr("aria-checked", $('#monochromeCheckbox').is(':checked'));
 }
 
+function changeRefresh() {
+    $("#refreshCheckbox").attr("aria-checked", $('#refreshCheckbox').is(':checked'));
+}
 
 // **********************************************
 // FUNCTIONS NOT BEING USED BEGIN HERE
