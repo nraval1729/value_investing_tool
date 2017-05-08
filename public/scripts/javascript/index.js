@@ -339,6 +339,8 @@ function deleteSearchResult(row, tableName) {
     document.getElementById(tableName).deleteRow(index);
     if (document.getElementById(tableName).rows.length == 1) {
         document.getElementById(tableName).deleteRow(0);
+        searchTableHasHeader = false;
+
     }
     $("#searchTable").trigger("update")
                      .trigger("sorton", [$("#searchTable")[0].config.sortList])
