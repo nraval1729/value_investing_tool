@@ -139,7 +139,7 @@ a {
 /* makes its interior elements
 go from left to right */
 .horizontal {
-  
+
     width: 25vw;
 
     display: flex;
@@ -151,6 +151,7 @@ go from left to right, and centers
 the interior elements from left to
 right */
 .horizontalCenter {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;

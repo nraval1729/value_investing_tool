@@ -1,3 +1,5 @@
-public/json_files/*.json
+public/json_files/current.json
+public/json_files/info.json
+public/json_file/valid_tickers.json
 *.log
 reports/
