@@ -365,7 +365,7 @@ function makeTableRowString(security, tableName) {
 //renders the table header row for the search result table
 function makeTableHeaderString(tableName) {
     var str = '<tr class="securityTableHeader">';
-    str +=  '<th class="securityCellCompanyName"></th>';
+    str +=  '<th class="tableHeaderCell popup">Name</th>';
     str += makePopupHeader("peBox", "pePopup", "P/E", "P/E: price-to-earnings ratio");
     str += makePopupHeader("psBox", "psPopup", "P/S", "P/S: price-to-sales ratio");
     str += makePopupHeader("pbBox", "pbPopup", "P/B", "P/B: price-to-book ratio");
