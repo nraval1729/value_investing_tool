@@ -23,9 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Python bridge to run python from node
 var spawn = require("child_process").spawn;
 
-// launchCurrentScraper();
-// launchValidTickersGenerator();
-// launchInfoJsonGenerator();
+launchCurrentScraper();
+launchValidTickersGenerator();
+launchInfoJsonGenerator();
 
 app.get("/", function(req, res) {
 	res.render('index.html');

@@ -93,7 +93,8 @@
 
 
 #exploreSectorSection, #exploreIndustrySection {
-    width: 860px; 
+  margin-left: 15vw;
+  width: 70vw;
 }
 
 
@@ -111,9 +112,8 @@
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    width: 170px;
-    min-height: 160px;
-    height: 160px;
+    height: 20vh;
+    width: 12vw;
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: white;
@@ -142,14 +142,17 @@
 }
 
 .exploreListItemColorSection {
-    margin-left: 35px;
-    width:100px;
-    min-height:60px;
+    margin-left: 2.5vw;
+    margin-bottom: 2vh;
+    width: 7vw;
+    height: 8vh;
 }
 
-#indexHeader {   
-    width: 900px;
-    margin-top: 15px;
+#indexHeader {
+    width: 84vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 3vh;
 }
 
 #page {
@@ -215,10 +218,14 @@
 
 .securityCellContent {
     font-weight: normal;
-    width: 60px;
-    height: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
+    min-height: 30px;
+    min-width: 30px;
+    width: 6vw;
+    height: 6vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,8 +240,9 @@
 }
 
 .securityCellCompanyName {
-    width: 100px;
-    height: 80px;
+
+    width: 10vw;
+    height: 10vh;
     padding-right: 10px;
     border: 0px;
     border-left: 10px;
@@ -253,15 +261,14 @@
 }
 
 .securityTableHeader td {
-    color: black; 
+    color: black;
 }
 
 .splashBox {
-    min-width: 270px;
-    min-height: 270px;
-    width: 270px;
-    height: 270px;
-    background-color: rgb(40,40,40); 
+    min-width: 210px;
+    min-height: 210px;
+
+    background-color: rgb(40,40,40);
     color: rgb(220,220,220);
     margin: 10px;
     padding-top: 10px;
@@ -270,16 +277,15 @@
 }
 
 .horizontal p.splashBoxCaption {
+
     /*margin-left: 35px;*/
     /*text-align: center;*/
 }
 
 .splashBox {
-    min-width: 270px;
-    min-height: 270px;
-    width: 270px;
-    height: 270px;
-    background-color: white; 
+    width: 25vw;
+    height: 40vh;
+    background-color: white;
     border: 2px solid black;
     color: rgb(220,220,220);
     margin: 10px;
@@ -289,15 +295,15 @@
 }
 
 #splashBoxCaptionOne {
-    margin-left: 35px;
+    margin-left: 1vw;
 }
 
 #splashBoxCaptionTwo {
-    margin-left: 35px;
+    margin-left: 1vw;
 }
 
 #splashBoxCaptionThree {
-    margin-left: 40px;
+    margin-left: 1vw;
 }
 
 .splashBox:hover {
@@ -313,8 +319,8 @@
 .splashBoxIcon {
     width: 25px;
     height: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1vw;
+    margin-right: 5vw;
     margin-top: 7px;
 }
 
@@ -323,8 +329,8 @@
 }
 
 .splashBoxParagraph {
-    font-size: 100%; 
-    margin-top: 50px; 
+    font-size: 100%;
+    margin-top: 50px;
     margin-left: 15px;
     margin-right: 15px;
     text-align: left;
@@ -333,11 +339,11 @@
 
 .tableHeaderCell {
     font-weight: bold;
-    width: 80px;
-    height: 80px;
+    width: 3vw;
+    height: 5vh;
     color: black;
 }
-   
+
 /* Popup container */
 .popup {
 /*    position: relative;
@@ -389,7 +395,7 @@
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
+    from {opacity: 0;}
     to {opacity: 1;}
 }
 
@@ -497,8 +503,8 @@
 }
 
 .splashBoxParagraph {
-    font-size: 80%; 
-    margin-top: 50px; 
+    font-size: 80%;
+    margin-top: 50px;
     margin-left: 10px;
     margin-right: 10px;
 

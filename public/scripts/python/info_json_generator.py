@@ -108,8 +108,6 @@ def prune_json(json_array, valid_tickers):
             my_array.append(json_array[index])
     return my_array
 
-
-# populates the big dictionary with the raw data.
 def populate_big_dictionary(big_dictionary, raw_data_historical, raw_data_current, valid_tickers):
     # loop over historical raw data. add stocks 
     # to big_dictionary only they have clean data
@@ -168,7 +166,6 @@ def populate_decile_dictionary(key, ratio, ratio_list, decile_dictionary, big_di
     decile_dictionary[key] = decile
 
 
-# populates the s_score_dictionary and s_score_list with the data they need.
 def populate_s_score_dictionary_s_score_list( s_score_dictionary, s_score_list, big_dictionary,
             pb_decile_dictionary, pe_decile_dictionary, ps_decile_dictionary, div_decile_dictionary):
     
@@ -178,12 +175,10 @@ def populate_s_score_dictionary_s_score_list( s_score_dictionary, s_score_list, 
         s_score_list.append(aggregate_score)
 
  
-# sorts the s_score_list.
 def sort_s_score_list(s_score_list):
     s_score_list.sort()
 
 
-# populates the s_rank_dictionary
 def populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list, s_rank_dictionary):
     for key in big_dictionary:
         val = s_score_dictionary[key]
@@ -191,52 +186,39 @@ def populate_s_rank_dictionary(big_dictionary, s_score_dictionary, s_score_list,
         s_rank_dictionary[key] = location + 1
 
 
-# appends s_rank to all entries in the big dictionary
 def append_s_rank_to_big_dictionary(big_dictionary, s_rank_dictionary):
     for key in big_dictionary:
         big_dictionary[key]['s_rank'] = s_rank_dictionary[key]
 
 
-# appends the company name to all entries in big dictionary
 def append_company_name_to_big_dictionary(big_dictionary, ticker_to_security_map):
     for key in big_dictionary:
         big_dictionary[key]['security'] = ticker_to_security_map[key]
 
 
-# populates the big list
 def populate_big_list(big_list, big_dictionary):
     big_list = big_dictionary.values()
 
-
-# reads in biographical.json
 def read_biographical_data():
     with open(cwd+'/public/json_files/biographical.json') as infile:
         raw_data_biographical = json.load(infile)
     return raw_data_biographical
 
-
-# reads in historical.json
 def read_historical_data():
     with open(cwd+'/public/json_files/historical.json') as infile:
         raw_data_historical = json.load(infile)
     return raw_data_historical
 
-
-# reads in current.json
 def read_current_data():
     with open(cwd+'/public/json_files/current.json') as infile:
         raw_data_current = json.load(infile)
     return raw_data_current
 
-
-# reads in valid_tickers.json
 def read_valid_tickers():
     with open(cwd+'/public/json_files/valid_tickers.json') as infile:
         tickers_json = json.load(infile)
     return tickers_json
 
-
-# creates the info dictionary 
 def create_info_dict(raw_data_biographical, tickers_json):
     info_dict = {}
     tickers = set(tickers_json['valid_tickers'])
@@ -286,7 +268,6 @@ def create_info_dict(raw_data_biographical, tickers_json):
     return info_dict
 
 
-# creates technical map
 def create_technical_map(raw_data_historical, raw_data_current, valid_tickers, ticker_to_security_map):
     
     global NUM_VALID_TICKERS
@@ -339,16 +320,42 @@ def create_technical_map(raw_data_historical, raw_data_current, valid_tickers, t
 
     append_company_name_to_big_dictionary(big_dictionary, ticker_to_security_map)
 
-    return big_dictionary
+    # big_list = big_dictionary.values()
 
+    #info_dict['technical_map'] = big_dictionary
 
-# writes info.json file
+    return big_dictionary # new craig
+
 def write_outfile(info_dict):
     with open(cwd+'/public/json_files/info.json', 'w') as outfile:
         json.dump(info_dict, outfile, indent=4)
 
 
-# creates sector_delta_map
+# def main():
+#     i = 1
+#     while True:
+#         print "Starting iteration: ", i
+#         i+= 1
+
+#         global info_dict = {} # new keyword craig: global
+
+#         raw_data_biographical = read_biographical_data()
+
+#         raw_data_historical = read_historical_data()
+
+#         raw_data_current = read_current_data()
+
+#         tickers_json = read_valid_tickers()
+
+#         generate_all_json_maps(raw_data_biographical, tickers_json, info_dict)
+
+#         generate_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'], info_dict)
+
+#         write_info_json(info_dict)
+    
+#         time.sleep(300)
+
+
 def create_sector_delta_map(info_dict, industry_delta_map):
     sector_delta_map = {}
     for sector in info_dict['sector_to_industries']:
@@ -356,7 +363,6 @@ def create_sector_delta_map(info_dict, industry_delta_map):
     return sector_delta_map
 
 
-# utility function. Computes sector delta.
 def compute_sector_delta(sector, info_dict, industry_delta_map):
     total = 0;
     n = len(info_dict['sector_to_industries'][sector])
@@ -367,24 +373,18 @@ def compute_sector_delta(sector, info_dict, industry_delta_map):
     sector_delta = total / n
     return sector_delta
 
-
-# creates industry delta map
 def create_industry_delta_map(info_dict, technical_map):
     industry_delta_map = {}
     for industry in info_dict['industry_to_tickers']:
         industry_delta_map[industry] = compute_industry_delta(industry, info_dict, technical_map)
     return industry_delta_map
 
-
-# utility function. Computes industry delta.
 def compute_industry_delta(industry, info_dict, technical_map):
     pb = compute_ratio_delta(industry, info_dict, technical_map, 'pb')
     pe = compute_ratio_delta(industry, info_dict, technical_map, 'pe')
     ps = compute_ratio_delta(industry, info_dict, technical_map, 'ps')
     return (pb + pe + ps) / 3
 
-
-# utility function. Computes ratio delta.
 def compute_ratio_delta(industry, info_dict, technical_map, ratio):
     avg = ratio + '_avg'
     cur = ratio + '_cur'
@@ -399,8 +399,6 @@ def compute_ratio_delta(industry, info_dict, technical_map, ratio):
     delta = delta_sum / n
     return delta
 
-
-# allows zero-dividend stocks to pass through
 def clean_raw_data(raw_data, data_type):
     bad_indicator = ""
     if data_type == "historical":
@@ -417,8 +415,25 @@ def clean_raw_data(raw_data, data_type):
 
     return raw_data
 
+def create_leaderboard_tickers(technical_map):
+    top_tickers = {}
+    temp_list = []
 
-# performs main program operations.
+    for k, v in technical_map.iteritems():
+        for attribute, value in v.iteritems():
+            if attribute == "s_rank" and value <= 10:
+                temp_list.append((k, value))
+
+    temp_list = sorted(temp_list, key = lambda x:x[1])
+    top_tickers_list = [i[0] for i in temp_list]
+
+    top_tickers['best'] = top_tickers_list
+
+    print "TOP TICKERS LIST: ", top_tickers_list
+    print "TOP TICKERS MAP: ", top_tickers
+
+    return top_tickers
+
 def main():
 
     while True:
@@ -432,6 +447,8 @@ def main():
         tickers_json = read_valid_tickers()
         info_dict = create_info_dict(raw_data_biographical, tickers_json)
         info_dict['technical_map'] = create_technical_map(raw_data_historical, raw_data_current, tickers_json, info_dict['ticker_to_security'])
+        info_dict['leaderboard'] = create_leaderboard_tickers(info_dict['technical_map'])
+        print "INFO DICT: ", info_dict
         info_dict['industry_to_delta'] = create_industry_delta_map(info_dict, info_dict['technical_map'])
         info_dict['sector_to_delta'] = create_sector_delta_map(info_dict, info_dict['industry_to_delta'])
 

@@ -54,6 +54,7 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100vw;
 }
 
 .darkGreen {
@@ -67,21 +68,20 @@ a {
 }
 
 #footer {
-    width: 900px;
-    min-height: 100px;
+    width: 100vw;
+    margin-left: -5vw;
     background-color: white;
-    margin-top: 400px;
+    margin-top: 15vh;
 }
 
 #footerLinks {
     text-align: left;
-    margin: 15px;
     list-style-type: none;
     font-size: 80%;
 }
 
 #footerLinks a {
-    margin-right: 100px;
+    margin-left: 5vw;
     color: black;
     text-decoration: none;
 }
@@ -139,23 +139,26 @@ a {
 /* makes its interior elements
 go from left to right */
 .horizontal {
+  
+    width: 25vw;
+
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 /* makes its interior elements
 go from left to right, and centers
-the interior elements from left to 
+the interior elements from left to
 right */
 .horizontalCenter {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
 }
 
 .verticalCenter {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
 }
 
@@ -193,8 +196,8 @@ right */
     /*color: white; */
     color: black;
     background-color: white;
-    width: 100px;
-    height: 50px;
+    width: 10vw;
+    height: 7vh;
     border: none;
     margin-top: -5px;
     font-size: 105%;
@@ -210,10 +213,10 @@ right */
 
 
 #page {
-    margin: auto;
+
 }
 
-#pageHeader {   
+#pageHeader {
     width: 900px;
     margin-top: 15px;
 }
@@ -222,42 +225,37 @@ right */
     display: block;
     clear: both;
     min-height: 10px;
-    height: 10px;  
+    height: 1vh;
 }
 
 .spacer25 {
     display: block;
     clear: both;
-    min-height: 25px;
-    height: 25px;
+    height: 3vh;
 }
 
 .spacer50 {
     display: block;
     clear: both;
-    min-height: 50px;
-    height: 50px;
+    height: 6vh;
 }
 
 .spacer100 {
     display: block;
     clear: both;
-    min-height: 100px;
-    height: 100px;
+    height: 12vh;
 }
 
 .spacer150 {
     display: block;
     clear: both;
-    min-height: 150px;
-    height: 150px;
+    height: 18vh;
 }
 
 .spacer200 {
     display: block;
     clear: both;
-    min-height: 200px;
-    height: 200px;
+    height: 24vh;
 }
 
 .underline {
@@ -274,6 +272,3 @@ go from top to bottom */
     display: flex;
     flex-direction: column;
 }
-
-
-

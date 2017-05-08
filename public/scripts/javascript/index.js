@@ -31,6 +31,8 @@ $(document).ready(function() {
     $.get("/info", function(data) {
 
         infoJSON = data;
+        console.log("DATA!")
+        console.log(JSON.stringify(infoJSON, null, 4))
 
         var securityToTicker = data["security_to_ticker"];
         var tickerToSecurity = data["ticker_to_security"];
