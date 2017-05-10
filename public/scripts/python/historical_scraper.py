@@ -9,6 +9,7 @@ from random import randint
 from selenium import webdriver
 
 
+# Kicks off and returns an instance of a firefox browser
 def start_browser():
 	fp = webdriver.FirefoxProfile()
 	fp.set_preference("dom.max_chrome_script_run_time", 0)
@@ -16,19 +17,20 @@ def start_browser():
 	browser = Firefox(firefox_profile=fp)
 	return browser
 
+# Load valid tickers from the json file
 def load_tickers():
 	with open("../../json_files/sorted_biographical_list_of_dicts.json", "r") as s:
 		sorted_biographical_list_of_dicts = json.load(s)
 		return sorted_biographical_list_of_dicts
 
-
+# Iteratively scrape data off of morningstar
 def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list_of_dicts, base_url, browser):
 
 	# First tab of the browser
 	browser.get("http://www.google.com/")
 
 	for curr_dict in sorted_biographical_list_of_dicts:
-		# Sleep one second to avoid overloading the morningstar servers
+		# Sleep a random amount of time to avoid overloading the morningstar servers
 		time.sleep(randint(1, 4))
 
 		my_dict = OrderedDict()
@@ -74,10 +76,12 @@ def scrape_morningstar(sorted_biographical_list_of_dicts, sorted_historical_list
 		except Exception:
 			pass
 
+# Write to historical.json
 def write_sorted_historical_list_of_dicts(sorted_historical_list_of_dicts):
 	with open("../../json_files/historical.json", 'w') as c:
 		json.dump(sorted_historical_list_of_dicts, c, indent = 4)
 
+# Main
 def main():
 	browser = start_browser()
 

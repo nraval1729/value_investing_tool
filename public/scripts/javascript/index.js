@@ -69,8 +69,6 @@ function handleSearchAndLeaderboardData(data) {
 
 // Shows the explore section; hides the other sections of the SPA
 function showExplore() {
-    // TODO
-    // Add loading icon after so that we wait until infoJSON is populated.
     renderSectorLevel();
     $("#exploreButton").addClass("underline");
     $("#searchButton").removeClass("underline");
