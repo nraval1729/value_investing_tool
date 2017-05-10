@@ -1,10 +1,15 @@
-
-
 * {
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     color: black;
+}
+
+.aboutContentDiv {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 100%;
+    font-weight: normal;
 }
 
 #aboutPageTitle {
@@ -241,13 +246,6 @@ right */
     margin-bottom: 15px;
     text-align: left;
     font-size: 110%;
-}
-
-.aboutContentDiv {
-    margin-bottom: 15px;
-    text-align: left;
-    font-size: 100%;
-    font-weight: normal;
 }
 
 #selectedLink {

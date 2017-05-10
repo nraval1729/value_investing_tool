@@ -5,7 +5,6 @@
     color: black;
 }
 
-
 /* to style the placeholder text inside of the search bars
 citation: http://stackoverflow.com/questions/2610497/
 change-an-html5-inputs-placeholder-color-with-css */
@@ -28,15 +27,13 @@ a {
     text-decoration: none;
 }
 
-/*body {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}*/
-
 .black {
     background-color: black;
+    color: white;
+}
+
+.blackGrey {
+    background-color: #404040;
     color: white;
 }
 
@@ -93,30 +90,8 @@ a {
     -webkit-transition: color 0.10s ease;
 }
 
-.whiteWithBorder {
-    background-color: white;
-    color: black;
-    border-color: black;
-    border-style: solid;
-}
-
-.white {
-    background-color: white;
-    color: black;
-}
-
-.whiteGrey {
-    background-color: #bfbfbf;
-    color: black;
-}
-
 .grey {
     background-color: #808080;
-    color: white;
-}
-
-.blackGrey {
-    background-color: #404040;
     color: white;
 }
 
@@ -157,27 +132,12 @@ right */
     justify-content: center;
 }
 
-.verticalCenter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 #interior {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 30px;
 }
-
-/*#logo {
-    font-size: 170%;
-    margin: 10px;
-    font-family: Tahoma, sans-serif;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}*/
 
 #logoButton {
     background-color: #4286f4;
@@ -273,4 +233,27 @@ go from top to bottom */
 .vertical {
     display: flex;
     flex-direction: column;
+}
+
+.verticalCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.whiteWithBorder {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-style: solid;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.whiteGrey {
+    background-color: #bfbfbf;
+    color: black;
 }

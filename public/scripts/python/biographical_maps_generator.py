@@ -104,7 +104,7 @@ def prune_json(json_array, valid_tickers):
 	return my_array
 
 
-
+# peforms main program operations
 def main():
 	# get handles on the json files
 	with open('biographical.json') as infile:
@@ -134,43 +134,6 @@ def main():
 	security_to_industry_map = create_simple_map(biographical_json_pruned, "security", "industry")
 	security_to_sector_map = create_simple_map(biographical_json_pruned, "security", "sector")
 
-
- 	# NISARG: DO NOT DELETE THE COMMENTED-OUT PRINT STATEMENTS BELOW FOR NOW.  THANKS.  CRAIG 
-	
-	# print industry_to_sector_map
-	# print industry_to_sector_map['Life & Health Insurance']
-
-	# print industry_to_tickers_map
-	# print industry_to_tickers_map['Life & Health Insurance']
-
-	# print sector_to_industries_map
-	# print sector_to_industries_map['Industrials']
-
-	# print security_to_industry_map
-	# print security_to_industry_map['Ford Motor']
-
-	# print security_to_sector_map
-	# print security_to_sector_map['Ford Motor']
-
-	# print security_to_ticker_list
-	# print security_to_ticker_list[0]
-
-	# print security_to_ticker_map
-	# print security_to_ticker_map['Ford Motor']
-
-	# print ticker_to_industry_map
-	# print ticker_to_industry_map['F']
-
-	# print ticker_to_sector_map
-	# print ticker_to_sector_map['F']
-
-	# print ticker_to_security_list
-	# print ticker_to_security_list[0]
-
-	# print ticker_to_security_map
-	# print ticker_to_security_map['F']
-	
-
 	# industry_to_sector_map
  	with open('industry_to_sector_map.json', 'w') as outfile:
  		json.dump(industry_to_sector_map, outfile, indent=4)
@@ -198,7 +161,6 @@ def main():
 	# security_to_ticker_map
  	with open('security_to_ticker_map.json', 'w') as outfile:
  		json.dump(security_to_ticker_map, outfile, indent=4)
-
 
 	# ticker_to_industry_map
  	with open('ticker_to_industry_map.json', 'w') as outfile:

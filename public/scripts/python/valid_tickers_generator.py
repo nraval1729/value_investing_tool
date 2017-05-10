@@ -44,7 +44,7 @@ def make_dictionary_from_set(my_key, my_set):
 	my_list.sort()
 	return {my_key: my_list}
 
-
+# peforms main program operations
 def main():
 
 	while True:

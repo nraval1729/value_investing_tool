@@ -1,76 +1,12 @@
-.cursorArrow {
-
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
-.cursorArrow:hover {
-    cursor: default;
-}
-
-.cursorHand {
-
-}
-
-.cursorHand:hover {
-    cursor: pointer;
-    cursor: hand;
-}
-
-
-
-.hiddenForSR {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-#interior {
-    display: flex;
-    flex-direction: column;
-}
-
-.nonHoverBox {
-    margin-top: 70px;
-    width: 850px;
-    min-height: 200px;
-    background-color: rgb(40,40,40);
-    color: white;
-    margin-bottom: 50px;
-}
-
-#page {
-    width: 1100px;
-    display: flex;
-    flex-direction: column;
-}
-
-#searchBarWrapper {
-    margin-top: 100px;
-}
-
-#searchBarInput {
-    width: 550px;
-    height: 50px;
-    border: none;
-    font-size: 140%;
-    padding-left: 10px;
-    color: black;
-}
-
-#searchBarDecoration {
-    width: 40px;
-    height: 40px;
-}
-
-#searchBarDecorationWrapper {
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 
 #breadCrumbList {
@@ -91,6 +27,34 @@
     color: black;
 }
 
+.checkbox {
+    width: 25px;
+    height: 25px;
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#colorSlider {
+    width: 800px;
+}
+
+.cursorArrow {
+
+}
+
+.cursorArrow:hover {
+    cursor: default;
+}
+
+.cursorHand {
+
+}
+
+.cursorHand:hover {
+    cursor: pointer;
+    cursor: hand;
+}
 
 #exploreSectorSection, #exploreIndustrySection {
   margin-left: 15vw;
@@ -117,9 +81,6 @@
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: white;
-    /*box-shadow: 0 3px 5px rgba(0,0,0,0.35);*/
-    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
     border: 2px solid black;
 }
 
@@ -148,6 +109,26 @@
     height: 8vh;
 }
 
+#footer {
+    margin-bottom: 50px;
+}
+
+.hiddenForSR {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* code below this line is new */
+.hoverlink {
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
 #indexHeader {
     width: 84vw;
     margin-left: 8vw;
@@ -159,11 +140,104 @@
     min-height: 40px;
 }
 
-#page {
+#interior {
     display: flex;
     flex-direction: column;
 }
 
+#miscPref {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nonHoverBox {
+    margin-top: 70px;
+    width: 850px;
+    min-height: 200px;
+    background-color: rgb(40,40,40);
+    color: white;
+    margin-bottom: 50px;
+}
+
+#page {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Popup container */
+.popup {
+
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    display: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-color: #4286f4;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: relative;
+    z-index: 10;
+    bottom: 10%;
+    left: 40%;
+    margin-left: -80px; /* should be the size of the table header cell */
+    margin-top: -40px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #4286f4 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    display: block;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+#searchBarWrapper {
+    margin-top: 100px;
+}
+
+#searchBarInput {
+    width: 550px;
+    height: 50px;
+    border: none;
+    font-size: 140%;
+    padding-left: 10px;
+    color: black;
+}
+
+#searchBarDecoration {
+    width: 40px;
+    height: 40px;
+}
+
+#searchBarDecorationWrapper {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #searchBarDecoration {
     z-index: -100;
@@ -268,17 +342,29 @@
     color: black;
 }
 
-/*.splashBox {
-    min-width: 210px;
-    min-height: 210px;
+.sliderButton {
+    color: white;
+    background-color: #4286f4;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    margin-top: -5px;
+    font-size: 105%;
+    font-weight: bold;
+}
 
-    background-color: rgb(40,40,40);
-    color: rgb(220,220,220);
-    margin: 10px;
-    padding-top: 10px;
+.sliderButton:hover {
+    cursor: pointer;
+    background-color: #555;
+}
+
+#slidersDiv {
     display: flex;
     flex-direction: column;
-}*/
+    justify-content: space-between;
+    align-items: center;
+}
 
 .splashBox {
     overflow: scroll;
@@ -298,8 +384,6 @@
 
     margin-left: 1vw;
 }
-
-
 
 #splashBoxCaptionTwo {
     margin-left: 1vw;
@@ -324,11 +408,13 @@
   width: 13vw;
   height: 5vh;
 }
+
 #splashBoxIcon2 {
   margin-top: 1vh;
   width: 14vw;
   height: 5vh;
 }
+
 #splashBoxIcon3 {
   margin-top: 1vh;
   width: 12vw;
@@ -341,7 +427,6 @@
     position: absolute;
     left: 20px;
     top: 15px;
-
 }
 
 .splashBoxLink {
@@ -356,87 +441,11 @@
     text-align: left;
 }
 
-
 .tableHeaderCell {
     font-weight: bold;
     width: 3vw;
     height: 5vh;
     color: black;
-}
-
-/* Popup container */
-.popup {
-/*    position: relative;
-    display: inline-block;
-    cursor: pointer;*/
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-    visibility: hidden;
-    display: none;
-/*    width: 250px;*/
-    background-color: white;
-    color: black;
-    text-align: center;
-    border-color: #4286f4;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: relative;
-    z-index: 10;
-    bottom: 10%;
-    left: 40%;
-    margin-left: -80px; /* should be the size of the table header cell */
-    margin-top: -40px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #4286f4 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-    display: block;
-    -webkit-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s;
-}
-
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
-
-
-/* code below this line is new */
-.hoverlink {
-    text-decoration: none;
-    cursor: pointer;
-    cursor: hand;
-}
-
-#slidersDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .ui-slider-range {
@@ -451,104 +460,3 @@
     text-align: center;
     line-height: 1.6em;
 }
-
-#colorSlider {
-    width: 800px;
-}
-
-.sliderButton {
-    /*color: white; */
-    color: white;
-    background-color: #4286f4;
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 6px;
-    margin-top: -5px;
-    font-size: 105%;
-    font-weight: bold;
-}
-
-.sliderButton:hover {
-    cursor: pointer;
-    background-color: #555;
-}
-
-#miscPref {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.checkbox {
-    width: 25px;
-    height: 25px;
-    text-align: left;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-/*.splashBox {
-    min-width: 270px;
-    min-height: 270px;
-    width: 270px;
-    height: 270px;
-    background-color: rgb(40,40,40); /* almost black *//*
-    color: rgb(220,220,220);
-    margin: 10px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.splashBox:hover {
-    background-color: rgb(20,20,20); /* almost black *//*
-    transition: background-color 0.15s ease;
-    -webkit-transition: background-color 0.15s ease;
-    cursor: pointer;
-}
-
-.splashBoxCaption {
-    font-size: 200%;
-    font-family: Tahoma, sans-serif;
-    color: rgb(170,170,170);
-}
-
-.splashBoxIcon {
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 7px;
-}
-
-.splashBoxLink {
-    text-decoration: none;
-}
-
-.splashBoxParagraph {
-    font-size: 80%;
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-
-#bannerImage {
-    height: 380px;
-}
-
-#bannerImageWrapper {
-    margin-top:20px;
-}
-#largeCaption {
-    margin-top: 100px;
-    margin-bottom: 120px;
-}
-
-#largeCaption p {
-    font-size: 300%;
-    color: rgb(170,170,170);
-    letter-spacing: 2px;
-}
-}*/
