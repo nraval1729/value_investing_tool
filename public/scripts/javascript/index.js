@@ -37,6 +37,7 @@ $(document).ready(function() {
 
 });
 
+// Gets the info.json file
 function requestInfoJson() {
 
     $.get("/info", function(data) {
@@ -45,6 +46,7 @@ function requestInfoJson() {
     });
 }
 
+// Initializes search and leaderboard functionality
 function handleSearchAndLeaderboardData(data) {
 
         infoJSON = data;
@@ -61,7 +63,11 @@ function handleSearchAndLeaderboardData(data) {
         refreshTables();
 }
 
-//VISIBILITY SECTION
+// **********************************************
+// VISIBILITY FUNCTIONS BEGIN HERE
+// **********************************************
+
+// Shows the explore section; hides the other sections of the SPA
 function showExplore() {
     // TODO
     // Add loading icon after so that we wait until infoJSON is populated.
@@ -77,6 +83,7 @@ function showExplore() {
     $("#footer").toggle(false);
 }
 
+// Shows the home page; hides the other sections of the SPA
 function showHome() {
     $("#exploreButton").removeClass("underline");
     $("#searchButton").removeClass("underline");
@@ -88,6 +95,7 @@ function showHome() {
     $("#footer").toggle(true);
 }
 
+// Hides and shows the preferences section
 function togglePreferences() {
     if (preferencesAreVisible) {
         hidePreferences();
@@ -96,17 +104,20 @@ function togglePreferences() {
     }
 }
 
+// Shows the preferences section
 function showPreferences() {
     preferencesAreVisible = true;
     $("#preferencesSection").slideDown(500);
     $("#colorSlider").slider( "option", "values", [colorBreakPoint1Default, colorBreakPoint2Default, colorBreakPoint3Default, colorBreakPoint4Default]);
 }
 
+// Hides the preferences section
 function hidePreferences() {
     preferencesAreVisible = false;
     $("#preferencesSection").slideUp(500);  
 }
 
+// Shows the search section and hides the other parts of the SPA
 function showSearch() {
     $("#exploreButton").removeClass("underline");
     $("#searchButton").addClass("underline");
@@ -122,6 +133,7 @@ function showSearch() {
 // TICKER MANAGEMENT FUNCTIONS BEGIN HERE
 // **********************************************
 
+// For testing purposes
 function displayTickers(listName) {
     console.log("inside displayTickers");
     if (listName == null) {
@@ -134,6 +146,7 @@ function displayTickers(listName) {
     }
 }
 
+// Returns true if a list has a particular ticker.
 function hasTicker(listName, ticker) {
     var n = listName.length;
     for (var i = 0; i < n; i++) {
@@ -144,12 +157,14 @@ function hasTicker(listName, ticker) {
     return false;
 }
 
+// Adds a ticker to the input list
 function addTicker(listName, ticker) {
     if (!hasTicker(listName, ticker)) {
         listName.push(ticker);
     }
 }
 
+// Deletes a ticker from the input list
 function deleteTicker(listName, ticker) {
     var n = listName.length;
     var splicePoint = 0;
@@ -162,12 +177,14 @@ function deleteTicker(listName, ticker) {
     listName.splice(splicePoint, 1);
 }
 
+// Clears the list of all the tickers
 function clearTickers(listName) {
     for (var i = listName.length; i > 0; i--) {
         listName.pop();
     }
 }
 
+// Given a table name, returns the corresponding ticker list.
 function getTickerList(tableName) {
     var tickerList = "";
     if (tableName == "exploreTable") {
@@ -180,6 +197,9 @@ function getTickerList(tableName) {
     return tickerList;
 }
 
+// Makes a hard copy of a ticker list from associated table name
+// This function is to work around the fact that JavaScript 
+// assigns collections by reference rather than value.
 function hardCopyList(tableName) {
     var alias = getTickerList(tableName);
     var tickerListCopy = [];
@@ -194,6 +214,7 @@ function hardCopyList(tableName) {
 // SEARCH SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
+// Initializes the autocomplete feature for search
 function populateSearchSuggestions(security_to_ticker) {
     var companyNames = Object.keys(security_to_ticker);
     var tickers = companyNames.map(function(v) {return security_to_ticker[v]; });
@@ -217,7 +238,7 @@ function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
     }, false);
 }
 
-
+// Takes search input from user and renders the associated data to the search workbench.
 function processUserSelection(e, securityToTicker, tickerToSecurity, json) {
     var userSelection = e.text.trim();
     var dataForUserSelection;
@@ -252,6 +273,7 @@ function appendTable(str, tableName) {
 
 }
 
+// appends the header to the input table
 function appendHeader(str, tableName) {
     var searchTable = $("#"+tableName);
 
@@ -270,6 +292,7 @@ function appendHeader(str, tableName) {
     // $("#"+tableName).tablesorter().trigger("update").trigger("appendCache");
 }
 
+// appends search result body to the input table
 function appendBody(str, tableName) {
     var searchTable = $("#"+tableName);
 
@@ -286,6 +309,7 @@ function appendBody(str, tableName) {
     $("#"+tableName).trigger("updateAll");
 }
 
+// given a ticker and a table, appends a corresponding data row to the table
 function makeTableRow(ticker, table) {
     //data consists of a single stock's technical information
     var data = infoJSON['technical_map'][ticker];
@@ -412,6 +436,7 @@ function makeTableHeaderString(tableName) {
     return str;
 }
 
+// compose the HTML needed to connect the table to the popup header
 function makePopupHeader(boxName, popupName, headerText, popupText, tableName) {
     var str = '<th class="tableHeaderCell popup" id="' + boxName + tableName + '" oncontextmenu="return false;">';
     str += '<span class="popuptext" id="' + popupName + tableName + '">'+ popupText +'</span>';
@@ -470,12 +495,14 @@ function determineColor(excursion) {
 // EXPLORE SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
+// utility function. Adds arrows to the breadcrumb list
 function doBreadCrumbArrows() {
     var breadCrumbList = $("#breadCrumbList");
     var arrows = '<li> >> </li>';
     breadCrumbList.append(arrows);
 }
 
+// appends a company breadcrumb to the breadcrumb list
 function doCompanyBreadCrumb(companyName) {
     var list = $("#breadCrumbList");
     doBreadCrumbArrows();
@@ -492,6 +519,7 @@ function doCompanyBreadCrumb(companyName) {
     breadCrumbChain.push(companyName);
 }
 
+// appends a industry breadcrumb to the breadcrumb list
 function doIndustryBreadCrumb(industryName) {
     var list = $("#breadCrumbList");
     doSectorBreadCrumb();
@@ -509,6 +537,7 @@ function doIndustryBreadCrumb(industryName) {
     breadCrumbChain.push(industryName);
 }
 
+// appends a sector breadcrumb to the breadcrumb list
 function doSectorBreadCrumb() {
     var breadCrumbList = $("#breadCrumbList");
     breadCrumbList.empty();
@@ -524,6 +553,7 @@ function doSectorBreadCrumb() {
     breadCrumbChain.push("Sectors");
 }
 
+// renders the industry level corresponding to the given sector name
 function renderIndustryLevel(sectorName) {
     var list = $("#exploreIndustryList");
     list.empty();
@@ -541,6 +571,7 @@ function renderIndustryLevel(sectorName) {
     doIndustryBreadCrumb(sectorName);
 }
 
+// utility function. Composes the html for a single industry list item
 function renderIndustryListItem(industryName, color) {
     var str = 
         '<li onclick="renderTickerLevel(\'' + industryName + '\')" class="exploreListItem">'
@@ -556,6 +587,7 @@ function renderIndustryListItem(industryName, color) {
      return str;
 }
 
+// renders the sector level
 function renderSectorLevel() {
     var list = $("#exploreSectorList");
     list.empty();
@@ -574,6 +606,7 @@ function renderSectorLevel() {
     doSectorBreadCrumb();
 }
 
+// utility function. Composes the html for a single sector list item
 function renderSectorListItem(sectorName, color) {
     var str = 
     '<li onclick="renderIndustryLevel(\'' + sectorName + '\')" class="exploreListItem">'
@@ -589,6 +622,7 @@ function renderSectorListItem(sectorName, color) {
      return str;
 }
 
+// renders the ticker level corresponding to the given industry name
 function renderTickerLevel(industryName) {
     var tableHeader = makeTableHeaderString("exploreTable");
     appendHeader(tableHeader, "exploreTable");
@@ -603,6 +637,7 @@ function renderTickerLevel(industryName) {
     activatePopups("exploreTable");
 }
 
+// add eventhandling to popups
 function activatePopups(tablename) {
 
     $('#peBox'+tablename).mousedown(function(e){displayToolTip(e, $('#pePopup'+tablename))});
@@ -638,6 +673,7 @@ function activatePopups(tablename) {
     });
 }
 
+// on right click, toggle visibility of popups
 function displayToolTip(event, popup) {
     if(event.which == 3 && !popup.hasClass('show')) {
         popup.toggleClass('show');
@@ -648,7 +684,7 @@ function displayToolTip(event, popup) {
 // PREFERENCES SECTION FUNCTIONS BEGIN HERE
 // **********************************************
 
-
+// refreshes table data upon events such as slider updates or clicking on refresh data button
 function refreshTables() {
     refreshTable("searchTable", searchTableHasHeader);
 
@@ -699,12 +735,14 @@ function refreshTable(tableName, tableHeaderStatus) {
     }
 }
 
+// implements checkbox functionality for monochrome
 function changeMonochrome() {
     refreshTables();
     $("#colorSlider").slider( "option", "values", [colorBreakPoint1, colorBreakPoint2, colorBreakPoint3, colorBreakPoint4]);
     $("#monochromeCheckbox").attr("aria-checked", $('#monochromeCheckbox').is(':checked'));
 }
 
+// implements checkbox functionality for data refresh
 function changeRefresh() {
     $("#refreshCheckbox").attr("aria-checked", $('#refreshCheckbox').is(':checked'));
 }
@@ -713,6 +751,7 @@ function changeRefresh() {
 // LEADERBOARD FUNCTIONS START HERE
 // **********************************************
 
+// renders the leaderboard table
 function renderLeaderboard() {
 
     $("#leaderboard thead").empty();
@@ -728,6 +767,7 @@ function renderLeaderboard() {
     }
 }
 
+// toggles the visibility of the leaderboard
 function toggleLeaderboard() {
     if(leaderboardIsVisible) {
         $("#leaderboard").toggle(false);
