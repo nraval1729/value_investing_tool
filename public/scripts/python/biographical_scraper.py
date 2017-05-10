@@ -8,8 +8,10 @@ import urllib
 import sys
 import os
 
+# Gets the current working directory
 cwd = os.getcwd()
 
+# Gets the biographical data from wikipedia
 def get_and_write_biographical_data():
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -44,10 +46,12 @@ def get_and_write_biographical_data():
 
     return sorted_biographical_list_of_dicts
 
+# Puts the biographical data in a list of dictionaries for other scripts to use
 def dump_sorted_biographical_list_of_dicts(sorted_biographical_list_of_dicts):
     with open(cwd+'/public/json_files/sorted_biographical_list_of_dicts.json', 'w') as c:
             json.dump(sorted_biographical_list_of_dicts, c, indent = 4)
 
+# Main loop
 def main():
 
     sorted_biographical_list_of_dicts = get_and_write_biographical_data()
