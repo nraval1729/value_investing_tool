@@ -27,7 +27,7 @@
 
             // When the user clicks on the button, scroll to the top of the document
             function topFunction() {
-                document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+                document.body.scrollTop = 0; // For Chrome, Safari and Opera
                 document.documentElement.scrollTop = 0; // For IE and Firefox
             }
         </script>
@@ -36,7 +36,12 @@
 
         <div class="centerMe">
             <header id="indexHeader" style="width: 900px; background-color: #4286f4;" role="banner">
-                <div id="logoButton" style="height: 50px; text-align: left; float:left; margin-top: 15px; width: 800px; cursor: default;">Value Investing Tool</div>
+                <div id="logoButton" onclick="doAlert()" style="height: 50px; text-align: left; float:left; margin-top: 15px; width: 800px; cursor: hand;">Value Investing Tool</div>
+                <script>
+                  function doAlert() {
+                      alert("Please return to the original tab to resume working.");
+                  }
+                  </script>
             </header>
         </div>
 
