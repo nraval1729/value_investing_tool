@@ -11,7 +11,7 @@ var colorBreakPoint4Default = 0.40;    //above or equal to this value: bright re
 var colorBreakPoint3Default = 0.20;    //above or equal to this value and below colorBreakPoint1: dark red
 var colorBreakPoint2Default = -0.20;   //above or equal to this value and below colorBreakPoint2: black
 var colorBreakPoint1Default = -0.40;   //above or equal to this value and below colorBreakPoint3: green
-                                //below colorBreakPoint4: bright green
+                                       //below colorBreakPoint4: bright green
 
 var sliderMin = -1;
 var sliderMax = 1;
@@ -107,7 +107,7 @@ function myChange(event, ui) {
     refreshTables();
 }
 
-
+// Upon page load, sets initial conditions.
 $( function() {
 
     $( "#colorSlider" ).slider({
