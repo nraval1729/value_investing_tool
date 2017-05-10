@@ -106,7 +106,7 @@ function togglePreferences() {
 function showPreferences() {
     preferencesAreVisible = true;
     $("#preferencesSection").slideDown(500);
-    $("#colorSlider").slider( "option", "values", [colorBreakPoint1Default, colorBreakPoint2Default, colorBreakPoint3Default, colorBreakPoint4Default]);
+    $("#colorSlider").slider( "option", "values", [colorBreakPoint1, colorBreakPoint2, colorBreakPoint3, colorBreakPoint4]);
 }
 
 // Hides the preferences section
@@ -685,6 +685,7 @@ function displayToolTip(event, popup) {
 // refreshes table data upon events such as slider updates or clicking on refresh data button
 function refreshTables() {
     refreshTable("searchTable", searchTableHasHeader);
+    refreshTable("leaderboard", true);
 
     if (breadCrumbChain.length == 1) {
         renderSectorLevel();
@@ -692,7 +693,6 @@ function refreshTables() {
         renderIndustryLevel(breadCrumbChain[1]);
     } else {
         refreshTable("exploreTable", exploreTableHasHeader);
-        refreshTable("leaderboard", true);
     }
 }
 
