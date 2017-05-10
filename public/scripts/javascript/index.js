@@ -5,7 +5,7 @@ var exploreTableHasHeader = false;
 var leaderboardHasHeader = false;
 var preferencesAreVisible = false;
 var leaderboardIsVisible = false;
-var breadCrumbChain = [];
+var breadCrumbChain = ["Sectors"];
 var searchTickers = [];
 var exploreTickers = [];
 var leaderboardTickers = [];
@@ -69,11 +69,21 @@ function handleSearchAndLeaderboardData(data) {
 
 // Shows the explore section; hides the other sections of the SPA
 function showExplore() {
-    renderSectorLevel();
+
+    if (breadCrumbChain.length == 1) {
+        renderSectorLevel();
+    } else if (breadCrumbChain.length == 2) {
+        renderIndustryLevel(breadCrumbChain[1]);
+    } else {
+        renderTickerLevel(breadCrumbChain[2]);
+        //refreshTable("exploreTable", exploreTableHasHeader);
+    }
+
+    //renderSectorLevel();
     $("#exploreButton").addClass("underline");
     $("#searchButton").removeClass("underline");
     $("#preferencesButton").removeClass("underline");
-    $("#logoButton").toggle(true);
+    //$("#logoButton").toggle(true);
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(true);
@@ -478,13 +488,19 @@ function determineColor(excursion) {
             index = 0;
         } 
     }
-
     if(!$('#monochromeCheckbox').is(':checked')) {
         return colors[index];
     }
     else {
         return monochromeColors[index];
     }
+}
+
+//returns true if monochrome is selected
+function isMonochrome() {
+
+    return $('#monochromeCheckbox').is(':checked');      
+    
 }
 
 
@@ -503,18 +519,27 @@ function doBreadCrumbArrows() {
 // appends a company breadcrumb to the breadcrumb list
 function doCompanyBreadCrumb(companyName) {
     var list = $("#breadCrumbList");
-    doBreadCrumbArrows();
+    
     $('#industryBreadCrumb').addClass('cursorHand');
 
-    var listItem =
+     if(breadCrumbChain.length != 3) {
+        breadCrumbChain.push(companyName);
+
+        doBreadCrumbArrows();
+        var listItem =
         '<li id="companyBreadCrumb">'
         + companyName 
         + '</li>';
-    list.append(listItem);
+        list.append(listItem);
+
+    } else {
+        breadCrumbChain[2] = companyName;
+    }
+    
     $("#exploreSectorSection").toggle(false);
     $("#exploreIndustrySection").toggle(false);
     $("#exploreCompanySection").toggle(true);
-    breadCrumbChain.push(companyName);
+
 }
 
 // appends a industry breadcrumb to the breadcrumb list
@@ -524,15 +549,22 @@ function doIndustryBreadCrumb(industryName) {
     $('#sectorBreadCrumb').addClass('cursorHand');
     doBreadCrumbArrows();
 
+    // var listItem =
+    //     '<li id="industryBreadCrumb" onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
+    //     + industryName 
+    //     + '</li>';
+
     var listItem =
-        '<li id="industryBreadCrumb" onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
+        '<li id="industryBreadCrumb" onclick="renderIndustryLevel(\'' + industryName + '\')">'
         + industryName 
         + '</li>';
+
     list.append(listItem);
     $("#exploreSectorSection").toggle(false);
     $("#exploreIndustrySection").toggle(true);
     $("#exploreCompanySection").toggle(false);
     breadCrumbChain.push(industryName);
+    
 }
 
 // appends a sector breadcrumb to the breadcrumb list
@@ -541,13 +573,16 @@ function doSectorBreadCrumb() {
     breadCrumbList.empty();
     $("#exploreTable").empty();
     clearTickers(breadCrumbChain);
+    // var listItem = 
+    // '<li id="sectorBreadCrumb" onclick="doSectorBreadCrumb()">Sectors</li>';
+
     var listItem = 
-    '<li id="sectorBreadCrumb" onclick="doSectorBreadCrumb()">Sectors</li>';
+    '<li id="sectorBreadCrumb" onclick="renderSectorLevel()">Sectors</li>';
+
     breadCrumbList.append(listItem);
     $("#exploreSectorSection").toggle(true);
     $("#exploreIndustrySection").toggle(false);
     $("#exploreCompanySection").toggle(false);
-
     breadCrumbChain.push("Sectors");
 }
 
@@ -622,6 +657,10 @@ function renderSectorListItem(sectorName, color) {
 
 // renders the ticker level corresponding to the given industry name
 function renderTickerLevel(industryName) {
+    
+    clearTable("exploreTable");
+
+    clearTickers(exploreTickers);
     var tableHeader = makeTableHeaderString("exploreTable");
     appendHeader(tableHeader, "exploreTable");
     exploreTableHasHeader = true;

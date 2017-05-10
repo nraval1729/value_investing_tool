@@ -21,3 +21,8 @@ don't run it using python3 please.
 Hello
 
 Try our application out on the web here: https://valueinvestingtool.herokuapp.com/
+
+Since we use heroku for deployment, and they use dynos, the first time the site is launched 
+after a period of inactivity, it would take about 5-15 secs to render. This is a 
+limitation of the free account of heroku. Subsequent reloads will be rendered at normal
+speeds.
