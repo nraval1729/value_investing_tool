@@ -723,6 +723,11 @@ function displayToolTip(event, popup) {
 
 // refreshes table data upon events such as slider updates or clicking on refresh data button
 function refreshTables() {
+    // Don't refresh if there isn't a valid JSON file
+    if(!infoJSON) {
+        return;
+    }
+
     refreshTable("searchTable", searchTableHasHeader);
     refreshTable("leaderboard", true);
 
@@ -737,10 +742,6 @@ function refreshTables() {
 
 // Redraw the search table with latest JSON data and colors
 function refreshTable(tableName, tableHeaderStatus) {
-    // Don't refresh if there isn't a valid JSON file
-    if(!infoJSON) {
-        return;
-    }
 
     //don't re-populate an empty table.  you will end
     //up with an orphan table header (i.e. a table header
