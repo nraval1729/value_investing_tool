@@ -69,7 +69,6 @@ $(document).ready(function() {
 function requestInfoJson() {
 
     $.get("/info", function(data) {
-
         handleSearchAndLeaderboardData(data);
     });
 }
