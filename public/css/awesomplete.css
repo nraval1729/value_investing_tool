@@ -17,7 +17,8 @@
 }
 
 .awesomplete > ul {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     left: 0;
     z-index: 1;
     min-width: 100%;

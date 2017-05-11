@@ -34,7 +34,7 @@
         </div>
 
         <main role="main" id="interior">
-            <!-- PREFERENCES SECTION -->
+
             <div class="centerMe">
                 <section role="region" aria-labelledby="prefsTitle" id="preferencesSection">
                     <div class="spacer50"></div>
@@ -53,8 +53,10 @@
                             <div role="slider" id="custom-handle4" class="ui-slider-handle" aria-valuenow="0.5" aria-valuemin="-1" aria-valuemax="1"></div>
                         </div>
 
-                        <div class="spacer50"></div>
+                        <div class="spacer25"></div>
+
                         <button role="button" id="resetColorSliderButton" class="sliderButton" onclick="resetColorSlider()">Restore Slider Defaults</button>
+
                         <div class="spacer25"></div>
                     </div>
 
@@ -63,18 +65,25 @@
                             <label for="monochromeCheckbox">Monochrome</label>
                             <input role="checkbox" aria-checked="false" id="monochromeCheckbox" class="checkbox" type="checkbox" onchange="changeMonochrome()">
                         </div>
+                        <div class="verticalCenter">
+                            <!-- <label for="refreshCheckbox">Continuous Updates</label>
+                            <input role="checkbox" aria-checked="true" id="refreshCheckbox" class="checkbox" type="checkbox" onchange="changeRefresh()" checked> -->
+                            <button role="button" id="refreshButton" class="sliderButton" onclick="requestInfoJson()">Refresh data</button>
+
+                        </div>
                     </div>
 
                 </section><!-- end: preferencesSection -->
             </div>
 
             <div class="centerMe">
-
-                <!-- SPLASH PAGE SECTION -->
                 <section role="region" aria-labelledby="homeTitle" id="homeSection">
                     <h1 class ="hiddenForSR" id="homeTitle">Home</h1>
                     <div class="spacer100"></div>
                     <div class="centerMe">
+
+                        <!-- splash page section -->
+
 
                         <div role="link" class="splashBox" onclick="showSearch()" name="Show Search page.">
                             <div class="horizontal">
@@ -124,7 +133,6 @@
                 </section><!-- end: homeSection -->
             </div>
 
-            <!-- SEARCH SECTION -->
             <section role="region" aria-labelledby="searchTitle" id="searchSection">
                 <h1 id="searchTitle" class="centerMe hiddenForSR">Search</h1>
                 <div class="spacer100"></div>
@@ -141,7 +149,7 @@
                 </div>
             </section><!-- end: searchSection -->
 
-            <!-- EXPLORE SECTION -->
+
             <div class="centerMe">
                 <section role="region" aria-labelledby="exploreTitle" id="exploreSection">
                     <h1 class = "hiddenForSR" id="exploreTitle">Explore</h1>
@@ -171,7 +179,6 @@
                 </section><!-- end: exploreSection -->
             </div>
 
-        <!-- FOOTER SECTION -->
         <div class="centerMe">
             <footer role="contentInfo" id="footer">
                 <div class="centerMe">

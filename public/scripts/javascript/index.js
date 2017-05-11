@@ -73,22 +73,47 @@ function requestInfoJson() {
     });
 }
 
+//var ALREADY = false;
+
 // Initializes search and leaderboard functionality
 function handleSearchAndLeaderboardData(data) {
 
-        infoJSON = data;
+    infoJSON = data;
+    renderLeaderboard();
+    //refresh the existing tables with the new data from info json
+    refreshTables();
 
-        var securityToTicker = data["security_to_ticker"];
-        var tickerToSecurity = data["ticker_to_security"];
-        populateSearchSuggestions(securityToTicker);
-        addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+    // if (ALREADY) {
+    //     removeEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+    //     document.getElementById("searchBarInput").removeEventListener("awesomplete-selectcomplete", function(e){
+    //         processUserSelection(e, securityToTicker, tickerToSecurity, data);
+    //     }, false);
+    // }
 
-        // Leaderboard stuff
-        renderLeaderboard();
+    var securityToTicker = data["security_to_ticker"];
+    var tickerToSecurity = data["ticker_to_security"];
+    populateSearchSuggestions(securityToTicker);
+    addEventListenerForSearch(securityToTicker, tickerToSecurity, data);
+    // ALREADY = true;
 
-        // Should refresh the existing tables with the new data from info json
-        refreshTables();
 }
+
+// User made a selection from dropdown. 
+// This is fired after the selection is applied
+function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
+    window.addEventListener("awesomplete-selectcomplete", function(e){
+        processUserSelection(e, securityToTicker, tickerToSecurity, data);
+    }, false);
+}
+
+// User made a selection from dropdown. 
+// This is fired after the selection is applied
+function removeEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
+    window.removeEventListener("awesomplete-selectcomplete", function(e){
+        processUserSelection(e, securityToTicker, tickerToSecurity, data);
+    }, false);
+}
+
 
 // **********************************************
 // VISIBILITY FUNCTIONS BEGIN HERE
@@ -265,13 +290,7 @@ function populateSearchSuggestions(security_to_ticker) {
     awesomplete.list = autocompleteList;
 }
 
-// User made a selection from dropdown. 
-// This is fired after the selection is applied
-function addEventListenerForSearch(securityToTicker, tickerToSecurity, data) {
-    window.addEventListener("awesomplete-selectcomplete", function(e){
-        processUserSelection(e, securityToTicker, tickerToSecurity, data);
-    }, false);
-}
+
 
 // Takes search input from user and renders the associated data to the search workbench.
 function processUserSelection(e, securityToTicker, tickerToSecurity, json) {
