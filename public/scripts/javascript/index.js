@@ -160,6 +160,7 @@ function showSearch() {
     $("#searchSection").toggle(true);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    preferencesAreVisible = false;
     $("#footer").toggle(false);
 }
 
