@@ -132,6 +132,11 @@ right */
     justify-content: center;
 }
 
+.horizontalCenter2 {
+    width: 500px;
+    margin: 0 auto;
+}
+
 #interior {
     display: flex;
     justify-content: center;
