@@ -16,10 +16,6 @@ var colorBreakPoint2 = -0.20;   //above or equal to this value and below colorBr
 var colorBreakPoint1 = -0.40;   //above or equal to this value and below colorBreakPoint3: green
                                 //below colorBreakPoint4: bright green
 
-var dividendCoefficient = 1.0;  //sometimes the dividend doesn't move a lot, resulting in all black
-                                //colors for the dividend.  this coefficient allows you to adjust the
-                                //sensitivity of the dividend to colors.  greater than 1 will produce
-                                //more colors, less than 1 will produce less colors.
 var colors = ["brightGreen", "darkGreen", "black", "darkRed", "brightRed"];
 var monochromeColors = ["whiteWithBorder", "whiteGrey", "grey", "blackGrey", "black"];
 
@@ -28,8 +24,40 @@ $(document).ready(function() {
     showHome();
     
     // Make the explore + search tables sortable
-    $("#exploreTable").tablesorter();
-    $("#searchTable").tablesorter();
+    $("#exploreTable").tablesorter({ 
+
+        //prevent sorting on blank table cells
+        headers: { 
+
+            6: { 
+                sorter: false 
+            }, 
+
+            7: { 
+                sorter: false 
+            }
+        } 
+    }); 
+
+
+    $("#searchTable").tablesorter({ 
+        //prevent sorting on blank table cells
+        headers: { 
+
+            6: { 
+                sorter: false 
+            }, 
+
+            7: { 
+                sorter: false 
+            }, 
+
+            8: { 
+                sorter: false 
+            } 
+        } 
+    }); 
+
 
     $("#leaderboard").toggle(false);
 
@@ -76,18 +104,16 @@ function showExplore() {
         renderIndustryLevel(breadCrumbChain[1]);
     } else {
         renderTickerLevel(breadCrumbChain[2]);
-        //refreshTable("exploreTable", exploreTableHasHeader);
     }
 
-    //renderSectorLevel();
     $("#exploreButton").addClass("underline");
     $("#searchButton").removeClass("underline");
     $("#preferencesButton").removeClass("underline");
-    //$("#logoButton").toggle(true);
     $("#homeSection").toggle(false);
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(true);
     $("#preferencesSection").toggle(false);
+    preferencesAreVisible = false;
     $("#footer").toggle(false);
 }
 
@@ -100,6 +126,7 @@ function showHome() {
     $("#searchSection").toggle(false);
     $("#exploreSection").toggle(false);
     $("#preferencesSection").toggle(false);
+    preferencesAreVisible = false;
     $("#footer").toggle(true);
 }
 
@@ -457,7 +484,7 @@ function renderSecurityCell(currValue, histValue, isDividend) {
     var currValueNum = parseFloat(currValue);
     var histValueNum = parseFloat(histValue);
     var excursion = (currValueNum - histValueNum) / histValueNum;
-    if (isDividend) excursion  = - dividendCoefficient * excursion; //adjust the range and flip sign
+    if (isDividend) excursion  = - excursion; //flip sign
     var color = determineColor(excursion);
     var shortDec = parseFloat(currValue).toFixed(2);
     var tdString = '<td class = "securityCell"><div class="securityCellContent ' + color + '">' + shortDec + '</div></td>';
@@ -549,11 +576,6 @@ function doIndustryBreadCrumb(industryName) {
     $('#sectorBreadCrumb').addClass('cursorHand');
     doBreadCrumbArrows();
 
-    // var listItem =
-    //     '<li id="industryBreadCrumb" onclick="doIndustryBreadCrumb(\'' + industryName + '\')">'
-    //     + industryName 
-    //     + '</li>';
-
     var listItem =
         '<li id="industryBreadCrumb" onclick="renderIndustryLevel(\'' + industryName + '\')">'
         + industryName 
@@ -573,8 +595,6 @@ function doSectorBreadCrumb() {
     breadCrumbList.empty();
     $("#exploreTable").empty();
     clearTickers(breadCrumbChain);
-    // var listItem = 
-    // '<li id="sectorBreadCrumb" onclick="doSectorBreadCrumb()">Sectors</li>';
 
     var listItem = 
     '<li id="sectorBreadCrumb" onclick="renderSectorLevel()">Sectors</li>';
